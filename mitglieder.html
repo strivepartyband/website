@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mitgliederbereich – STR!VE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --yellow: #F5C800;
+  --red: #D91A1A;
+  --black: #0d0d0d;
+  --dark: #141414;
+  --card: #1c1c1c;
+  --card2: #222;
+  --border: rgba(255,255,255,0.08);
+  --text: #f0f0f0;
+  --muted: #888;
+  --green: #4CAF50;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--black); color: var(--text); font-family: 'Open Sans', sans-serif; min-height: 100vh; }
+
+/* ─── LOGIN ─── */
+#loginScreen {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 30%, rgba(245,200,0,0.06) 0%, transparent 65%);
+  padding: 20px;
+}
+.login-box {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 8px; padding: 44px 40px;
+  width: 100%; max-width: 380px;
+  text-align: center;
+}
+.login-logo { font-family: 'Montserrat', sans-serif; font-size: 40px; font-weight: 900; color: var(--yellow); letter-spacing: 3px; margin-bottom: 4px; }
+.login-logo .bang { color: var(--red); }
+.login-sub { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; }
+
+.login-box h2 { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 800; color: var(--text); margin-bottom: 24px; }
+
+.lg { margin-bottom: 16px; text-align: left; }
+.lg label { display: block; font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 7px; }
+.lg input {
+  width: 100%; background: var(--dark); border: 1px solid var(--border);
+  border-radius: 4px; color: var(--text); padding: 13px 15px;
+  font-family: 'Open Sans', sans-serif; font-size: 14px;
+  outline: none; transition: border-color 0.2s;
+}
+.lg input:focus { border-color: rgba(245,200,0,0.4); }
+
+.btn-login {
+  width: 100%; background: var(--yellow); color: var(--black);
+  border: none; border-radius: 4px; padding: 14px;
+  font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+  cursor: pointer; transition: all 0.2s; margin-top: 8px;
+}
+.btn-login:hover { background: #FFD700; transform: translateY(-1px); }
+
+.login-err {
+  display: none; margin-top: 14px;
+  background: rgba(217,26,26,0.12); border: 1px solid rgba(217,26,26,0.25);
+  border-radius: 4px; padding: 10px 14px;
+  font-size: 13px; color: #ff7070; text-align: left;
+}
+
+/* ─── MEMBER AREA ─── */
+#memberArea { display: none; min-height: 100vh; }
+
+/* Nav */
+.m-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5%; height: 64px;
+  background: var(--dark); border-bottom: 1px solid rgba(245,200,0,0.12);
+  position: sticky; top: 0; z-index: 10;
+}
+.m-nav-brand { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 900; color: var(--yellow); letter-spacing: 2px; }
+.m-nav-brand .bang { color: var(--red); }
+.m-nav-right { display: flex; align-items: center; gap: 20px; }
+.m-nav-tag { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(245,200,0,0.5); }
+.btn-logout { background: transparent; border: 1px solid var(--border); border-radius: 4px; color: var(--muted); padding: 7px 14px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; transition: all 0.2s; }
+.btn-logout:hover { border-color: rgba(245,200,0,0.3); color: var(--yellow); }
+
+/* Content */
+.m-content { max-width: 1000px; margin: 0 auto; padding: 48px 5%; }
+
+.m-welcome {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 36px; gap: 20px; flex-wrap: wrap;
+}
+.m-welcome h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(24px,4vw,36px); font-weight: 900; color: var(--yellow); }
+.m-welcome p { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+/* Upload area */
+.upload-zone {
+  background: var(--card); border: 1.5px dashed rgba(245,200,0,0.25);
+  border-radius: 8px; padding: 40px 32px;
+  text-align: center; cursor: pointer;
+  transition: all 0.25s; margin-bottom: 32px;
+  position: relative;
+}
+.upload-zone:hover { border-color: rgba(245,200,0,0.5); background: rgba(245,200,0,0.03); }
+.upload-zone.drag-over { border-color: var(--yellow); background: rgba(245,200,0,0.06); }
+.uz-icon { font-size: 40px; margin-bottom: 14px; }
+.uz-title { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 6px; }
+.uz-sub { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.uz-sub span { color: var(--yellow); font-weight: 600; }
+#fileInput { display: none; }
+
+/* Tabs */
+.tabs { display: flex; gap: 4px; margin-bottom: 20px; border-bottom: 1px solid var(--border); }
+.tab {
+  font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  padding: 11px 20px; color: var(--muted); cursor: pointer;
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+  transition: all 0.2s;
+}
+.tab.active { color: var(--yellow); border-bottom-color: var(--yellow); }
+.tab:hover:not(.active) { color: var(--text); }
+
+/* File list */
+.file-list { display: flex; flex-direction: column; gap: 10px; }
+
+.file-item {
+  background: var(--card2); border: 1px solid var(--border);
+  border-radius: 6px; padding: 16px 20px;
+  display: flex; align-items: center; gap: 16px;
+  transition: border-color 0.2s;
+}
+.file-item:hover { border-color: rgba(245,200,0,0.2); }
+.fi-icon { font-size: 24px; flex-shrink: 0; }
+.fi-info { flex: 1; }
+.fi-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 3px; word-break: break-all; }
+.fi-meta { font-size: 11px; color: var(--muted); }
+.fi-actions { display: flex; gap: 8px; flex-shrink: 0; }
+.btn-dl, .btn-del {
+  border: none; border-radius: 4px; padding: 8px 14px;
+  font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  cursor: pointer; transition: all 0.2s;
+}
+.btn-dl { background: rgba(245,200,0,0.1); color: var(--yellow); border: 1px solid rgba(245,200,0,0.2); }
+.btn-dl:hover { background: rgba(245,200,0,0.2); }
+.btn-del { background: rgba(217,26,26,0.08); color: #ff7070; border: 1px solid rgba(217,26,26,0.2); }
+.btn-del:hover { background: rgba(217,26,26,0.18); }
+
+.empty-state {
+  text-align: center; padding: 48px 20px; color: var(--muted);
+}
+.empty-state .es-icon { font-size: 36px; margin-bottom: 12px; }
+.empty-state p { font-size: 14px; line-height: 1.6; }
+
+/* Notes textarea */
+.notes-area {
+  background: var(--card2); border: 1px solid var(--border);
+  border-radius: 6px; overflow: hidden;
+}
+.notes-area .na-top {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 18px; border-bottom: 1px solid var(--border);
+}
+.na-top span { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); }
+.btn-save-note {
+  background: var(--green); color: var(--black);
+  border: none; border-radius: 3px; padding: 7px 16px;
+  font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+  cursor: pointer; transition: all 0.2s;
+}
+.btn-save-note:hover { background: #5DBF5D; }
+#notesText {
+  width: 100%; min-height: 260px; background: transparent;
+  border: none; outline: none;
+  color: var(--text); font-family: 'Open Sans', sans-serif; font-size: 14px; line-height: 1.75;
+  padding: 20px 18px; resize: vertical;
+}
+.save-indicator {
+  font-size: 11px; color: var(--green); text-align: right;
+  padding: 6px 18px; min-height: 28px; font-weight: 600;
+}
+
+/* Upload progress */
+.progress-bar {
+  height: 3px; background: var(--border); border-radius: 2px; margin-top: 12px; display: none;
+}
+.progress-fill { height: 100%; background: var(--yellow); border-radius: 2px; transition: width 0.3s; width: 0%; }
+</style>
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div id="loginScreen">
+  <div class="login-box">
+    <div class="login-logo">STR<span class="bang">!</span>VE</div>
+    <div class="login-sub">Mitgliederbereich</div>
+    <h2>Anmelden</h2>
+    <div class="lg">
+      <label>Benutzername</label>
+      <input type="text" id="inputUser" placeholder="strive" autocomplete="username" onkeydown="if(event.key==='Enter')doLogin()">
+    </div>
+    <div class="lg">
+      <label>Passwort</label>
+      <input type="password" id="inputPass" placeholder="••••••••" autocomplete="current-password" onkeydown="if(event.key==='Enter')doLogin()">
+    </div>
+    <button class="btn-login" onclick="doLogin()">Einloggen →</button>
+    <div class="login-err" id="loginErr">❌ Falscher Benutzername oder Passwort.</div>
+  </div>
+</div>
+
+<!-- MEMBER AREA -->
+<div id="memberArea">
+  <nav class="m-nav">
+    <div class="m-nav-brand">STR<span class="bang">!</span>VE</div>
+    <div class="m-nav-right">
+      <span class="m-nav-tag">🔒 Mitglieder</span>
+      <button class="btn-logout" onclick="logout()">Abmelden</button>
+    </div>
+  </nav>
+
+  <div class="m-content">
+    <div class="m-welcome">
+      <div>
+        <h1>🎸 Bandbereich</h1>
+        <p>Hier findet ihr alle Setlists, Songtexte und Notizen – nur für Bandmitglieder.</p>
+      </div>
+    </div>
+
+    <!-- Upload Zone -->
+    <div class="upload-zone" id="uploadZone" onclick="document.getElementById('fileInput').click()" ondragover="handleDrag(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+      <div class="uz-icon">📁</div>
+      <div class="uz-title">Datei hochladen</div>
+      <div class="uz-sub">Klicken oder Datei hierher ziehen<br><span>PDF, Word, TXT, JPG, PNG</span> – max. 10 MB</div>
+      <div class="progress-bar" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+    <input type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.txt,.png,.jpg,.jpeg" onchange="handleFiles(this.files)">
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tab active" onclick="switchTab('files', this)">📂 Dateien</div>
+      <div class="tab" onclick="switchTab('notes', this)">📝 Notizen / Setlist</div>
+    </div>
+
+    <!-- Files Tab -->
+    <div id="tabFiles">
+      <div class="file-list" id="fileList">
+        <div class="empty-state">
+          <div class="es-icon">📂</div>
+          <p>Noch keine Dateien hochgeladen.<br>Ladet Setlists, Songtexte oder andere Dokumente hoch!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notes Tab -->
+    <div id="tabNotes" style="display:none;">
+      <div class="notes-area">
+        <div class="na-top">
+          <span>📝 Notizen & Setlist</span>
+          <button class="btn-save-note" onclick="saveNote()">Speichern</button>
+        </div>
+        <textarea id="notesText" placeholder="Hier könnt ihr eure aktuelle Setlist, Abläufe, Notizen, Songreihenfolge usw. eintragen...
+
+Beispiel Setlist:
+1. Back in Black – AC/DC
+2. Hammer to Fall – Queen
+3. ..."></textarea>
+        <div class="save-indicator" id="saveIndicator"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── AUTH ───
+const USER = 'strive';
+const PASS = 'setlist';
+
+function doLogin() {
+  const u = document.getElementById('inputUser').value.trim();
+  const p = document.getElementById('inputPass').value;
+  if(u === USER && p === PASS) {
+    sessionStorage.setItem('striveAuth', '1');
+    document.getElementById('loginScreen').style.display = 'none';
+    document.getElementById('memberArea').style.display = 'block';
+    loadData();
+  } else {
+    document.getElementById('loginErr').style.display = 'block';
+    document.getElementById('inputPass').value = '';
+  }
+}
+
+function logout() {
+  sessionStorage.removeItem('striveAuth');
+  location.reload();
+}
+
+// Auto-check session
+if(sessionStorage.getItem('striveAuth') === '1') {
+  document.getElementById('loginScreen').style.display = 'none';
+  document.getElementById('memberArea').style.display = 'block';
+}
+
+// ─── TABS ───
+function switchTab(tab, el) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('tabFiles').style.display = tab === 'files' ? 'block' : 'none';
+  document.getElementById('tabNotes').style.display = tab === 'notes' ? 'block' : 'none';
+}
+
+// ─── FILES (stored in localStorage as base64) ───
+let files = [];
+
+function loadData() {
+  try {
+    const saved = localStorage.getItem('striveFiles');
+    if(saved) files = JSON.parse(saved);
+  } catch(e) { files = []; }
+  const note = localStorage.getItem('striveNote') || '';
+  document.getElementById('notesText').value = note;
+  renderFiles();
+}
+
+function saveFiles() {
+  try { localStorage.setItem('striveFiles', JSON.stringify(files)); } catch(e) {
+    alert('Speicher voll! Bitte einige Dateien löschen.');
+  }
+}
+
+function handleFiles(fileList) {
+  Array.from(fileList).forEach(file => {
+    if(file.size > 10 * 1024 * 1024) { alert(`"${file.name}" ist zu groß (max. 10 MB)`); return; }
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      files.unshift({
+        id: Date.now() + Math.random(),
+        name: file.name,
+        size: file.size,
+        type: file.type,
+        date: new Date().toLocaleDateString('de-DE'),
+        data: e.target.result
+      });
+      saveFiles();
+      renderFiles();
+    };
+    reader.readAsDataURL(file);
+  });
+  document.getElementById('fileInput').value = '';
+  // Show progress animation
+  showProgress();
+}
+
+function showProgress() {
+  const bar = document.getElementById('progressBar');
+  const fill = document.getElementById('progressFill');
+  bar.style.display = 'block';
+  fill.style.width = '0%';
+  setTimeout(() => fill.style.width = '60%', 50);
+  setTimeout(() => fill.style.width = '100%', 400);
+  setTimeout(() => bar.style.display = 'none', 800);
+}
+
+function renderFiles() {
+  const list = document.getElementById('fileList');
+  if(files.length === 0) {
+    list.innerHTML = `<div class="empty-state"><div class="es-icon">📂</div><p>Noch keine Dateien hochgeladen.<br>Ladet Setlists, Songtexte oder andere Dokumente hoch!</p></div>`;
+    return;
+  }
+  list.innerHTML = files.map((f, i) => `
+    <div class="file-item">
+      <div class="fi-icon">${fileIcon(f.name)}</div>
+      <div class="fi-info">
+        <div class="fi-name">${escHtml(f.name)}</div>
+        <div class="fi-meta">${formatSize(f.size)} · Hochgeladen am ${f.date}</div>
+      </div>
+      <div class="fi-actions">
+        <button class="btn-dl" onclick="downloadFile(${i})">⬇ Download</button>
+        <button class="btn-del" onclick="deleteFile(${i})">✕ Löschen</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function fileIcon(name) {
+  const ext = name.split('.').pop().toLowerCase();
+  if(['pdf'].includes(ext)) return '📄';
+  if(['doc','docx'].includes(ext)) return '📝';
+  if(['txt'].includes(ext)) return '📃';
+  if(['jpg','jpeg','png','gif'].includes(ext)) return '🖼️';
+  return '📁';
+}
+
+function formatSize(bytes) {
+  if(bytes < 1024) return bytes + ' B';
+  if(bytes < 1024*1024) return (bytes/1024).toFixed(1) + ' KB';
+  return (bytes/1024/1024).toFixed(1) + ' MB';
+}
+
+function escHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function downloadFile(i) {
+  const f = files[i];
+  const a = document.createElement('a');
+  a.href = f.data;
+  a.download = f.name;
+  a.click();
+}
+
+function deleteFile(i) {
+  if(!confirm(`"${files[i].name}" wirklich löschen?`)) return;
+  files.splice(i, 1);
+  saveFiles();
+  renderFiles();
+}
+
+// ─── DRAG & DROP ───
+function handleDrag(e) {
+  e.preventDefault();
+  document.getElementById('uploadZone').classList.add('drag-over');
+}
+function handleDragLeave(e) {
+  document.getElementById('uploadZone').classList.remove('drag-over');
+}
+function handleDrop(e) {
+  e.preventDefault();
+  document.getElementById('uploadZone').classList.remove('drag-over');
+  handleFiles(e.dataTransfer.files);
+}
+
+// ─── NOTES ───
+function saveNote() {
+  const val = document.getElementById('notesText').value;
+  localStorage.setItem('striveNote', val);
+  const ind = document.getElementById('saveIndicator');
+  ind.textContent = '✓ Gespeichert!';
+  setTimeout(() => ind.textContent = '', 2500);
+}
+
+// Auto-save notes on Ctrl+S
+document.addEventListener('keydown', e => {
+  if((e.ctrlKey || e.metaKey) && e.key === 's') { e.preventDefault(); saveNote(); }
+});
+</script>
+</body>
+</html>
