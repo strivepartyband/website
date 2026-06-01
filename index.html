@@ -112,7 +112,55 @@ nav {
   aspect-ratio:16/9;
   border:0;
 }
+/* Referenzen*/
 
+  .ref-intro{
+  max-width:700px;
+  color:var(--muted);
+  line-height:1.8;
+  margin-bottom:40px;
+}
+
+.ref-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+}
+
+.ref-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:24px;
+  box-shadow:0 2px 10px rgba(26,18,8,0.05);
+  transition:all .25s;
+}
+
+.ref-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(245,200,0,0.35);
+  box-shadow:0 10px 30px rgba(26,18,8,0.1);
+}
+
+.ref-icon{
+  font-size:28px;
+  margin-bottom:12px;
+}
+
+.ref-title{
+  font-family:"Montserrat",sans-serif;
+  font-size:16px;
+  font-weight:800;
+  color:var(--dark);
+  margin-bottom:4px;
+}
+
+.ref-sub{
+  font-size:13px;
+  color:var(--muted);
+}
+
+  
   
 /* Warm stage background */
 .hero-glow {
@@ -765,10 +813,10 @@ footer {
   </p>
 
   <div class="ref-grid">
-
+  
     <div class="ref-card">
       <div class="ref-icon">🎡</div>
-      <div class="ref-title">Wohnzimmerkonzertl</div>
+      <div class="ref-title">Wohnzimmerkonzert</div>
       <div class="ref-sub">Privatkonzert · 2026</div>
     </div>
 
