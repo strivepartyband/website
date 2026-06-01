@@ -368,6 +368,57 @@ h2 em { color:var(--red); font-style:normal; }
 }
 .song:hover { background:rgba(245,200,0,0.15); border-color:rgba(245,200,0,0.4); color:var(--dark); }
 
+.band-showcase{
+  position:relative;
+  margin-top:50px;
+  height:500px;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(26,18,8,0.25);
+}
+
+.band-showcase img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:
+    brightness(0.55)
+    contrast(1.1)
+    saturate(1.15);
+}
+
+.band-showcase::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      to top,
+      rgba(26,18,8,0.85),
+      rgba(26,18,8,0.25)
+    );
+}
+
+.band-showcase-text{
+  position:absolute;
+  left:40px;
+  bottom:40px;
+  z-index:2;
+  color:white;
+}
+
+.band-showcase-text h3{
+  font-family:"Montserrat",sans-serif;
+  font-size:42px;
+  font-weight:900;
+  margin-bottom:10px;
+}
+
+.band-showcase-text p{
+  font-size:16px;
+  color:rgba(255,255,255,0.8);
+}
+  
 /* ─── BAND ─── */
 .band-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:18px; margin-top:52px; }
 .member {
@@ -575,6 +626,14 @@ footer {
   </div>
 </section>
 
+<div class="band-showcase">
+  <img src="bilder/bandbild.jpg" alt="STR!VE Partyband">
+  <div class="band-showcase-text">
+    <h3>100% Live.</h3>
+    <p>Rockige Covers, moderne Hits und echte Partyenergie.</p>
+  </div>
+</div>
+  
 <!-- TERMINE -->
 <div class="sec-warm" id="termine">
   <div class="sec-inner">
