@@ -238,7 +238,54 @@ nav {
   display:flex; gap:14px; flex-wrap:wrap;
   animation: fadeUp 0.6s 0.3s ease both;
 }
+---------------
+.floating-book-btn{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    z-index:9999;
 
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:16px 24px;
+
+    background:linear-gradient(135deg,var(--yellow),var(--orange));
+    color:var(--dark);
+
+    font-family:"Montserrat",sans-serif;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:1px;
+    text-transform:uppercase;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    box-shadow:0 8px 30px rgba(245,200,0,.35);
+    transition:all .25s ease;
+}
+
+.floating-book-btn:hover{
+    transform:translateY(-3px) scale(1.03);
+    box-shadow:0 12px 40px rgba(245,200,0,.5);
+}
+
+.floating-book-btn:active{
+    transform:scale(.96);
+}
+
+@media (max-width:768px){
+    .floating-book-btn{
+        right:15px;
+        bottom:15px;
+        padding:14px 18px;
+        font-size:12px;
+    }
+}
+------------  
 .btn-yellow {
   display:inline-block;
   background:var(--yellow); color:var(--dark);
@@ -641,6 +688,9 @@ footer {
 }
 </style>
 </head>
+<a href="#kontakt" class="floating-book-btn">
+    📅 Jetzt buchen
+</a>
 <body>
 
 <nav id="nav">
