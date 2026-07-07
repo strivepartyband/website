@@ -377,57 +377,89 @@ h2 em { color:var(--red); font-style:normal; }
 
 /* Formspree:*/
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 500px;
-  margin: 0 auto;
+.booking-form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
 }
 
-.contact-form label {
-  font-weight: 600;
-  font-size: 0.95rem;
-  margin-bottom: 0.3rem;
-  display: block;
+.booking-form label{
+    display:block;
+    margin-bottom:6px;
+
+    font-family:"Montserrat",sans-serif;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+
+    color:var(--muted);
 }
 
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid #444;
-  border-radius: 8px;
-  background: #1a1a1a;
-  color: #fff;
-  font-size: 1rem;
-  font-family: inherit;
+.booking-form input,
+.booking-form select,
+.booking-form textarea{
+    width:100%;
+
+    padding:14px 16px;
+
+    background:var(--bg);
+    color:var(--text);
+
+    border:1.5px solid var(--border);
+    border-radius:8px;
+
+    font-size:15px;
+    font-family:"Open Sans",sans-serif;
+
+    transition:.25s;
 }
 
-.contact-form input:focus,
-.contact-form select:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #e63946; /* passt euren Akzentfarben an */
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus{
+    outline:none;
+
+    border-color:var(--yellow);
+
+    box-shadow:0 0 0 4px rgba(245,200,0,.12);
 }
 
-.contact-form button {
-  padding: 0.9rem 1.5rem;
-  background: #e63946;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s ease;
+.booking-form textarea{
+    min-height:140px;
+    resize:vertical;
 }
 
-.contact-form button:hover {
-  background: #c92a37;
+.booking-form button{
+    margin-top:10px;
+
+    background:linear-gradient(135deg,var(--yellow),var(--orange));
+
+    color:var(--dark);
+
+    border:none;
+    border-radius:8px;
+
+    padding:16px;
+
+    font-family:"Montserrat",sans-serif;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:0 8px 24px rgba(245,200,0,.25);
 }
 
+.booking-form button:hover{
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 36px rgba(245,200,0,.4);
+}
   
 /* ─── TERMINE ─── */
 .termine-list { display:flex; flex-direction:column; gap:12px; margin-top:52px; }
@@ -1038,8 +1070,11 @@ footer {
     </div>
   </div>
 </section>
+  
+<div class="cf">
+    <h3>Unverbindlich anfragen</h3>
 
-<form action="https://formspree.io/f/mrewddre" method="POST" class="contact-form">
+    <form action="https://formspree.io/f/mrewddre" method="POST" class="contact-form">
   <label for="name">Name</label>
   <input type="text" id="name" name="name" required>
 
@@ -1074,6 +1109,8 @@ footer {
 
   <button type="submit">Anfrage senden</button>
 </form>
+</div>
+
   
 <!-- FOOTER -->
 <footer>
