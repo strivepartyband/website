@@ -383,6 +383,18 @@ h2 em { color:var(--red); font-style:normal; }
 .alc-loc { font-size:13px; color:rgba(255,255,255,0.25); margin-top:10px; position:relative; z-index:1; }
 .alc-loc strong { color:rgba(245,200,0,0.6); }
 
+.btn-ghost-dark {
+  display:inline-block;
+  background:transparent; color:var(--dark);
+  border:1.5px solid rgba(26,18,8,0.3);
+  padding:15px 36px; border-radius:3px;
+  font-family:"Montserrat",sans-serif;
+  font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase;
+  text-decoration:none;
+  transition:all 0.2s;
+}
+.btn-ghost-dark:hover { border-color:rgba(26,18,8,0.6); transform:translateY(-2px); }
+  
 .about-band{
     display:block;
     width:100%;
@@ -707,8 +719,8 @@ footer {
   padding:52px 5% 28px; text-align:center;
 }
 .fl { display:flex; justify-content:center; margin-bottom:16px; }
-.fl img { height:52px; filter:drop-shadow(0 0 12px rgba(245,200,0,0.3)); }
-.ft { font-family:"Montserrat",sans-serif; font-size:10px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:rgba(255,255,255,0.25); margin-bottom:28px; }
+.fl img { height:52px; width:auto; filter:drop-shadow(0 0 12px rgba(245,200,0,0.3)); }
+.ft { font-family:"Montserrat",sans-serif; font-size:10px; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:rgba(255,255,255,0.65); margin-bottom:28px; }
 .flinks { display:flex; justify-content:center; gap:24px; list-style:none; flex-wrap:wrap; margin-bottom:28px; }
 .flinks a { color:rgba(255,255,255,0.65); text-decoration:none; font-family:"Montserrat",sans-serif; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; transition:color 0.2s; }
 .flinks a:hover { color:var(--yellow); }
@@ -1077,7 +1089,7 @@ footer {
     </div>
     <div class="hero-btns">
         <a href="#kontakt" class="btn-yellow">Jetzt buchen</a>
-        <a href="#termine" class="btn-ghost">Nächste Auftritte</a>
+        <a href="#termine" class="btn-ghost-dark">Nächste Auftritte</a>
       </div>
 </section>
 
@@ -1154,7 +1166,7 @@ footer {
   
 <!-- FOOTER -->
 <footer>
-  <div class="fl"><img src="bilder/weblogostrive.webp" alt="STR!VE" width="300" height="210"></div>
+  <div class="fl"><img src="bilder/weblogostrive.webp" alt="STR!VE" width="300" height="210" style="width:auto;"></div>
   <div class="ft">Partyband · Eifel · Mayen</div>
   <ul class="flinks">
     <li><a href="#about">Über uns</a></li>
