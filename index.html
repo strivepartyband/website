@@ -1151,13 +1151,36 @@ footer {
   <div class="fcopy">© 2026 STR!VE Partyband · Nitztal · <a href="mailto:strivepartyband@gmail.com">strivepartyband@gmail.com</a></div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-function toggleNav(){document.getElementById("navLinks").classList.toggle("open");}
-document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navLinks").classList.remove("open")));
-window.addEventListener("scroll",()=>document.getElementById("nav").classList.toggle("scrolled",scrollY>40));
-function sendForm(){
-  document.getElementById("cForm").style.display="none";
-  document.getElementById("formOk").style.display="block";
-  setTimeout(()=>{window.location.href="mailto:strivepartyband@gmail.com?subject=Buchungsanfrage STR!VE Partyband";},900);
+<script>
+function toggleNav() {
+    document.getElementById("navLinks").classList.toggle("open");
 }
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isInt
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("open");
+    });
+});
+
+window.addEventListener("scroll", () => {
+    const nav = document.getElementById("nav");
+    if (nav) {
+        nav.classList.toggle("scrolled", window.scrollY > 40);
+    }
+});
+
+// Fade-In Animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+document.querySelectorAll(".reveal").forEach(el => {
+    observer.observe(el);
+});
+</script>
