@@ -867,13 +867,14 @@ footer {
     Stimmung und volle Energie auf der Bühne.
   </p>
 
-  <div class="video-wrap">
-    <iframe
-      src="https://www.youtube-nocookie.com/embed/akB_7GcP-sY?si=Wcw2T3JqYprHL0Mm"
-      title="STR!VE Partyband Live"
-      allowfullscreen>
-    </iframe>
+  <div class="video-wrap" id="videoFacade" onclick="loadVideo()" style="cursor:pointer;position:relative;">
+  <img src="https://img.youtube.com/vi/akB_7GcP-sY/maxresdefault.jpg" alt="STR!VE Live Video" style="width:100%;display:block;" loading="lazy" width="1280" height="720">
+  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+    <div style="width:70px;height:70px;background:rgba(0,0,0,0.7);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+      <div style="width:0;height:0;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:22px solid white;margin-left:5px;"></div>
+    </div>
   </div>
+</div>
 </section>
   
 <!-- TERMINE -->
@@ -1163,6 +1164,12 @@ footer {
 </footer>
 
 <script>
+function loadVideo() {
+  const wrap = document.getElementById('videoFacade');
+  wrap.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/akB_7GcP-sY?si=Wcw2T3JqYprHL0Mm&autoplay=1" title="STR!VE Partyband Live" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>`;
+}
+
+  
 function toggleNav() {
     document.getElementById("navLinks").classList.toggle("open");
 }
