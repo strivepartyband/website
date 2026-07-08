@@ -82,11 +82,31 @@ display:grid;
 
 grid-template-columns:1.1fr 1fr;
 
-gap:50px;
+gap:60px;
 
 align-items:center;
 
-margin:70px 0;
+background:white;
+
+padding:45px;
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+box-shadow:0 15px 45px rgba(0,0,0,.08);
+
+margin-top:60px;
+
+transition:.3s;
+
+}
+
+.reference-card:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 25px 60px rgba(0,0,0,.12);
 
 }
 
@@ -94,11 +114,11 @@ margin:70px 0;
 
 width:100%;
 
-display:block;
+aspect-ratio:4/3;
+
+object-fit:cover;
 
 border-radius:18px;
-
-box-shadow:0 20px 60px rgba(0,0,0,.18);
 
 transition:.35s;
 
@@ -895,52 +915,112 @@ footer {
 <main>
 
 <body>
-<section class="hero hero-small">
-  <div class="hero-bg"></div>
 
-  <div class="hero-content">
-    <div class="tag">REFERENZEN</div>
+    
+<section id="hero">
 
-    <h1>
-      Vergangene<br>
-      <em>Auftritte</em>
-    </h1>
+    <div class="hero-glow"></div>
 
-    <p>
-      Seit unserer Gründung im Jahr 2025 durfte STR!VE bereits zahlreiche
-      Veranstaltungen musikalisch begleiten – von Kirmes und Vereinsfest über
-      Firmenfeiern bis hin zu privaten Events. Hier findet ihr einen Auszug
-      unserer bisherigen Live-Auftritte.
-    </p>
-  </div>
+    <div class="spot s1"></div>
+    <div class="spot s2"></div>
+    <div class="spot s3"></div>
+    <div class="spot s4"></div>
+
+    <div class="hero-inner">
+
+        <div class="hero-text">
+
+            <div class="hero-pill">
+                REFERENZEN
+            </div>
+
+            <h1 class="hero-title">
+                Unsere bisherigen<br>
+                <em>Live-Auftritte</em>
+            </h1>
+
+            <p class="hero-desc">
+
+                Seit unserer Gründung durfte STR!VE zahlreiche Veranstaltungen
+                musikalisch begleiten – von Kirmes und Vereinsfesten über
+                Firmenfeiern bis hin zu privaten Events.
+
+                <br><br>
+
+                Jeder Auftritt erzählt seine eigene Geschichte.
+
+            </p>
+
+            <div class="hero-btns">
+
+                <a href="#referenzen" class="btn-yellow">
+                    Referenzen ansehen
+                </a>
+
+                <a href="index.html#kontakt" class="btn-ghost">
+                    Jetzt buchen
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-logo-wrap">
+
+            <img src="bilder/weblogostrive.webp"
+                 class="hero-logo-img"
+                 alt="STR!VE Logo">
+
+        </div>
+
+    </div>
+
 </section>
 
 
-<section class="sec">
+
+
+
+
+
+
+    
+
+<section class="sec" id="referenzen">
 
 <div class="tag">
+
 REFERENZEN
+
 </div>
 
 <h2>
-Bereits auf vielen Bühnen
+
+Unvergessliche
 <br>
-<em>zuhause</em>
+
+<em>Live-Momente</em>
+
 </h2>
 
 <p class="lead">
 
 Jeder Auftritt ist einzigartig.
 
-Ob Stadtfest, Kirmes, Firmenfeier oder privates Event – wir möchten nicht
-einfach nur Musik spielen, sondern Erinnerungen schaffen.
+Ob Stadtfest, Kirmes, Firmenfeier oder privates Event –
+wir möchten nicht einfach Musik spielen, sondern Erinnerungen schaffen.
 
-Hier findet ihr einige Veranstaltungen, bei denen STR!VE bereits live auf der
-Bühne stand.
+Hier findet ihr einige vergangene Veranstaltungen,
+bei denen STR!VE bereits live auf der Bühne stand.
 
 </p>
 
 </section>
+
+
+
+
+    
 
 <section class="sec">
 
@@ -948,7 +1028,8 @@ Bühne stand.
 
 <div class="reference-image">
 
-<img src="bilder/highlander.jpg" alt="STR!VE beim Highlander Irish Pub">
+<img src="bilder/highlander.webp"
+     alt="STR!VE live im Highlander Irish Pub Mayen">
 
 </div>
 
@@ -956,13 +1037,16 @@ Bühne stand.
 
 <div class="ref-date">
 
-07. August 2026
+07. AUGUST 2026
 
 </div>
 
 <h2>
 
 Highlander Irish Pub
+
+<br>
+
 Mayen
 
 </h2>
@@ -975,15 +1059,50 @@ Mayen
 
 <p>
 
-Beim Konzert im Highlander Irish Pub in Mayen sorgte STR!VE mit einer Mischung
-aus Rockklassikern, modernen Hits und Partymusik für einen stimmungsvollen
-Abend.
+Beim Konzert im Highlander Irish Pub in Mayen sorgte STR!VE
+mit einer Mischung aus Rockklassikern,
+modernen Hits und echter Partyenergie für beste Stimmung.
 
-Vor einem begeisterten Publikum entwickelte sich schnell eine ausgelassene
-Atmosphäre, bei der bis spät in den Abend gemeinsam gefeiert wurde.
+Vom ersten Song bis zur letzten Zugabe wurde gemeinsam
+gesungen, gefeiert und getanzt.
 
 </p>
 
+<div class="ref-highlights">
+
+<div>
+
+🎸 100 % Live
+
+</div>
+
+<div>
+
+🍻 Irish Pub
+
+</div>
+
+<div>
+
+📍 Mayen
+
+</div>
+
+<div>
+
+🎶 Rock • Pop • Party
+
+</div>
+
+</div>
+
+<a href="index.html#kontakt"
+class="btn-yellow"
+style="margin-top:35px;display:inline-block;">
+
+STR!VE buchen
+
+</a>
 
 </div>
 
