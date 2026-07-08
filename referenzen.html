@@ -1181,3 +1181,43 @@ STR!VE buchen
 
 </body>
 </main>
+
+  <script>
+function loadVideo() {
+  const wrap = document.getElementById('videoFacade');
+  wrap.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/akB_7GcP-sY?si=Wcw2T3JqYprHL0Mm&autoplay=1" title="STR!VE Partyband Live" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>`;
+}
+
+  
+function toggleNav() {
+    document.getElementById("navLinks").classList.toggle("open");
+}
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("open");
+    });
+});
+
+window.addEventListener("scroll", () => {
+    const nav = document.getElementById("nav");
+    if (nav) {
+        nav.classList.toggle("scrolled", window.scrollY > 40);
+    }
+});
+
+// Fade-In Animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+document.querySelectorAll(".reveal").forEach(el => {
+    observer.observe(el);
+});
+</script>
