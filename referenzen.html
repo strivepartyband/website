@@ -1,6 +1,47 @@
-
+<!DOCTYPE html>
+<html lang="de">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 
 <style>
+
+  
+/* ─── NAV ─── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:200;
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 0 5%; height:68px;
+  background: rgba(26,18,8,0.97);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s;
+}
+.nav-brand {
+  display:flex; align-items:center; gap:12px;
+  text-decoration:none;
+}
+.nav-logo-img { height:38px; width:auto; }
+.nav-links { display:flex; gap:28px; list-style:none; align-items:center; }
+.nav-links a {
+  color: rgba(255,255,255,0.65);
+  text-decoration:none;
+  font-family:"Montserrat",sans-serif;
+  font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
+  transition:color 0.2s;
+}
+.nav-links a:hover { color:#fff; }
+.nav-cta {
+  background: var(--yellow) !important;
+  color: var(--dark) !important;
+  padding: 10px 22px; border-radius:3px;
+  transition: background 0.2s, transform 0.15s !important;
+}
+.nav-cta:hover { background: var(--yellow2) !important; transform:translateY(-1px); }
+
+.burger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+.burger span { display:block; width:24px; height:2px; background:var(--yellow); }
+
+    
 .hero-small{
     min-height:60vh;
 }
@@ -117,6 +158,24 @@ grid-template-columns:1fr;
 
 }
 </style>
+
+    <nav id="nav">
+  <a href="#hero" class="nav-brand">
+    <img src="bilder/weblogostrive.webp" alt="STR!VE Logo" class="nav-logo-img" width="150" height="38" loading="eager">
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">Über uns</a></li>
+    <li><a href="#termine">Termine</a></li>
+    <li><a href="#repertoire">Repertoire</a></li>
+    <li><a href="#band">Die Band</a></li>
+    <li><a href="#preise">Preise</a></li>
+    <li><a href="#kontakt" class="nav-cta">Jetzt buchen</a></li>
+  </ul>
+  <div class="burger" id="burger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+    
 <main>
 
 <body>
