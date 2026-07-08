@@ -94,57 +94,51 @@ nav {
 }
 
 .reference-card{
-
-display:grid;
-
-grid-template-columns:1.1fr 1fr;
-
-gap:60px;
-
-align-items:center;
-
-background:white;
-
-padding:45px;
-
-border-radius:22px;
-
-border:1px solid var(--border);
-
-box-shadow:0 15px 45px rgba(0,0,0,.08);
-
-margin-top:60px;
-
-transition:.3s;
-
-}
-
-.reference-card:hover{
-
-transform:translateY(-6px);
-
-box-shadow:0 25px 60px rgba(0,0,0,.12);
-
+  display:grid;
+  grid-template-columns: 1fr 1.15fr;  /* Bild bekommt mehr Raum */
+  gap:40px;
+  align-items:stretch;               /* Bild füllt Kartenhöhe */
+  background:white;
+  padding:32px;                       /* weniger Innenabstand */
+  border-radius:22px;
+  border:1px solid var(--border);
+  box-shadow:0 15px 45px rgba(0,0,0,.08);
+  margin-top:60px;
+  transition:.3s;
 }
 
 .reference-image img{
-
-width:100%;
-
-aspect-ratio:4/3;
-
-object-fit:cover;
-
-border-radius:18px;
-
-transition:.35s;
-
+  width:100%;
+  height:100%;
+  min-height:320px;
+  aspect-ratio:auto;      /* nicht mehr 4/3 erzwingen, Höhe folgt der Karte */
+  object-fit:cover;
+  border-radius:18px;
+  transition:.35s;
 }
 
-.reference-image img:hover{
+/* NEU: eigene, kompakte Überschriftenstruktur statt globalem h2 */
+.ref-eyebrow{
+  font-family:"Montserrat",sans-serif;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:4px;
+}
+.ref-title{
+  font-family:"Montserrat",sans-serif;
+  font-size:clamp(24px,3vw,32px);   /* deutlich kleiner als globales h2 */
+  font-weight:900;
+  line-height:1.1;
+  color:var(--dark);
+  margin-bottom:14px;
+}
 
-transform:scale(1.02);
-
+@media(max-width:900px){
+  .reference-card{ grid-template-columns:1fr; }
+  .reference-image img{ min-height:220px; aspect-ratio:4/3; }
 }
 
 .ref-date{
@@ -962,21 +956,18 @@ footer {
             </div>
 
             <h1 class="hero-title">
-                Unsere bisherigen<br>
-                <em>Live-Auftritte</em>
-            </h1>
+    Live-Auftritte unserer Partyband<br>
+    in der <em>Eifel & Region Koblenz</em>
+</h1>
 
-            <p class="hero-desc">
-
-                Seit unserer Gründung durfte STR!VE zahlreiche Veranstaltungen
-                musikalisch begleiten – von Kirmes und Vereinsfesten über
-                Firmenfeiern bis hin zu privaten Events.
-
-                <br><br>
-
-                Jeder Auftritt erzählt seine eigene Geschichte.
-
-            </p>
+<p class="hero-desc">
+    Seit unserer Gründung hat <strong>STR!VE</strong> zahlreiche Veranstaltungen 
+    in Mayen, Koblenz und der Eifel musikalisch begleitet – von Kirmes 
+    und Vereinsfesten über Firmenfeiern bis hin zu Hochzeiten und 
+    privaten Feiern.
+    <br><br>
+    Jeder Auftritt erzählt seine eigene Geschichte.
+</p>
 
             <div class="hero-btns">
 
@@ -1131,15 +1122,8 @@ STR!VE buchen
 
 </div>
 
-<h2>
-
-Hochsim-<br>merhalle
-
-<br>
-
-Ettringen
-
-</h2>
+<div class="ref-eyebrow">Hochsimmerhalle</div>
+<h3 class="ref-title">Ettringen</h3>
 
 <div class="ref-category">
 
@@ -1196,15 +1180,8 @@ STR!VE buchen
 
 </div>
 
-<h2>
-
-Bürgerhaus
-
-<br>
-
-Kottenheim
-
-</h2>
+<div class="ref-eyebrow">Bürgerhaus</div>
+<h3 class="ref-title">Kottenheim</h3>
 
 <div class="ref-category">
 
@@ -1247,29 +1224,18 @@ STR!VE buchen
 <div class="reference-content">
 
 <div class="ref-date">
-
 10. APRIL 2026
-
 </div>
 
-<h2>
+<div class="ref-eyebrow">Bürgerhaus</div>
+<h3 class="ref-title">Mayen-Nitztal</h3>
 
-Bürgerhaus
-
-<br>
-
-Mayen-Nitztal
-
-</h2>
 
 <div class="ref-category">
-
 Konzert
-
 </div>
 
 <p>
-
 Mit einem besonderen Abend begann die Geschichte von STR!VE auf der Bühne: Am 10. April 2026 spielten wir unser erstes Konzert überhaupt – ein exklusives Wohnzimmerkonzert im Bürgerhaus Nitztal. <br>
 
 Vor Familie, Freunden und Musikbegeisterten präsentierten wir erstmals unser Live-Programm mit einer Mischung aus Rockklassikern, modernen Hits und Partymusik. Der Abend war nicht nur unser offizieller Bandauftakt, sondern auch ein wichtiger Meilenstein auf dem Weg zu zahlreichen weiteren Auftritten.<br>
