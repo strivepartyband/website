@@ -183,55 +183,7 @@ nav {
   aspect-ratio:16/9;
   border:0;
 }
-/* Referenzen*/
 
-  .ref-intro{
-  max-width:700px;
-  color:var(--muted);
-  line-height:1.8;
-  margin-bottom:40px;
-}
-
-.ref-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:18px;
-}
-
-.ref-card{
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:10px;
-  padding:24px;
-  box-shadow:0 2px 10px rgba(26,18,8,0.05);
-  transition:all .25s;
-}
-
-.ref-card:hover{
-  transform:translateY(-4px);
-  border-color:rgba(245,200,0,0.35);
-  box-shadow:0 10px 30px rgba(26,18,8,0.1);
-}
-
-.ref-icon{
-  font-size:28px;
-  margin-bottom:12px;
-}
-
-.ref-title{
-  font-family: "Montserrat", "Montserrat Fallback", sans-serif;
-  font-size:16px;
-  font-weight:800;
-  color:var(--dark);
-  margin-bottom:4px;
-}
-
-.ref-sub{
-  font-size:13px;
-  color:var(--muted);
-}
-
-  
   
 /* Warm stage background */
 .hero-glow {
@@ -340,10 +292,8 @@ nav {
   50%     { filter: drop-shadow(0 8px 60px rgba(245,200,0,0.55)) drop-shadow(0 0 120px rgba(245,200,0,0.25)); }
 }
 
-@keyframes fadeUp {
-  from { opacity:0; transform:translateY(24px); }
-  to   { opacity:1; transform:translateY(0); }
-}
+
+
 
 /* ─── STATS ─── */
 .stats {
@@ -412,11 +362,6 @@ h2 em { color:var(--red); font-style:normal; }
 .feat-t { font-family: "Montserrat", "Montserrat Fallback", sans-serif; font-size:13px; font-weight:800; color:var(--dark); margin-bottom:2px; }
 .feat-s { font-size:12px; color:var(--muted); }
 
-.about-img-wrap {
-  border-radius:12px; overflow:hidden;
-  box-shadow:0 20px 60px rgba(26,18,8,0.2);
-  position:relative;
-}
 .about-logo-card {
   background: var(--dark);
   padding:52px 40px; text-align:center;
@@ -429,12 +374,10 @@ h2 em { color:var(--red); font-style:normal; }
   width:300px; height:300px;
   background: radial-gradient(circle, rgba(245,200,0,0.1) 0%, transparent 65%);
 }
-@keyframes floatG { from{transform:scale(1);} to{transform:scale(1.4) translate(20px,15px);} }
+
 .alc-img { width:100%; max-width:300px; position:relative; z-index:1;
   filter: drop-shadow(0 4px 24px rgba(245,200,0,0.3)); }
-.alc-sub { font-family: "Montserrat", "Montserrat Fallback", sans-serif; font-size:11px; font-weight:700; letter-spacing:5px; text-transform:uppercase; color:rgba(255,255,255,0.35); margin-top:18px; position:relative; z-index:1; }
-.alc-loc { font-size:13px; color:rgba(255,255,255,0.25); margin-top:10px; position:relative; z-index:1; }
-.alc-loc strong { color:rgba(245,200,0,0.6); }
+
 
 .btn-ghost-dark {
   display:inline-block;
@@ -542,7 +485,6 @@ h2 em { color:var(--red); font-style:normal; }
 }
   
 /* ─── TERMINE ─── */
-.termine-list { display:flex; flex-direction:column; gap:12px; margin-top:52px; }
 .termin {
   background:#fff; border:1px solid var(--border);
   border-radius:10px; padding:20px 28px;
@@ -668,12 +610,6 @@ h2 em { color:var(--red); font-style:normal; }
   color:white;
 }
 
-.band-showcase-text h3{
-  font-family: "Montserrat", "Montserrat Fallback", sans-serif;
-  font-size:42px;
-  font-weight:900;
-  margin-bottom:10px;
-}
 
 .band-showcase-text p{
   font-size:16px;
@@ -741,18 +677,7 @@ h2 em { color:var(--red); font-style:normal; }
 
 .cf { background:#fff; border:1px solid var(--border); border-radius:10px; padding:36px; box-shadow:0 2px 14px rgba(26,18,8,0.07); }
 .cf h3 { font-family: "Montserrat", "Montserrat Fallback", sans-serif; font-size:24px; font-weight:800; color:var(--dark); margin-bottom:22px; }
-.fg { margin-bottom:16px; }
-.fg label { display:block; font-family: "Montserrat", "Montserrat Fallback", sans-serif; font-size:10px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); margin-bottom:6px; }
-.fg input,.fg select,.fg textarea {
-  width:100%; background:var(--bg); border:1.5px solid var(--border); border-radius:6px;
-  color:var(--text); padding:12px 14px;
-  font-family:"Open Sans",sans-serif; font-size:14px; outline:none;
-  transition:border-color 0.2s;
-  -webkit-appearance:none;
-}
-.fg input:focus,.fg select:focus,.fg textarea:focus { border-color:rgba(245,200,0,0.6); box-shadow:0 0 0 3px rgba(245,200,0,0.1); }
-.fg textarea { min-height:90px; resize:vertical; }
-.fg-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+
 .btn-sub {
   width:100%; background: linear-gradient(135deg, var(--yellow), var(--orange));
   color:var(--dark); border:none; border-radius:6px; padding:15px;
@@ -761,10 +686,6 @@ h2 em { color:var(--red); font-style:normal; }
   box-shadow:0 4px 16px rgba(245,200,0,0.25);
 }
 .btn-sub:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(245,200,0,0.4); }
-.form-ok { display:none; text-align:center; padding:44px 20px; }
-.form-ok .oi { font-size:52px; margin-bottom:14px; }
-.form-ok h4 { font-family: "Montserrat", "Montserrat Fallback", sans-serif; font-size:22px; font-weight:800; color:var(--dark); margin-bottom:8px; }
-.form-ok p { color:var(--muted); font-size:14px; }
 
 /* ─── FOOTER ─── */
 footer {
@@ -1226,18 +1147,6 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// Fade-In Animation
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-}, {
-    threshold: 0.15
-});
 
-document.querySelectorAll(".reveal").forEach(el => {
-    observer.observe(el);
-});
+
 </script>
