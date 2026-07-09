@@ -124,17 +124,6 @@ nav {
 .burger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
 .burger span { display:block; width:24px; height:2px; background:var(--yellow); }
 
-
-    
-    
-.hero-small{
-    min-height:60vh;
-}
-
-.hero-small .hero-content{
-    max-width:900px;
-}
-
 .reference-card{
   display:grid;
   grid-template-columns: 1fr 1.15fr;  /* Bild bekommt mehr Raum */
@@ -159,24 +148,7 @@ nav {
   transition:.35s;
 }
 
-/* NEU: eigene, kompakte Überschriftenstruktur statt globalem h2 */
-.ref-eyebrow{
-  font-family:"Montserrat",sans-serif;
-  font-size:13px;
-  font-weight:700;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:var(--muted);
-  margin-bottom:4px;
-}
-.ref-title{
-  font-family:"Montserrat",sans-serif;
-  font-size:clamp(40px,3vw,40px);   /* deutlich kleiner als globales h2 */
-  font-weight:1000;
-  line-height:1.2;
-  color:var(--dark);
-  margin-bottom:14px;
-}
+
 
 @media(max-width:900px){
   .reference-card{ grid-template-columns:1fr; }
@@ -508,6 +480,11 @@ footer {
 }
 </style>
 
+
+    
+
+
+<body>
 <nav id="nav">
   <a href="index.html" class="nav-brand">
     <img src="bilder/weblogostrive.webp"
@@ -534,11 +511,6 @@ footer {
     <span></span>
   </div>
 </nav>
-    
-
-
-<body>
-
     
 <section id="hero">
 
@@ -865,11 +837,6 @@ STR!VE buchen
   
 
 </section>
-
-
-</body>
-
-
 <!-- FOOTER -->
 <footer>
   <div class="fl"><img src="bilder/weblogostrive.webp" alt="STR!VE" width="300" height="210" style="width:auto;"></div>
@@ -886,6 +853,11 @@ STR!VE buchen
   </ul>
   <div class="fcopy">© 2026 STR!VE Partyband · Nitztal · <a href="mailto:strivepartyband@gmail.com">strivepartyband@gmail.com</a></div>
 </footer>
+
+</body>
+
+
+
 
   
   <script>
@@ -909,16 +881,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// Fade-In Animation
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-}, {
-    threshold: 0.15
-});
+
 
 document.querySelectorAll(".reveal").forEach(el => {
     observer.observe(el);
