@@ -332,261 +332,223 @@ nav {
     object-fit:contain;
 }
 
-  /* ─── REFERENZEN RONDELL ─── */
+/* ─── SCHON GESPIELT BEI ─── */
 
 .references-preview {
   background: var(--warm);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   overflow: hidden;
 }
 
 .references-preview-inner {
   max-width: 1140px;
   margin: 0 auto;
-  padding: 72px 5% 78px;
+  padding: 24px 5%;
 }
 
 .references-heading {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 30px;
-  margin-bottom: 38px;
+  align-items: center;
+  gap: 28px;
+  margin: 0;
 }
 
 .references-heading-text {
-  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
 }
 
+.references-heading .tag {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.references-heading h2,
 .references-subtitle {
-  max-width: 600px;
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.7;
-  margin-top: 8px;
+  display: none;
 }
 
 /* Slider */
 
 .references-slider {
-  position: relative;
+  flex: 1;
+  min-width: 0;
   overflow: hidden;
-  width: 100%;
 }
 
 .references-track {
   display: flex;
-  gap: 18px;
+  gap: 12px;
+  transition: transform .6s cubic-bezier(.22,.61,.36,1);
   will-change: transform;
-  transition: transform 0.7s cubic-bezier(.22,.61,.36,1);
 }
 
 .reference-card {
-  flex: 0 0 calc((100% - 36px) / 3);
-  min-width: 0;
+  flex: 0 0 calc((100% - 24px) / 3);
+
+  min-height: 0;
+  height: 58px;
+
+  box-sizing: border-box;
 
   background: #fff;
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 28px 26px;
+  border-radius: 7px;
 
-  min-height: 155px;
+  padding: 0 16px;
 
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
 
-  box-shadow: 0 3px 14px rgba(26,18,8,0.05);
+  box-shadow: none;
 
   transition:
-    transform .25s ease,
-    box-shadow .25s ease,
-    border-color .25s ease;
+    border-color .2s ease,
+    transform .2s ease;
 }
 
 .reference-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(245,200,0,.4);
-  box-shadow: 0 12px 30px rgba(26,18,8,.1);
+  transform: translateY(-2px);
+  border-color: var(--yellow);
 }
 
 .reference-card-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 15px;
 }
 
 .reference-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 9px;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 6px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   background: rgba(245,200,0,.13);
-  color: var(--dark);
 
-  font-size: 19px;
+  font-size: 14px;
 }
 
 .reference-type {
-  font-family: "Montserrat", "Montserrat Fallback", sans-serif;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 1.7px;
-  text-transform: uppercase;
-
-  color: var(--red);
+  display: none;
 }
 
 .reference-name {
-  margin-top: 18px;
+  margin: 0;
 
   font-family: "Montserrat", "Montserrat Fallback", sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 800;
-  line-height: 1.3;
+  line-height: 1.2;
 
-  color: var(--dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .reference-location {
-  margin-top: 5px;
+  margin: 2px 0 0;
 
-  font-size: 12px;
-  line-height: 1.5;
+  font-size: 10px;
   color: var(--muted);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Navigation */
+/* Steuerung */
 
 .references-controls {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  margin-top: 24px;
+  display: none;
 }
 
-.references-arrows {
-  display: flex;
-  gap: 8px;
-}
-
-.references-arrow {
-  width: 40px;
-  height: 40px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid var(--border);
-  border-radius: 7px;
-
-  background: #fff;
-  color: var(--dark);
-
-  font-size: 20px;
-  cursor: pointer;
-
-  transition: all .2s ease;
-}
-
-.references-arrow:hover {
-  background: var(--yellow);
-  border-color: var(--yellow);
-  transform: translateY(-1px);
-}
-
-.references-dots {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.references-dot {
-  width: 7px;
-  height: 7px;
-
-  border: 0;
-  border-radius: 50%;
-
-  padding: 0;
-  background: rgba(26,18,8,.18);
-
-  cursor: pointer;
-  transition: all .25s ease;
-}
-
-.references-dot.active {
-  width: 22px;
-  border-radius: 10px;
-  background: var(--red);
-}
-
-/* CTA */
+/* Button */
 
 .references-cta {
-  text-align: center;
-  margin-top: 34px;
+  flex-shrink: 0;
+  margin: 0;
 }
 
 .references-cta p {
-  color: var(--muted);
-  font-size: 13px;
-  margin-bottom: 15px;
+  display: none;
+}
+
+.references-cta .btn-yellow {
+  padding: 11px 17px;
+  font-size: 10px;
+  white-space: nowrap;
 }
 
 
-/* ─── RESPONSIVE ─── */
+/* Tablet */
 
-@media(max-width:900px) {
+@media (max-width: 1000px) {
+
+  .references-heading {
+    gap: 18px;
+  }
 
   .reference-card {
-    flex-basis: calc((100% - 18px) / 2);
+    flex-basis: calc((100% - 12px) / 2);
   }
 
 }
 
-@media(max-width:600px) {
+
+/* Mobile */
+
+@media (max-width: 700px) {
 
   .references-preview-inner {
-    padding: 60px 5% 64px;
+    padding: 18px 5%;
   }
 
   .references-heading {
-    display: block;
-    margin-bottom: 28px;
+    gap: 12px;
   }
 
-  .references-heading h2 {
-    margin-bottom: 12px;
+  .references-heading-text {
+    display: none;
   }
 
-  .references-subtitle {
-    font-size: 14px;
+  .references-slider {
+    flex: 1;
   }
 
   .reference-card {
-    flex-basis: 88%;
-    min-height: 145px;
-    padding: 24px 22px;
+    flex-basis: 82%;
+    height: 52px;
+    padding: 0 12px;
   }
 
-  .references-controls {
-    margin-top: 18px;
+  .reference-icon {
+    width: 27px;
+    height: 27px;
+    font-size: 12px;
   }
 
-  .references-arrow {
-    width: 38px;
-    height: 38px;
+  .reference-name {
+    font-size: 11px;
+  }
+
+  .reference-location {
+    font-size: 9px;
+  }
+
+  .references-cta .btn-yellow {
+    padding: 10px 12px;
+    font-size: 9px;
   }
 
 }
-
   
 /* ─── STATS ─── */
 .stats {
@@ -1097,213 +1059,94 @@ footer {
   </div>
 </section>
 
-<!-- SCHON GESPIELT BEI -->
-
 <section class="references-preview" id="referenzen-preview">
+
   <div class="references-preview-inner">
 
     <div class="references-heading">
+
       <div class="references-heading-text">
-
         <div class="tag">Schon gespielt bei</div>
-
-        <h2>
-          Hier waren wir<br>
-          <em>bereits live</em>
-        </h2>
-
-        <p class="references-subtitle">
-          Von Kirmes und Vereinsfesten bis zu öffentlichen Veranstaltungen –
-          STR!VE war bereits bei verschiedenen Events in der Region live auf der Bühne.
-        </p>
-
       </div>
-    </div>
 
+      <div class="references-slider" id="referencesSlider">
 
-    <div class="references-slider" id="referencesSlider">
+        <div class="references-track" id="referencesTrack">
 
-      <div class="references-track" id="referencesTrack">
-
-
-        <!-- REFERENZ 1 -->
-
-        <div class="reference-card">
-
-          <div class="reference-card-top">
-            <div class="reference-icon">🎪</div>
-            <div class="reference-type">Kirmes</div>
-          </div>
-
-          <div>
-            <div class="reference-name">
-              Kirmes Mayen-Nitztal
+          <div class="reference-card">
+            <div class="reference-card-top">
+              <div class="reference-icon">🎪</div>
             </div>
-
-            <div class="reference-location">
-              Mayen-Nitztal · 2026
+            <div>
+              <div class="reference-name">Kirmes Mayen-Nitztal</div>
+              <div class="reference-location">Mayen-Nitztal · 2026</div>
             </div>
           </div>
 
-        </div>
-
-
-        <!-- REFERENZ 2 -->
-
-        <div class="reference-card">
-
-          <div class="reference-card-top">
-            <div class="reference-icon">🎉</div>
-            <div class="reference-type">Sommerfest</div>
-          </div>
-
-          <div>
-            <div class="reference-name">
-              Sommernachtsfest der Showtanzgruppe Ettringen
+          <div class="reference-card">
+            <div class="reference-card-top">
+              <div class="reference-icon">🎉</div>
             </div>
-
-            <div class="reference-location">
-              Ettringen · 2026
+            <div>
+              <div class="reference-name">Sommernachtsfest</div>
+              <div class="reference-location">Ettringen · 2026</div>
             </div>
           </div>
 
-        </div>
-
-
-        <!-- REFERENZ 3 -->
-
-        <div class="reference-card">
-
-          <div class="reference-card-top">
-            <div class="reference-icon">🌍</div>
-            <div class="reference-type">Partnerschaftstreffen</div>
+          <div class="reference-card">
+            <div class="reference-card-top">
+              <div class="reference-icon">🌍</div>
+            </div>
+            <div>
+              <div class="reference-name">Partnerschaftstreffen</div>
+              <div class="reference-location">Ettringen & Dornes · 2026</div>
+            </div>
           </div>
 
-          <div>
-            <div class="reference-name">
-              Partnerschaftstreffen Ettringen &amp; Dornes
+          <div class="reference-card">
+            <div class="reference-card-top">
+              <div class="reference-icon">🇪🇺</div>
             </div>
+            <div>
+              <div class="reference-name">SPD-Europatag</div>
+              <div class="reference-location">Kottenheim · 2026</div>
+            </div>
+          </div>
 
-            <div class="reference-location">
-              Ettringen · 2026
+          <div class="reference-card">
+            <div class="reference-card-top">
+              <div class="reference-icon">🎸</div>
+            </div>
+            <div>
+              <div class="reference-name">Highlander Rock</div>
+              <div class="reference-location">Mayen · 2026</div>
+            </div>
+          </div>
+
+          <div class="reference-card">
+            <div class="reference-card-top">
+              <div class="reference-icon">🏠</div>
+            </div>
+            <div>
+              <div class="reference-name">Wohnzimmerkonzert</div>
+              <div class="reference-location">Nitztal · 2026</div>
             </div>
           </div>
 
         </div>
-
-
-        <!-- REFERENZ 4 -->
-
-        <div class="reference-card">
-
-          <div class="reference-card-top">
-            <div class="reference-icon">🇪🇺</div>
-            <div class="reference-type">Veranstaltung</div>
-          </div>
-
-          <div>
-            <div class="reference-name">
-              SPD-Europatag
-            </div>
-
-            <div class="reference-location">
-              Kottenheim · 2026
-            </div>
-          </div>
-
-        </div>
-
-
-        <!-- REFERENZ 5 -->
-
-        <div class="reference-card">
-
-          <div class="reference-card-top">
-            <div class="reference-icon">🎸</div>
-            <div class="reference-type">Konzert</div>
-          </div>
-
-          <div>
-            <div class="reference-name">
-              Highlander Rock
-            </div>
-
-            <div class="reference-location">
-              Mayen · 2026
-            </div>
-          </div>
-
-        </div>
-
-
-        <!-- REFERENZ 6 -->
-
-        <div class="reference-card">
-
-          <div class="reference-card-top">
-            <div class="reference-icon">🏛️</div>
-            <div class="reference-type">Veranstaltung</div>
-          </div>
-
-          <div>
-            <div class="reference-name">
-              Wohnzimmerkonzert
-            </div>
-
-            <div class="reference-location">
-              Nitztal · 2026
-            </div>
-          </div>
-
-        </div>
-
-
-      </div>
-    </div>
-
-
-    <!-- STEUERUNG -->
-
-    <div class="references-controls">
-
-      <div class="references-dots" id="referencesDots"></div>
-
-      <div class="references-arrows">
-
-        <button
-          class="references-arrow"
-          id="referencesPrev"
-          aria-label="Vorherige Referenz">
-          ←
-        </button>
-
-        <button
-          class="references-arrow"
-          id="referencesNext"
-          aria-label="Nächste Referenz">
-          →
-        </button>
 
       </div>
 
-    </div>
-
-
-    <!-- CTA -->
-
-    <div class="references-cta">
-
-      <p>
-        Mehr über unsere bisherigen Auftritte und Veranstaltungen
-      </p>
-
-      <a href="referenzen.html" class="btn-yellow">
-        Alle Referenzen
-      </a>
+      <div class="references-cta">
+        <a href="referenzen.html" class="btn-yellow">
+          Alle Referenzen →
+        </a>
+      </div>
 
     </div>
 
   </div>
+
 </section>
   
 <!-- STATS -->
