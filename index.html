@@ -1467,267 +1467,222 @@ footer {
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  const track = document.getElementById("referencesTrack");
-  const slider = document.getElementById("referencesSlider");
-  const nextBtn = document.getElementById("referencesNext");
-  const prevBtn = document.getElementById("referencesPrev");
-  const dotsContainer = document.getElementById("referencesDots");
+    const slider = document.getElementById("referencesSlider");
+    const track = document.getElementById("referencesTrack");
 
-  if (!track || !slider) return;
+    if (!slider || !track) return;
 
-  const cards = Array.from(
-    track.querySelectorAll(".reference-card")
-  );
-
-  let current = 0;
-  let timer = null;
-  let isPaused = false;
-
-
-  function getVisibleCards() {
-
-    if (window.innerWidth <= 600) {
-      return 1;
-    }
-
-    if (window.innerWidth <= 900) {
-      return 2;
-    }
-
-    return 3;
-  }
-
-
-  function getMaxIndex() {
-
-    return Math.max(
-      0,
-      cards.length - getVisibleCards()
+    const cards = Array.from(
+        track.querySelectorAll(".reference-card")
     );
 
-  }
+    if (cards.length <= 1) return;
+
+    let current = 0;
+    let timer = null;
+    let isPaused = false;
 
 
-  function getStep() {
+    /* Anzahl sichtbarer Karten bestimmen */
 
-    if (!cards.length) return 0;
+    function getVisibleCards() {
 
-    const cardWidth = cards[0].getBoundingClientRect().width;
+        if (window.innerWidth <= 700) {
+            return 1;
+        }
 
-    const styles = window.getComputedStyle(track);
-    const gap = parseFloat(styles.columnGap || styles.gap) || 0;
+        if (window.innerWidth <= 1000) {
+            return 2;
+        }
 
-    return cardWidth + gap;
-
-  }
-
-
-  function createDots() {
-
-    dotsContainer.innerHTML = "";
-
-    const maxIndex = getMaxIndex();
-
-    for (let i = 0; i <= maxIndex; i++) {
-
-      const dot = document.createElement("button");
-
-      dot.className = "references-dot";
-
-      dot.setAttribute(
-        "aria-label",
-        "Referenz " + (i + 1)
-      );
-
-      dot.addEventListener("click", function () {
-
-        current = i;
-        updateSlider();
-        restartTimer();
-
-      });
-
-      dotsContainer.appendChild(dot);
+        return 3;
 
     }
 
-  }
 
+    /* Breite einer Karte + Abstand */
 
-  function updateDots() {
+    function getStep() {
 
-    const dots =
-      dotsContainer.querySelectorAll(".references-dot");
+        if (!cards[0]) return 0;
 
-    dots.forEach((dot, index) => {
+        const cardWidth =
+            cards[0].getBoundingClientRect().width;
 
-      dot.classList.toggle(
-        "active",
-        index === current
-      );
+        const styles =
+            window.getComputedStyle(track);
 
-    });
+        const gap =
+            parseFloat(styles.columnGap || styles.gap) || 0;
 
-  }
+        return cardWidth + gap;
 
-
-  function updateSlider() {
-
-    const maxIndex = getMaxIndex();
-
-    if (current > maxIndex) {
-      current = maxIndex;
     }
 
-    if (current < 0) {
-      current = 0;
+
+    /* Maximale Position */
+
+    function getMaxIndex() {
+
+        return Math.max(
+            0,
+            cards.length - getVisibleCards()
+        );
+
     }
 
-    const step = getStep();
 
-    track.style.transform =
-      "translateX(-" + (current * step) + "px)";
+    /* Slider bewegen */
 
-    updateDots();
+    function moveSlider() {
 
-  }
+        const maxIndex = getMaxIndex();
 
+        if (current > maxIndex) {
+            current = 0;
+        }
 
-  function next() {
+        const step = getStep();
 
-    const maxIndex = getMaxIndex();
+        track.style.transform =
+            "translateX(-" + (current * step) + "px)";
 
-    if (current >= maxIndex) {
-      current = 0;
-    } else {
-      current++;
     }
 
-    updateSlider();
 
-  }
+    /* Nächste Karte */
 
+    function nextSlide() {
 
-  function previous() {
+        const maxIndex = getMaxIndex();
 
-    const maxIndex = getMaxIndex();
+        current++;
 
-    if (current <= 0) {
-      current = maxIndex;
-    } else {
-      current--;
+        if (current > maxIndex) {
+            current = 0;
+        }
+
+        moveSlider();
+
     }
 
-    updateSlider();
 
-  }
+    /* Automatischen Ablauf starten */
 
+    function startSlider() {
 
-  function startTimer() {
+        clearInterval(timer);
 
-    clearInterval(timer);
+        timer = setInterval(function () {
 
-    timer = setInterval(function () {
+            if (!isPaused) {
+                nextSlide();
+            }
 
-      if (!isPaused) {
-        next();
-      }
+        }, 3500);
 
-    }, 4000);
-
-  }
+    }
 
 
-  function restartTimer() {
+    /* Beim Darüberfahren pausieren */
 
-    clearInterval(timer);
-    startTimer();
+    slider.addEventListener(
+        "mouseenter",
+        function () {
+            isPaused = true;
+        }
+    );
 
-  }
-
-
-  nextBtn.addEventListener("click", function () {
-
-    next();
-    restartTimer();
-
-  });
-
-
-  prevBtn.addEventListener("click", function () {
-
-    previous();
-    restartTimer();
-
-  });
+    slider.addEventListener(
+        "mouseleave",
+        function () {
+            isPaused = false;
+        }
+    );
 
 
-  /* Bei Hover pausieren */
+    /* Touch / Wischen auf Mobilgeräten */
 
-  slider.addEventListener("mouseenter", function () {
-    isPaused = true;
-  });
-
-  slider.addEventListener("mouseleave", function () {
-    isPaused = false;
-  });
+    let touchStartX = 0;
+    let touchEndX = 0;
 
 
-  /* Mobile Touch-Steuerung */
+    slider.addEventListener(
+        "touchstart",
+        function (event) {
 
-  let touchStartX = 0;
-  let touchEndX = 0;
+            touchStartX =
+                event.changedTouches[0].screenX;
 
-  slider.addEventListener(
-    "touchstart",
-    function (e) {
-
-      touchStartX = e.changedTouches[0].screenX;
-
-    },
-    { passive: true }
-  );
+        },
+        { passive: true }
+    );
 
 
-  slider.addEventListener(
-    "touchend",
-    function (e) {
+    slider.addEventListener(
+        "touchend",
+        function (event) {
 
-      touchEndX = e.changedTouches[0].screenX;
+            touchEndX =
+                event.changedTouches[0].screenX;
 
-      const distance =
-        touchStartX - touchEndX;
+            const distance =
+                touchStartX - touchEndX;
 
-      if (Math.abs(distance) < 40) return;
+            if (Math.abs(distance) < 40) {
+                return;
+            }
 
-      if (distance > 0) {
-        next();
-      } else {
-        previous();
-      }
+            const maxIndex = getMaxIndex();
 
-      restartTimer();
+            if (distance > 0) {
 
-    },
-    { passive: true }
-  );
+                current++;
+
+                if (current > maxIndex) {
+                    current = 0;
+                }
+
+            } else {
+
+                current--;
+
+                if (current < 0) {
+                    current = maxIndex;
+                }
+
+            }
+
+            moveSlider();
+            startSlider();
+
+        },
+        { passive: true }
+    );
 
 
-  /* Fenstergröße */
+    /* Bei Änderung der Fenstergröße neu berechnen */
 
-  window.addEventListener("resize", function () {
+    window.addEventListener(
+        "resize",
+        function () {
 
-    createDots();
-    updateSlider();
+            const maxIndex = getMaxIndex();
 
-  });
+            if (current > maxIndex) {
+                current = 0;
+            }
+
+            moveSlider();
+
+        }
+    );
 
 
-  /* Start */
+    /* Initialisieren */
 
-  createDots();
-  updateSlider();
-  startTimer();
+    moveSlider();
+    startSlider();
 
 });
 </script>
