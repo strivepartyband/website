@@ -332,6 +332,262 @@ nav {
     object-fit:contain;
 }
 
+  /* ─── REFERENZEN RONDELL ─── */
+
+.references-preview {
+  background: var(--warm);
+  overflow: hidden;
+}
+
+.references-preview-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 72px 5% 78px;
+}
+
+.references-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 38px;
+}
+
+.references-heading-text {
+  min-width: 0;
+}
+
+.references-subtitle {
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-top: 8px;
+}
+
+/* Slider */
+
+.references-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.references-track {
+  display: flex;
+  gap: 18px;
+  will-change: transform;
+  transition: transform 0.7s cubic-bezier(.22,.61,.36,1);
+}
+
+.reference-card {
+  flex: 0 0 calc((100% - 36px) / 3);
+  min-width: 0;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 26px;
+
+  min-height: 155px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-shadow: 0 3px 14px rgba(26,18,8,0.05);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+}
+
+.reference-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(245,200,0,.4);
+  box-shadow: 0 12px 30px rgba(26,18,8,.1);
+}
+
+.reference-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.reference-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(245,200,0,.13);
+  color: var(--dark);
+
+  font-size: 19px;
+}
+
+.reference-type {
+  font-family: "Montserrat", "Montserrat Fallback", sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+
+  color: var(--red);
+}
+
+.reference-name {
+  margin-top: 18px;
+
+  font-family: "Montserrat", "Montserrat Fallback", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.3;
+
+  color: var(--dark);
+}
+
+.reference-location {
+  margin-top: 5px;
+
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* Navigation */
+
+.references-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 24px;
+}
+
+.references-arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.references-arrow {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border);
+  border-radius: 7px;
+
+  background: #fff;
+  color: var(--dark);
+
+  font-size: 20px;
+  cursor: pointer;
+
+  transition: all .2s ease;
+}
+
+.references-arrow:hover {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  transform: translateY(-1px);
+}
+
+.references-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.references-dot {
+  width: 7px;
+  height: 7px;
+
+  border: 0;
+  border-radius: 50%;
+
+  padding: 0;
+  background: rgba(26,18,8,.18);
+
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.references-dot.active {
+  width: 22px;
+  border-radius: 10px;
+  background: var(--red);
+}
+
+/* CTA */
+
+.references-cta {
+  text-align: center;
+  margin-top: 34px;
+}
+
+.references-cta p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+
+/* ─── RESPONSIVE ─── */
+
+@media(max-width:900px) {
+
+  .reference-card {
+    flex-basis: calc((100% - 18px) / 2);
+  }
+
+}
+
+@media(max-width:600px) {
+
+  .references-preview-inner {
+    padding: 60px 5% 64px;
+  }
+
+  .references-heading {
+    display: block;
+    margin-bottom: 28px;
+  }
+
+  .references-heading h2 {
+    margin-bottom: 12px;
+  }
+
+  .references-subtitle {
+    font-size: 14px;
+  }
+
+  .reference-card {
+    flex-basis: 88%;
+    min-height: 145px;
+    padding: 24px 22px;
+  }
+
+  .references-controls {
+    margin-top: 18px;
+  }
+
+  .references-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+}
+
+  
 /* ─── STATS ─── */
 .stats {
   background: var(--dark2);
@@ -799,7 +1055,7 @@ footer {
   ]
 }
 </script>
-  
+
 <nav id="nav">
   <a href="#hero" class="nav-brand">
     <img src="bilder/weblogostrive.webp" alt="STR!VE Logo" class="nav-logo-img" width="150" height="38" loading="eager">
@@ -841,7 +1097,214 @@ footer {
   </div>
 </section>
 
+<!-- SCHON GESPIELT BEI -->
 
+<section class="references-preview" id="referenzen-preview">
+  <div class="references-preview-inner">
+
+    <div class="references-heading">
+      <div class="references-heading-text">
+
+        <div class="tag">Schon gespielt bei</div>
+
+        <h2>
+          Hier waren wir<br>
+          <em>bereits live</em>
+        </h2>
+
+        <p class="references-subtitle">
+          Von Kirmes und Vereinsfesten bis zu öffentlichen Veranstaltungen –
+          STR!VE war bereits bei verschiedenen Events in der Region live auf der Bühne.
+        </p>
+
+      </div>
+    </div>
+
+
+    <div class="references-slider" id="referencesSlider">
+
+      <div class="references-track" id="referencesTrack">
+
+
+        <!-- REFERENZ 1 -->
+
+        <div class="reference-card">
+
+          <div class="reference-card-top">
+            <div class="reference-icon">🎪</div>
+            <div class="reference-type">Kirmes</div>
+          </div>
+
+          <div>
+            <div class="reference-name">
+              Kirmes Mayen-Nitztal
+            </div>
+
+            <div class="reference-location">
+              Mayen-Nitztal · 2026
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- REFERENZ 2 -->
+
+        <div class="reference-card">
+
+          <div class="reference-card-top">
+            <div class="reference-icon">🎉</div>
+            <div class="reference-type">Sommerfest</div>
+          </div>
+
+          <div>
+            <div class="reference-name">
+              Sommernachtsfest der Showtanzgruppe Ettringen
+            </div>
+
+            <div class="reference-location">
+              Ettringen · 2026
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- REFERENZ 3 -->
+
+        <div class="reference-card">
+
+          <div class="reference-card-top">
+            <div class="reference-icon">🌍</div>
+            <div class="reference-type">Partnerschaftstreffen</div>
+          </div>
+
+          <div>
+            <div class="reference-name">
+              Partnerschaftstreffen Ettringen &amp; Dornes
+            </div>
+
+            <div class="reference-location">
+              Ettringen · 2026
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- REFERENZ 4 -->
+
+        <div class="reference-card">
+
+          <div class="reference-card-top">
+            <div class="reference-icon">🇪🇺</div>
+            <div class="reference-type">Veranstaltung</div>
+          </div>
+
+          <div>
+            <div class="reference-name">
+              SPD-Europatag
+            </div>
+
+            <div class="reference-location">
+              Kottenheim · 2026
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- REFERENZ 5 -->
+
+        <div class="reference-card">
+
+          <div class="reference-card-top">
+            <div class="reference-icon">🎸</div>
+            <div class="reference-type">Konzert</div>
+          </div>
+
+          <div>
+            <div class="reference-name">
+              Highlander Rock
+            </div>
+
+            <div class="reference-location">
+              Mayen · 2026
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- REFERENZ 6 -->
+
+        <div class="reference-card">
+
+          <div class="reference-card-top">
+            <div class="reference-icon">🏛️</div>
+            <div class="reference-type">Veranstaltung</div>
+          </div>
+
+          <div>
+            <div class="reference-name">
+              Wohnzimmerkonzert
+            </div>
+
+            <div class="reference-location">
+              Nitztal · 2026
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <!-- STEUERUNG -->
+
+    <div class="references-controls">
+
+      <div class="references-dots" id="referencesDots"></div>
+
+      <div class="references-arrows">
+
+        <button
+          class="references-arrow"
+          id="referencesPrev"
+          aria-label="Vorherige Referenz">
+          ←
+        </button>
+
+        <button
+          class="references-arrow"
+          id="referencesNext"
+          aria-label="Nächste Referenz">
+          →
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- CTA -->
+
+    <div class="references-cta">
+
+      <p>
+        Mehr über unsere bisherigen Auftritte und Veranstaltungen
+      </p>
+
+      <a href="referenzen.html" class="btn-yellow">
+        Alle Referenzen
+      </a>
+
+    </div>
+
+  </div>
+</section>
   
 <!-- STATS -->
 <div class="stats">
@@ -1158,7 +1621,273 @@ footer {
   </ul>
   <div class="fcopy">© 2026 STR!VE Partyband · Nitztal · <a href="mailto:strivepartyband@gmail.com">strivepartyband@gmail.com</a></div>
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+  const track = document.getElementById("referencesTrack");
+  const slider = document.getElementById("referencesSlider");
+  const nextBtn = document.getElementById("referencesNext");
+  const prevBtn = document.getElementById("referencesPrev");
+  const dotsContainer = document.getElementById("referencesDots");
+
+  if (!track || !slider) return;
+
+  const cards = Array.from(
+    track.querySelectorAll(".reference-card")
+  );
+
+  let current = 0;
+  let timer = null;
+  let isPaused = false;
+
+
+  function getVisibleCards() {
+
+    if (window.innerWidth <= 600) {
+      return 1;
+    }
+
+    if (window.innerWidth <= 900) {
+      return 2;
+    }
+
+    return 3;
+  }
+
+
+  function getMaxIndex() {
+
+    return Math.max(
+      0,
+      cards.length - getVisibleCards()
+    );
+
+  }
+
+
+  function getStep() {
+
+    if (!cards.length) return 0;
+
+    const cardWidth = cards[0].getBoundingClientRect().width;
+
+    const styles = window.getComputedStyle(track);
+    const gap = parseFloat(styles.columnGap || styles.gap) || 0;
+
+    return cardWidth + gap;
+
+  }
+
+
+  function createDots() {
+
+    dotsContainer.innerHTML = "";
+
+    const maxIndex = getMaxIndex();
+
+    for (let i = 0; i <= maxIndex; i++) {
+
+      const dot = document.createElement("button");
+
+      dot.className = "references-dot";
+
+      dot.setAttribute(
+        "aria-label",
+        "Referenz " + (i + 1)
+      );
+
+      dot.addEventListener("click", function () {
+
+        current = i;
+        updateSlider();
+        restartTimer();
+
+      });
+
+      dotsContainer.appendChild(dot);
+
+    }
+
+  }
+
+
+  function updateDots() {
+
+    const dots =
+      dotsContainer.querySelectorAll(".references-dot");
+
+    dots.forEach((dot, index) => {
+
+      dot.classList.toggle(
+        "active",
+        index === current
+      );
+
+    });
+
+  }
+
+
+  function updateSlider() {
+
+    const maxIndex = getMaxIndex();
+
+    if (current > maxIndex) {
+      current = maxIndex;
+    }
+
+    if (current < 0) {
+      current = 0;
+    }
+
+    const step = getStep();
+
+    track.style.transform =
+      "translateX(-" + (current * step) + "px)";
+
+    updateDots();
+
+  }
+
+
+  function next() {
+
+    const maxIndex = getMaxIndex();
+
+    if (current >= maxIndex) {
+      current = 0;
+    } else {
+      current++;
+    }
+
+    updateSlider();
+
+  }
+
+
+  function previous() {
+
+    const maxIndex = getMaxIndex();
+
+    if (current <= 0) {
+      current = maxIndex;
+    } else {
+      current--;
+    }
+
+    updateSlider();
+
+  }
+
+
+  function startTimer() {
+
+    clearInterval(timer);
+
+    timer = setInterval(function () {
+
+      if (!isPaused) {
+        next();
+      }
+
+    }, 4000);
+
+  }
+
+
+  function restartTimer() {
+
+    clearInterval(timer);
+    startTimer();
+
+  }
+
+
+  nextBtn.addEventListener("click", function () {
+
+    next();
+    restartTimer();
+
+  });
+
+
+  prevBtn.addEventListener("click", function () {
+
+    previous();
+    restartTimer();
+
+  });
+
+
+  /* Bei Hover pausieren */
+
+  slider.addEventListener("mouseenter", function () {
+    isPaused = true;
+  });
+
+  slider.addEventListener("mouseleave", function () {
+    isPaused = false;
+  });
+
+
+  /* Mobile Touch-Steuerung */
+
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  slider.addEventListener(
+    "touchstart",
+    function (e) {
+
+      touchStartX = e.changedTouches[0].screenX;
+
+    },
+    { passive: true }
+  );
+
+
+  slider.addEventListener(
+    "touchend",
+    function (e) {
+
+      touchEndX = e.changedTouches[0].screenX;
+
+      const distance =
+        touchStartX - touchEndX;
+
+      if (Math.abs(distance) < 40) return;
+
+      if (distance > 0) {
+        next();
+      } else {
+        previous();
+      }
+
+      restartTimer();
+
+    },
+    { passive: true }
+  );
+
+
+  /* Fenstergröße */
+
+  window.addEventListener("resize", function () {
+
+    createDots();
+    updateSlider();
+
+  });
+
+
+  /* Start */
+
+  createDots();
+  updateSlider();
+  startTimer();
+
+});
+</script>
 <script>
 function loadVideo() {
   const wrap = document.getElementById('videoFacade');
