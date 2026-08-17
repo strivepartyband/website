@@ -740,7 +740,46 @@ h2 em { color:var(--red); font-style:normal; }
 
     box-shadow:0 12px 36px rgba(245,200,0,.4);
 }
-  
+
+/*--- Soundcloud --*/
+/* ─── SOUNDCLOUD ─── */
+.soundcloud-wrap {
+  width: 100%;
+  max-width: 760px;
+  margin: 40px auto 0;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(26,18,8,0.08);
+}
+
+.soundcloud-wrap iframe {
+  display: block;
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+.soundcloud-credit {
+  padding: 8px 14px 10px;
+  font-size: 9px;
+  color: #aaa;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.soundcloud-credit a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.soundcloud-credit a:hover {
+  color: var(--red);
+}
+
 /* ─── TERMINE ─── */
 .termin {
   background:#fff; border:1px solid var(--border);
@@ -1184,6 +1223,32 @@ footer {
 
 <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2383079886&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/str-ve" title="STR!VE" target="_blank" style="color: #cccccc; text-decoration: none;">STR!VE</a> · <a href="https://soundcloud.com/str-ve/thol" title="Thinkin out Loud - Ed Sheeran covered by STR!VE" target="_blank" style="color: #cccccc; text-decoration: none;">Thinkin out Loud - Ed Sheeran covered by STR!VE</a></div>
 
+
+<div class="soundcloud-wrap">
+
+  <iframe
+    scrolling="no"
+    frameborder="no"
+    allow="autoplay; encrypted-media"
+    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2383079886&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+  </iframe>
+
+  <div class="soundcloud-credit">
+    <a href="https://soundcloud.com/str-ve"
+       title="STR!VE"
+       target="_blank">
+      STR!VE
+    </a>
+    ·
+    <a href="https://soundcloud.com/str-ve/thol"
+       title="Thinkin out Loud - Ed Sheeran covered by STR!VE"
+       target="_blank">
+      Thinkin out Loud - Ed Sheeran covered by STR!VE
+    </a>
+  </div>
+
+</div>
+  
 <!-- Video -->
   
 <section class="sec" id="video">
