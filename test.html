@@ -3,7 +3,7 @@
 <body>
   <pre id="out">lädt...</pre>
   <script>
-    fetch("https://www.googleapis.com/calendar/v3/calendars/DEINE_KALENDER_ID/events?key=DEIN_API_KEY&maxResults=5&singleEvents=true&orderBy=startTime&timeMin=2026-08-19T00:00:00Z")
+    fetch("https://www.googleapis.com/calendar/v3/calendars/DEINE_KALENDER_ID/events?key=AIzaSyB1l2JSeFzVgAfNBRQuA2oJr2klRmG2TZw&maxResults=5&singleEvents=true&orderBy=startTime&timeMin=2026-08-19T00:00:00Z")
       .then(r => r.json())
       .then(data => { document.getElementById("out").textContent = JSON.stringify(data, null, 2); })
       .catch(err => { document.getElementById("out").textContent = "Fehler: " + err; });
