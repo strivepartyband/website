@@ -1749,8 +1749,8 @@ footer {
             type: cal.type,
             start: s.date,
             allDay: s.allDay,
-            title: cal.type === 'public' ? (ev.summary || 'STR!VE live') : 'Geschlossene Gesellschaft',
-            location: cal.type === 'public' ? (ev.location || '') : '',
+            title: ev.summary || 'STR!VE live'
+            location: cal.type === 'public' ? ev.location || '') : '',
             note: cal.type === 'public' ? (ev.description || '') : 'Termin belegt'
           };
         }).filter(Boolean);
