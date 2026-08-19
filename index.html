@@ -829,6 +829,40 @@ h2 em { color:var(--red); font-style:normal; }
 .termine-foot { text-align:center; margin-top:36px; }
 .termine-foot p { color:var(--muted); font-size:14px; margin-bottom:16px; }
 
+/* ─── TERMINE: Überarbeitung ─── */
+.termine-intro { max-width:640px; color:var(--muted); font-size:15px; line-height:1.7; margin-top:22px; }
+.termine-legend { display:flex; flex-wrap:wrap; gap:10px 18px; align-items:center; margin:24px 0 8px; }
+.tl-item { display:inline-flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); }
+.tl-dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+.tl-dot.pub { background:#2E7D32; }
+.tl-dot.priv { background:var(--yellow); }
+
+.termin-month {
+  font-family:"Montserrat","Montserrat Fallback",sans-serif;
+  font-size:11px; font-weight:800; letter-spacing:2px; text-transform:uppercase;
+  color:var(--muted); margin:30px 0 12px; display:flex; align-items:center; gap:14px;
+}
+.termin-month::after { content:""; flex:1; height:1px; background:var(--border); }
+
+.termin-list { display:flex; flex-direction:column; gap:12px; }
+.termin.is-public::before { transform:scaleY(1); background:linear-gradient(to bottom,#4CAF50,#2E7D32); }
+.termin.is-private { opacity:0.92; }
+.t-meta { display:flex; flex-wrap:wrap; gap:6px 14px; margin-top:6px; }
+.t-chip { font-size:11px; color:var(--muted); display:inline-flex; align-items:center; gap:5px; }
+.t-right { display:flex; flex-direction:column; align-items:flex-end; gap:8px; flex-shrink:0; }
+.t-link {
+  font-family:"Montserrat","Montserrat Fallback",sans-serif;
+  font-size:11px; font-weight:800; letter-spacing:1px; text-transform:uppercase;
+  color:var(--red); text-decoration:none; border-bottom:2px solid transparent; transition:border-color .2s;
+}
+.t-link:hover { border-color:var(--red); }
+@media (max-width:600px){
+  .termin { flex-wrap:wrap; gap:14px 18px; padding:18px 20px; }
+  .t-sep { display:none; }
+  .t-right { flex-direction:row; align-items:center; width:100%; justify-content:space-between; }
+}
+
+
 /* ─── REPERTOIRE ─── */
 .rep-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:16px; margin-top:52px; }
 .rep-card {
@@ -1038,6 +1072,245 @@ footer {
   .fg-row { grid-template-columns:1fr; }
   footer { padding:40px 5% 20px; }
 }
+
+/* ─── PREIS-RECHNER ─── */
+.calc {
+  margin-top: 44px; background: var(--card); border: 1px solid var(--border);
+  border-top: 3px solid var(--yellow); border-radius: 4px; padding: 0;
+  display: grid; grid-template-columns: 1.2fr 0.8fr;
+}
+.calc-main { padding: 32px 34px; }
+.calc h3 {
+  font-family: Montserrat, sans-serif; font-size: 15px; font-weight: 800;
+  letter-spacing: 1.6px; text-transform: uppercase; margin-bottom: 6px;
+}
+.calc-hint { font-size: 14px; color: var(--muted); margin-bottom: 26px; max-width: 44ch; }
+.calc-row { margin-bottom: 24px; }
+.calc-row > span.lbl {
+  display: block; font-family: Montserrat, sans-serif; font-size: 11px; font-weight: 700;
+  letter-spacing: 1.6px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
+}
+.opt-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.opt {
+  border: 1px solid var(--border); background: transparent; border-radius: 3px;
+  padding: 10px 14px; font-family: "Open Sans", sans-serif; font-size: 14px;
+  color: var(--text); cursor: pointer; transition: border-color .15s, background .15s;
+}
+.opt:hover { border-color: var(--yellow); }
+.opt[aria-pressed="true"] {
+  background: var(--dark); border-color: var(--dark); color: #fff;
+}
+.opt[aria-pressed="true"] .opt-sub { color: rgba(255,255,255,.65); }
+.opt-sub { display: block; font-size: 11px; color: var(--muted); margin-top: 2px; }
+.calc-km { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.calc-km input {
+  width: 110px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 3px;
+  font-family: "Open Sans", sans-serif; font-size: 14px; color: var(--text); background: var(--card);
+}
+.calc-km input:focus { outline: none; border-color: var(--yellow); }
+.calc-km small { color: var(--muted); font-size: 13px; }
+.calc-out {
+  background: var(--dark); color: #fff; padding: 32px 30px;
+  display: flex; flex-direction: column; justify-content: flex-start;
+}
+.calc-out .co-lbl {
+  font-family: Montserrat, sans-serif; font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--yellow);
+}
+.calc-out .co-price {
+  font-family: Montserrat, sans-serif; font-weight: 900; font-size: 40px; line-height: 1.1;
+  margin: 8px 0 4px; color: #fff;
+}
+.calc-out .co-sub { font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 20px; }
+.calc-out ul { list-style: none; margin-bottom: 22px; }
+.calc-out li {
+  font-size: 13px; color: rgba(255,255,255,0.85); padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; gap: 12px;
+}
+.calc-out .btn-yellow { width: 100%; justify-content: center; text-align: center; }
+.calc-note { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 14px; line-height: 1.6; }
+
+/* ─── NEU: FILTERBARE SONGLISTE ─── */
+.song-filter { margin-top: 34px; }
+.sf-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 20px; }
+.sf-search {
+  flex: 1 1 220px; min-width: 200px; padding: 12px 16px; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--card); font-family: "Open Sans", sans-serif;
+  font-size: 14px; color: var(--text); outline: none;
+}
+.sf-search:focus { border-color: var(--yellow); box-shadow: 0 0 0 3px rgba(245,200,0,0.25); }
+.sf-chip {
+  border: 1px solid var(--border); background: var(--card); border-radius: 999px;
+  padding: 10px 16px; font-family: Montserrat, sans-serif; font-size: 12px; font-weight: 700;
+  letter-spacing: .6px; color: var(--muted); cursor: pointer; transition: all .2s;
+}
+.sf-chip:hover { border-color: var(--yellow); color: var(--text); }
+.sf-chip.active { background: var(--dark); border-color: var(--dark); color: var(--yellow); }
+.sf-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.sf-item {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px;
+  transition: transform .18s, border-color .18s;
+}
+.sf-item:hover { transform: translateY(-2px); border-color: var(--yellow); }
+.sf-title { font-weight: 600; font-size: 14px; }
+.sf-artist { display: block; font-size: 12px; color: var(--muted); }
+.sf-genre {
+  font-family: Montserrat, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--red); white-space: nowrap;
+}
+.sf-count { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+.sf-empty { padding: 22px; text-align: center; color: var(--muted); font-size: 14px; }
+
+/* ─── NEU: STICKY MOBILE BUCHUNGS-LEISTE ─── */
+.book-bar { display: none; }
+@media (max-width: 900px) {
+  .calc { grid-template-columns: 1fr; }
+  .calc-main { padding: 26px 20px; }
+  .calc-out { padding: 26px 20px; }
+  .book-bar {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 250;
+    gap: 10px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(26,18,8,0.97); backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .book-bar a {
+    flex: 1; text-align: center; padding: 13px 10px; border-radius: 999px;
+    font-family: Montserrat, sans-serif; font-weight: 800; font-size: 13px; text-decoration: none;
+  }
+  .book-bar .bb-primary { background: var(--yellow); color: var(--dark); }
+  .book-bar .bb-ghost { border: 1px solid rgba(255,255,255,0.35); color: #fff; }
+  body { padding-bottom: 74px; }
+}
+
+
+
+/* ─── COOKIE-BANNER / EINWILLIGUNG ─── */
+.cookie-banner {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 3000;
+  background: var(--dark);
+  color: #fff;
+  border-top: 3px solid var(--yellow);
+  box-shadow: 0 -10px 40px rgba(0,0,0,0.25);
+  display: none;
+}
+.cookie-banner.show { display: flex; }
+.cookie-banner-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 22px 5%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: space-between;
+}
+.cookie-banner p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.9);
+  flex: 1;
+}
+.cookie-banner a { color: var(--yellow); text-decoration: underline; }
+.cookie-banner a:hover { color: var(--yellow2); }
+.cookie-banner-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.cb-btn {
+  border: none; cursor: pointer;
+  padding: 11px 18px; border-radius: 3px;
+  font-family: "Montserrat", "Montserrat Fallback", sans-serif;
+  font-size: 12px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
+  transition: all .2s;
+}
+.cb-btn-primary { background: var(--yellow); color: var(--dark); }
+.cb-btn-primary:hover { background: var(--yellow2); }
+.cb-btn-ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+.cb-btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.05); }
+.cb-btn-secondary { background: rgba(255,255,255,0.12); color: #fff; }
+.cb-btn-secondary:hover { background: rgba(255,255,255,0.2); }
+
+@media (max-width: 900px) {
+  .cookie-banner-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .cookie-banner-actions { width: 100%; }
+  .cb-btn { flex: 1; }
+}
+
+.cookie-modal {
+  position: fixed; inset: 0; z-index: 3100;
+  background: rgba(0,0,0,0.55);
+  display: none; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.cookie-modal.show { display: flex; }
+.cookie-modal-inner {
+  background: var(--card);
+  color: var(--text);
+  max-width: 520px; width: 100%;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+.cookie-modal h3 {
+  font-family: "Montserrat", "Montserrat Fallback", sans-serif;
+  font-size: 20px; font-weight: 800; margin-bottom: 6px;
+}
+.cookie-modal-intro {
+  font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 22px;
+}
+.cookie-category {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px 0; border-bottom: 1px solid var(--border);
+}
+.cookie-category:last-child { border-bottom: none; }
+.cc-info { flex: 1; }
+.cc-title {
+  font-family: "Montserrat", "Montserrat Fallback", sans-serif;
+  font-weight: 700; font-size: 14px; margin-bottom: 4px;
+}
+.cc-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+.cc-toggle {
+  appearance: none;
+  width: 44px; height: 24px; border-radius: 999px;
+  background: rgba(26,18,8,0.2);
+  position: relative; cursor: pointer;
+  flex-shrink: 0;
+  transition: background .2s;
+}
+.cc-toggle:checked { background: var(--yellow); }
+.cc-toggle::after {
+  content: ""; position: absolute; top: 2px; left: 2px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: transform .2s;
+}
+.cc-toggle:checked::after { transform: translateX(20px); }
+.cc-toggle:disabled { opacity: 0.5; cursor: not-allowed; }
+.cookie-modal-actions {
+  display: flex; gap: 10px; justify-content: flex-end; margin-top: 24px;
+}
+.cookie-modal-actions .cb-btn { padding: 11px 20px; }
+
+.video-consent-overlay {
+  position: absolute; inset: 0;
+  background: rgba(26,18,8,0.85);
+  color: #fff;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 16px; padding: 24px; text-align: center;
+}
+.video-consent-overlay p {
+  max-width: 320px; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.85);
+}
+.video-consent-overlay button {
+  background: var(--yellow); color: var(--dark); border: none;
+  padding: 12px 22px; border-radius: 3px;
+  font-family: "Montserrat", "Montserrat Fallback", sans-serif;
+  font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: .5px;
+  cursor: pointer;
+}
+.video-consent-overlay button:hover { background: var(--yellow2); }
+
 </style>
 </head>
 
@@ -1303,49 +1576,325 @@ footer {
   <div class="sec-inner">
     <div class="tag">Kalender 2026</div>
     <h2>Kommende<br><em>Auftritte</em></h2>
-      
-      <div class="termin">
-        <div class="t-date"><div class="t-day">12</div><div class="t-mon">Sep 2026</div></div>
-        <div class="t-sep"></div>
-        <div class="t-inf">
-          <div class="t-name">Konzert zur Kirmes Ettringen </div>
-          <div class="t-loc">📍 Eventlocation Kaiserhof, 56729 Ettringen &nbsp;·&nbsp;  wird bekanntgegeben</div>
+    <p class="termine-intro">Öffentliche Konzerte sind für alle zugänglich – kommt vorbei und erlebt uns live. Private Feiern listen wir nur als belegte Termine, damit ihr seht, wann wir schon ausgebucht sind.</p>
+
+    <div class="termine-legend">
+      <span class="tl-item"><span class="tl-dot pub"></span> Öffentliches Konzert – jeder ist willkommen</span>
+      <span class="tl-item"><span class="tl-dot priv"></span> Geschlossene Veranstaltung – Termin belegt</span>
+    </div>
+
+    <!-- Termine werden aus dem Google Kalender geladen.
+         Bis die Daten da sind (oder falls Google nicht erreichbar ist),
+         bleibt der statische Fallback unten stehen. -->
+    <div id="termin-status" class="termin-status" hidden></div>
+
+    <div id="termin-container">
+      <div class="termin-month">September 2026</div>
+      <div class="termin-list">
+        <div class="termin is-public">
+          <div class="t-date"><div class="t-day">12</div><div class="t-mon">Sep 2026</div></div>
+          <div class="t-sep"></div>
+          <div class="t-inf">
+            <div class="t-name">Konzert zur Kirmes Ettringen</div>
+            <div class="t-meta">
+              <span class="t-chip">Eventlocation Kaiserhof, 56729 Ettringen</span>
+              <span class="t-chip">Beginn wird noch bekanntgegeben</span>
+            </div>
+          </div>
+          <div class="t-right">
+            <span class="tbadge bf">Öffentlich</span>
+            <a class="t-link" href="https://maps.google.com/?q=Eventlocation+Kaiserhof+56729+Ettringen" target="_blank" rel="noopener">Route planen</a>
+          </div>
         </div>
-        <span class="tbadge bk">Kirmes</span>
       </div>
-      <div class="termin">
-        <div class="t-date"><div class="t-day">23</div><div class="t-mon">Okt 2026</div></div>
-        <div class="t-sep"></div>
-        <div class="t-inf">
-          <div class="t-name">Oktoberfest 🔒</div>
-          <div class="t-loc">📍 privat &nbsp;·&nbsp;  19:00 Uhr</div>
+
+      <div class="termin-month">Oktober 2026</div>
+      <div class="termin-list">
+        <div class="termin is-private">
+          <div class="t-date"><div class="t-day">23</div><div class="t-mon">Okt 2026</div></div>
+          <div class="t-sep"></div>
+          <div class="t-inf">
+            <div class="t-name">Geschlossene Gesellschaft</div>
+            <div class="t-meta">
+              <span class="t-chip">Termin belegt</span>
+              <span class="t-chip">ab 19:00 Uhr</span>
+            </div>
+          </div>
+          <div class="t-right"><span class="tbadge bp">Privat</span></div>
         </div>
-        <span class="tbadge bp">Privat</span>
-      </div>
-      <div class="termin">
-        <div class="t-date"><div class="t-day">24</div><div class="t-mon">Okt 2026</div></div>
-        <div class="t-sep"></div>
-        <div class="t-inf">
-          <div class="t-name">CDU Döppekooche-Essen 🔒</div>
-          <div class="t-loc">📍 privat &nbsp;·&nbsp;  19:00 Uhr</div>
+        <div class="termin is-private">
+          <div class="t-date"><div class="t-day">24</div><div class="t-mon">Okt 2026</div></div>
+          <div class="t-sep"></div>
+          <div class="t-inf">
+            <div class="t-name">Geschlossene Gesellschaft</div>
+            <div class="t-meta">
+              <span class="t-chip">Termin belegt</span>
+              <span class="t-chip">ab 19:00 Uhr</span>
+            </div>
+          </div>
+          <div class="t-right"><span class="tbadge bp">Privat</span></div>
         </div>
-        <span class="tbadge bp">Privat</span>
       </div>
+    </div>
+
+    <div class="termin-month">Noch frei</div>
+    <div class="termin-list">
       <a href="#kontakt" class="termin-add">
-        <div class="ta-l"><div class="ta-t"> Euer Event hier?</div><div class="ta-s">Jetzt unverbindlich anfragen – noch freie Termine!</div></div>
+        <div class="ta-l"><div class="ta-t">Euer Event hier?</div><div class="ta-s">Für 2026 und 2027 sind noch Wochenenden frei – unverbindlich anfragen.</div></div>
         <div class="ta-arr">→</div>
       </a>
       <a href="referenzen.html" class="termin-add">
-        <div class="ta-l"><div class="ta-t"> Referenzen</div><div class="ta-s">Hier haben wir schon gespielt.</div></div>
+        <div class="ta-l"><div class="ta-t">Vergangene Auftritte</div><div class="ta-s">Wo wir bisher gespielt haben – Referenzen ansehen.</div></div>
         <div class="ta-arr">→</div>
       </a>
     </div>
+
+
     <div class="termine-foot">
-      <p>Noch freie Termine für 2026 – jetzt sichern bevor sie weg sind!</p>
+      <p>Termin im Kopf? Sagt uns Datum und Anlass – wir melden uns meist am selben Tag zurück.</p>
       <a href="#kontakt" class="btn-yellow">Termin anfragen</a>
     </div>
   </div>
 </div>
+
+<script type="application/ld+json" id="termine-jsonld">
+{
+  "@context": "https://schema.org",
+  "@graph": [{
+    "@type": "Event",
+    "name": "STR!VE live – Konzert zur Kirmes Ettringen",
+    "startDate": "2026-09-12",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Eventlocation Kaiserhof",
+      "address": {
+        "@type": "PostalAddress",
+        "postalCode": "56729",
+        "addressLocality": "Ettringen",
+        "addressCountry": "DE"
+      }
+    },
+    "performer": { "@type": "MusicGroup", "name": "STR!VE Partyband" }
+  }]
+}
+</script>
+
+<style>
+.termin-status { font-size:13px; color:var(--muted); margin:18px 0 4px; }
+.termin-status.err { color:#e0a03a; }
+.termin-updated { font-size:12px; color:var(--muted); opacity:.75; margin-top:14px; }
+.termin-skeleton { height:78px; border-radius:4px; background:rgba(255,255,255,.05); margin-bottom:10px; animation:tsk 1.2s ease-in-out infinite alternate; }
+@keyframes tsk { from{opacity:.45} to{opacity:.9} }
+</style>
+
+<script>
+/* ------------------------------------------------------------------
+   TERMINE AUS GOOGLE KALENDER
+   ------------------------------------------------------------------
+   Einrichtung (einmalig):
+
+   1) Zwei Google-Kalender anlegen:
+      a) "STR!VE Öffentlich"  -> Freigabe: "Öffentlich verfügbar machen"
+                                 + "Alle Details zu Terminen sehen"
+                                 (hier nur Konzerte eintragen, die jeder sehen darf)
+      b) "STR!VE Belegt"      -> Freigabe: "Öffentlich verfügbar machen"
+                                 + "Nur frei/gebucht (Details ausblenden)"
+                                 (private Feiern – Google gibt hier KEINE
+                                  Titel/Orte heraus, nur das Datum)
+
+   2) In den Kalender-Einstellungen jeweils die "Kalender-ID" kopieren
+      und unten bei CAL_CFG.calendars eintragen.
+
+   3) API-Key: https://console.cloud.google.com -> Projekt -> APIs & Dienste
+      -> "Google Calendar API" aktivieren -> Anmeldedaten -> API-Schlüssel.
+      WICHTIG, weil der Code auf GitHub öffentlich ist:
+        - Schlüssel einschränken -> "Websites (HTTP-Referrer)"
+          -> https://www.strive-partyband.de/*  (und ggf. euer github.io-Domain)
+        - API-Einschränkung -> nur "Google Calendar API"
+      Der Schlüssel gibt dann nur Lesezugriff auf ohnehin öffentliche
+      Kalender – er ist damit unkritisch, auch wenn er im Quelltext steht.
+
+   Solange unten kein Key/keine Kalender-ID steht, bleibt die statische
+   Liste im HTML stehen (nichts geht kaputt).
+------------------------------------------------------------------- */
+(function () {
+  var CAL_CFG = {
+    apiKey: '',                 // <-- hier den eingeschränkten API-Key eintragen
+    calendars: [
+      // { id: 'xxxxx@group.calendar.google.com', type: 'public'  },
+      // { id: 'yyyyy@group.calendar.google.com', type: 'private' }
+    ],
+    maxEvents: 12,              // wie viele Termine maximal anzeigen
+    refreshMinutes: 30,         // automatischer Refresh im offenen Tab
+    cacheMinutes: 15            // Zwischenspeicher, spart Anfragen
+  };
+
+  var container = document.getElementById('termin-container');
+  var statusEl  = document.getElementById('termin-status');
+  if (!container) return;
+  if (!CAL_CFG.apiKey || !CAL_CFG.calendars.length) return; // Fallback bleibt stehen
+
+  var MON = ['Jan','Feb','Mrz','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'];
+  var MON_LONG = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+  var CACHE_KEY = 'strive_cal_cache_v1';
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c];
+    });
+  }
+
+  function parseStart(ev) {
+    var raw = (ev.start && (ev.start.dateTime || ev.start.date)) || null;
+    if (!raw) return null;
+    return { date: new Date(raw), allDay: !ev.start.dateTime };
+  }
+
+  function timeLabel(d) {
+    return ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2) + ' Uhr';
+  }
+
+  function fetchCalendar(cal) {
+    var now = new Date().toISOString();
+    var url = 'https://www.googleapis.com/calendar/v3/calendars/'
+      + encodeURIComponent(cal.id) + '/events'
+      + '?key=' + encodeURIComponent(CAL_CFG.apiKey)
+      + '&timeMin=' + encodeURIComponent(now)
+      + '&singleEvents=true&orderBy=startTime&maxResults=' + CAL_CFG.maxEvents;
+
+    return fetch(url, { cache: 'no-store' })
+      .then(function (r) {
+        if (!r.ok) return r.text().then(function (t) { throw new Error(cal.id + ' [' + r.status + '] ' + t); });
+        return r.json();
+      })
+      .then(function (data) {
+        return (data.items || []).map(function (ev) {
+          var s = parseStart(ev);
+          if (!s) return null;
+          return {
+            type: cal.type,
+            start: s.date,
+            allDay: s.allDay,
+            title: cal.type === 'public' ? (ev.summary || 'STR!VE live') : 'Geschlossene Gesellschaft',
+            location: cal.type === 'public' ? (ev.location || '') : '',
+            note: cal.type === 'public' ? (ev.description || '') : 'Termin belegt'
+          };
+        }).filter(Boolean);
+      });
+  }
+
+  function render(events) {
+    if (!events.length) {
+      container.innerHTML = '<div class="termin-list"><div class="termin"><div class="t-inf">'
+        + '<div class="t-name">Aktuell keine öffentlichen Termine eingetragen</div>'
+        + '<div class="t-meta"><span class="t-chip">Neue Termine folgen in Kürze</span></div>'
+        + '</div></div></div>';
+      return;
+    }
+
+    var html = '', lastMonth = '';
+    events.slice(0, CAL_CFG.maxEvents).forEach(function (e) {
+      var d = e.start;
+      var monthKey = MON_LONG[d.getMonth()] + ' ' + d.getFullYear();
+      if (monthKey !== lastMonth) {
+        if (lastMonth) html += '</div>';
+        html += '<div class="termin-month">' + esc(monthKey) + '</div><div class="termin-list">';
+        lastMonth = monthKey;
+      }
+
+      var isPub = e.type === 'public';
+      var chips = [];
+      if (isPub && e.location) chips.push(esc(e.location));
+      if (!isPub) chips.push('Termin belegt');
+      chips.push(e.allDay ? 'Beginn wird noch bekanntgegeben' : 'ab ' + timeLabel(d));
+
+      html += '<div class="termin ' + (isPub ? 'is-public' : 'is-private') + '">'
+        + '<div class="t-date"><div class="t-day">' + d.getDate() + '</div>'
+        + '<div class="t-mon">' + MON[d.getMonth()] + ' ' + d.getFullYear() + '</div></div>'
+        + '<div class="t-sep"></div>'
+        + '<div class="t-inf"><div class="t-name">' + esc(e.title) + '</div>'
+        + '<div class="t-meta">' + chips.map(function (c) { return '<span class="t-chip">' + c + '</span>'; }).join('') + '</div></div>'
+        + '<div class="t-right"><span class="tbadge ' + (isPub ? 'bf">Öffentlich' : 'bp">Privat') + '</span>'
+        + (isPub && e.location
+            ? '<a class="t-link" href="https://maps.google.com/?q=' + encodeURIComponent(e.location) + '" target="_blank" rel="noopener">Route planen</a>'
+            : '')
+        + '</div></div>';
+    });
+    if (lastMonth) html += '</div>';
+
+    html += '<div class="termin-updated">Automatisch aus unserem Kalender aktualisiert – Stand '
+      + new Date().toLocaleString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+      + ' Uhr</div>';
+
+    container.innerHTML = html;
+    updateJsonLd(events);
+  }
+
+  function updateJsonLd(events) {
+    var node = document.getElementById('termine-jsonld');
+    if (!node) return;
+    var list = events.filter(function (e) { return e.type === 'public'; }).map(function (e) {
+      var obj = {
+        '@type': 'Event',
+        name: 'STR!VE live – ' + e.title,
+        startDate: e.start.toISOString().slice(0, e.allDay ? 10 : 19),
+        eventStatus: 'https://schema.org/EventScheduled',
+        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        performer: { '@type': 'MusicGroup', name: 'STR!VE Partyband' }
+      };
+      if (e.location) obj.location = { '@type': 'Place', name: e.location, address: e.location };
+      return obj;
+    });
+    if (!list.length) return;
+    node.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': list });
+  }
+
+  function readCache() {
+    try {
+      var raw = localStorage.getItem(CACHE_KEY);
+      if (!raw) return null;
+      var c = JSON.parse(raw);
+      if (Date.now() - c.t > CAL_CFG.cacheMinutes * 60000) return null;
+      c.events.forEach(function (e) { e.start = new Date(e.start); });
+      return c.events;
+    } catch (err) { return null; }
+  }
+
+  function load(force) {
+    if (!force) {
+      var cached = readCache();
+      if (cached) { render(cached); return; }
+    }
+    if (statusEl) { statusEl.hidden = false; statusEl.className = 'termin-status'; statusEl.textContent = 'Termine werden geladen …'; }
+
+    Promise.all(CAL_CFG.calendars.map(fetchCalendar))
+      .then(function (lists) {
+        var all = [].concat.apply([], lists).sort(function (a, b) { return a.start - b.start; });
+        try { localStorage.setItem(CACHE_KEY, JSON.stringify({ t: Date.now(), events: all })); } catch (err) {}
+        if (statusEl) statusEl.hidden = true;
+        render(all);
+      })
+      .catch(function (err) {
+        console.warn('Kalender konnte nicht geladen werden:', err);
+        if (statusEl) {
+          statusEl.hidden = false;
+          statusEl.className = 'termin-status err';
+          statusEl.textContent = 'Kalender gerade nicht erreichbar – unten stehen die zuletzt bekannten Termine.';
+        }
+      });
+  }
+
+  load(false);
+  setInterval(function () { load(true); }, CAL_CFG.refreshMinutes * 60000);
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) load(false);
+  });
+})();
+</script>
+
+
 
 <!-- BAND -->
 <div class="sec-warm" id="band">
@@ -1418,15 +1967,16 @@ footer {
     </div>
     <div>
       <p style="font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Bekannte Titel im Set u.a.:</p>
-      <div class="songs-wrap">
-        <span class="song">Summer of '69</span>
-        <span class="song">Livin' on a Prayer</span>
-        <span class="song">Zombie</span>
-        <span class="song">Radio Gaga</span>
-        <span class="song">Country Roads</span>
-        <span class="song">Holiday</span>
-        <span class="song">Shut up and Dance</span>
-        <span class="song">…und viele mehr!</span>
+      <div class="song-filter">
+        <div class="sf-bar">
+          <input type="search" class="sf-search" id="sfSearch" placeholder="Song oder Interpret suchen…" aria-label="Songs durchsuchen">
+          <button class="sf-chip active" data-genre="alle">Alle</button>
+          <button class="sf-chip" data-genre="Rock">Rock</button>
+          <button class="sf-chip" data-genre="Moderne Hits">Moderne Hits</button>
+          <button class="sf-chip" data-genre="Party">Party</button>
+        </div>
+        <div class="sf-count" id="sfCount"></div>
+        <div class="sf-list" id="sfList"></div>
       </div>
       <p style="margin-top:16px;font-size:13px;color:var(--muted);">Spezialwünsche? Wir lernen auch gerne Songs extra für euch!</p>
     </div>
@@ -1439,15 +1989,54 @@ footer {
   <h2>Was kostet eine<br><em> Coverband?</em></h2>
   <div class="about-grid">
     <div class="about-text">
-      <p>Wir wissen: Das Budget spielt bei jeder Feier eine Rolle. Deshalb sind wir transparent.</p>
-      <p>Unser Basispaket startet <strong>ab 600 €</strong> – mit allem, was ihr braucht: professioneller PA-Anlage, Stimmiger Beleuchtung, und einem unvergesslichen Abend.</p>
-      <p>Für besondere Wünsche – zum Beispiel längere Spieldauer – schnüren wir euch ein <strong>individuelles Paket.</strong></p>
-      <p> Einfach melden, <strong>wir antworten schnell.</strong>.</p>
+      <p>Jeder Anlass ist anders – deshalb gibt es bei uns kein „Einheitsangebot“. Ob <strong>Kirmes, Feuerwehrfest, Firmenfeier oder private Party</strong>: Wählt unten euren Anlass und die gewünschte Spieldauer aus, ergänzt die Anfahrt und seht sofort einen realistischen Richtwert.</p>
+      <p>Alle Preise beinhalten <strong>PA-Anlage, Beleuchtung, Auf- und Abbau</strong> sowie die Reisekosten ab Mayen. Extras wie erweiterte Lichtshow oder Aufbau am Vortag könnt ihr flexibel hinzubuchen.</p>
+      <p>Der Rechner zeigt eine unverbindliche Planungszahl – für ein festes Angebot meldet euch einfach bei uns. <strong>Wir antworten schnell.</strong></p>
     </div>
     <div class="hero-btns">
         <a href="#kontakt" class="btn-yellow">Jetzt buchen</a>
         <a href="#termine" class="btn-ghost-dark">Nächste Auftritte</a>
       </div>
+  </div>
+
+  <!-- Preis-Rechner (Preise zentral im Skript am Seitenende anpassbar) -->
+  <div class="calc">
+    <div class="calc-main">
+      <h3>Preis-Rechner</h3>
+      <p class="calc-hint">Anlass und Spieldauer wählen, Entfernung eintragen – ihr seht sofort einen realistischen Richtwert.</p>
+
+      <div class="calc-row">
+        <span class="lbl">Anlass</span>
+        <div class="opt-grid" id="calcAnlass"></div>
+      </div>
+
+      <div class="calc-row">
+        <span class="lbl">Spieldauer</span>
+        <div class="opt-grid" id="calcDauer"></div>
+      </div>
+
+      <div class="calc-row">
+        <span class="lbl">Anfahrt ab Mayen</span>
+        <div class="calc-km">
+          <input type="number" id="calcKm" min="0" max="400" step="5" value="30" inputmode="numeric"> <small>km einfache Strecke &middot; die ersten 30 km sind inklusive</small>
+        </div>
+      </div>
+
+      <div class="calc-row">
+        <span class="lbl">Extras</span>
+        <div class="opt-grid" id="calcExtras"></div>
+      </div>
+    </div>
+
+    <div class="calc-out">
+      <div class="co-lbl">Richtwert</div>
+      <div class="co-price" id="calcPrice">ab 600 &euro;</div>
+      <div class="co-sub" id="calcRange">inkl. PA-Anlage, Licht &amp; Auf-/Abbau</div>
+      <ul id="calcBreakdown"></ul>
+      <a href="#kontakt" class="btn-yellow" id="calcCta">Angebot anfordern</a>
+      <p class="calc-note">Unverbindlicher Richtwert. Der finale Preis h&auml;ngt von Datum, Location und Aufwand ab &ndash; wir melden uns schnell mit einem festen Angebot.</p>
+    </div>
+  </div>
 </section>
 
 <!-- KONTAKT -->
@@ -1548,9 +2137,59 @@ footer {
     <li><a href="#preise">Preise</a></li>
     <li><a href="impressum.html">Impressum</a></li>
     <li><a href="daten.html">Datenschutzerklärung</a></li>
+    <li><a href="#" id="cookieSettingsLink">Cookie-Einstellungen</a></li>
   </ul>
   <div class="fcopy">© 2026 STR!VE Partyband · Nitztal · <a href="mailto:strivepartyband@gmail.com">strivepartyband@gmail.com</a></div>
 </footer>
+
+<!-- COOKIE-BANNER -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie-Hinweis">
+  <div class="cookie-banner-inner">
+    <p>
+      Wir verwenden Cookies und ähnliche Technologien, um diese Website zu betreiben und Inhalte von Drittanbietern (z. B. YouTube) anzuzeigen.
+      <a href="daten.html" target="_blank">Datenschutzerklärung</a>
+    </p>
+    <div class="cookie-banner-actions">
+      <button class="cb-btn cb-btn-primary" type="button" onclick="acceptCookies('all')">Alle akzeptieren</button>
+      <button class="cb-btn cb-btn-ghost" type="button" onclick="acceptCookies('necessary')">Nur notwendige</button>
+      <button class="cb-btn cb-btn-secondary" type="button" onclick="openCookieSettings()">Einstellungen</button>
+    </div>
+  </div>
+</div>
+
+<!-- COOKIE-MODAL -->
+<div class="cookie-modal" id="cookieModal" role="dialog" aria-modal="true" aria-label="Cookie-Einstellungen">
+  <div class="cookie-modal-inner">
+    <h3>Cookie-Einstellungen</h3>
+    <p class="cookie-modal-intro">Wähle aus, welche Cookies du erlaubst. Notwendige Cookies sind für den Betrieb der Seite immer aktiv.</p>
+    <div class="cookie-category">
+      <div class="cc-info">
+        <div class="cc-title">Notwendig</div>
+        <div class="cc-desc">Für die Grundfunktionen der Website (z. B. Navigation, Kontaktformular).</div>
+      </div>
+      <input class="cc-toggle" type="checkbox" checked disabled aria-label="Notwendige Cookies sind immer aktiv">
+    </div>
+    <div class="cookie-category">
+      <div class="cc-info">
+        <div class="cc-title">Statistik &amp; Marketing</div>
+        <div class="cc-desc">Hilft uns zu verstehen, wie Besucher die Website nutzen (z. B. Google Analytics, Meta Pixel).</div>
+      </div>
+      <input class="cc-toggle" type="checkbox" id="toggleStats">
+    </div>
+    <div class="cookie-category">
+      <div class="cc-info">
+        <div class="cc-title">Externe Medien</div>
+        <div class="cc-desc">Inhalte von Drittanbietern wie YouTube-Videos oder eingebettete Social-Media-Feeds.</div>
+      </div>
+      <input class="cc-toggle" type="checkbox" id="toggleExternal">
+    </div>
+    <div class="cookie-modal-actions">
+      <button class="cb-btn cb-btn-ghost" type="button" onclick="closeCookieModal()">Abbrechen</button>
+      <button class="cb-btn cb-btn-primary" type="button" onclick="saveCookieSettings()">Auswahl speichern</button>
+    </div>
+  </div>
+</div>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -1776,6 +2415,11 @@ document.addEventListener("DOMContentLoaded", function () {
 <script>
 function loadVideo() {
   const wrap = document.getElementById('videoFacade');
+  const c = window.STRIVE_CONSENT || {};
+  if (!c.external) {
+    wrap.innerHTML = '<div class="video-consent-overlay"><p>Dieses Video wird von YouTube geladen. Bitte aktiviere „Externe Medien“ in den Cookie-Einstellungen.</p><button type="button" onclick="openCookieSettings()">Cookie-Einstellungen öffnen</button></div>';
+    return;
+  }
   wrap.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/akB_7GcP-sY?si=Wcw2T3JqYprHL0Mm&autoplay=1" title="STR!VE Partyband Live" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>`;
 }
 
@@ -1800,3 +2444,260 @@ window.addEventListener("scroll", () => {
 
 
 </script>
+
+<!-- NEU: Sticky Buchungsleiste (mobil) -->
+<div class="book-bar">
+  <a class="bb-ghost" href="tel:+491778477660">Anrufen</a>
+  <a class="bb-primary" href="#kontakt">Jetzt anfragen</a>
+</div>
+
+<script>
+/* ─── Preis-Rechner ────────────────────────────────────────────────────
+   Alles hier zentral anpassbar: Anlässe, Dauer-Stufen, Extras, Anfahrt. */
+const PREISE = {
+  /* Basis gilt für 2 Std. Spielzeit, inkl. PA & Licht. */
+  basis: 600,
+  freieKm: 30,
+  proKm: 0.9,
+
+  /* Anlass: aufschlag = Zu-/Abschlag in €, dauer = vorausgewählte Stufe */
+  anlaesse: [
+    { id: 'kirmes',   label: 'Kirmes / Volksfest',   sub: 'Bühne meist gestellt', aufschlag: 0,   dauer: 3 },
+    { id: 'feuerwehr',label: 'Feuerwehr- / Vereinsfest', sub: 'Zelt & Halle',      aufschlag: 0,   dauer: 3 },
+    { id: 'privat',   label: 'Privatfeier',          sub: 'Geburtstag, Hochzeit',   aufschlag: 0,   dauer: 2 },
+    { id: 'firma_s',  label: 'Firmenfeier klein',    sub: 'bis ca. 100 Gäste',      aufschlag: 100, dauer: 2 },
+    { id: 'firma_l',  label: 'Firmenfeier groß',     sub: 'ab ca. 100 Gäste',      aufschlag: 250, dauer: 2.5 }
+  ],
+
+  /* Spieldauer-Stufen: preis = Gesamtpreis der Musik (ohne Anfahrt/Extras) */
+  dauern: [
+    { std: 1,   label: '1 Std.',   sub: '1 Set',        preis: 450 },
+    { std: 1.5, label: '1,5 Std.', sub: '2 kurze Sets', preis: 520 },
+    { std: 2,   label: '2 Std.',   sub: '2 Sets',       preis: 600 },
+    { std: 2.5, label: '2,5 Std.', sub: '2 lange Sets', preis: 680 },
+    { std: 3,   label: '3 Std.',   sub: '3 Sets',       preis: 750 },
+    { std: 3.5, label: '3,5 Std.', sub: '4 Sets',       preis: 830 }
+  ],
+
+  extras: [
+    { id: 'light', label: 'Erweiterte Lichtshow',      preis: 150 },
+    { id: 'mic',   label: 'Technik für Reden & Playlist', preis: 100 },
+    { id: 'day',   label: 'Aufbau am Vortag',          preis: 120 }
+  ]
+};
+
+(function () {
+  const elA = document.getElementById('calcAnlass');
+  if (!elA) return;
+  const elD = document.getElementById('calcDauer');
+  const elE = document.getElementById('calcExtras');
+  const elKm = document.getElementById('calcKm');
+  const euro = n => Math.round(n).toLocaleString('de-DE') + ' €';
+
+  let anlass = PREISE.anlaesse[0];
+  let dauer  = PREISE.dauern.find(d => d.std === anlass.dauer);
+  const gewaehlteExtras = new Set();
+
+  function btn(label, sub) {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'opt'; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = label + (sub ? '<span class="opt-sub">' + sub + '</span>' : '');
+    return b;
+  }
+
+  PREISE.anlaesse.forEach(a => {
+    const b = btn(a.label, a.sub);
+    b.addEventListener('click', () => {
+      anlass = a;
+      dauer = PREISE.dauern.find(d => d.std === a.dauer) || dauer;
+      render();
+    });
+    a._el = b; elA.appendChild(b);
+  });
+
+  PREISE.dauern.forEach(d => {
+    const b = btn(d.label, d.sub);
+    b.addEventListener('click', () => { dauer = d; render(); });
+    d._el = b; elD.appendChild(b);
+  });
+
+  PREISE.extras.forEach(x => {
+    const b = btn(x.label, '+ ' + euro(x.preis));
+    b.addEventListener('click', () => {
+      gewaehlteExtras.has(x.id) ? gewaehlteExtras.delete(x.id) : gewaehlteExtras.add(x.id);
+      render();
+    });
+    x._el = b; elE.appendChild(b);
+  });
+
+  function render() {
+    PREISE.anlaesse.forEach(a => a._el.setAttribute('aria-pressed', String(a === anlass)));
+    PREISE.dauern.forEach(d => d._el.setAttribute('aria-pressed', String(d === dauer)));
+    PREISE.extras.forEach(x => x._el.setAttribute('aria-pressed', String(gewaehlteExtras.has(x.id))));
+
+    const km = Math.max(0, Math.min(400, Number(elKm.value) || 0));
+    const fahrt = Math.max(0, km - PREISE.freieKm) * PREISE.proKm;
+    const extras = PREISE.extras.filter(x => gewaehlteExtras.has(x.id));
+    const extraSumme = extras.reduce((s, x) => s + x.preis, 0);
+    const total = dauer.preis + anlass.aufschlag + fahrt + extraSumme;
+
+    document.getElementById('calcPrice').textContent = 'ab ' + euro(total);
+    document.getElementById('calcRange').textContent =
+      'Rahmen ca. ' + euro(total) + ' – ' + euro(total * 1.15);
+
+    const rows = [['Live-Musik · ' + dauer.label + ' (PA & Licht)', dauer.preis]];
+    if (anlass.aufschlag) rows.push([anlass.label, anlass.aufschlag]);
+    if (fahrt) rows.push([Math.round(km - PREISE.freieKm) + ' km Anfahrt', fahrt]);
+    extras.forEach(x => rows.push([x.label, x.preis]));
+    document.getElementById('calcBreakdown').innerHTML =
+      rows.map(r => '<li><span>' + r[0] + '</span><span>' + euro(r[1]) + '</span></li>').join('');
+
+    document.getElementById('calcCta').dataset.summary =
+      'Meine Anfrage: ' + anlass.label + ', ' + dauer.label + ' Spielzeit, ca. ' + km + ' km Anfahrt'
+      + (extras.length ? ', Extras: ' + extras.map(x => x.label).join(', ') : '')
+      + ' – Richtwert ' + euro(total) + '.';
+  }
+
+  elKm.addEventListener('input', render);
+
+  document.getElementById('calcCta').addEventListener('click', function () {
+    const msg = document.getElementById('message');
+    if (msg && !msg.value.trim()) msg.value = this.dataset.summary + '\n\n';
+  });
+
+  render();
+})();
+
+/* ─── NEU: Filterbare Songliste ────────────────────────────────────────
+   Hier einfach weitere Songs ergänzen: { t: Titel, a: Interpret, g: Genre } */
+const SONGS = [
+  { t: "Summer of '69",    a: "Bryan Adams",   g: "Rock" },
+  { t: "Livin' on a Prayer", a: "Bon Jovi",    g: "Rock" },
+  { t: "Zombie",           a: "The Cranberries", g: "Rock" },
+  { t: "Radio Ga Ga",      a: "Queen",         g: "Rock" },
+  { t: "Holiday",          a: "Green Day",     g: "Rock" },
+  { t: "Country Roads",    a: "John Denver",   g: "Party" },
+  { t: "Shut Up and Dance", a: "Walk the Moon", g: "Moderne Hits" }
+];
+
+(function () {
+  const list = document.getElementById('sfList');
+  if (!list) return;
+  const count = document.getElementById('sfCount');
+  const search = document.getElementById('sfSearch');
+  const chips = Array.from(document.querySelectorAll('.sf-chip'));
+  let genre = 'alle';
+
+  function render() {
+    const q = search.value.trim().toLowerCase();
+    const hits = SONGS.filter(s =>
+      (genre === 'alle' || s.g === genre) &&
+      (!q || (s.t + ' ' + s.a).toLowerCase().includes(q))
+    );
+    count.textContent = hits.length + ' von ' + SONGS.length + ' Songs – und viele mehr live im Set!';
+    list.innerHTML = hits.length
+      ? hits.map(s => '<div class="sf-item"><div><span class="sf-title">' + s.t +
+          '</span><span class="sf-artist">' + s.a + '</span></div><span class="sf-genre">' + s.g + '</span></div>').join('')
+      : '<div class="sf-empty">Kein Treffer – schreibt uns einfach, wir lernen Songs auch extra für euch!</div>';
+  }
+
+  chips.forEach(c => c.addEventListener('click', () => {
+    chips.forEach(x => x.classList.remove('active'));
+    c.classList.add('active');
+    genre = c.dataset.genre;
+    render();
+  }));
+  search.addEventListener('input', render);
+  render();
+})();
+</script>
+
+<script>
+(function() {
+  const STORAGE_KEY = 'strive_cookie_consent';
+  let consent = null;
+
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) consent = JSON.parse(saved);
+  } catch (e) {}
+
+  window.STRIVE_CONSENT = consent || { necessary: true, statistics: false, external: false };
+
+  const banner = document.getElementById('cookieBanner');
+  const modal = document.getElementById('cookieModal');
+  const toggleStats = document.getElementById('toggleStats');
+  const toggleExternal = document.getElementById('toggleExternal');
+
+  function showBanner() { banner.classList.add('show'); }
+  function hideBanner() { banner.classList.remove('show'); }
+  function showModal() { modal.classList.add('show'); }
+  function hideModal() { modal.classList.remove('show'); }
+
+  function saveConsent(c) {
+    c.date = new Date().toISOString();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(c));
+    consent = c;
+    window.STRIVE_CONSENT = c;
+    applyConsent(c);
+  }
+
+  function applyConsent(c) {
+    document.body.dataset.cookieExternal = c.external ? '1' : '0';
+    document.body.dataset.cookieStats = c.statistics ? '1' : '0';
+  }
+
+  window.openCookieSettings = function() {
+    if (consent) {
+      toggleStats.checked = !!consent.statistics;
+      toggleExternal.checked = !!consent.external;
+    } else {
+      toggleStats.checked = false;
+      toggleExternal.checked = false;
+    }
+    hideBanner();
+    showModal();
+  };
+
+  window.closeCookieModal = function() {
+    hideModal();
+    if (!consent) showBanner();
+  };
+
+  window.acceptCookies = function(type) {
+    if (type === 'all') {
+      saveConsent({ necessary: true, statistics: true, external: true });
+    } else {
+      saveConsent({ necessary: true, statistics: false, external: false });
+    }
+    hideBanner();
+    hideModal();
+  };
+
+  window.saveCookieSettings = function() {
+    saveConsent({
+      necessary: true,
+      statistics: toggleStats.checked,
+      external: toggleExternal.checked
+    });
+    hideBanner();
+    hideModal();
+  };
+
+  if (consent) {
+    applyConsent(consent);
+  } else {
+    showBanner();
+  }
+
+  const footerLink = document.getElementById('cookieSettingsLink');
+  if (footerLink) {
+    footerLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.openCookieSettings();
+    });
+  }
+})();
+</script>
+</body>
+</html>
