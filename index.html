@@ -1147,18 +1147,11 @@ footer {
 .sf-chip:hover { border-color: var(--yellow); color: var(--text); }
 .sf-chip.active { background: var(--dark); border-color: var(--dark); color: var(--yellow); }
 .sf-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
-.sf-item {
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px;
-  transition: transform .18s, border-color .18s;
-}
+.sf-item { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; transition: transform .18s, border-color .18s; }
 .sf-item:hover { transform: translateY(-2px); border-color: var(--yellow); }
 .sf-title { font-weight: 600; font-size: 14px; }
 .sf-artist { display: block; font-size: 12px; color: var(--muted); }
-.sf-genre {
-  font-family: Montserrat, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1px;
-  text-transform: uppercase; color: var(--red); white-space: nowrap;
-}
+.sf-genre { font-family: Montserrat, sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--red); white-space: nowrap; }
 .sf-count { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
 .sf-empty { padding: 22px; text-align: center; color: var(--muted); font-size: 14px; }
 
@@ -1948,7 +1941,10 @@ footer {
           <button class="sf-chip" data-genre="Party">Party</button>
         </div>
         <div class="sf-count" id="sfCount"></div>
-        <div class="sf-list" id="sfList"></div>
+<div class="sf-listwrap is-collapsed" id="sfWrap">
+  <div class="sf-list" id="sfList"></div>
+</div>
+<button type="button" class="sf-more" id="sfMore">Alle Songs anzeigen</button>
       </div>
       <p style="margin-top:16px;font-size:13px;color:var(--muted);">Spezialwünsche? Wir lernen auch gerne Songs extra für euch!</p>
     </div>
@@ -2448,7 +2444,7 @@ const PREISE = {
     { std: 2,   label: '2 Std.',   sub: '2 Sets',       preis: 550 },
     { std: 2.5, label: '2,5 Std.', sub: '2 lange Sets', preis: 650 },
     { std: 3,   label: '3 Std.',   sub: '3 Sets',       preis: 750 },
-    { std: 3.5, label: '3,5 Std.', sub: '4 Sets',       preis: 850 }
+    { std: 3.5, label: '3,5 Std.', sub: '3 Sets',       preis: 850 }
   ],
 
   extras: [
@@ -2585,10 +2581,19 @@ const SONGS = [
 (function () {
   const list = document.getElementById('sfList');
   if (!list) return;
+  const wrap = document.getElementById('sfWrap');
+  const more = document.getElementById('sfMore');
   const count = document.getElementById('sfCount');
   const search = document.getElementById('sfSearch');
   const chips = Array.from(document.querySelectorAll('.sf-chip'));
   let genre = 'alle';
+  let expanded = false;
+
+  function syncMore(hits) {
+    wrap.classList.toggle('is-collapsed', !expanded && hits > 12);
+    more.style.display = (hits > 12) ? 'inline-block' : 'none';
+    more.textContent = expanded ? 'Weniger anzeigen' : 'Alle ' + hits + ' Songs anzeigen';
+  }
 
   function render() {
     const q = search.value.trim().toLowerCase();
@@ -2598,10 +2603,17 @@ const SONGS = [
     );
     count.textContent = hits.length + ' von ' + SONGS.length + ' Songs – und viele mehr live im Set!';
     list.innerHTML = hits.length
-      ? hits.map(s => '<div class="sf-item"><div><span class="sf-title">' + s.t +
-          '</span><span class="sf-artist">' + s.a + '</span></div><span class="sf-genre">' + s.g + '</span></div>').join('')
+      ? hits.map(s => '<div class="sf-item"><span class="sf-title">' + s.t +
+          '</span><span class="sf-artist">' + s.a + '</span></div>').join('')
       : '<div class="sf-empty">Kein Treffer – schreibt uns einfach, wir lernen Songs auch extra für euch!</div>';
+    syncMore(hits.length);
   }
+
+  more.addEventListener('click', () => {
+    expanded = !expanded;
+    render();
+    if (!expanded) wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
 
   chips.forEach(c => c.addEventListener('click', () => {
     chips.forEach(x => x.classList.remove('active'));
@@ -2609,7 +2621,7 @@ const SONGS = [
     genre = c.dataset.genre;
     render();
   }));
-  search.addEventListener('input', render);
+  search.addEventListener('input', () => { expanded = search.value.trim() !== ''; render(); });
   render();
 })();
 </script>
