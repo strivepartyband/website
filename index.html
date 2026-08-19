@@ -1749,7 +1749,7 @@ footer {
             type: cal.type,
             start: s.date,
             allDay: s.allDay,
-            title: ev.summary || 'STR!VE live'
+            title: ev.summary
             location: cal.type === 'public' ? ev.location || '') : '',
             note: cal.type === 'public' ? (ev.description || '') : 'Termin belegt'
           };
