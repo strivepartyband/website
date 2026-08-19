@@ -1690,35 +1690,7 @@ footer {
 </style>
 
 <script>
-/* ------------------------------------------------------------------
-   TERMINE AUS GOOGLE KALENDER
-   ------------------------------------------------------------------
-   Einrichtung (einmalig):
 
-   1) Zwei Google-Kalender anlegen:
-      a) "STR!VE Öffentlich"  -> Freigabe: "Öffentlich verfügbar machen"
-                                 + "Alle Details zu Terminen sehen"
-                                 (hier nur Konzerte eintragen, die jeder sehen darf)
-      b) "STR!VE Belegt"      -> Freigabe: "Öffentlich verfügbar machen"
-                                 + "Nur frei/gebucht (Details ausblenden)"
-                                 (private Feiern – Google gibt hier KEINE
-                                  Titel/Orte heraus, nur das Datum)
-
-   2) In den Kalender-Einstellungen jeweils die "Kalender-ID" kopieren
-      und unten bei CAL_CFG.calendars eintragen.
-
-   3) API-Key: https://console.cloud.google.com -> Projekt -> APIs & Dienste
-      -> "Google Calendar API" aktivieren -> Anmeldedaten -> API-Schlüssel.
-      WICHTIG, weil der Code auf GitHub öffentlich ist:
-        - Schlüssel einschränken -> "Websites (HTTP-Referrer)"
-          -> https://www.strive-partyband.de/*  (und ggf. euer github.io-Domain)
-        - API-Einschränkung -> nur "Google Calendar API"
-      Der Schlüssel gibt dann nur Lesezugriff auf ohnehin öffentliche
-      Kalender – er ist damit unkritisch, auch wenn er im Quelltext steht.
-
-   Solange unten kein Key/keine Kalender-ID steht, bleibt die statische
-   Liste im HTML stehen (nichts geht kaputt).
-------------------------------------------------------------------- */
 (function () {
   var CAL_CFG = {
     apiKey: 'AIzaSyB1l2JSeFzVgAfNBRQuA2oJr2klRmG2TZw',                 // <-- hier den eingeschränkten API-Key eintragen
@@ -1727,8 +1699,8 @@ footer {
       { id: '7b7432d513759469d56c24a864a37e7e9bc85c62c0c76f82596818f26ec9a1e5@group.calendar.google.com', type: 'private' }
     ],
     maxEvents: 12,              // wie viele Termine maximal anzeigen
-    refreshMinutes: 30,         // automatischer Refresh im offenen Tab
-    cacheMinutes: 15            // Zwischenspeicher, spart Anfragen
+    refreshMinutes: 5,         // automatischer Refresh im offenen Tab
+    cacheMinutes: 2            // Zwischenspeicher, spart Anfragen
   };
 
   var container = document.getElementById('termin-container');
