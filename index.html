@@ -1073,6 +1073,58 @@ footer {
   footer { padding:40px 5% 20px; }
 }
 
+
+.soundcloud-facade {
+    width: 100%;
+    height: 166px;
+    position: relative;
+    overflow: hidden;
+    background: #f2f2f2;
+    cursor: pointer;
+}
+
+.soundcloud-facade-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.soundcloud-facade-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.soundcloud-facade-button {
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 50%;
+    background: #ff5500;
+    color: #fff;
+    font-size: 20px;
+    line-height: 48px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.soundcloud-facade-button:hover {
+    transform: scale(1.05);
+}
+
+.soundcloud-facade-hint {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #777;
+}
+  
+
 /* ─── PREIS-RECHNER ─── */
 .calc {
   margin-top: 44px; background: var(--card); border: 1px solid var(--border);
@@ -1525,78 +1577,77 @@ footer {
 <!-- Soundcloud Links -->
 
 <!-- Narcotic -->
-<div class="soundcloud-wrap">
+<div class="soundcloud-wrap soundcloud-facade"
+     data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2383081173&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+     data-title="STR!VE – Narcotic – Liquido">
 
-  <iframe
-    scrolling="no"
-    frameborder="no"
-    allow="autoplay; encrypted-media"
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2384815818&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-  </iframe>
+    <div class="soundcloud-facade-content">
+        <div class="soundcloud-facade-title">
+            STR!VE · Narcotic – Liquido
+        </div>
 
-  <div class="soundcloud-credit">
-    <a href="https://soundcloud.com/str-ve"
-       title="STR!VE"
-       target="_blank">
-      STR!VE
-    </a>
-    ·
-    <a href="https://soundcloud.com/str-ve/narcotic"
-       title="Narcotic - Liquido covered by STRIVE"
-       target="_blank">
-      Narcotic - Liquido covered by STRIVE
-    </a>
-  </div>
-<!-- All the small Things -->
-<div class="soundcloud-wrap">
+        <button class="soundcloud-facade-button"
+                type="button"
+                aria-label="Narcotic von STR!VE abspielen">
+            ▶
+        </button>
 
-  <iframe
-    scrolling="no"
-    frameborder="no"
-    allow="autoplay; encrypted-media"
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2383081173&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-  </iframe>
-
-  <div class="soundcloud-credit">
-    <a href="https://soundcloud.com/str-ve"
-       title="STR!VE"
-       target="_blank">
-      STR!VE
-    </a>
-    ·
-    <a href="https://soundcloud.com/str-ve/allthesmallthings"
-       title="All the Small Things - Blink182 covered by Strive"
-       target="_blank">
-      All the Small Things - Blink182 covered by Strive
-    </a>
-  </div>
+        <div class="soundcloud-facade-hint">
+            Zum Abspielen klicken
+        </div>
+    </div>
 
 </div>
 
 
+
+  
+<!-- All the small Things -->
+<div class="soundcloud-wrap soundcloud-facade"
+     data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2383079886&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+     data-title="STR!VE – All the Small Things – Blink-182">
+
+    <div class="soundcloud-facade-content">
+        <div class="soundcloud-facade-title">
+            STR!VE · All the Small Things – Blink-182
+        </div>
+
+        <button class="soundcloud-facade-button"
+                type="button"
+                aria-label="All the Small Things von STR!VE abspielen">
+            ▶
+        </button>
+
+        <div class="soundcloud-facade-hint">
+            Zum Abspielen klicken
+        </div>
+    </div>
+
+</div>
+
+
+
+
 <!-- Thinkin out Loud -->
-<div class="soundcloud-wrap">
+<div class="soundcloud-wrap soundcloud-facade"
+     data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2384815818&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+     data-title="STR!VE – Thinkin out Loud – Ed Sheeran">
 
-  <iframe
-    scrolling="no"
-    frameborder="no"
-    allow="autoplay; encrypted-media"
-    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2383079886&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-  </iframe>
+    <div class="soundcloud-facade-content">
+        <div class="soundcloud-facade-title">
+            STR!VE · Thinkin out Loud – Ed Sheeran
+        </div>
 
-  <div class="soundcloud-credit">
-    <a href="https://soundcloud.com/str-ve"
-       title="STR!VE"
-       target="_blank">
-      STR!VE
-    </a>
-    ·
-    <a href="https://soundcloud.com/str-ve/thol"
-       title="Thinkin out Loud - Ed Sheeran covered by STR!VE"
-       target="_blank">
-      Thinkin out Loud - Ed Sheeran covered by STR!VE
-    </a>
-  </div>
+        <button class="soundcloud-facade-button"
+                type="button"
+                aria-label="Thinkin out Loud von STR!VE abspielen">
+            ▶
+        </button>
+
+        <div class="soundcloud-facade-hint">
+            Zum Abspielen klicken
+        </div>
+    </div>
 
 </div>
 
@@ -3310,5 +3361,40 @@ if (startDauer) {
   }
 })();
 </script>
+
+<script>
+document.querySelectorAll('.soundcloud-facade').forEach(facade => {
+
+    facade.addEventListener('click', function () {
+
+        if (this.dataset.loaded === 'true') {
+            return;
+        }
+
+        const iframe = document.createElement('iframe');
+
+        iframe.src = this.dataset.src;
+        iframe.title = this.dataset.title;
+
+        iframe.width = '100%';
+        iframe.height = '166';
+        iframe.scrolling = 'no';
+        iframe.frameBorder = 'no';
+
+        iframe.allow = 'autoplay; encrypted-media';
+
+        iframe.style.width = '100%';
+        iframe.style.height = '166px';
+        iframe.style.border = '0';
+
+        this.innerHTML = '';
+        this.appendChild(iframe);
+
+        this.dataset.loaded = 'true';
+    });
+
+});
+</script>
+
 </body>
 </html>
