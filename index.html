@@ -230,7 +230,9 @@ nav {
   max-width:1140px; margin:0 auto; width:100%;
 }
 
-.hero-text {}
+.hero-text {
+  min-height: 300px;
+}
 
 .hero-pill {
     display:inline-flex;
@@ -606,7 +608,10 @@ nav {
   display:flex; justify-content:center; flex-wrap:wrap;
 }
 .stat {
-  text-align:center; padding:32px 52px;
+  text-align:center;
+  padding:32px 52px;
+  min-height:120px;
+  box-sizing:border-box;
   border-right:1px solid rgba(255,255,255,0.06);
 }
 .stat:last-child { border-right:none; }
