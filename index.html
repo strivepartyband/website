@@ -284,16 +284,51 @@ nav {
 .btn-ghost:hover { border-color:rgba(255,255,255,0.7); transform:translateY(-2px); }
 
 .hero-logo-wrap {
-  display:flex; justify-content:center; align-items:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
 }
+
+.hero-logo-wrap::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(245,200,0,0.18) 0%,
+      rgba(245,200,0,0.08) 32%,
+      transparent 68%
+    );
+  filter:blur(24px);
+  transform:scale(0.8);
+  opacity:0.85;
+  animation:logoGlowPulse 4s ease-in-out infinite;
+  will-change:transform,opacity;
+}
+
 .hero-logo-img {
-  width:100%; max-width:460px;
-  filter: drop-shadow(0 8px 40px rgba(245,200,0,0.35)) drop-shadow(0 0 80px rgba(245,200,0,0.15));
-  animation: logoPulse 4s ease-in-out infinite;
+  position:relative;
+  z-index:1;
+  width:100%;
+  max-width:460px;
+  filter:
+    drop-shadow(0 8px 40px rgba(245,200,0,0.35))
+    drop-shadow(0 0 80px rgba(245,200,0,0.15));
 }
-@keyframes logoPulse {
-  0%,100% { filter: drop-shadow(0 8px 40px rgba(245,200,0,0.35)) drop-shadow(0 0 80px rgba(245,200,0,0.15)); }
-  50%     { filter: drop-shadow(0 8px 60px rgba(245,200,0,0.55)) drop-shadow(0 0 120px rgba(245,200,0,0.25)); }
+
+@keyframes logoGlowPulse {
+  0%,100% {
+    transform:scale(0.8);
+    opacity:0.85;
+  }
+
+  50% {
+    transform:scale(1);
+    opacity:1;
+  }
 }
 
 
