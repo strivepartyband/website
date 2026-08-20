@@ -1225,6 +1225,7 @@ footer {
   border: 1px solid var(--border); background: var(--card); font-family: "Open Sans", sans-serif;
   font-size: 14px; color: var(--text); outline: none;
 }
+  
 .sf-search:focus { border-color: var(--yellow); box-shadow: 0 0 0 3px rgba(245,200,0,0.25); }
 .sf-chip {
   border: 1px solid var(--border); background: var(--card); border-radius: 999px;
@@ -1834,11 +1835,12 @@ footer {
   var CAL_CFG = {
     apiKey: 'AIzaSyB1l2JSeFzVgAfNBRQuA2oJr2klRmG2TZw',                 // <-- hier den eingeschränkten API-Key eintragen
     calendars: [
-      { id: '65ef828e5ca28a23ffb153dfaf744498aeaef99711594c6a45a3adfab2c7b817@group.calendar.google.com', type: 'public'  },
-      { id: '7b7432d513759469d56c24a864a37e7e9bc85c62c0c76f82596818f26ec9a1e5@group.calendar.google.com', type: 'private' }
+      { id: '65ef828e5ca28a23ffb153dfaf744498aeaef99711594c6a45a3adfab2c7b817@group.calendar.google.com'}
     ],
+    privateKeywords: ['privat', 'geschlossene gesellschaft', 'closed'],
     maxEvents: 12,              // wie viele Termine maximal anzeigen
     refreshMinutes: 30,         // automatischer Refresh im offenen Tab
+    cacheKey: 'strive_cal_cache_v2',
     cacheMinutes: 15            // Zwischenspeicher, spart Anfragen
   };
 
@@ -1880,20 +1882,38 @@ footer {
         if (!r.ok) return r.text().then(function (t) { throw new Error(cal.id + ' [' + r.status + '] ' + t); });
         return r.json();
       })
-      .then(function (data) {
+            .then(function (data) {
         return (data.items || []).map(function (ev) {
           var s = parseStart(ev);
           if (!s) return null;
+
+          var rawTitle = ev.summary || 'Termin';
+          var lower = rawTitle.toLowerCase();
+          var isPrivate = CAL_CFG.privateKeywords.some(function (k) {
+            return lower.indexOf(k) !== -1;
+          });
+
+          // Keyword + Trennzeichen aus dem angezeigten Titel entfernen
+          var title = rawTitle;
+          if (isPrivate) {
+            title = rawTitle
+              .replace(/\b(privat|geschlossene gesellschaft|closed)\b/gi, '')
+              .replace(/^[\s\-–—:|,()\[\]]+|[\s\-–—:|,()\[\]]+$/g, '')
+              .trim();
+            if (!title) title = 'Geschlossene Gesellschaft';
+          }
+
           return {
-  type: cal.type,
-  start: s.date,
-  allDay: s.allDay,
-  title: ev.summary || 'Termin',
-  location: cal.type === 'public' ? (ev.location || '') : '',
-  note: cal.type === 'public' ? (ev.description || '') : 'Termin belegt'
-};
+            type: isPrivate ? 'private' : 'public',
+            start: s.date,
+            allDay: s.allDay,
+            title: title,
+            location: isPrivate ? '' : (ev.location || ''),
+            note: isPrivate ? 'Termin belegt' : (ev.description || '')
+          };
         }).filter(Boolean);
       });
+
   }
 
   function render(events) {
