@@ -1173,9 +1173,15 @@ footer {
 }
 .calc-hint { font-size: 14px; color: var(--muted); margin-bottom: 26px; max-width: 44ch; }
 .calc-row { margin-bottom: 24px; }
-.calc-row > span.lbl {
-  display: block; font-family: Montserrat, sans-serif; font-size: 11px; font-weight: 700;
-  letter-spacing: 1.6px; text-transform: uppercase; color: var(--muted); margin-bottom: 10px;
+.calc-row > .lbl {
+  display: block;
+  font-family: Montserrat, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
 }
 .opt-grid { display: flex; flex-wrap: wrap; gap: 8px; }
 .opt {
@@ -2437,18 +2443,17 @@ footer {
 
     <div class="calc-row">
 
-      <span class="lbl">Anfahrt ab Mayen</span>
+  <label class="lbl" for="calcKm">Anfahrt ab Mayen</label>
 
-      <div class="calc-km">
+  <div class="calc-km">
 
-        <input type="number"
-               id="calcKm"
-               min="0"
-               max="400"
-               step="5"
-               value="30"
-               inputmode="numeric">
-
+    <input type="number"
+           id="calcKm"
+           min="0"
+           max="400"
+           step="5"
+           value="30"
+           inputmode="numeric">
         <small>
           km einfache Strecke · die ersten 30 km sind inklusive
         </small>
