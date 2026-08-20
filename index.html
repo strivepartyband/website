@@ -1123,15 +1123,51 @@ footer {
 
 /* ─── RESPONSIVE ─── */
 @media(max-width:900px) {
-  .hero-inner { grid-template-columns:1fr; text-align:center; }
-  .hero-btns { justify-content:center; }
-  .hero-logo-wrap { order:-1; }
-  .hero-logo-img { max-width:320px; }
-  .about-grid { grid-template-columns:1fr; }
-  .about-img-wrap,.about-logo-card { display:none; }
-  .contact-layout { grid-template-columns:1fr; }
-  .songs-box { grid-template-columns:1fr; }
-  .sl-left { border-right:none; border-bottom:1px solid var(--border); padding-right:0; padding-bottom:24px; }
+  .hero-inner {
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .hero-text {
+    height:auto;
+    min-height:0;
+  }
+
+  .hero-btns {
+    justify-content:center;
+  }
+
+  .hero-logo-wrap {
+    order:-1;
+  }
+
+  .hero-logo-img {
+    max-width:320px;
+  }
+
+  .about-grid {
+    grid-template-columns:1fr;
+  }
+
+  .about-img-wrap,
+  .about-logo-card {
+    display:none;
+  }
+
+  .contact-layout {
+    grid-template-columns:1fr;
+  }
+
+  .songs-box {
+    grid-template-columns:1fr;
+  }
+
+  .sl-left {
+    border-right:none;
+    border-bottom:1px solid var(--border);
+    padding-right:0;
+    padding-bottom:24px;
+  }
 }
 @media(max-width:768px) {
   .nav-links {
