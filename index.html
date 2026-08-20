@@ -1957,20 +1957,183 @@ footer {
     <div>
       <p style="font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;">Bekannte Titel im Set u.a.:</p>
       <div class="song-filter">
-        <div class="sf-bar">
-          <input type="search" class="sf-search" id="sfSearch" placeholder="Song oder Interpret suchen…" aria-label="Songs durchsuchen">
-          <button class="sf-chip active" data-genre="alle">Alle</button>
-          <button class="sf-chip" data-genre="Rock">Rock</button>
-          <button class="sf-chip" data-genre="Moderne Hits">Moderne Hits</button>
-          <button class="sf-chip" data-genre="Party">Party</button>
-        </div>
-        <div class="sf-count" id="sfCount"></div>
-<div class="sf-listwrap is-collapsed" id="sfWrap">
-  <div class="sf-list" id="sfList"></div>
-</div>
-<button type="button" class="sf-more" id="sfMore">Alle Songs anzeigen</button>
+  <div class="sf-bar">
+    <input type="search"
+           class="sf-search"
+           id="sfSearch"
+           placeholder="Song oder Interpret suchen…"
+           aria-label="Songs durchsuchen">
 
+    <button class="sf-chip active" data-genre="alle">Alle</button>
+    <button class="sf-chip" data-genre="Rock">Rock</button>
+    <button class="sf-chip" data-genre="Moderne Hits">Moderne Hits</button>
+    <button class="sf-chip" data-genre="Party">Party</button>
+  </div>
+
+  <div class="sf-count" id="sfCount"></div>
+
+  <div class="sf-listwrap is-collapsed" id="sfWrap">
+    <div class="sf-list" id="sfList">
+
+      <div class="song" data-genre="Rock" data-title="American Idiot" data-artist="Green Day">
+        American Idiot – Green Day
       </div>
+
+      <div class="song" data-genre="Rock" data-title="All the Small Things" data-artist="Blink-182">
+        All the Small Things – Blink-182
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Blitzkrieg Bop" data-artist="Ramones">
+        Blitzkrieg Bop – Ramones
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Boulevard of Broken Dreams" data-artist="Green Day">
+        Boulevard of Broken Dreams – Green Day
+      </div>
+
+      <div class="song" data-genre="Party" data-title="Country Roads" data-artist="John Denver">
+        Country Roads – John Denver
+      </div>
+
+      <div class="song" data-genre="Moderne Hits" data-title="Don't Look Back in Anger" data-artist="Oasis">
+        Don't Look Back in Anger – Oasis
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Don't Stop Believin'" data-artist="Journey">
+        Don't Stop Believin' – Journey
+      </div>
+
+      <div class="song" data-genre="Party" data-title="Dirty Diana" data-artist="Michael Jackson">
+        Dirty Diana – Michael Jackson
+      </div>
+
+      <div class="song" data-genre="Party" data-title="Fields of Athenry" data-artist="The Dubliners">
+        Fields of Athenry – The Dubliners
+      </div>
+
+      <div class="song" data-genre="Party" data-title="Footloose" data-artist="Kenny Loggins">
+        Footloose – Kenny Loggins
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Hammer to Fall" data-artist="Queen">
+        Hammer to Fall – Queen
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Highway to Hell" data-artist="AC/DC">
+        Highway to Hell – AC/DC
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Holiday" data-artist="Green Day">
+        Holiday – Green Day
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="House of the Rising Sun" data-artist="The Animals">
+        House of the Rising Sun – The Animals
+      </div>
+
+      <div class="song" data-genre="Party" data-title="Let Me Entertain You" data-artist="Robbie Williams">
+        Let Me Entertain You – Robbie Williams
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Livin' on a Prayer" data-artist="Bon Jovi">
+        Livin' on a Prayer – Bon Jovi
+      </div>
+
+      <div class="song" data-genre="Moderne Hits" data-title="Mr. Brightside" data-artist="The Killers">
+        Mr. Brightside – The Killers
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Narcotic" data-artist="Liquido">
+        Narcotic – Liquido
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Radio Ga Ga" data-artist="Queen">
+        Radio Ga Ga – Queen
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Rockin' All Over the World" data-artist="Status Quo">
+        Rockin' All Over the World – Status Quo
+      </div>
+
+      <div class="song" data-genre="Party" data-title="Schickeria" data-artist="Spider Murphy Gang">
+        Schickeria – Spider Murphy Gang
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Schrei nach Liebe" data-artist="Die Ärzte">
+        Schrei nach Liebe – Die Ärzte
+      </div>
+
+      <div class="song" data-genre="Party" data-title="Skandal im Sperrbezirk" data-artist="Spider Murphy Gang">
+        Skandal im Sperrbezirk – Spider Murphy Gang
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Sex on Fire" data-artist="Kings of Leon">
+        Sex on Fire – Kings of Leon
+      </div>
+
+      <div class="song" data-genre="Moderne Hits" data-title="Shut Up and Dance" data-artist="WALK THE MOON">
+        Shut Up and Dance – WALK THE MOON
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Smells Like Teen Spirit" data-artist="Nirvana">
+        Smells Like Teen Spirit – Nirvana
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Song 2" data-artist="Blur">
+        Song 2 – Blur
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Summer of '69" data-artist="Bryan Adams">
+        Summer of '69 – Bryan Adams
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Sweet Child o' Mine" data-artist="Guns N' Roses">
+        Sweet Child o' Mine – Guns N' Roses
+      </div>
+
+      <div class="song" data-genre="Party" data-title="Tage wie diese" data-artist="Die Toten Hosen">
+        Tage wie diese – Die Toten Hosen
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Teenage Dirtbag" data-artist="Wheatus">
+        Teenage Dirtbag – Wheatus
+      </div>
+
+      <div class="song" data-genre="Moderne Hits" data-title="Tommi" data-artist="AnnenMayKantereit">
+        Tommi – AnnenMayKantereit
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="What's Up?" data-artist="4 Non Blondes">
+        What's Up? – 4 Non Blondes
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="We Will Rock You" data-artist="Queen">
+        We Will Rock You – Queen
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Whiskey in the Jar" data-artist="Metallica">
+        Whiskey in the Jar – Metallica
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Wish You Were Here" data-artist="Pink Floyd">
+        Wish You Were Here – Pink Floyd
+      </div>
+
+      <div class="song" data-genre="Moderne Hits" data-title="Wonderwall" data-artist="Oasis">
+        Wonderwall – Oasis
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Zombie" data-artist="The Cranberries">
+        Zombie – The Cranberries
+      </div>
+
+    </div>
+  </div>
+
+  <button type="button" class="sf-more" id="sfMore">
+    Alle Songs anzeigen
+  </button>
+</div>
       <p style="margin-top:16px;font-size:13px;color:var(--muted);">Spezialwünsche? Wir lernen auch gerne Songs extra für euch!</p>
     </div>
   </div>
@@ -1994,42 +2157,230 @@ footer {
 
   <!-- Preis-Rechner (Preise zentral im Skript am Seitenende anpassbar) -->
   <div class="calc">
-    <div class="calc-main">
-      <h3>Preis-Rechner</h3>
-      <p class="calc-hint">Anlass und Spieldauer wählen, Entfernung eintragen – ihr seht sofort einen realistischen Richtwert.</p>
 
-      <div class="calc-row">
-        <span class="lbl">Anlass</span>
-        <div class="opt-grid" id="calcAnlass"></div>
-      </div>
+  <div class="calc-main">
 
-      <div class="calc-row">
-        <span class="lbl">Spieldauer</span>
-        <div class="opt-grid" id="calcDauer"></div>
-      </div>
+    <h3>Preis-Rechner</h3>
 
-      <div class="calc-row">
-        <span class="lbl">Anfahrt ab Mayen</span>
-        <div class="calc-km">
-          <input type="number" id="calcKm" min="0" max="400" step="5" value="30" inputmode="numeric"> <small>km einfache Strecke &middot; die ersten 30 km sind inklusive</small>
-        </div>
-      </div>
+    <p class="calc-hint">
+      Anlass und Spieldauer wählen, Entfernung eintragen –
+      ihr seht sofort einen realistischen Richtwert.
+    </p>
 
-      <div class="calc-row">
-        <span class="lbl">Extras</span>
-        <div class="opt-grid" id="calcExtras"></div>
+    <div class="calc-row">
+      <span class="lbl">Anlass</span>
+
+      <div class="opt-grid" id="calcAnlass">
+
+        <button type="button"
+                class="opt"
+                data-id="kirmes"
+                data-dauer="3"
+                data-aufschlag="0"
+                aria-pressed="true">
+          Kirmes / Volksfest
+          <span class="opt-sub">Bühne meist gestellt</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-id="feuerwehr"
+                data-dauer="3"
+                data-aufschlag="0"
+                aria-pressed="false">
+          Feuerwehr- / Vereinsfest
+          <span class="opt-sub">Zelt &amp; Halle</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-id="privat"
+                data-dauer="2"
+                data-aufschlag="0"
+                aria-pressed="false">
+          Privatfeier
+          <span class="opt-sub">Geburtstag, Hochzeit</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-id="firma_s"
+                data-dauer="2"
+                data-aufschlag="100"
+                aria-pressed="false">
+          Firmenfeier klein
+          <span class="opt-sub">bis ca. 100 Gäste</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-id="firma_l"
+                data-dauer="2.5"
+                data-aufschlag="250"
+                aria-pressed="false">
+          Firmenfeier groß
+          <span class="opt-sub">ab ca. 100 Gäste</span>
+        </button>
+
       </div>
     </div>
 
-    <div class="calc-out">
-      <div class="co-lbl">Richtwert</div>
-      <div class="co-price" id="calcPrice">ab 600 &euro;</div>
-      <div class="co-sub" id="calcRange">inkl. PA-Anlage, Licht &amp; Auf-/Abbau</div>
-      <ul id="calcBreakdown"></ul>
-      <a href="#kontakt" class="btn-yellow" id="calcCta">Angebot anfordern</a>
-      <p class="calc-note">Unverbindlicher Richtwert. Der finale Preis h&auml;ngt von Datum, Location und Aufwand ab &ndash; wir melden uns schnell mit einem festen Angebot.</p>
+
+    <div class="calc-row">
+
+      <span class="lbl">Spieldauer</span>
+
+      <div class="opt-grid" id="calcDauer">
+
+        <button type="button"
+                class="opt"
+                data-std="1"
+                data-preis="350"
+                aria-pressed="false">
+          1 Std.
+          <span class="opt-sub">1 Set</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-std="1.5"
+                data-preis="450"
+                aria-pressed="false">
+          1,5 Std.
+          <span class="opt-sub">2 kurze Sets</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-std="2"
+                data-preis="550"
+                aria-pressed="true">
+          2 Std.
+          <span class="opt-sub">2 Sets</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-std="2.5"
+                data-preis="650"
+                aria-pressed="false">
+          2,5 Std.
+          <span class="opt-sub">2 lange Sets</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-std="3"
+                data-preis="750"
+                aria-pressed="false">
+          3 Std.
+          <span class="opt-sub">3 Sets</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-std="3.5"
+                data-preis="850"
+                aria-pressed="false">
+          3,5 Std.
+          <span class="opt-sub">3 Sets</span>
+        </button>
+
+      </div>
     </div>
+
+
+    <div class="calc-row">
+
+      <span class="lbl">Anfahrt ab Mayen</span>
+
+      <div class="calc-km">
+
+        <input type="number"
+               id="calcKm"
+               min="0"
+               max="400"
+               step="5"
+               value="30"
+               inputmode="numeric">
+
+        <small>
+          km einfache Strecke · die ersten 30 km sind inklusive
+        </small>
+
+      </div>
+
+    </div>
+
+
+    <div class="calc-row">
+
+      <span class="lbl">Extras</span>
+
+      <div class="opt-grid" id="calcExtras">
+
+        <button type="button"
+                class="opt"
+                data-id="light"
+                data-preis="150"
+                aria-pressed="false">
+          Erweiterte Lichtshow
+          <span class="opt-sub">+ 150 €</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-id="mic"
+                data-preis="100"
+                aria-pressed="false">
+          Technik für Reden &amp; Playlist
+          <span class="opt-sub">+ 100 €</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-id="day"
+                data-preis="80"
+                aria-pressed="false">
+          Aufbau am Vortag
+          <span class="opt-sub">+ 80 €</span>
+        </button>
+
+      </div>
+
+    </div>
+
   </div>
+
+
+  <div class="calc-out">
+
+    <div class="co-lbl">Richtwert</div>
+
+    <div class="co-price" id="calcPrice">
+      ab 750 €
+    </div>
+
+    <div class="co-sub" id="calcRange">
+      inkl. PA-Anlage, Licht &amp; Auf-/Abbau
+    </div>
+
+    <ul id="calcBreakdown"></ul>
+
+    <a href="#kontakt"
+       class="btn-yellow"
+       id="calcCta">
+      Angebot anfordern
+    </a>
+
+    <p class="calc-note">
+      Unverbindlicher Richtwert. Der finale Preis hängt von Datum,
+      Location und Aufwand ab – wir melden uns schnell mit einem festen Angebot.
+    </p>
+
+  </div>
+
+</div>
 </section>
 
 <!-- KONTAKT -->
@@ -2445,213 +2796,406 @@ window.addEventListener("scroll", () => {
 </div>
 
 <script>
-/* ─── Preis-Rechner ────────────────────────────────────────────────────
-   Alles hier zentral anpassbar: Anlässe, Dauer-Stufen, Extras, Anfahrt. */
-const PREISE = {
-  /* Basis gilt für 2 Std. Spielzeit, inkl. PA & Licht. */
-  basis: 600,
-  freieKm: 30,
-  proKm: 0.9,
-
-  /* Anlass: aufschlag = Zu-/Abschlag in €, dauer = vorausgewählte Stufe */
-  anlaesse: [
-    { id: 'kirmes',   label: 'Kirmes / Volksfest',   sub: 'Bühne meist gestellt', aufschlag: 0,   dauer: 3 },
-    { id: 'feuerwehr',label: 'Feuerwehr- / Vereinsfest', sub: 'Zelt & Halle',      aufschlag: 0,   dauer: 3 },
-    { id: 'privat',   label: 'Privatfeier',          sub: 'Geburtstag, Hochzeit',   aufschlag: 0,   dauer: 2 },
-    { id: 'firma_s',  label: 'Firmenfeier klein',    sub: 'bis ca. 100 Gäste',      aufschlag: 100, dauer: 2 },
-    { id: 'firma_l',  label: 'Firmenfeier groß',     sub: 'ab ca. 100 Gäste',      aufschlag: 250, dauer: 2.5 }
-  ],
-
-  /* Spieldauer-Stufen: preis = Gesamtpreis der Musik (ohne Anfahrt/Extras) */
-  dauern: [
-    { std: 1,   label: '1 Std.',   sub: '1 Set',        preis: 350 },
-    { std: 1.5, label: '1,5 Std.', sub: '2 kurze Sets', preis: 450 },
-    { std: 2,   label: '2 Std.',   sub: '2 Sets',       preis: 550 },
-    { std: 2.5, label: '2,5 Std.', sub: '2 lange Sets', preis: 650 },
-    { std: 3,   label: '3 Std.',   sub: '3 Sets',       preis: 750 },
-    { std: 3.5, label: '3,5 Std.', sub: '3 Sets',       preis: 850 }
-  ],
-
-  extras: [
-    { id: 'light', label: 'Erweiterte Lichtshow',      preis: 150 },
-    { id: 'mic',   label: 'Technik für Reden & Playlist', preis: 100 },
-    { id: 'day',   label: 'Aufbau am Vortag',          preis: 80 }
-  ]
-};
+/* ─── PREIS-RECHNER ───────────────────────────────────────────────── */
 
 (function () {
+
   const elA = document.getElementById('calcAnlass');
-  if (!elA) return;
   const elD = document.getElementById('calcDauer');
   const elE = document.getElementById('calcExtras');
   const elKm = document.getElementById('calcKm');
-  const euro = n => Math.round(n).toLocaleString('de-DE') + ' €';
 
-  let anlass = PREISE.anlaesse[0];
-  let dauer  = PREISE.dauern.find(d => d.std === anlass.dauer);
+  if (!elA || !elD || !elE || !elKm) return;
+
+  const euro = n =>
+    Math.round(n).toLocaleString('de-DE') + ' €';
+
+  const freieKm = 30;
+  const proKm = 0.9;
+
+  let anlass =
+    elA.querySelector('.opt[aria-pressed="true"]') ||
+    elA.querySelector('.opt');
+
+  let dauer =
+    elD.querySelector('.opt[aria-pressed="true"]') ||
+    elD.querySelector('.opt');
+
   const gewaehlteExtras = new Set();
 
-  function btn(label, sub) {
-    const b = document.createElement('button');
-    b.type = 'button'; b.className = 'opt'; b.setAttribute('aria-pressed', 'false');
-    b.innerHTML = label + (sub ? '<span class="opt-sub">' + sub + '</span>' : '');
-    return b;
-  }
 
-  PREISE.anlaesse.forEach(a => {
-    const b = btn(a.label, a.sub);
-    b.addEventListener('click', () => {
-      anlass = a;
-      dauer = PREISE.dauern.find(d => d.std === a.dauer) || dauer;
+  /* Anlass auswählen */
+
+  elA.querySelectorAll('.opt').forEach(button => {
+
+    button.addEventListener('click', () => {
+
+      anlass = button;
+
+      elA.querySelectorAll('.opt').forEach(b => {
+        b.setAttribute(
+          'aria-pressed',
+          String(b === anlass)
+        );
+      });
+
+      const passendeDauer =
+        elD.querySelector(
+          '.opt[data-std="' +
+          button.dataset.dauer +
+          '"]'
+        );
+
+      if (passendeDauer) {
+        dauer = passendeDauer;
+      }
+
       render();
+
     });
-    a._el = b; elA.appendChild(b);
+
   });
 
-  PREISE.dauern.forEach(d => {
-    const b = btn(d.label, d.sub);
-    b.addEventListener('click', () => { dauer = d; render(); });
-    d._el = b; elD.appendChild(b);
-  });
 
-  PREISE.extras.forEach(x => {
-    const b = btn(x.label, '+ ' + euro(x.preis));
-    b.addEventListener('click', () => {
-      gewaehlteExtras.has(x.id) ? gewaehlteExtras.delete(x.id) : gewaehlteExtras.add(x.id);
+  /* Spieldauer auswählen */
+
+  elD.querySelectorAll('.opt').forEach(button => {
+
+    button.addEventListener('click', () => {
+
+      dauer = button;
+
+      elD.querySelectorAll('.opt').forEach(b => {
+        b.setAttribute(
+          'aria-pressed',
+          String(b === dauer)
+        );
+      });
+
       render();
+
     });
-    x._el = b; elE.appendChild(b);
+
   });
+
+
+  /* Extras auswählen */
+
+  elE.querySelectorAll('.opt').forEach(button => {
+
+    button.addEventListener('click', () => {
+
+      const id = button.dataset.id;
+
+      if (gewaehlteExtras.has(id)) {
+        gewaehlteExtras.delete(id);
+      } else {
+        gewaehlteExtras.add(id);
+      }
+
+      button.setAttribute(
+        'aria-pressed',
+        String(gewaehlteExtras.has(id))
+      );
+
+      render();
+
+    });
+
+  });
+
 
   function render() {
-    PREISE.anlaesse.forEach(a => a._el.setAttribute('aria-pressed', String(a === anlass)));
-    PREISE.dauern.forEach(d => d._el.setAttribute('aria-pressed', String(d === dauer)));
-    PREISE.extras.forEach(x => x._el.setAttribute('aria-pressed', String(gewaehlteExtras.has(x.id))));
 
-    const km = Math.max(0, Math.min(400, Number(elKm.value) || 0));
-    const fahrt = Math.max(0, km - PREISE.freieKm) * PREISE.proKm;
-    const extras = PREISE.extras.filter(x => gewaehlteExtras.has(x.id));
-    const extraSumme = extras.reduce((s, x) => s + x.preis, 0);
-    const total = dauer.preis + anlass.aufschlag + fahrt + extraSumme;
+    const km = Math.max(
+      0,
+      Math.min(
+        400,
+        Number(elKm.value) || 0
+      )
+    );
 
-    document.getElementById('calcPrice').textContent = 'ab ' + euro(total);
-    document.getElementById('calcRange').textContent =
-      'Rahmen ca. ' + euro(total) + ' – ' + euro(total * 1.15);
 
-    const rows = [['Live-Musik · ' + dauer.label + ' (PA & Licht)', dauer.preis]];
-    if (anlass.aufschlag) rows.push([anlass.label, anlass.aufschlag]);
-    if (fahrt) rows.push([Math.round(km - PREISE.freieKm) + ' km Anfahrt', fahrt]);
-    extras.forEach(x => rows.push([x.label, x.preis]));
-    document.getElementById('calcBreakdown').innerHTML =
-      rows.map(r => '<li><span>' + r[0] + '</span><span>' + euro(r[1]) + '</span></li>').join('');
+    const dauerPreis =
+      Number(dauer.dataset.preis) || 0;
 
-    document.getElementById('calcCta').dataset.summary =
-      'Meine Anfrage: ' + anlass.label + ', ' + dauer.label + ' Spielzeit, ca. ' + km + ' km Anfahrt'
-      + (extras.length ? ', Extras: ' + extras.map(x => x.label).join(', ') : '')
-      + ' – Richtwert ' + euro(total) + '.';
+    const anlassAufschlag =
+      Number(anlass.dataset.aufschlag) || 0;
+
+
+    const fahrt =
+      Math.max(0, km - freieKm) * proKm;
+
+
+    const extras =
+      Array.from(
+        elE.querySelectorAll('.opt')
+      )
+      .filter(button =>
+        gewaehlteExtras.has(button.dataset.id)
+      );
+
+
+    const extraSumme =
+      extras.reduce(
+        (summe, button) =>
+          summe + Number(button.dataset.preis || 0),
+        0
+      );
+
+
+    const total =
+      dauerPreis +
+      anlassAufschlag +
+      fahrt +
+      extraSumme;
+
+
+    document.getElementById(
+      'calcPrice'
+    ).textContent =
+      'ab ' + euro(total);
+
+
+    document.getElementById(
+      'calcRange'
+    ).textContent =
+      'Rahmen ca. ' +
+      euro(total) +
+      ' – ' +
+      euro(total * 1.15);
+
+
+    const rows = [];
+
+
+    rows.push([
+      'Live-Musik · ' +
+      dauer.textContent.trim().split('\n')[0],
+      dauerPreis
+    ]);
+
+
+    if (anlassAufschlag) {
+
+      rows.push([
+        anlass.textContent.trim().split('\n')[0],
+        anlassAufschlag
+      ]);
+
+    }
+
+
+    if (fahrt) {
+
+      rows.push([
+        Math.round(km - freieKm) +
+        ' km Anfahrt',
+        fahrt
+      ]);
+
+    }
+
+
+    extras.forEach(button => {
+
+      rows.push([
+        button.textContent.trim().split('\n')[0],
+        Number(button.dataset.preis)
+      ]);
+
+    });
+
+
+    document.getElementById(
+      'calcBreakdown'
+    ).innerHTML =
+      rows.map(row =>
+
+        '<li>' +
+          '<span>' + row[0] + '</span>' +
+          '<span>' + euro(row[1]) + '</span>' +
+        '</li>'
+
+      ).join('');
+
+
+    document.getElementById(
+      'calcCta'
+    ).dataset.summary =
+
+      'Meine Anfrage: ' +
+      anlass.textContent.trim().split('\n')[0] +
+      ', ' +
+      dauer.textContent.trim().split('\n')[0] +
+      ' Spielzeit, ca. ' +
+      km +
+      ' km Anfahrt' +
+
+      (
+        extras.length
+          ? ', Extras: ' +
+            extras
+              .map(x =>
+                x.textContent.trim().split('\n')[0]
+              )
+              .join(', ')
+          : ''
+      ) +
+
+      ' – Richtwert ' +
+      euro(total) +
+      '.';
+
   }
 
-  elKm.addEventListener('input', render);
 
-  document.getElementById('calcCta').addEventListener('click', function () {
-    const msg = document.getElementById('message');
-    if (msg && !msg.value.trim()) msg.value = this.dataset.summary + '\n\n';
+  elKm.addEventListener(
+    'input',
+    render
+  );
+
+
+  document.getElementById(
+    'calcCta'
+  ).addEventListener(
+    'click',
+    function () {
+
+      const msg =
+        document.getElementById('message');
+
+      if (
+        msg &&
+        !msg.value.trim()
+      ) {
+
+        msg.value =
+          this.dataset.summary +
+          '\n\n';
+
+      }
+
+    }
+  );
+
+/* Anfangszustand passend zum gewählten Anlass */
+
+const startDauer =
+  elD.querySelector(
+    '.opt[data-std="' +
+    anlass.dataset.dauer +
+    '"]'
+  );
+
+if (startDauer) {
+  dauer = startDauer;
+
+  elD.querySelectorAll('.opt').forEach(b => {
+    b.setAttribute(
+      'aria-pressed',
+      String(b === dauer)
+    );
   });
-
+}
   render();
-})();
 
-/* ─── NEU: Filterbare Songliste ────────────────────────────────────────
-   Hier einfach weitere Songs ergänzen: { t: Titel, a: Interpret, g: Genre } */
-const SONGS = [
-  { t: 'American Idiot', a: 'Green Day', g: 'Rock' },
-  { t: 'All the Small Things', a: 'Blink-182', g: 'Rock' },
-  { t: 'Blitzkrieg Bop', a: 'Ramones', g: 'Rock' },
-  { t: 'Boulevard of Broken Dreams', a: 'Green Day', g: 'Rock' },
-  { t: 'Country Roads', a: 'John Denver', g: 'Party' },
-  { t: "Don’t Look Back in Anger", a: 'Oasis', g: 'Moderne Hits' },
-  { t: "Don’t Stop Believin’", a: 'Journey', g: 'Rock' },
-  { t: 'Dirty Diana', a: 'Michael Jackson', g: 'Party' },
-  { t: 'Fields of Athenry', a: 'The Dubliners', g: 'Party' },
-  { t: 'Footloose', a: 'Kenny Loggins', g: 'Party' },
-  { t: 'Hammer to Fall', a: 'Queen', g: 'Rock' },
-  { t: 'Highway to Hell', a: 'AC/DC', g: 'Rock' },
-  { t: 'Holiday', a: 'Green Day', g: 'Rock' },
-  { t: 'House of the Rising Sun', a: 'The Animals', g: 'Rock' },
-  { t: 'Let Me Entertain You', a: 'Robbie Williams', g: 'Party' },
-  { t: 'Livin’ on a Prayer', a: 'Bon Jovi', g: 'Rock' },
-  { t: 'Mr. Brightside', a: 'The Killers', g: 'Moderne Hits' },
-  { t: 'Narcotic', a: 'Liquido', g: 'Rock' },
-  { t: 'Radio Ga Ga', a: 'Queen', g: 'Rock' },
-  { t: 'Rockin’ All Over the World', a: 'Status Quo', g: 'Rock' },
-  { t: 'Schickeria', a: 'Spider Murphy Gang', g: 'Party' },
-  { t: 'Schrei nach Liebe', a: 'Die Ärzte', g: 'Rock' },
-  { t: 'Skandal im Sperrbezirk', a: 'Spider Murphy Gang', g: 'Party' },
-  { t: 'Sex on Fire', a: 'Kings of Leon', g: 'Rock' },
-  { t: 'Shut Up and Dance', a: 'WALK THE MOON', g: 'Moderne Hits' },
-  { t: 'Smells Like Teen Spirit', a: 'Nirvana', g: 'Rock' },
-  { t: 'Song 2', a: 'Blur', g: 'Rock' },
-  { t: 'Summer of ’69', a: 'Bryan Adams', g: 'Rock' },
-  { t: 'Sweet Child o’ Mine', a: 'Guns N’ Roses', g: 'Rock' },
-  { t: 'Tage wie diese', a: 'Die Toten Hosen', g: 'Party' },
-  { t: 'Teenage Dirtbag', a: 'Wheatus', g: 'Rock' },
-  { t: 'Tommi', a: 'AnnenMayKantereit', g: 'Moderne Hits' },
-  { t: 'What’s Up?', a: '4 Non Blondes', g: 'Rock' },
-  { t: 'We Will Rock You', a: 'Queen', g: 'Rock' },
-  { t: 'Whiskey in the Jar', a: 'Metallica', g: 'Rock' },
-  { t: 'Wish You Were Here', a: 'Pink Floyd', g: 'Rock' },
-  { t: 'Wonderwall', a: 'Oasis', g: 'Moderne Hits' },
-  { t: 'Zombie', a: 'The Cranberries', g: 'Rock' }
-];
+})();
+</script>
+<script>
+/* ─── Filterbare Songliste ─────────────────────────────────────────── */
+
 (function () {
   const list = document.getElementById('sfList');
   if (!list) return;
+
   const wrap = document.getElementById('sfWrap');
   const more = document.getElementById('sfMore');
   const count = document.getElementById('sfCount');
   const search = document.getElementById('sfSearch');
   const chips = Array.from(document.querySelectorAll('.sf-chip'));
+
+  const songs = Array.from(list.querySelectorAll('.song'));
+
   let genre = 'alle';
   let expanded = false;
 
   function syncMore(hits) {
-    wrap.classList.toggle('is-collapsed', !expanded && hits > 12);
-    more.style.display = (hits > 12) ? 'inline-block' : 'none';
-    more.textContent = expanded ? 'Weniger anzeigen' : 'Alle ' + hits + ' Songs anzeigen';
+    wrap.classList.toggle(
+      'is-collapsed',
+      !expanded && hits > 12
+    );
+
+    more.style.display = hits > 12 ? 'inline-block' : 'none';
+
+    more.textContent = expanded
+      ? 'Weniger anzeigen'
+      : 'Alle ' + hits + ' Songs anzeigen';
   }
 
   function render() {
     const q = search.value.trim().toLowerCase();
-    const hits = SONGS.filter(s =>
-      (genre === 'alle' || s.g === genre) &&
-      (!q || (s.t + ' ' + s.a).toLowerCase().includes(q))
-    );
-    count.textContent = hits.length + ' von ' + SONGS.length + ' Songs – und viele mehr live im Set!';
-    list.innerHTML = hits.length
-      ? hits.map(s => '<div class="sf-item"><span class="sf-title">' + s.t +
-          '</span><span class="sf-artist">' + s.a + '</span></div>').join('')
-      : '<div class="sf-empty">Kein Treffer – schreibt uns einfach, wir lernen Songs auch extra für euch!</div>';
-    syncMore(hits.length);
+
+    let hits = 0;
+
+    songs.forEach(song => {
+      const songGenre = song.dataset.genre || '';
+      const title = song.dataset.title || '';
+      const artist = song.dataset.artist || '';
+
+      const matchesGenre =
+        genre === 'alle' || songGenre === genre;
+
+      const matchesSearch =
+        !q ||
+        (title + ' ' + artist)
+          .toLowerCase()
+          .includes(q);
+
+      const visible =
+        matchesGenre && matchesSearch;
+
+      song.style.display = visible ? '' : 'none';
+
+      if (visible) hits++;
+    });
+
+    count.textContent =
+      hits + ' von ' + songs.length +
+      ' Songs – und viele mehr live im Set!';
+
+    syncMore(hits);
   }
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+
+      chip.classList.add('active');
+
+      genre = chip.dataset.genre;
+
+      expanded = false;
+
+      render();
+    });
+  });
+
+  search.addEventListener('input', () => {
+    expanded = false;
+    render();
+  });
 
   more.addEventListener('click', () => {
     expanded = !expanded;
     render();
-    if (!expanded) wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 
-  chips.forEach(c => c.addEventListener('click', () => {
-    chips.forEach(x => x.classList.remove('active'));
-    c.classList.add('active');
-    genre = c.dataset.genre;
-    render();
-  }));
-  search.addEventListener('input', () => { expanded = search.value.trim() !== ''; render(); });
   render();
 })();
-
 </script>
 
+  
 <script>
 (function() {
   const STORAGE_KEY = 'strive_cookie_consent';
