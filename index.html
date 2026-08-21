@@ -2198,7 +2198,7 @@ footer {
   </div>
 
   <!-- Preis-Rechner (Preise zentral im Skript am Seitenende anpassbar) -->
-  <div class="calc">
+<div class="calc">
 
   <div class="calc-main">
 
@@ -2219,6 +2219,7 @@ footer {
                 data-id="kirmes"
                 data-dauer="3"
                 data-aufschlag="0"
+                data-rabatt="0"
                 aria-pressed="true">
           Kirmes / Volksfest
           <span class="opt-sub">Bühne meist gestellt</span>
@@ -2229,6 +2230,7 @@ footer {
                 data-id="feuerwehr"
                 data-dauer="3"
                 data-aufschlag="0"
+                data-rabatt="0"
                 aria-pressed="false">
           Feuerwehr- / Vereinsfest
           <span class="opt-sub">Zelt &amp; Halle</span>
@@ -2238,7 +2240,8 @@ footer {
                 class="opt"
                 data-id="privat"
                 data-dauer="2"
-                data-aufschlag="0"
+                data-aufschlag="100"
+                data-rabatt="100"
                 aria-pressed="false">
           Privatfeier
           <span class="opt-sub">Geburtstag, Hochzeit</span>
@@ -2249,6 +2252,7 @@ footer {
                 data-id="firma_s"
                 data-dauer="2"
                 data-aufschlag="100"
+                data-rabatt="0"
                 aria-pressed="false">
           Firmenfeier klein
           <span class="opt-sub">bis ca. 100 Gäste</span>
@@ -2259,6 +2263,7 @@ footer {
                 data-id="firma_l"
                 data-dauer="2.5"
                 data-aufschlag="250"
+                data-rabatt="0"
                 aria-pressed="false">
           Firmenfeier groß
           <span class="opt-sub">ab ca. 100 Gäste</span>
@@ -2334,17 +2339,18 @@ footer {
 
     <div class="calc-row">
 
-  <label class="lbl" for="calcKm">Anfahrt ab Mayen</label>
+      <label class="lbl" for="calcKm">Anfahrt ab Mayen</label>
 
-  <div class="calc-km">
+      <div class="calc-km">
 
-    <input type="number"
-           id="calcKm"
-           min="0"
-           max="400"
-           step="5"
-           value="30"
-           inputmode="numeric">
+        <input type="number"
+               id="calcKm"
+               min="0"
+               max="400"
+               step="5"
+               value="30"
+               inputmode="numeric">
+
         <small>
           km einfache Strecke · die ersten 30 km sind inklusive
         </small>
@@ -2423,7 +2429,6 @@ footer {
 
 </div>
 </section>
-
 <!-- KONTAKT -->
 <section class="sec" id="kontakt">
   <div class="tag">Kontakt &amp; Buchung</div>
@@ -2869,10 +2874,12 @@ document.querySelectorAll(".nav-links a").forEach(link => {
       anlass = button;
 
       elA.querySelectorAll('.opt').forEach(b => {
+
         b.setAttribute(
           'aria-pressed',
           String(b === anlass)
         );
+
       });
 
       const passendeDauer =
@@ -2902,10 +2909,12 @@ document.querySelectorAll(".nav-links a").forEach(link => {
       dauer = button;
 
       elD.querySelectorAll('.opt').forEach(b => {
+
         b.setAttribute(
           'aria-pressed',
           String(b === dauer)
         );
+
       });
 
       render();
@@ -2955,8 +2964,22 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     const dauerPreis =
       Number(dauer.dataset.preis) || 0;
 
+
+    /*
+     * Der Anlass bestimmt den regulären Grundpreis.
+     *
+     * Firmenfeiern:
+     *   Grundpreis + 100 € bzw. + 250 €
+     *
+     * Privatfeiern:
+     *   gleicher regulärer Grundpreis wie Firmenfeier klein
+     *   minus 100 € Privatkundenrabatt
+     */
     const anlassAufschlag =
       Number(anlass.dataset.aufschlag) || 0;
+
+    const rabatt =
+      Number(anlass.dataset.rabatt) || 0;
 
 
     const fahrt =
@@ -2980,9 +3003,19 @@ document.querySelectorAll(".nav-links a").forEach(link => {
       );
 
 
+    /*
+     * Gesamtpreis:
+     *
+     * Spieldauer
+     * + regulärer Anlass-Grundpreis
+     * - Privatkundenrabatt
+     * + Anfahrt
+     * + Extras
+     */
     const total =
       dauerPreis +
-      anlassAufschlag +
+      anlassAufschlag -
+      rabatt +
       fahrt +
       extraSumme;
 
@@ -3005,18 +3038,27 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     const rows = [];
 
 
+    /*
+     * Grundpreis inklusive Anlass-Grundpreis.
+     * Dadurch erscheint bei Firmenfeiern kein
+     * separater "Aufschlag".
+     */
     rows.push([
       'Live-Musik · ' +
       dauer.textContent.trim().split('\n')[0],
-      dauerPreis
+      dauerPreis + anlassAufschlag
     ]);
 
 
-    if (anlassAufschlag) {
+    /*
+     * Nur bei Privatfeiern wird der Rabatt
+     * separat ausgewiesen.
+     */
+    if (rabatt) {
 
       rows.push([
-        anlass.textContent.trim().split('\n')[0],
-        anlassAufschlag
+        'Privatkundenrabatt',
+        -rabatt
       ]);
 
     }
@@ -3046,11 +3088,20 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     document.getElementById(
       'calcBreakdown'
     ).innerHTML =
+
       rows.map(row =>
 
         '<li>' +
-          '<span>' + row[0] + '</span>' +
-          '<span>' + euro(row[1]) + '</span>' +
+          '<span>' +
+            row[0] +
+          '</span>' +
+          '<span>' +
+            (
+              row[1] < 0
+                ? '− ' + euro(Math.abs(row[1]))
+                : euro(row[1])
+            ) +
+          '</span>' +
         '</li>'
 
       ).join('');
@@ -3115,25 +3166,32 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     }
   );
 
-/* Anfangszustand passend zum gewählten Anlass */
 
-const startDauer =
-  elD.querySelector(
-    '.opt[data-std="' +
-    anlass.dataset.dauer +
-    '"]'
-  );
+  /* Anfangszustand passend zum gewählten Anlass */
 
-if (startDauer) {
-  dauer = startDauer;
-
-  elD.querySelectorAll('.opt').forEach(b => {
-    b.setAttribute(
-      'aria-pressed',
-      String(b === dauer)
+  const startDauer =
+    elD.querySelector(
+      '.opt[data-std="' +
+      anlass.dataset.dauer +
+      '"]'
     );
-  });
-}
+
+  if (startDauer) {
+
+    dauer = startDauer;
+
+    elD.querySelectorAll('.opt').forEach(b => {
+
+      b.setAttribute(
+        'aria-pressed',
+        String(b === dauer)
+      );
+
+    });
+
+  }
+
+
   render();
 
 })();
