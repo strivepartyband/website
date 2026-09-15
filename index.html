@@ -263,7 +263,125 @@ nav {
   transition:all 0.2s;
 }
 .btn-yellow:hover { background:var(--yellow2); transform:translateY(-2px); box-shadow:0 8px 30px rgba(245,200,0,0.45); }
+/* ─── LIVE FOTO-ROULETTE ─── */
 
+.live-roulette {
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+  height: clamp(260px, 42vw, 500px);
+  margin: 34px auto 44px;
+  overflow: hidden;
+  border-radius: 14px;
+  background: var(--dark);
+  box-shadow: 0 20px 60px rgba(26,18,8,0.18);
+  border: 1px solid rgba(245,200,0,0.15);
+}
+
+.live-roulette::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      to top,
+      rgba(26,18,8,0.65) 0%,
+      rgba(26,18,8,0.05) 45%,
+      rgba(26,18,8,0.10) 100%
+    );
+}
+
+.live-roulette-track {
+  position: absolute;
+  inset: 0;
+}
+
+.live-roulette-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.04);
+  transition:
+    opacity 1s ease,
+    transform 5s ease;
+}
+
+.live-roulette-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.live-roulette-slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.live-roulette-caption {
+  position: absolute;
+  left: 28px;
+  bottom: 26px;
+  z-index: 4;
+  color: #fff;
+  font-family: "Montserrat", "Montserrat Fallback", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 10px rgba(0,0,0,.45);
+}
+
+.live-roulette-dots {
+  position: absolute;
+  right: 26px;
+  bottom: 27px;
+  z-index: 4;
+  display: flex;
+  gap: 7px;
+}
+
+.live-roulette-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,.45);
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.live-roulette-dot.active {
+  width: 22px;
+  border-radius: 10px;
+  background: var(--yellow);
+}
+
+@media (max-width: 700px) {
+  .live-roulette {
+    height: 300px;
+    margin: 28px auto 34px;
+    border-radius: 10px;
+  }
+
+  .live-roulette-caption {
+    left: 18px;
+    bottom: 18px;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+  }
+
+  .live-roulette-dots {
+    right: 18px;
+    bottom: 19px;
+  }
+}
+
+  
 .btn-ghost {
   display:inline-block;
   background:transparent; color:#fff;
@@ -1503,7 +1621,57 @@ footer {
   </div>
 </section> 
 
+<!-- Fotopart-->
+<div class="live-roulette" id="liveRoulette">
 
+  <div class="live-roulette-track">
+
+    <div class="live-roulette-slide active">
+      <img
+        src="bilder/live1.webp"
+        alt="STR!VE live auf der Bühne"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="live-roulette-slide">
+      <img
+        src="bilder/live2.webp"
+        alt="STR!VE Liveband"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="live-roulette-slide">
+      <img
+        src="bilder/live3.webp"
+        alt="STR!VE bei einem Live-Auftritt"
+        loading="lazy"
+      >
+    </div>
+
+    <div class="live-roulette-slide">
+      <img
+        src="bilder/live4.webp"
+        alt="STR!VE Partyband live"
+        loading="lazy"
+      >
+    </div>
+
+  </div>
+
+  <div class="live-roulette-caption">
+    100% Live · 100% STR!VE
+  </div>
+
+  <div class="live-roulette-dots">
+    <button class="live-roulette-dot active" type="button" aria-label="Foto 1"></button>
+    <button class="live-roulette-dot" type="button" aria-label="Foto 2"></button>
+    <button class="live-roulette-dot" type="button" aria-label="Foto 3"></button>
+    <button class="live-roulette-dot" type="button" aria-label="Foto 4"></button>
+  </div>
+
+</div>
 
 
 <!-- Video -->
@@ -3288,7 +3456,62 @@ document.querySelectorAll(".nav-links a").forEach(link => {
   render();
 })();
 </script>
+<script>
+(function () {
 
+  const roulette = document.getElementById('liveRoulette');
+
+  if (!roulette) return;
+
+  const slides = Array.from(
+    roulette.querySelectorAll('.live-roulette-slide')
+  );
+
+  const dots = Array.from(
+    roulette.querySelectorAll('.live-roulette-dot')
+  );
+
+  if (!slides.length) return;
+
+  let current = 0;
+  let timer;
+
+  function showSlide(index) {
+
+    current = index;
+
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === current);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === current);
+    });
+  }
+
+  function nextSlide() {
+    showSlide((current + 1) % slides.length);
+  }
+
+  function start() {
+    clearInterval(timer);
+    timer = setInterval(nextSlide, 3500);
+  }
+
+  dots.forEach((dot, index) => {
+
+    dot.addEventListener('click', function () {
+      showSlide(index);
+      start();
+    });
+
+  });
+
+  showSlide(0);
+  start();
+
+})();
+</script>
   
 <script>
 (function() {
