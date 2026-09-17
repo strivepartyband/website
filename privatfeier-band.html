@@ -1,0 +1,1513 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Live-Band für private Feier | Eifel & Region</title>
+
+    <meta name="description"
+          content="Live-Band für Geburtstag, Jubiläum und private Feier in Eifel, Mayen, Koblenz, Bonn, Trier und Umgebung. STR!VE jetzt anfragen.">
+
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.strivepartyband.de/private-feier-band.html">
+
+    <meta property="og:title" content="Live-Band für private Feier | STR!VE">
+    <meta property="og:description"
+          content="STR!VE spielt live bei Geburtstagen, Jubiläen und privaten Feiern in der Eifel, am Rhein, an der Mosel und darüber hinaus.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.strivepartyband.de/private-feier-band.html">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        :root {
+            --yellow:#F5C800;
+            --yellow2:#FFD700;
+            --red:#D91A1A;
+            --orange:#FF6B00;
+            --bg:#FAFAF8;
+            --bg2:#F3F1EC;
+            --warm:#FFF8E8;
+            --dark:#1A1208;
+            --dark2:#2C1F0A;
+            --text:#1A1208;
+            --muted:#7A6A50;
+            --border:rgba(26,18,8,.1);
+            --max:1160px;
+        }
+
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        html {
+            scroll-behavior:smooth;
+        }
+
+        body {
+            background:var(--bg);
+            color:var(--text);
+            font-family:"Open Sans",sans-serif;
+            line-height:1.7;
+        }
+
+        img {
+            display:block;
+            max-width:100%;
+        }
+
+        a {
+            color:inherit;
+        }
+
+        nav {
+            position:fixed;
+            inset:0 0 auto 0;
+            z-index:1000;
+            height:68px;
+
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+
+            padding:0 5%;
+            background:rgba(26,18,8,.97);
+            backdrop-filter:blur(12px);
+        }
+
+        .nav-logo {
+            width:150px;
+            height:38px;
+            object-fit:contain;
+        }
+
+        .nav-links {
+            display:flex;
+            align-items:center;
+            gap:28px;
+            list-style:none;
+        }
+
+        .nav-links a {
+            color:rgba(255,255,255,.67);
+            text-decoration:none;
+
+            font-family:"Montserrat",sans-serif;
+            font-size:12px;
+            font-weight:700;
+            letter-spacing:1.4px;
+            text-transform:uppercase;
+        }
+
+        .nav-links a:hover {
+            color:#fff;
+        }
+
+        .nav-cta {
+            padding:10px 22px;
+            border-radius:3px;
+            background:var(--yellow);
+            color:var(--dark)!important;
+        }
+
+        .burger {
+            display:none;
+            flex-direction:column;
+            gap:5px;
+        }
+
+        .burger span {
+            width:25px;
+            height:2px;
+            background:var(--yellow);
+        }
+
+        h1,h2,h3 {
+            font-family:"Montserrat",sans-serif;
+            line-height:1.08;
+        }
+
+        .hero {
+            min-height:700px;
+            padding:145px 5% 95px;
+
+            display:flex;
+            align-items:center;
+
+            position:relative;
+            overflow:hidden;
+
+            color:#fff;
+
+            background:
+                radial-gradient(circle at 80% 40%,rgba(245,200,0,.17),transparent 31%),
+                radial-gradient(circle at 14% 84%,rgba(217,26,26,.16),transparent 34%),
+                linear-gradient(135deg,#120d06,#241706 56%,#120d06);
+        }
+
+        .hero:before {
+            content:"";
+            position:absolute;
+            inset:0;
+
+            background:
+                linear-gradient(110deg,transparent 43%,rgba(245,200,0,.10) 50%,transparent 58%),
+                linear-gradient(74deg,transparent 46%,rgba(217,26,26,.09) 53%,transparent 60%);
+        }
+
+        .hero-inner {
+            width:100%;
+            max-width:var(--max);
+            margin:auto;
+            position:relative;
+            z-index:2;
+        }
+
+        .hero-content {
+            max-width:860px;
+        }
+
+        .hero-label,
+        .section-tag {
+            font-family:"Montserrat",sans-serif;
+            font-size:11px;
+            font-weight:800;
+            letter-spacing:2px;
+            text-transform:uppercase;
+        }
+
+        .hero-label {
+            display:inline-flex;
+            align-items:center;
+            gap:10px;
+
+            padding:8px 13px;
+            margin-bottom:23px;
+
+            color:var(--yellow);
+            border:1px solid rgba(245,200,0,.32);
+            background:rgba(245,200,0,.07);
+        }
+
+        .hero-label:before {
+            content:"";
+            width:7px;
+            height:7px;
+            border-radius:50%;
+            background:var(--yellow);
+        }
+
+        .hero h1 {
+            font-size:clamp(42px,7vw,76px);
+            font-weight:900;
+            letter-spacing:-2.5px;
+        }
+
+        .hero h1 em {
+            color:var(--yellow);
+            font-style:normal;
+        }
+
+        .hero-text {
+            max-width:720px;
+            margin-top:28px;
+            color:rgba(255,255,255,.74);
+            font-size:18px;
+        }
+
+        .hero-actions {
+            display:flex;
+            flex-wrap:wrap;
+            gap:13px;
+            margin-top:34px;
+        }
+
+        .btn {
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+
+            min-height:52px;
+            padding:0 25px;
+            border-radius:3px;
+
+            font-family:"Montserrat",sans-serif;
+            font-size:12px;
+            font-weight:800;
+            letter-spacing:1.2px;
+            text-transform:uppercase;
+            text-decoration:none;
+
+            transition:.2s ease;
+        }
+
+        .btn-yellow {
+            background:var(--yellow);
+            color:var(--dark);
+            box-shadow:0 12px 35px rgba(245,200,0,.15);
+        }
+
+        .btn-yellow:hover {
+            background:var(--yellow2);
+            transform:translateY(-2px);
+        }
+
+        .btn-outline {
+            color:#fff;
+            border:1px solid rgba(255,255,255,.28);
+            background:rgba(255,255,255,.03);
+        }
+
+        .btn-outline:hover {
+            background:rgba(255,255,255,.08);
+        }
+
+        .hero-note {
+            margin-top:23px;
+            color:rgba(255,255,255,.45);
+            font-size:13px;
+        }
+
+        .section {
+            padding:90px 5%;
+        }
+
+        .section-inner {
+            max-width:var(--max);
+            margin:auto;
+        }
+
+        .section-warm {
+            background:var(--bg2);
+        }
+
+        .section-tag {
+            margin-bottom:15px;
+            color:var(--red);
+        }
+
+        .section h2 {
+            max-width:850px;
+            font-size:clamp(34px,5vw,52px);
+            font-weight:900;
+            letter-spacing:-1.5px;
+        }
+
+        .section h2 em {
+            color:var(--red);
+            font-style:normal;
+        }
+
+        .lead {
+            max-width:800px;
+            margin-top:24px;
+            color:#5f533f;
+            font-size:17px;
+        }
+
+        .intro-grid {
+            display:grid;
+            grid-template-columns:1.08fr .92fr;
+            gap:70px;
+        }
+
+        .intro-copy p {
+            margin-top:19px;
+        }
+
+        .info-card {
+            padding:32px;
+            background:#fff;
+            border:1px solid var(--border);
+            border-radius:5px;
+            box-shadow:0 15px 45px rgba(26,18,8,.06);
+        }
+
+        .info-card h3 {
+            font-size:22px;
+            font-weight:800;
+        }
+
+        .info-card p {
+            margin-top:13px;
+            color:var(--muted);
+            font-size:15px;
+        }
+
+        .info-list {
+            margin-top:24px;
+        }
+
+        .info-item {
+            padding:15px 0;
+            border-top:1px solid var(--border);
+        }
+
+        .info-item strong {
+            display:block;
+            font-family:"Montserrat",sans-serif;
+        }
+
+        .info-item span {
+            color:var(--muted);
+            font-size:14px;
+        }
+
+        .reason-grid {
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:18px;
+            margin-top:50px;
+        }
+
+        .reason {
+            padding:31px;
+            background:#fff;
+            border:1px solid var(--border);
+        }
+
+        .reason-number {
+            color:var(--red);
+            font-family:"Montserrat",sans-serif;
+            font-size:11px;
+            font-weight:900;
+            letter-spacing:1.5px;
+        }
+
+        .reason h3 {
+            margin-top:21px;
+            font-size:21px;
+            font-weight:800;
+        }
+
+        .reason p {
+            margin-top:13px;
+            color:var(--muted);
+            font-size:15px;
+        }
+
+        .details-grid {
+            display:grid;
+            grid-template-columns:.92fr 1.08fr;
+            gap:65px;
+        }
+
+        .details {
+            margin-top:35px;
+        }
+
+        .detail {
+            padding:18px 0;
+            border-top:1px solid var(--border);
+
+            display:grid;
+            grid-template-columns:145px 1fr;
+            gap:25px;
+        }
+
+        .detail:last-child {
+            border-bottom:1px solid var(--border);
+        }
+
+        .detail-label {
+            font-family:"Montserrat",sans-serif;
+            font-size:11px;
+            font-weight:800;
+            letter-spacing:1px;
+            text-transform:uppercase;
+        }
+
+        .detail p {
+            color:#5f533f;
+            font-size:15px;
+        }
+
+        .song-box {
+            padding:36px;
+            background:var(--dark);
+            color:#fff;
+            border-radius:5px;
+        }
+
+        .song-box .section-tag {
+            color:var(--yellow);
+        }
+
+        .song-box h3 {
+            font-size:30px;
+            font-weight:900;
+        }
+
+        .song-box > p {
+            margin-top:15px;
+            color:rgba(255,255,255,.64);
+        }
+
+        .songs {
+            display:flex;
+            flex-wrap:wrap;
+            gap:8px;
+            margin-top:25px;
+        }
+
+        .song {
+            padding:7px 10px;
+            border:1px solid rgba(255,255,255,.13);
+            background:rgba(255,255,255,.04);
+            color:rgba(255,255,255,.82);
+            font-size:12px;
+        }
+
+        .cta-band {
+            padding:70px 5%;
+            background:linear-gradient(120deg,#241706,#1A1208 55%,#251806);
+            color:#fff;
+        }
+
+        .cta-inner {
+            max-width:var(--max);
+            margin:auto;
+
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:40px;
+        }
+
+        .cta-band h2 {
+            font-size:clamp(30px,4vw,44px);
+            font-weight:900;
+        }
+
+        .cta-band p {
+            margin-top:10px;
+            color:rgba(255,255,255,.6);
+        }
+
+        .region-grid {
+            display:grid;
+            grid-template-columns:1.1fr .9fr;
+            gap:65px;
+            align-items:center;
+        }
+
+        .region-copy p {
+            margin-top:18px;
+        }
+
+        .region-box {
+            padding:34px;
+            background:var(--warm);
+            border-left:4px solid var(--yellow);
+        }
+
+        .region-box strong {
+            display:block;
+            font-family:"Montserrat",sans-serif;
+            font-size:22px;
+        }
+
+        .region-box p {
+            margin-top:13px;
+            color:#625640;
+            font-size:15px;
+        }
+
+        .quote-section {
+            background:var(--bg2);
+        }
+
+        blockquote {
+            max-width:900px;
+            margin:45px auto 0;
+            padding:42px 45px;
+
+            background:#fff;
+            border-left:5px solid var(--red);
+            box-shadow:0 15px 45px rgba(26,18,8,.07);
+        }
+
+        blockquote p {
+            font-family:"Montserrat",sans-serif;
+            font-size:clamp(22px,3vw,31px);
+            font-weight:700;
+            line-height:1.35;
+        }
+
+        blockquote cite {
+            display:block;
+            margin-top:22px;
+            color:var(--muted);
+            font-size:13px;
+            font-style:normal;
+        }
+
+        .faq-list {
+            max-width:900px;
+            margin-top:45px;
+        }
+
+        details {
+            border-top:1px solid var(--border);
+        }
+
+        details:last-child {
+            border-bottom:1px solid var(--border);
+        }
+
+        summary {
+            padding:22px 5px;
+            cursor:pointer;
+
+            font-family:"Montserrat",sans-serif;
+            font-size:17px;
+            font-weight:800;
+            list-style:none;
+        }
+
+        summary::-webkit-details-marker {
+            display:none;
+        }
+
+        summary::after {
+            content:"+";
+            float:right;
+            color:var(--red);
+            font-size:23px;
+        }
+
+        details[open] summary::after {
+            content:"−";
+        }
+
+        details p {
+            max-width:800px;
+            padding:0 5px 23px;
+            color:var(--muted);
+            font-size:15px;
+        }
+
+        .final-cta {
+            padding:90px 5%;
+            text-align:center;
+
+            background:
+                radial-gradient(circle at 50% 0%,rgba(245,200,0,.12),transparent 42%),
+                var(--dark);
+
+            color:#fff;
+        }
+
+        .final-cta-inner {
+            max-width:800px;
+            margin:auto;
+        }
+
+        .final-cta h2 {
+            font-size:clamp(35px,6vw,58px);
+            font-weight:900;
+        }
+
+        .final-cta h2 em {
+            color:var(--yellow);
+            font-style:normal;
+        }
+
+        .final-cta p {
+            max-width:670px;
+            margin:22px auto 30px;
+            color:rgba(255,255,255,.65);
+        }
+
+        .related {
+            padding:65px 5%;
+        }
+
+        .related-inner {
+            max-width:var(--max);
+            margin:auto;
+        }
+
+        .related-grid {
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:16px;
+            margin-top:30px;
+        }
+
+        .related-card {
+            padding:25px;
+            background:#fff;
+            border:1px solid var(--border);
+            text-decoration:none;
+            transition:.2s ease;
+        }
+
+        .related-card:hover {
+            transform:translateY(-2px);
+            border-color:rgba(217,26,26,.3);
+        }
+
+        .related-card span {
+            color:var(--red);
+            font-family:"Montserrat",sans-serif;
+            font-size:10px;
+            font-weight:800;
+            letter-spacing:1.5px;
+            text-transform:uppercase;
+        }
+
+        .related-card strong {
+            display:block;
+            margin-top:7px;
+            font-family:"Montserrat",sans-serif;
+            font-size:19px;
+        }
+
+        footer {
+            padding:55px 5% 25px;
+            background:var(--dark);
+            color:#fff;
+        }
+
+        .footer-inner {
+            max-width:var(--max);
+            margin:auto;
+        }
+
+        .footer-top {
+            display:flex;
+            justify-content:space-between;
+            gap:40px;
+        }
+
+        .footer-logo {
+            width:150px;
+        }
+
+        .footer-tagline {
+            margin-top:12px;
+            color:rgba(255,255,255,.5);
+            font-size:13px;
+        }
+
+        .footer-links {
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:flex-end;
+            gap:15px 25px;
+            list-style:none;
+        }
+
+        .footer-links a {
+            color:rgba(255,255,255,.57);
+            text-decoration:none;
+            font-size:13px;
+        }
+
+        .footer-links a:hover {
+            color:var(--yellow);
+        }
+
+        .footer-bottom {
+            margin-top:45px;
+            padding-top:20px;
+            border-top:1px solid rgba(255,255,255,.1);
+            color:rgba(255,255,255,.4);
+            font-size:12px;
+        }
+
+        @media(max-width:850px) {
+
+            .nav-links {
+                position:absolute;
+                top:68px;
+                left:0;
+                right:0;
+
+                display:none;
+                flex-direction:column;
+                gap:0;
+
+                padding:12px 0 20px;
+                background:rgba(26,18,8,.99);
+            }
+
+            .nav-links.open {
+                display:flex;
+            }
+
+            .nav-links a {
+                display:block;
+                padding:14px 5%;
+            }
+
+            .nav-links .nav-cta {
+                margin:10px 5%;
+                text-align:center;
+            }
+
+            .burger {
+                display:flex;
+            }
+
+            .hero {
+                min-height:670px;
+                padding-top:125px;
+            }
+
+            .intro-grid,
+            .details-grid,
+            .region-grid {
+                grid-template-columns:1fr;
+                gap:40px;
+            }
+
+            .reason-grid {
+                grid-template-columns:1fr;
+            }
+
+            .cta-inner {
+                flex-direction:column;
+                align-items:flex-start;
+            }
+
+            .detail {
+                grid-template-columns:1fr;
+                gap:5px;
+            }
+
+            .footer-top {
+                flex-direction:column;
+            }
+
+            .footer-links {
+                justify-content:flex-start;
+            }
+        }
+
+        @media(max-width:550px) {
+
+            .section {
+                padding:68px 5%;
+            }
+
+            .hero {
+                padding:120px 5% 75px;
+            }
+
+            .hero-actions {
+                flex-direction:column;
+            }
+
+            .btn {
+                width:100%;
+            }
+
+            .info-card,
+            .reason,
+            .song-box,
+            .region-box {
+                padding:25px;
+            }
+
+            blockquote {
+                padding:30px 25px;
+            }
+
+            .related-grid {
+                grid-template-columns:1fr;
+            }
+        }
+
+    </style>
+
+    <!--
+        SCHEMA.ORG-VORSCHLAG:
+
+        Allgemeine Leistungsseite:
+        @type: MusicGroup
+
+        Bei einer konkret genannten privaten Feier:
+        @type: Event
+
+        Keine erfundenen Eventdaten auszeichnen.
+        Für die allgemeine Seite reichen Bandinformationen und
+        das Einsatzgebiet.
+    -->
+
+</head>
+
+<body>
+
+<nav id="nav">
+
+    <a href="index.html">
+        <img
+            src="bilder/weblogostrive.webp"
+            alt="STR!VE Partyband Logo"
+            class="nav-logo"
+            width="150"
+            height="38"
+        >
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about">Über uns</a></li>
+        <li><a href="index.html#termine">Termine</a></li>
+        <li><a href="index.html#repertoire">Repertoire</a></li>
+        <li><a href="index.html#band">Die Band</a></li>
+        <li><a href="index.html#preise">Preise</a></li>
+        <li><a href="referenzen.html">Referenzen</a></li>
+        <li><a href="index.html#kontakt" class="nav-cta">Jetzt buchen</a></li>
+    </ul>
+
+    <div class="burger" onclick="toggleNav()" aria-label="Menü öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</nav>
+
+
+<main>
+
+    <header class="hero">
+
+        <div class="hero-inner">
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    Geburtstag · Jubiläum · Private Party
+                </div>
+
+                <h1>
+                    Live-Band für eure
+                    <em>private Feier</em>
+                </h1>
+
+                <p class="hero-text">
+                    Geburtstag, Jubiläum oder einfach eine große Party:
+                    STR!VE spielt live bei privaten Feiern in der Eifel,
+                    am Rhein, an der Mosel und darüber hinaus.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="index.html#kontakt" class="btn btn-yellow">
+                        Private Feier anfragen
+                    </a>
+
+                    <a href="#details" class="btn btn-outline">
+                        Ablauf & Repertoire
+                    </a>
+
+                </div>
+
+                <p class="hero-note">
+                    Datum, Ort und gewünschte Spielzeit schicken – den Rest besprechen wir gemeinsam.
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <section class="section">
+
+        <div class="section-inner">
+
+            <div class="intro-grid">
+
+                <div class="intro-copy">
+
+                    <div class="section-tag">
+                        Private Feier mit STR!VE
+                    </div>
+
+                    <h2>
+                        Eure Feier hat keinen
+                        <em>vorgefertigten Ablauf</em>
+                    </h2>
+
+                    <p class="lead">
+                        Bei einer privaten Feier kennt ihr eure Gäste selbst.
+                        Deshalb gibt es meistens auch keinen festen Ablauf wie
+                        bei einem Stadtfest. Vielleicht wird erst lange gegessen,
+                        vielleicht gibt es eine Rede oder ein Überraschungsprogramm.
+                    </p>
+
+                    <p>
+                        Irgendwann soll dann Musik laufen – und zwar nicht einfach
+                        aus einer Playlist, sondern live auf der Bühne.
+                    </p>
+
+                    <p>
+                        Genau dafür kann STR!VE passen. Wir können einen bestimmten
+                        Teil des Abends übernehmen oder mehrere Sets spielen. Welche
+                        Variante sinnvoll ist, hängt von Location, Gästezahl und
+                        eurem persönlichen Ablauf ab.
+                    </p>
+
+                    <p>
+                        Unser erstes eigenes Konzert war übrigens selbst etwas
+                        ziemlich Persönliches: Im April 2026 startete STR!VE mit
+                        einem Wohnzimmerkonzert im Bürgerhaus Nitztal vor Familie,
+                        Freunden und Musikinteressierten. :chatgpt-content-reference{index="8"}
+                    </p>
+
+                </div>
+
+
+                <aside class="info-card">
+
+                    <h3>
+                        Private Feiern mit Live-Musik
+                    </h3>
+
+                    <p>
+                        Zum Beispiel für:
+                    </p>
+
+                    <div class="info-list">
+
+                        <div class="info-item">
+                            <strong>Geburtstage</strong>
+                            <span>Vom runden Geburtstag bis zur größeren Party</span>
+                        </div>
+
+                        <div class="info-item">
+                            <strong>Jubiläen</strong>
+                            <span>Persönliche Feier mit Live-Musik</span>
+                        </div>
+
+                        <div class="info-item">
+                            <strong>Familienfeiern</strong>
+                            <span>Wenn mehrere Generationen gemeinsam feiern</span>
+                        </div>
+
+                        <div class="info-item">
+                            <strong>Private Partys</strong>
+                            <span>Mit eigenem Ablauf und Wunschprogramm</span>
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section section-warm">
+
+        <div class="section-inner">
+
+            <div class="section-tag">
+                Warum STR!VE?
+            </div>
+
+            <h2>
+                Eine private Feier darf
+                <em>persönlich bleiben</em>
+            </h2>
+
+            <div class="reason-grid">
+
+                <article class="reason">
+
+                    <div class="reason-number">01 / GÄSTE</div>
+
+                    <h3>
+                        Verschiedene Altersgruppen
+                    </h3>
+
+                    <p>
+                        Bei Familienfeiern stehen oft mehrere Generationen zusammen.
+                        Unser Programm verbindet bekannte Klassiker mit moderneren
+                        Songs und Partymusik.
+                    </p>
+
+                </article>
+
+
+                <article class="reason">
+
+                    <div class="reason-number">02 / WÜNSCHE</div>
+
+                    <h3>
+                        Euer Abend, nicht unser Standardablauf
+                    </h3>
+
+                    <p>
+                        Wenn es besondere Songs oder einen bestimmten Zeitpunkt für
+                        den Auftritt gibt, sprecht das bei der Anfrage direkt an.
+                        Zusätzliche Songs können nach Absprache vorbereitet werden.
+                    </p>
+
+                </article>
+
+
+                <article class="reason">
+
+                    <div class="reason-number">03 / TECHNIK</div>
+
+                    <h3>
+                        Die Technik kommt mit
+                    </h3>
+
+                    <p>
+                        PA und Beleuchtung bringen wir grundsätzlich mit. Auf- und
+                        Abbau übernehmen wir ebenfalls, damit ihr euch um eure Feier
+                        kümmern könnt.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section" id="details">
+
+        <div class="section-inner">
+
+            <div class="details-grid">
+
+                <div>
+
+                    <div class="section-tag">
+                        Ablauf & Details
+                    </div>
+
+                    <h2>
+                        Wie viel STR!VE
+                        <em>braucht eure Feier?</em>
+                    </h2>
+
+                    <div class="details">
+
+                        <div class="detail">
+                            <div class="detail-label">Spielzeit</div>
+                            <p>
+                                Aktuell sind 1 bis 3,5 Stunden möglich. Bei längeren
+                                Feiern können mehrere Sets mit Pausen eingeplant werden.
+                            </p>
+                        </div>
+
+                        <div class="detail">
+                            <div class="detail-label">Beginn</div>
+                            <p>
+                                Der Auftritt kann auf euren Ablauf abgestimmt werden.
+                                Wenn zuerst Essen oder ein anderes Programm stattfindet,
+                                muss die Band nicht direkt zum Einlass spielen.
+                            </p>
+                        </div>
+
+                        <div class="detail">
+                            <div class="detail-label">Repertoire</div>
+                            <p>
+                                Rockklassiker, Pop, moderne Hits und Partysongs.
+                                Wunschlieder könnt ihr bei der Anfrage direkt nennen.
+                            </p>
+                        </div>
+
+                        <div class="detail">
+                            <div class="detail-label">Technik</div>
+                            <p>
+                                PA, Beleuchtung und Auf- und Abbau gehören grundsätzlich
+                                zu unserem Angebot.
+                            </p>
+                        </div>
+
+                        <div class="detail">
+                            <div class="detail-label">Location</div>
+                            <p>
+                                Ob Halle, Eventlocation oder geeigneter privater
+                                Veranstaltungsort: Wir klären den benötigten Platz
+                                und die technischen Voraussetzungen vorher.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <aside class="song-box">
+
+                    <div class="section-tag">
+                        Aus unserem Programm
+                    </div>
+
+                    <h3>
+                        Ein paar Songs für eure Party
+                    </h3>
+
+                    <p>
+                        Zum Beispiel:
+                    </p>
+
+                    <div class="songs">
+                        <span class="song">Wonderwall</span>
+                        <span class="song">Tage wie diese</span>
+                        <span class="song">Country Roads</span>
+                        <span class="song">Don't Stop Believin'</span>
+                        <span class="song">Summer of '69</span>
+                        <span class="song">Mr. Brightside</span>
+                        <span class="song">Shut Up and Dance</span>
+                        <span class="song">Narcotic</span>
+                        <span class="song">Zombie</span>
+                        <span class="song">Sex on Fire</span>
+                        <span class="song">Livin' on a Prayer</span>
+                        <span class="song">Highway to Hell</span>
+                        <span class="song">Skandal im Sperrbezirk</span>
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="cta-band">
+
+        <div class="cta-inner">
+
+            <div>
+
+                <h2>
+                    Geburtstag oder Jubiläum geplant?
+                </h2>
+
+                <p>
+                    Schickt uns Datum, Ort und ungefähr die gewünschte Spielzeit.
+                    Wenn ihr schon einen Ablauf habt, gerne direkt mitschicken.
+                </p>
+
+            </div>
+
+            <a href="index.html#kontakt" class="btn btn-yellow">
+                Private Feier anfragen
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-inner">
+
+            <div class="region-grid">
+
+                <div class="region-copy">
+
+                    <div class="section-tag">
+                        Unser Einsatzgebiet
+                    </div>
+
+                    <h2>
+                        Private Feier in der Eifel
+                        oder <em>ein Stück weiter</em>
+                    </h2>
+
+                    <p>
+                        STR!VE kommt aus Nitztal bei Mayen. Unsere bisherigen
+                        Veranstaltungen fanden unter anderem in Mayen-Nitztal,
+                        Ettringen, Mayen und Kottenheim statt. :chatgpt-content-reference{index="9"}
+                    </p>
+
+                    <p>
+                        Für private Feiern fahren wir aber auch Richtung Koblenz,
+                        Andernach und Neuwied sowie durch die Eifel und entlang
+                        von Rhein und Mosel.
+                    </p>
+
+                    <p>
+                        Wenn eure Geburtstagsfeier in Bonn, Trier, Bitburg, Köln,
+                        Mainz oder Bad Kreuznach stattfindet, könnt ihr ebenfalls
+                        anfragen. Bei weiteren Strecken schauen wir uns Termin,
+                        Gage und Anfahrt konkret an.
+                    </p>
+
+                </div>
+
+
+                <aside class="region-box">
+
+                    <strong>
+                        Feier nicht in Mayen?
+                    </strong>
+
+                    <p>
+                        Kein Problem. Wir sind regional unterwegs und nehmen auch
+                        Veranstaltungen außerhalb unseres direkten Heimatortes an.
+                    </p>
+
+                    <p>
+                        Schickt uns einfach den Veranstaltungsort. Dann können wir
+                        direkt einschätzen, ob der Termin für uns passt.
+                    </p>
+
+                    <a href="index.html#kontakt" class="btn btn-yellow" style="margin-top:22px;">
+                        Feier anfragen
+                    </a>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section quote-section">
+
+        <div class="section-inner">
+
+            <div class="section-tag">
+                Kundenstimme
+            </div>
+
+            <h2>
+                Eure Rückmeldung zur
+                <em>Feier</em>
+            </h2>
+
+            <blockquote>
+
+                <p>
+                    [ZITAT EINFÜGEN]
+                </p>
+
+                <cite>
+                    — Gastgeber / Veranstalter
+                </cite>
+
+            </blockquote>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-inner">
+
+            <div class="section-tag">
+                FAQ
+            </div>
+
+            <h2>
+                Fragen vor der
+                <em>Buchung</em>
+            </h2>
+
+            <div class="faq-list">
+
+                <details>
+                    <summary>Was kostet STR!VE für eine private Feier?</summary>
+                    <p>
+                        Das hängt unter anderem von Termin, Spielzeit, Veranstaltungsort
+                        und Anfahrt ab. Auf der Hauptseite könnt ihr zunächst einen
+                        unverbindlichen Richtwert über den Preisrechner bekommen.
+                        Für eure konkrete Feier können wir anschließend ein Angebot
+                        abstimmen.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Fahrt ihr auch für private Feiern weiter weg?</summary>
+                    <p>
+                        Ja. Wir spielen nicht nur rund um Mayen. Auch Veranstaltungen
+                        in Richtung Koblenz, Bonn, Trier, Köln oder Mainz können
+                        angefragt werden. Bei größeren Entfernungen berücksichtigen
+                        wir den zusätzlichen Aufwand bei der Kalkulation.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Können wir uns bestimmte Songs wünschen?</summary>
+                    <p>
+                        Ihr könnt Wunschlieder bei der Anfrage direkt nennen.
+                        Laut unserer aktuellen Website können nach Absprache auch
+                        zusätzliche Songs für eine Veranstaltung vorbereitet werden.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Wie lange spielt ihr bei einer privaten Feier?</summary>
+                    <p>
+                        Aktuell sind verschiedene Spielzeiten zwischen 1 und
+                        3,5 Stunden möglich. Bei längeren Feiern kann der Auftritt
+                        auf mehrere Sets verteilt werden.
+                    </p>
+                </details>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="final-cta">
+
+        <div class="final-cta-inner">
+
+            <div class="section-tag">
+                Private Feier geplant?
+            </div>
+
+            <h2>
+                Dann lasst uns euren
+                <em>Abend planen.</em>
+            </h2>
+
+            <p>
+                Datum, Ort und gewünschte Spielzeit reichen für den Anfang.
+                Besondere Songs oder Programmpunkte könnt ihr direkt dazuschreiben.
+            </p>
+
+            <a href="index.html#kontakt" class="btn btn-yellow">
+                Private Feier anfragen
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section class="related">
+
+        <div class="related-inner">
+
+            <div class="section-tag">
+                Weitere Anlässe
+            </div>
+
+            <h2 style="font-size:34px;">
+                Vielleicht passt auch
+            </h2>
+
+            <div class="related-grid">
+
+                <a href="firmenfeier-band.html" class="related-card">
+                    <span>Firmenfeier</span>
+                    <strong>Band für Firmenfeier buchen</strong>
+                </a>
+
+                <a href="vereinsfest-band.html" class="related-card">
+                    <span>Vereinsfest</span>
+                    <strong>Band für Vereinsfest buchen</strong>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-top">
+
+            <div>
+
+                <img
+                    src="bilder/weblogostrive.webp"
+                    alt="STR!VE Partyband"
+                    class="footer-logo"
+                    width="150"
+                >
+
+                <div class="footer-tagline">
+                    Partyband · Eifel · Mayen · Koblenz
+                </div>
+
+            </div>
+
+            <ul class="footer-links">
+                <li><a href="index.html#about">Über uns</a></li>
+                <li><a href="index.html#termine">Termine</a></li>
+                <li><a href="index.html#repertoire">Repertoire</a></li>
+                <li><a href="index.html#band">Die Band</a></li>
+                <li><a href="index.html#preise">Preise</a></li>
+                <li><a href="referenzen.html">Referenzen</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="daten.html">Datenschutzerklärung</a></li>
+            </ul>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 STR!VE Partyband · Nitztal ·
+            <a href="mailto:strivepartyband@gmail.com">
+                strivepartyband@gmail.com
+            </a>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    function toggleNav() {
+        document.getElementById("navLinks").classList.toggle("open");
+    }
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            document.getElementById("navLinks").classList.remove("open");
+        });
+    });
+
+    window.addEventListener("scroll", () => {
+
+        const nav = document.getElementById("nav");
+
+        if (nav) {
+            nav.classList.toggle("scrolled", window.scrollY > 40);
+        }
+
+    });
+
+</script>
+
+</body>
+</html>

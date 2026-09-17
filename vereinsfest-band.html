@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Band für Vereinsfest buchen | Eifel & Rhein-Mosel</title>
+
+    <meta name="description"
+          content="STR!VE für euer Vereinsfest buchen: Live-Band aus der Eifel für Mayen, Koblenz, Bonn, Trier und die Region. Jetzt Termin anfragen.">
+
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.strivepartyband.de/vereinsfest-band.html">
+
+    <meta property="og:title" content="Band für Vereinsfest buchen | STR!VE">
+    <meta property="og:description"
+          content="Live-Band für Vereinsfeste in der Eifel, am Rhein und an der Mosel. STR!VE aus Nitztal spielt auch über die Region Mayen hinaus.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.strivepartyband.de/vereinsfest-band.html">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        :root {
+            --yellow: #F5C800;
+            --yellow2: #FFD700;
+            --red: #D91A1A;
+            --red2: #FF2222;
+            --orange: #FF6B00;
+            --bg: #FAFAF8;
+            --bg2: #F3F1EC;
+            --warm: #FFF8E8;
+            --dark: #1A1208;
+            --dark2: #2C1F0A;
+            --card: #FFFFFF;
+            --text: #1A1208;
+            --muted: #7A6A50;
+            --border: rgba(26,18,8,0.1);
+            --max: 1160px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: "Open Sans", sans-serif;
+            line-height: 1.7;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        nav {
+            position: fixed;
+            inset: 0 0 auto 0;
+            height: 68px;
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 5%;
+            background: rgba(26,18,8,.97);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(255,255,255,.05);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-logo {
+            width: 150px;
+            height: 38px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,.67);
+            text-decoration: none;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+
+            transition: .2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .nav-cta {
+            padding: 10px 22px;
+            border-radius: 3px;
+            background: var(--yellow);
+            color: var(--dark) !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--yellow2);
+            transform: translateY(-1px);
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .burger span {
+            width: 25px;
+            height: 2px;
+            background: var(--yellow);
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 710px;
+            padding: 145px 5% 95px;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+            overflow: hidden;
+
+            color: #fff;
+
+            background:
+                radial-gradient(circle at 78% 40%, rgba(245,200,0,.16), transparent 30%),
+                radial-gradient(circle at 15% 85%, rgba(217,26,26,.17), transparent 34%),
+                linear-gradient(135deg,#120d06,#241706 58%,#120d06);
+        }
+
+        .hero:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(112deg,
+                    transparent 0%,
+                    transparent 43%,
+                    rgba(245,200,0,.10) 50%,
+                    transparent 58%),
+                linear-gradient(72deg,
+                    transparent 0%,
+                    transparent 46%,
+                    rgba(217,26,26,.09) 52%,
+                    transparent 59%);
+        }
+
+        .hero-inner {
+            width: 100%;
+            max-width: var(--max);
+            margin: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-label,
+        .section-tag {
+            font-family: "Montserrat", sans-serif;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 8px 13px;
+            margin-bottom: 23px;
+
+            color: var(--yellow);
+            border: 1px solid rgba(245,200,0,.32);
+            background: rgba(245,200,0,.07);
+        }
+
+        .hero-label:before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--yellow);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Montserrat", sans-serif;
+            line-height: 1.08;
+        }
+
+        .hero h1 {
+            max-width: 900px;
+
+            font-size: clamp(42px,7vw,76px);
+            font-weight: 900;
+            letter-spacing: -2.5px;
+        }
+
+        .hero h1 em {
+            color: var(--yellow);
+            font-style: normal;
+        }
+
+        .hero-intro {
+            max-width: 720px;
+            margin-top: 28px;
+
+            color: rgba(255,255,255,.75);
+            font-size: 18px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+            margin-top: 34px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 52px;
+            padding: 0 25px;
+
+            border-radius: 3px;
+
+            font-family: "Montserrat", sans-serif;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+
+            text-decoration: none;
+            transition: .2s ease;
+        }
+
+        .btn-yellow {
+            background: var(--yellow);
+            color: var(--dark);
+            box-shadow: 0 12px 35px rgba(245,200,0,.15);
+        }
+
+        .btn-yellow:hover {
+            background: var(--yellow2);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            color: #fff;
+            border: 1px solid rgba(255,255,255,.28);
+            background: rgba(255,255,255,.03);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,.08);
+            border-color: rgba(255,255,255,.55);
+        }
+
+        .hero-note {
+            margin-top: 23px;
+            color: rgba(255,255,255,.45);
+            font-size: 13px;
+        }
+
+        /* GENERAL */
+
+        .section {
+            padding: 90px 5%;
+        }
+
+        .section-inner {
+            max-width: var(--max);
+            margin: auto;
+        }
+
+        .section-warm {
+            background: var(--bg2);
+        }
+
+        .section-dark {
+            background: var(--dark);
+            color: #fff;
+        }
+
+        .section-tag {
+            margin-bottom: 15px;
+            color: var(--red);
+        }
+
+        .section h2 {
+            max-width: 850px;
+            font-size: clamp(34px,5vw,52px);
+            font-weight: 900;
+            letter-spacing: -1.5px;
+        }
+
+        .section h2 em {
+            color: var(--red);
+            font-style: normal;
+        }
+
+        .lead {
+            max-width: 800px;
+            margin-top: 24px;
+            color: #5f533f;
+            font-size: 17px;
+        }
+
+        /* INTRO */
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1.08fr .92fr;
+            gap: 70px;
+            align-items: start;
+        }
+
+        .intro-copy p {
+            margin-top: 19px;
+        }
+
+        .intro-card {
+            padding: 31px;
+
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 5px;
+
+            box-shadow: 0 15px 45px rgba(26,18,8,.06);
+        }
+
+        .intro-card h3 {
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .intro-card p {
+            margin-top: 14px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .mini-list {
+            margin-top: 24px;
+            list-style: none;
+        }
+
+        .mini-list li {
+            padding: 13px 0;
+            border-top: 1px solid var(--border);
+            font-size: 14px;
+        }
+
+        .mini-list li:last-child {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .mini-list strong {
+            font-family: "Montserrat", sans-serif;
+        }
+
+        /* REASONS */
+
+        .reason-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 18px;
+            margin-top: 50px;
+        }
+
+        .reason {
+            padding: 31px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+        }
+
+        .reason-number {
+            color: var(--red);
+            font-family: "Montserrat",sans-serif;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+        }
+
+        .reason h3 {
+            margin-top: 21px;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .reason p {
+            margin-top: 13px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* DETAILS */
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: .92fr 1.08fr;
+            gap: 65px;
+            align-items: start;
+        }
+
+        .detail-list {
+            margin-top: 35px;
+        }
+
+        .detail {
+            padding: 18px 0;
+            border-top: 1px solid var(--border);
+
+            display: grid;
+            grid-template-columns: 145px 1fr;
+            gap: 25px;
+        }
+
+        .detail:last-child {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .detail-label {
+            font-family: "Montserrat",sans-serif;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .detail p {
+            color: #5f533f;
+            font-size: 15px;
+        }
+
+        .repertoire-box {
+            padding: 36px;
+            background: var(--dark);
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .repertoire-box .section-tag {
+            color: var(--yellow);
+        }
+
+        .repertoire-box h3 {
+            font-size: 30px;
+            font-weight: 900;
+        }
+
+        .repertoire-box > p {
+            margin-top: 15px;
+            color: rgba(255,255,255,.65);
+        }
+
+        .songs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 25px;
+        }
+
+        .song {
+            padding: 7px 10px;
+            border: 1px solid rgba(255,255,255,.13);
+            background: rgba(255,255,255,.04);
+            color: rgba(255,255,255,.82);
+            font-size: 12px;
+        }
+
+        /* CTA */
+
+        .cta-band {
+            padding: 70px 5%;
+            background:
+                linear-gradient(120deg,#241706,#1A1208 55%,#251806);
+            color: #fff;
+        }
+
+        .cta-inner {
+            max-width: var(--max);
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .cta-band h2 {
+            font-size: clamp(30px,4vw,44px);
+            font-weight: 900;
+        }
+
+        .cta-band p {
+            margin-top: 10px;
+            color: rgba(255,255,255,.6);
+        }
+
+        /* REGION */
+
+        .region-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 65px;
+            align-items: center;
+        }
+
+        .region-copy p {
+            margin-top: 18px;
+        }
+
+        .region-box {
+            padding: 34px;
+            background: var(--warm);
+            border-left: 4px solid var(--yellow);
+        }
+
+        .region-box strong {
+            display: block;
+            font-family: "Montserrat",sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .region-box p {
+            margin-top: 13px;
+            color: #625640;
+            font-size: 15px;
+        }
+
+        /* QUOTE */
+
+        .quote-section {
+            background: var(--bg2);
+        }
+
+        blockquote {
+            max-width: 900px;
+            margin: 45px auto 0;
+
+            padding: 42px 45px;
+
+            background: #fff;
+            border-left: 5px solid var(--red);
+
+            box-shadow: 0 15px 45px rgba(26,18,8,.07);
+        }
+
+        blockquote p {
+            font-family: "Montserrat",sans-serif;
+            font-size: clamp(22px,3vw,31px);
+            font-weight: 700;
+            line-height: 1.35;
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 22px;
+            color: var(--muted);
+            font-size: 13px;
+            font-style: normal;
+        }
+
+        /* FAQ */
+
+        .faq-list {
+            max-width: 900px;
+            margin-top: 45px;
+        }
+
+        details {
+            border-top: 1px solid var(--border);
+        }
+
+        details:last-child {
+            border-bottom: 1px solid var(--border);
+        }
+
+        summary {
+            padding: 22px 5px;
+            cursor: pointer;
+
+            font-family: "Montserrat",sans-serif;
+            font-size: 17px;
+            font-weight: 800;
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            float: right;
+            color: var(--red);
+            font-size: 23px;
+            font-weight: 400;
+        }
+
+        details[open] summary::after {
+            content: "−";
+        }
+
+        details p {
+            max-width: 800px;
+            padding: 0 5px 23px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* FINAL CTA */
+
+        .final-cta {
+            padding: 90px 5%;
+            text-align: center;
+
+            background:
+                radial-gradient(circle at 50% 0%,rgba(245,200,0,.12),transparent 42%),
+                var(--dark);
+
+            color: #fff;
+        }
+
+        .final-cta-inner {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(35px,6vw,58px);
+            font-weight: 900;
+        }
+
+        .final-cta h2 em {
+            color: var(--yellow);
+            font-style: normal;
+        }
+
+        .final-cta p {
+            max-width: 670px;
+            margin: 22px auto 30px;
+            color: rgba(255,255,255,.65);
+        }
+
+        /* RELATED */
+
+        .related {
+            padding: 65px 5%;
+            background: var(--bg);
+        }
+
+        .related-inner {
+            max-width: var(--max);
+            margin: auto;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .related-card {
+            padding: 25px;
+
+            background: #fff;
+            border: 1px solid var(--border);
+
+            text-decoration: none;
+            transition: .2s ease;
+        }
+
+        .related-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(217,26,26,.3);
+        }
+
+        .related-card span {
+            color: var(--red);
+            font-family: "Montserrat",sans-serif;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .related-card strong {
+            display: block;
+            margin-top: 7px;
+            font-family: "Montserrat",sans-serif;
+            font-size: 19px;
+            font-weight: 800;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 55px 5% 25px;
+            background: var(--dark);
+            color: #fff;
+        }
+
+        .footer-inner {
+            max-width: var(--max);
+            margin: auto;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            width: 150px;
+        }
+
+        .footer-tagline {
+            margin-top: 12px;
+            color: rgba(255,255,255,.5);
+            font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 15px 25px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,.57);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: var(--yellow);
+        }
+
+        .footer-bottom {
+            margin-top: 45px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,.1);
+
+            color: rgba(255,255,255,.4);
+            font-size: 12px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                position: absolute;
+                top: 68px;
+                left: 0;
+                right: 0;
+
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+
+                padding: 12px 0 20px;
+                background: rgba(26,18,8,.99);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 14px 5%;
+            }
+
+            .nav-links .nav-cta {
+                margin: 10px 5%;
+                text-align: center;
+            }
+
+            .burger {
+                display: flex;
+            }
+
+            .hero {
+                min-height: 670px;
+                padding-top: 125px;
+            }
+
+            .intro-grid,
+            .details-grid,
+            .region-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .reason-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .detail {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+
+            .footer-top {
+                flex-direction: column;
+            }
+
+            .footer-links {
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .section {
+                padding: 68px 5%;
+            }
+
+            .hero {
+                padding: 120px 5% 75px;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .intro-card,
+            .reason,
+            .repertoire-box,
+            .region-box {
+                padding: 25px;
+            }
+
+            blockquote {
+                padding: 30px 25px;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <!--
+        SCHEMA.ORG-VORSCHLAG
+
+        Für diese allgemeine Leistungsseite eignet sich MusicGroup.
+        Bei einer konkreten Vereinsveranstaltung kann zusätzlich ein
+        Event-Schema mit startDate, location und organizer ergänzt werden.
+
+        Mögliche areaServed-Werte:
+        Mayen, Koblenz, Andernach, Neuwied, Bonn, Trier, Köln,
+        Bitburg, Mainz, Bad Kreuznach sowie die umliegende Region.
+    -->
+
+</head>
+
+<body>
+
+<nav id="nav">
+
+    <a href="index.html" class="nav-brand">
+        <img
+            src="bilder/weblogostrive.webp"
+            alt="STR!VE Partyband Logo"
+            class="nav-logo"
+            width="150"
+            height="38"
+        >
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about">Über uns</a></li>
+        <li><a href="index.html#termine">Termine</a></li>
+        <li><a href="index.html#repertoire">Repertoire</a></li>
+        <li><a href="index.html#band">Die Band</a></li>
+        <li><a href="index.html#preise">Preise</a></li>
+        <li><a href="referenzen.html">Referenzen</a></li>
+        <li><a href="index.html#kontakt" class="nav-cta">Jetzt buchen</a></li>
+    </ul>
+
+    <div class="burger" onclick="toggleNav()" aria-label="Menü öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</nav>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="hero-inner">
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    Vereinsfest · Vereinsfeier · Jubiläum
+                </div>
+
+                <h1>
+                    Band für euer
+                    <em>Vereinsfest</em>
+                </h1>
+
+                <p class="hero-intro">
+                    Vom offiziellen Vereinsprogramm bis zum Abend auf der Tanzfläche:
+                    STR!VE spielt Live-Musik für Vereinsfeste in der Eifel, am Rhein,
+                    an der Mosel und darüber hinaus.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a href="index.html#kontakt" class="btn btn-yellow">
+                        Vereinsfest anfragen
+                    </a>
+
+                    <a href="#details" class="btn btn-outline">
+                        Ablauf & Technik
+                    </a>
+
+                </div>
+
+                <p class="hero-note">
+                    Datum, Ort und geplante Spielzeit schicken – wir prüfen den Termin.
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- INTRO -->
+
+    <section class="section">
+
+        <div class="section-inner">
+
+            <div class="intro-grid">
+
+                <div class="intro-copy">
+
+                    <div class="section-tag">
+                        Vereinsfest mit STR!VE
+                    </div>
+
+                    <h2>
+                        Erst Vereinsprogramm,
+                        dann <em>Feierabend</em>
+                    </h2>
+
+                    <p class="lead">
+                        Ein Vereinsfest hat oft einen ziemlich festen Ablauf. Begrüßung,
+                        Ehrungen, Reden oder ein Auftritt gehören dazu. Danach wird es
+                        meistens entspannter – und genau dann soll die Musik nicht im
+                        Weg stehen, sondern den Abend weiterbringen.
+                    </p>
+
+                    <p>
+                        Wir kennen solche Abläufe aus unseren eigenen Veranstaltungen.
+                        Beim Partnerschaftsjubiläum in Ettringen haben wir beispielsweise
+                        den musikalischen Abschluss des offiziellen Festabends übernommen.
+                        Vor uns stand der Auftritt eines Chors, danach ging die Veranstaltung
+                        in einen geselligen Abend über. :chatgpt-content-reference{index="0"}
+                    </p>
+
+                    <p>
+                        Auch beim 80-jährigen Jubiläum der SPD Kottenheim haben wir den
+                        musikalischen Auftakt eines Bürgerempfangs gestaltet. Das offizielle
+                        Programm und die Musik waren dort klar voneinander getrennt.
+                        :chatgpt-content-reference{index="1"}
+                    </p>
+
+                    <p>
+                        Genau solche unterschiedlichen Abläufe können wir bei der Planung
+                        berücksichtigen.
+                    </p>
+
+                </div>
+
+
+                <aside class="intro-card">
+
+                    <h3>
+                        Für welche Vereinsfeste?
+                    </h3>
+
+                    <p>
+                        Eine bestimmte Vereinsart ist dabei nicht Voraussetzung.
+                        Entscheidend ist, dass ihr Live-Musik für euren Abend sucht.
+                    </p>
+
+                    <ul class="mini-list">
+
+                        <li>
+                            <strong>Sportvereine</strong><br>
+                            Sommerfeste, Saisonabschluss oder Vereinsjubiläum
+                        </li>
+
+                        <li>
+                            <strong>Schützenvereine</strong><br>
+                            Festabend, Jubiläum oder Veranstaltung im Festzelt
+                        </li>
+
+                        <li>
+                            <strong>Musik- und Kulturvereine</strong><br>
+                            Konzertabend oder gemeinsames Vereinsfest
+                        </li>
+
+                        <li>
+                            <strong>Orts- und Gemeinschaftsfeste</strong><br>
+                            Wenn aus dem offiziellen Teil eine Feier werden soll
+                        </li>
+
+                    </ul>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WARUM -->
+
+    <section class="section section-warm">
+
+        <div class="section-inner">
+
+            <div class="section-tag">
+                Warum STR!VE?
+            </div>
+
+            <h2>
+                Musik, die sich in euren
+                <em>Ablauf einfügt</em>
+            </h2>
+
+            <div class="reason-grid">
+
+                <article class="reason">
+
+                    <div class="reason-number">01 / ABLAUF</div>
+
+                    <h3>
+                        Ihr bestimmt, wann es losgeht
+                    </h3>
+
+                    <p>
+                        Wenn zuerst gegessen, geehrt oder eine Ansprache gehalten wird,
+                        muss die Band nicht schon währenddessen ein komplettes Konzert
+                        spielen. Wir stimmen den Start mit euch ab.
+                    </p>
+
+                </article>
+
+
+                <article class="reason">
+
+                    <div class="reason-number">02 / MUSIK</div>
+
+                    <h3>
+                        Unterschiedliche Generationen vor der Bühne
+                    </h3>
+
+                    <p>
+                        Bei einem Vereinsfest stehen oft mehrere Generationen zusammen.
+                        Unser Programm verbindet Rockklassiker mit bekannten Pop- und
+                        Partysongs, statt sich nur auf eine Richtung zu konzentrieren.
+                    </p>
+
+                </article>
+
+
+                <article class="reason">
+
+                    <div class="reason-number">03 / ORGANISATION</div>
+
+                    <h3>
+                        Technik kommt mit
+                    </h3>
+
+                    <p>
+                        PA und Beleuchtung bringen wir grundsätzlich selbst mit.
+                        Auch Auf- und Abbau übernehmen wir, sodass der Verein nicht
+                        zusätzlich eine komplette Beschallung organisieren muss.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DETAILS -->
+
+    <section class="section" id="details">
+
+        <div class="section-inner">
+
+            <div class="details-grid">
+
+                <div>
+
+                    <div class="section-tag">
+                        Ablauf & Technik
+                    </div>
+
+                    <h2>
+                        Was wir für euer
+                        <em>Vereinsfest</em> planen
+                    </h2>
+
+                    <div class="detail-list">
+
+                        <div class="detail">
+
+                            <div class="detail-label">
+                                Spielzeit
+                            </div>
+
+                            <p>
+                                Je nach Veranstaltung sind 1 bis 3,5 Stunden möglich.
+                                Die Zeit kann auf mehrere Sets verteilt werden.
+                            </p>
+
+                        </div>
+
+
+                        <div class="detail">
+
+                            <div class="detail-label">
+                                Pausen
+                            </div>
+
+                            <p>
+                                Bei längeren Auftritten können Pausen eingeplant werden.
+                                Wenn vorher oder nachher eine andere Band spielt, lässt
+                                sich der Abend entsprechend aufteilen.
+                            </p>
+
+                        </div>
+
+
+                        <div class="detail">
+
+                            <div class="detail-label">
+                                Technik
+                            </div>
+
+                            <p>
+                                Unsere PA und Beleuchtung sind grundsätzlich dabei.
+                                Auf- und Abbau übernehmen wir ebenfalls.
+                            </p>
+
+                        </div>
+
+
+                        <div class="detail">
+
+                            <div class="detail-label">
+                                Reden
+                            </div>
+
+                            <p>
+                                Wenn bei eurem Vereinsfest Durchsagen oder Reden über
+                                die Anlage laufen sollen, können wir das vorab bei der
+                                technischen Planung berücksichtigen.
+                            </p>
+
+                        </div>
+
+
+                        <div class="detail">
+
+                            <div class="detail-label">
+                                Wünsche
+                            </div>
+
+                            <p>
+                                Bestimmte Songs können vorher besprochen werden.
+                                Auch zusätzliche Songs sind nach Absprache möglich.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <aside class="repertoire-box">
+
+                    <div class="section-tag">
+                        Repertoire
+                    </div>
+
+                    <h3>
+                        Bekannte Songs für den ganzen Verein
+                    </h3>
+
+                    <p>
+                        Ein paar Beispiele aus unserem aktuellen Programm:
+                    </p>
+
+                    <div class="songs">
+
+                        <span class="song">Country Roads</span>
+                        <span class="song">Wonderwall</span>
+                        <span class="song">Tage wie diese</span>
+                        <span class="song">Don't Stop Believin'</span>
+                        <span class="song">Summer of '69</span>
+                        <span class="song">Narcotic</span>
+                        <span class="song">Zombie</span>
+                        <span class="song">Mr. Brightside</span>
+                        <span class="song">Shut Up and Dance</span>
+                        <span class="song">Highway to Hell</span>
+                        <span class="song">Livin' on a Prayer</span>
+                        <span class="song">We Will Rock You</span>
+                        <span class="song">Skandal im Sperrbezirk</span>
+                        <span class="song">Sex on Fire</span>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta-band">
+
+        <div class="cta-inner">
+
+            <div>
+
+                <h2>
+                    Vereinsfest steht – Band fehlt noch?
+                </h2>
+
+                <p>
+                    Schickt uns den Termin und euren geplanten Ablauf.
+                    Dann können wir direkt schauen, wie STR!VE hineinpassen kann.
+                </p>
+
+            </div>
+
+            <a href="index.html#kontakt" class="btn btn-yellow">
+                Vereinsfest anfragen
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- REGION -->
+
+    <section class="section">
+
+        <div class="section-inner">
+
+            <div class="region-grid">
+
+                <div class="region-copy">
+
+                    <div class="section-tag">
+                        Unser Einsatzgebiet
+                    </div>
+
+                    <h2>
+                        Von Mayen über Koblenz
+                        bis weit in die <em>Region</em>
+                    </h2>
+
+                    <p>
+                        STR!VE kommt aus Nitztal bei Mayen. Dort haben wir auch unsere
+                        ersten Auftritte gespielt. In Mayen-Nitztal, Ettringen und
+                        Kottenheim waren wir bereits bei unterschiedlichen Veranstaltungen
+                        auf der Bühne. :chatgpt-content-reference{index="2"}
+                    </p>
+
+                    <p>
+                        Für Vereinsfeste fahren wir aber selbstverständlich nicht nur
+                        innerhalb von Mayen. Koblenz, Andernach und Neuwied liegen ebenso
+                        in unserem Umfeld wie Veranstaltungen in der Eifel oder an der
+                        Mosel.
+                    </p>
+
+                    <p>
+                        Auch wenn euer Vereinsfest weiter entfernt stattfindet – etwa
+                        Richtung Bonn, Trier, Bitburg, Köln, Mainz oder Bad Kreuznach –
+                        könnt ihr uns anfragen. Bei größeren Entfernungen schauen wir
+                        gemeinsam auf Termin, Anfahrt und den organisatorischen Aufwand.
+                    </p>
+
+                </div>
+
+
+                <aside class="region-box">
+
+                    <strong>
+                        Regional unterwegs
+                    </strong>
+
+                    <p>
+                        Wir sind eine Band aus der Eifel, aber keine Band, die nur
+                        innerhalb eines bestimmten Ortes spielt.
+                    </p>
+
+                    <p>
+                        Wenn Termin und Rahmen passen, fahren wir auch eine gute Strecke
+                        für euren Verein.
+                    </p>
+
+                    <a href="referenzen.html"
+                       class="btn btn-yellow"
+                       style="margin-top:22px;">
+                        Referenzen ansehen
+                    </a>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ZITAT -->
+
+    <section class="section quote-section">
+
+        <div class="section-inner">
+
+            <div class="section-tag">
+                Rückmeldung
+            </div>
+
+            <h2>
+                Eure Erfahrung kommt
+                <em>hierhin</em>
+            </h2>
+
+            <blockquote>
+
+                <p>
+                    [ZITAT EINFÜGEN]
+                </p>
+
+                <cite>
+                    — Veranstalter / Verein
+                </cite>
+
+            </blockquote>
+
+        </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+
+    <section class="section">
+
+        <div class="section-inner">
+
+            <div class="section-tag">
+                Fragen zur Buchung
+            </div>
+
+            <h2>
+                Häufige Fragen zum
+                <em>Vereinsfest</em>
+            </h2>
+
+            <div class="faq-list">
+
+                <details>
+
+                    <summary>
+                        Was kostet eine Band für ein Vereinsfest?
+                    </summary>
+
+                    <p>
+                        Das hängt vor allem von Spielzeit, Termin, Veranstaltungsort
+                        und Anfahrt ab. Auf der STR!VE-Website gibt es einen
+                        Preisrechner für einen ersten unverbindlichen Richtwert.
+                        Für euer konkretes Vereinsfest können wir anschließend ein
+                        passendes Angebot erstellen.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Können wir euch auch für ein Vereinsjubiläum buchen?
+                    </summary>
+
+                    <p>
+                        Ja. Gerade bei Jubiläen kann die Musik ein Teil des offiziellen
+                        Abends oder der Übergang in die anschließende Feier sein.
+                        Wie lange wir spielen und wann wir anfangen, wird vorher
+                        gemeinsam abgestimmt.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Bringt STR!VE die komplette Technik mit?
+                    </summary>
+
+                    <p>
+                        PA und Beleuchtung gehören grundsätzlich zu unserem Angebot.
+                        Auf- und Abbau übernehmen wir ebenfalls. Bei größeren
+                        Veranstaltungen oder zusätzlichen technischen Anforderungen
+                        können wir vorher besprechen, was darüber hinaus benötigt wird.
+                    </p>
+
+                </details>
+
+
+                <details>
+
+                    <summary>
+                        Wie viel Platz braucht die Band?
+                    </summary>
+
+                    <p>
+                        Das hängt von der konkreten Location und dem gewünschten Aufbau
+                        ab. Wenn ihr uns Größe und Art der Bühne beziehungsweise
+                        Spielfläche nennt, können wir die Planung gemeinsam abstimmen.
+                    </p>
+
+                </details>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+
+    <section class="final-cta">
+
+        <div class="final-cta-inner">
+
+            <div class="section-tag">
+                Vereinsfest geplant?
+            </div>
+
+            <h2>
+                Dann lasst uns über euren
+                <em>Termin sprechen.</em>
+            </h2>
+
+            <p>
+                Datum, Ort, ungefährer Ablauf und gewünschte Spielzeit reichen für
+                den Anfang. Den Rest können wir direkt miteinander klären.
+            </p>
+
+            <a href="index.html#kontakt" class="btn btn-yellow">
+                Vereinsfest anfragen
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- RELATED -->
+
+    <section class="related">
+
+        <div class="related-inner">
+
+            <div class="section-tag">
+                Weitere Anlässe
+            </div>
+
+            <h2 style="font-size:34px;">
+                Auch interessant
+            </h2>
+
+            <div class="related-grid">
+
+                <a href="kirmes-band.html" class="related-card">
+                    <span>Kirmes</span>
+                    <strong>Band für Kirmes buchen</strong>
+                </a>
+
+                <a href="private-feier-band.html" class="related-card">
+                    <span>Private Feier</span>
+                    <strong>Live-Band für private Feiern</strong>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-top">
+
+            <div>
+
+                <img
+                    src="bilder/weblogostrive.webp"
+                    alt="STR!VE Partyband"
+                    class="footer-logo"
+                    width="150"
+                >
+
+                <div class="footer-tagline">
+                    Partyband · Eifel · Mayen · Koblenz
+                </div>
+
+            </div>
+
+
+            <ul class="footer-links">
+                <li><a href="index.html#about">Über uns</a></li>
+                <li><a href="index.html#termine">Termine</a></li>
+                <li><a href="index.html#repertoire">Repertoire</a></li>
+                <li><a href="index.html#band">Die Band</a></li>
+                <li><a href="index.html#preise">Preise</a></li>
+                <li><a href="referenzen.html">Referenzen</a></li>
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="daten.html">Datenschutzerklärung</a></li>
+            </ul>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 STR!VE Partyband · Nitztal ·
+            <a href="mailto:strivepartyband@gmail.com">
+                strivepartyband@gmail.com
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    function toggleNav() {
+        document.getElementById("navLinks").classList.toggle("open");
+    }
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+            document.getElementById("navLinks").classList.remove("open");
+        });
+
+    });
+
+    window.addEventListener("scroll", () => {
+
+        const nav = document.getElementById("nav");
+
+        if (nav) {
+            nav.classList.toggle("scrolled", window.scrollY > 40);
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
