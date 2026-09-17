@@ -18,7 +18,10 @@ API_KEY = os.environ["GOOGLE_CALENDAR_API_KEY"]
 
 SITE_URL = "https://strivepartyband.de"
 
-EVENTS_DIR = Path("events")
+# Website-Root
+SITE_DIR = Path(".")
+
+EVENTS_DIR = SITE_DIR / "events"
 
 IMAGE_URL = f"{SITE_URL}/bilder/bandbild1.webp"
 
@@ -174,7 +177,7 @@ def build_event_schema(event, slug):
         ],
 
         "description": clean_description(event)
-        or "STR!VE Partyband live.",
+            or "STR!VE Partyband live.",
 
         "organizer": ORGANIZER,
 
@@ -369,15 +372,83 @@ def build_html(event, schema, slug):
 # SITEMAP
 # ============================================================
 
-def build_sitemap(slugs):
-    urls = [
-        f"{SITE_URL}/"
-    ]
+def get_all_html_urls():
+    """
+    Findet ALLE HTML-Dateien im gesamten Website-Verzeichnis
+    rekursiv und wandelt sie in absolute Website-URLs um.
 
-    urls.extend(
-        f"{SITE_URL}/events/{slug}/"
-        for slug in slugs
-    )
+    Beispiele:
+
+        index.html
+            -> https://strivepartyband.de/
+
+        referenzen.html
+            -> https://strivepartyband.de/referenzen.html
+
+        events/foo/index.html
+            -> https://strivepartyband.de/events/foo/
+
+        unterseite/test.html
+            -> https://strivepartyband.de/unterseite/test.html
+    """
+
+    urls = set()
+
+    for html_file in SITE_DIR.rglob("*.html"):
+
+        # sitemap selbst ist XML und wird daher ohnehin nicht gefunden.
+        # Sicherheitscheck: versteckte/.git-Verzeichnisse ignorieren.
+        parts = html_file.parts
+
+        if ".git" in parts:
+            continue
+
+        # Relative Position zur Website
+        relative = html_file.relative_to(SITE_DIR)
+
+        # index.html im Root wird zu /
+        if relative == Path("index.html"):
+            url = f"{SITE_URL}/"
+
+        # index.html in einem Unterordner:
+        # events/foo/index.html -> /events/foo/
+        elif relative.name.lower() == "index.html":
+            parent = relative.parent.as_posix()
+
+            if parent == ".":
+                url = f"{SITE_URL}/"
+            else:
+                url = f"{SITE_URL}/{parent}/"
+
+        # Normale HTML-Datei
+        else:
+            path = relative.as_posix()
+            url = f"{SITE_URL}/{path}"
+
+        urls.add(url)
+
+    return sorted(urls)
+
+
+def build_sitemap(generated_slugs=None):
+    """
+    Erstellt die Sitemap aus ALLEN HTML-Dateien im Repository.
+
+    Dadurch werden sowohl normale Seiten als auch automatisch
+    generierte Event-Seiten aufgenommen.
+    """
+
+    urls = get_all_html_urls()
+
+    # Sicherheit:
+    # Falls eine Eventseite gerade erzeugt wurde, aber aus irgendeinem
+    # Grund nicht gefunden wurde, wird sie trotzdem aufgenommen.
+    if generated_slugs:
+        for slug in generated_slugs:
+            urls.append(f"{SITE_URL}/events/{slug}/")
+
+    # Duplikate entfernen und alphabetisch sortieren
+    urls = sorted(set(urls))
 
     entries = "\n".join(
         f"""    <url>
@@ -479,6 +550,13 @@ def main():
 
         print(f"Erzeugt: /events/{slug}/")
 
+    # ========================================================
+    # SITEMAP ERZEUGEN
+    # ========================================================
+
+    print()
+    print("Erstelle Sitemap...")
+
     sitemap = build_sitemap(generated_slugs)
 
     Path("sitemap.xml").write_text(
@@ -486,10 +564,25 @@ def main():
         encoding="utf-8"
     )
 
+    # Anzahl URLs ermitteln
+    sitemap_urls = get_all_html_urls()
+
+    for slug in generated_slugs:
+        sitemap_urls.append(
+            f"{SITE_URL}/events/{slug}/"
+        )
+
+    sitemap_urls = sorted(set(sitemap_urls))
+
     print()
     print(
         f"{len(generated_slugs)} Event-Seiten erzeugt."
     )
+
+    print(
+        f"{len(sitemap_urls)} URLs in sitemap.xml aufgenommen."
+    )
+
     print("sitemap.xml aktualisiert.")
 
 
