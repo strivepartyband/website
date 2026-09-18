@@ -491,7 +491,153 @@ nav {
     opacity:1;
   }
 }
+/* =================================================
+   ATMOSPHERE – LIVE MOMENT
+   ================================================= */
 
+.atmosphere{
+  position:relative;
+  width:90%;
+  max-width:1160px;
+  margin:0 auto;
+  min-height:330px;
+  overflow:hidden;
+  background:#120D07;
+}
+
+/* Live-Foto */
+.atmosphere > img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center center;
+}
+
+/* Dunkles Foto-Overlay */
+.atmosphere::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10,6,3,.82) 0%,
+      rgba(10,6,3,.55) 42%,
+      rgba(10,6,3,.25) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(10,6,3,.08) 0%,
+      rgba(10,6,3,.45) 100%
+    );
+  pointer-events:none;
+}
+
+/* Inhalt */
+.atmosphere-content{
+  position:relative;
+  z-index:2;
+  min-height:330px;
+  display:flex;
+  align-items:center;
+}
+
+/* Textblock */
+.atmosphere-text{
+  max-width:700px;
+  padding:48px 56px;
+}
+
+/* Kleine gelbe Überschrift */
+.atmosphere-kicker{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  margin-bottom:12px;
+
+  font-family:
+    "Montserrat",
+    "Montserrat Fallback",
+    sans-serif;
+
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:2.8px;
+  text-transform:uppercase;
+
+  color:var(--yellow);
+}
+
+.atmosphere-kicker::before{
+  content:"";
+  width:34px;
+  height:3px;
+  background:var(--yellow);
+  flex:0 0 auto;
+}
+
+/* Große Headline */
+.atmosphere-title{
+  font-family:
+    "Montserrat",
+    "Montserrat Fallback",
+    sans-serif;
+
+  font-size:clamp(38px,5vw,68px);
+  font-weight:900;
+  line-height:.92;
+  letter-spacing:-2.8px;
+
+  color:#fff;
+}
+
+.atmosphere-title em{
+  color:var(--yellow);
+  font-style:normal;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+  .atmosphere{
+    width:90%;
+    min-height:300px;
+  }
+
+  .atmosphere-content{
+    min-height:300px;
+  }
+
+  .atmosphere-text{
+    padding:36px 28px;
+  }
+
+  .atmosphere-title{
+    font-size:clamp(34px,10vw,52px);
+    letter-spacing:-2px;
+  }
+
+}
+
+@media(max-width:500px){
+
+  .atmosphere{
+    width:100%;
+  }
+
+  .atmosphere-text{
+    padding:34px 22px;
+  }
+
+  .atmosphere-title{
+    font-size:40px;
+  }
+
+}
 
 /* ─── UNTERSTÜTZER ─── */
 
@@ -2989,6 +3135,39 @@ footer {
 
 </div>
 </section>
+
+<!-- =================================================
+     ATMOSPHERE
+================================================== -->
+
+<div class="atmosphere">
+
+    <img
+        src="bilder/live1.webp"
+        alt="STR!VE live auf der Bühne"
+        loading="lazy"
+    >
+
+    <div class="container atmosphere-content">
+
+        <div class="atmosphere-text">
+
+            <div class="atmosphere-kicker">
+                LIVE IST LIVE
+            </div>
+
+            <div class="atmosphere-title">
+                Die Bühne gehört<br>
+                <em>nicht nur uns.</em>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+  
 <!-- KONTAKT -->
 <section class="sec" id="kontakt">
   <div class="tag">Kontakt &amp; Buchung</div>
