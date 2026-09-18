@@ -88,6 +88,89 @@
   --border: rgba(26,18,8,0.1);
   --warm: #FFF8E8;
 }
+/* ─── DESIGN-VARIABLEN AUS DEM URSPRÜNGLICHEN REDESIGN ─── */
+:root {
+  --ink: #181108;
+  --ink2: #26190A;
+  --paper: #FAFAF8;
+  --paper2: #F2EEE6;
+  --line: rgba(24,17,8,.12);
+  --shadow: 0 18px 60px rgba(24,17,8,.10);
+}
+/* ─── KICKER ─── */
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: var(--red);
+  font-family: "Montserrat", "Montserrat Fallback", sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.kicker::before {
+  content: "";
+  width: 24px;
+  height: 3px;
+  background: var(--red);
+  border-radius: 2px;
+}
+/* ─── ALLGEMEINE BUTTONS ─── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 14px 22px;
+  border-radius: 4px;
+  font-family: "Montserrat", "Montserrat Fallback", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s, background .2s, border-color .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--yellow);
+  color: var(--dark);
+  box-shadow: 0 8px 28px rgba(245,200,0,.26);
+}
+
+.btn-primary:hover {
+  background: var(--yellow2);
+  box-shadow: 0 12px 34px rgba(245,200,0,.36);
+}
+
+.btn-dark {
+  background: transparent;
+  color: var(--dark);
+  border: 1px solid rgba(26,18,8,.22);
+}
+
+.btn-dark:hover {
+  border-color: rgba(26,18,8,.5);
+}
+
+.btn-light {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.28);
+}
+
+.btn-light:hover {
+  border-color: rgba(255,255,255,.65);
+}
+  
 
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
