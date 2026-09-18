@@ -1,0 +1,2590 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partyband &amp; Liveband Eifel | STR!VE – Kirmes &amp; Hochzeit</title>
+<meta name="description" content="STR!VE ist eure Partyband aus der Eifel für Kirmes, Schützenfest, Firmenfeier und Hochzeit in Mayen, Koblenz und ganz Rheinland-Pfalz. Jetzt anfragen!">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#181108">
+<meta name="author" content="STR!VE Partyband">
+<link rel="canonical" href="https://strivepartyband.de/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+
+<meta property="og:title" content="STR!VE Partyband – Liveband aus der Eifel">
+<meta property="og:description" content="Partyband, Coverband und Liveband für Kirmes, Schützenfest, Firmenfeier, Hochzeit und Vereinsfeste in Mayen, Koblenz und der Eifel.">
+<meta property="og:url" content="https://strivepartyband.de/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://strivepartyband.de/bilder/live1.webp">
+<meta property="og:image:alt" content="STR!VE Partyband live auf der Bühne">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="STR!VE Partyband – Liveband aus der Eifel">
+<meta name="twitter:description" content="Live-Musik für Kirmes, Schützenfest, Firmenfeier, Hochzeit und private Feiern in Mayen, Koblenz und der Eifel.">
+<meta name="twitter:image" content="https://strivepartyband.de/bilder/live1.webp">
+
+<link rel="preload" as="image" href="bilder/live1.webp" fetchpriority="high">
+<link rel="preload" as="image" href="bilder/weblogostrive.webp" fetchpriority="high">
+<link rel="preload" href="fonts/montserrat-v31-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/montserrat-v31-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/open-sans-v44-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/montserrat-v31-latin-regular.woff2') format('woff2')}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/montserrat-v31-latin-600.woff2') format('woff2')}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/montserrat-v31-latin-700.woff2') format('woff2')}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/montserrat-v31-latin-800.woff2') format('woff2')}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:900;font-display:swap;src:url('fonts/montserrat-v31-latin-900.woff2') format('woff2')}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/open-sans-v44-latin-regular.woff2') format('woff2')}
+
+:root{
+  --yellow:#F5C800; --yellow2:#FFD84A; --red:#D91A1A; --orange:#FF6B00;
+  --ink:#181108; --ink2:#26190A; --paper:#FAFAF8; --paper2:#F2EEE6; --card:#FFFFFF;
+  --text:#1C150D; --muted:#786A54; --line:rgba(24,17,8,.12); --warm:#FFF8E8;
+  --shadow:0 18px 60px rgba(24,17,8,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+body{background:var(--paper);color:var(--text);font-family:'Open Sans',sans-serif;overflow-x:hidden;line-height:1.55}
+body::selection{background:var(--yellow);color:var(--ink)}
+a{color:inherit}
+img{max-width:100%;height:auto}
+button,input,select,textarea{font:inherit}
+.skip-link{position:fixed;left:14px;top:-60px;z-index:4000;background:var(--yellow);color:var(--ink);padding:12px 16px;font-family:Montserrat,sans-serif;font-weight:800;text-decoration:none;border-radius:0 0 6px 6px;transition:top .2s}
+.skip-link:focus{top:0}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto;z-index:2000;height:72px;padding:0 clamp(18px,5vw,70px);display:flex;align-items:center;justify-content:space-between;background:rgba(24,17,8,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07);transition:background .25s,box-shadow .25s}
+nav.scrolled{background:rgba(24,17,8,.97);box-shadow:0 8px 30px rgba(0,0,0,.18)}
+.nav-brand{display:flex;align-items:center;text-decoration:none}
+.nav-logo-img{width:150px;height:38px;object-fit:contain}
+.nav-links{list-style:none;display:flex;align-items:center;gap:24px}
+.nav-links a{color:rgba(255,255,255,.68);font-family:Montserrat,sans-serif;font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;transition:color .2s}
+.nav-links a:hover,.nav-links a:focus-visible{color:#fff}
+.nav-cta{background:var(--yellow);color:var(--ink)!important;padding:12px 18px;border-radius:4px;box-shadow:0 5px 20px rgba(245,200,0,.20)}
+.nav-cta:hover{background:var(--yellow2);transform:translateY(-1px)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:10px;border:0;background:none}
+.burger span{display:block;width:24px;height:2px;background:var(--yellow);border-radius:2px}
+
+/* GLOBAL */
+.container{width:min(1160px,90%);margin:0 auto}
+.section{padding:100px 0}
+.section.warm{background:var(--warm);border-block:1px solid var(--line)}
+.kicker{display:inline-flex;align-items:center;gap:10px;margin-bottom:16px;color:var(--red);font-family:Montserrat,sans-serif;font-size:10px;font-weight:900;letter-spacing:3px;text-transform:uppercase}
+.kicker::before{content:'';width:24px;height:3px;background:var(--red);border-radius:2px}
+h2{font-family:Montserrat,sans-serif;font-size:clamp(38px,6vw,70px);font-weight:900;letter-spacing:-2.5px;line-height:.98;color:var(--ink);margin-bottom:20px}
+h2 em{color:var(--red);font-style:normal}
+h3{font-family:Montserrat,sans-serif;color:var(--ink);line-height:1.1}
+.lead{max-width:760px;color:var(--muted);font-size:16px;line-height:1.85}
+.text-link{color:var(--red);font-weight:700;text-decoration:none;border-bottom:1px solid rgba(217,26,26,.25)}
+.text-link:hover{border-bottom-color:var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:14px 22px;border-radius:4px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:800;letter-spacing:1.7px;text-transform:uppercase;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--yellow);color:var(--ink);box-shadow:0 8px 28px rgba(245,200,0,.26)}
+.btn-primary:hover{background:var(--yellow2);box-shadow:0 12px 34px rgba(245,200,0,.36)}
+.btn-dark{background:transparent;color:var(--ink);border:1px solid rgba(24,17,8,.22)}
+.btn-dark:hover{border-color:rgba(24,17,8,.5)}
+.btn-light{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.28)}
+.btn-light:hover{border-color:rgba(255,255,255,.65)}
+
+/* HERO */
+#hero{position:relative;isolation:isolate;min-height:min(860px,92vh);padding:110px 0 70px;background:var(--ink);color:#fff;overflow:hidden}
+.hero-noise{position:absolute;inset:0;pointer-events:none;opacity:.16;background:radial-gradient(circle at 20% 20%,rgba(255,255,255,.08) 0 1px,transparent 1px 22px);background-size:22px 22px;z-index:-2}
+.hero-inner{display:grid;grid-template-columns:minmax(0,1.03fr) minmax(340px,.97fr);gap:54px;align-items:center;min-height:680px}
+.hero-copy{position:relative;z-index:2}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:20px;color:var(--yellow);font-family:Montserrat,sans-serif;font-size:11px;font-weight:800;letter-spacing:2.8px;text-transform:uppercase}
+.hero-eyebrow::before{content:'';width:28px;height:2px;background:var(--yellow)}
+.hero-title{font-family:Montserrat,sans-serif;font-size:clamp(42px,7vw,82px);font-weight:900;line-height:.95;letter-spacing:-3.6px;color:#fff;max-width:780px;margin:0 0 26px}
+.hero-title em{display:block;color:var(--yellow);font-style:normal}
+.hero-desc{max-width:650px;color:rgba(255,255,255,.70);font-size:18px;line-height:1.8;margin-bottom:34px}
+.hero-desc strong{color:#fff}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px}
+.hero-pill{padding:9px 12px;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.04);color:rgba(255,255,255,.70);font-family:Montserrat,sans-serif;font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}
+.hero-visual{position:relative;min-height:590px}
+.hero-photo{position:absolute;inset:0;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.10);box-shadow:0 30px 80px rgba(0,0,0,.35);transform:rotate(1.2deg)}
+.hero-photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+.hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,17,8,.02) 22%,rgba(24,17,8,.78) 100%)}
+.hero-mark{position:absolute;left:-36px;bottom:46px;z-index:4;width:min(330px,65%);padding:24px;border-radius:10px;background:rgba(24,17,8,.94);border:1px solid rgba(245,200,0,.25);box-shadow:0 18px 55px rgba(0,0,0,.30)}
+.hero-mark img{width:100%;height:auto;display:block;filter:drop-shadow(0 0 28px rgba(245,200,0,.22))}
+.hero-stamp{position:absolute;right:-18px;top:34px;z-index:4;display:grid;place-items:center;width:118px;height:118px;border-radius:50%;background:var(--yellow);color:var(--ink);box-shadow:0 20px 45px rgba(0,0,0,.25);font-family:Montserrat,sans-serif;font-size:10px;font-weight:900;letter-spacing:1.5px;text-align:center;text-transform:uppercase;padding:16px}
+.hero-bottom{position:absolute;left:0;right:0;bottom:0;height:72px;clip-path:polygon(0 35%,100% 0,100% 100%,0 100%);background:var(--paper);z-index:2}
+
+/* STATS */
+.stats{background:var(--ink2);border-block:1px solid rgba(245,200,0,.10);display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:30px 22px;text-align:center;border-right:1px solid rgba(255,255,255,.08)}
+.stat:last-child{border-right:0}
+.stat-n{font-family:Montserrat,sans-serif;font-size:48px;font-weight:900;line-height:1;color:var(--yellow)}
+.stat-l{margin-top:8px;color:rgba(255,255,255,.62);font-family:Montserrat,sans-serif;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+
+/* REFERENCES STRIP */
+.references-preview{background:var(--warm);border-bottom:1px solid var(--line);overflow:hidden}
+.references-preview-inner{width:min(1280px,94%);margin:0 auto;padding:18px 0}
+.references-heading{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:18px}
+.references-heading-text .kicker{margin:0;white-space:nowrap}
+.references-slider{overflow:hidden;min-width:0}
+.references-track{display:flex;gap:10px;transition:transform .6s cubic-bezier(.22,.61,.36,1);will-change:transform}
+.reference-card{flex:0 0 calc((100% - 20px)/3);height:62px;padding:0 16px;background:#fff;border:1px solid var(--line);border-radius:7px;display:flex;align-items:center;box-shadow:0 6px 24px rgba(24,17,8,.04);transition:transform .2s,border-color .2s}
+.reference-card:hover{transform:translateY(-2px);border-color:rgba(245,200,0,.55)}
+.reference-name{font-family:Montserrat,sans-serif;font-size:12px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.reference-location{margin-top:2px;color:var(--muted);font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.references-cta .btn{min-height:42px;padding:11px 14px;font-size:9px;white-space:nowrap}
+
+/* ABOUT */
+.about-wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);gap:72px;align-items:center;margin-top:50px}
+.about-copy p{font-size:16px;line-height:1.85;color:#5e4d32;margin-bottom:18px}
+.about-copy p strong{color:var(--ink)}
+.about-photo{position:relative}
+.about-photo img{width:100%;height:520px;object-fit:cover;border-radius:14px;display:block;box-shadow:var(--shadow)}
+.about-photo::before{content:'';position:absolute;left:-18px;bottom:-18px;width:55%;height:55%;background:var(--yellow);opacity:.20;z-index:-1;transform:rotate(-4deg);border-radius:10px}
+.about-note{display:inline-flex;align-items:center;gap:10px;margin-top:10px;padding:12px 15px;background:var(--ink);color:#fff;border-radius:4px;font-family:Montserrat,sans-serif;font-size:10px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase}
+.about-note span{width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 5px rgba(245,200,0,.12)}
+
+/* EVENT TYPES */
+.event-section{position:relative;overflow:hidden}
+.event-intro{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:38px}
+.event-intro .lead{max-width:650px}
+.event-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.event-card{min-height:180px;padding:24px 20px 26px;background:var(--paper);border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;gap:28px;transition:transform .2s,background .2s,border-color .2s}
+.event-card:nth-child(2n){background:#fff}
+.event-card:hover{background:var(--yellow);transform:translateY(-3px);border-color:rgba(24,17,8,.14)}
+.event-card .event-n{color:var(--red);font-family:Montserrat,sans-serif;font-size:10px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+.event-card h3{font-size:18px;font-weight:800}
+.event-card p{font-size:12px;line-height:1.6;color:var(--muted)}
+.event-card .event-arrow{font-family:Montserrat,sans-serif;font-size:18px;font-weight:900}
+.event-card:hover p,.event-card:hover .event-n{color:rgba(24,17,8,.72)}
+
+/* LIVE PHOTO ROULETTE */
+.live-roulette{position:relative;width:min(1180px,90%);height:clamp(340px,54vw,640px);margin:20px auto 88px;overflow:hidden;border-radius:16px;background:var(--ink);box-shadow:0 26px 80px rgba(24,17,8,.18);border:1px solid rgba(245,200,0,.16)}
+.live-roulette::before{content:'';position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(180deg,rgba(24,17,8,.05),rgba(24,17,8,.62))}
+.live-roulette-track{position:absolute;inset:0}
+.live-roulette-slide{position:absolute;inset:0;opacity:0;transform:scale(1.035);transition:opacity 1s ease,transform 5s ease}
+.live-roulette-slide.active{opacity:1;transform:scale(1)}
+.live-roulette-slide img{width:100%;height:100%;display:block;object-fit:cover}
+.live-roulette-caption{position:absolute;left:30px;bottom:28px;z-index:4;color:#fff;font-family:Montserrat,sans-serif;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.live-roulette-caption::before{content:'STR!VE live';display:block;color:var(--yellow);font-size:10px;margin-bottom:4px}
+.live-roulette-dots{position:absolute;right:28px;bottom:28px;z-index:4;display:flex;gap:7px}
+.live-roulette-dot{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;transition:all .25s}
+.live-roulette-dot.active{width:22px;border-radius:10px;background:var(--yellow)}
+
+/* LIVE AUDIO / VIDEO */
+.video-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(320px,1.15fr);gap:42px;align-items:start;margin-top:46px}
+.video-copy{position:sticky;top:104px}
+.video-intro{max-width:520px;color:var(--muted);font-size:16px;line-height:1.8;margin-bottom:26px}
+.audio-list{display:grid;gap:12px}
+.soundcloud-wrap{width:100%;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 8px 28px rgba(24,17,8,.06)}
+.soundcloud-facade{height:166px;position:relative;cursor:pointer;background:#f3f3f1}
+.soundcloud-facade-content{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-family:'Open Sans',sans-serif}
+.soundcloud-facade-title{font-size:13px;font-weight:700;color:#333;margin-bottom:12px;padding:0 16px}
+.soundcloud-facade-button{width:48px;height:48px;border:0;border-radius:50%;background:#ff5500;color:#fff;font-size:20px;line-height:48px;padding:0;cursor:pointer;transition:transform .2s}
+.soundcloud-facade-button:hover{transform:scale(1.05)}
+.soundcloud-facade-hint{margin-top:10px;font-size:11px;color:#555}
+.video-wrap{position:relative;border-radius:14px;overflow:hidden;background:var(--ink);box-shadow:var(--shadow);border:1px solid rgba(24,17,8,.12)}
+.video-wrap img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover}
+.video-consent-overlay{position:absolute;inset:0;background:rgba(24,17,8,.88);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px;text-align:center}
+.video-consent-overlay p{max-width:320px;color:rgba(255,255,255,.85);font-size:14px;line-height:1.6}
+.video-consent-overlay button{background:var(--yellow);color:var(--ink);border:none;padding:12px 22px;border-radius:4px;font-family:Montserrat,sans-serif;font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.6px;cursor:pointer}
+
+/* TERMINE */
+.termines-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:28px}
+.termines-head .lead{max-width:700px}
+.termine-legend{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:22px 0}
+.tl-item{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+.tl-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}.tl-dot.pub{background:#2E7D32}.tl-dot.priv{background:var(--yellow)}
+.termin-status{font-size:13px;color:var(--muted);margin:16px 0}.termin-status.err{color:#c28a32}
+.termin-month{margin:28px 0 12px;display:flex;align-items:center;gap:14px;color:var(--muted);font-family:Montserrat,sans-serif;font-size:10px;font-weight:900;letter-spacing:2px;text-transform:uppercase}.termin-month::after{content:'';flex:1;height:1px;background:var(--line)}
+.termin-list{display:flex;flex-direction:column;gap:10px}
+.termin{position:relative;display:grid;grid-template-columns:auto 1px minmax(0,1fr) auto;gap:20px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 22px;box-shadow:0 4px 20px rgba(24,17,8,.04);overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s}
+.termin::before{content:'';position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(to bottom,var(--yellow),var(--orange));transform:scaleY(0);transform-origin:bottom;transition:transform .2s}.termin:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(24,17,8,.08);border-color:rgba(245,200,0,.38)}.termin:hover::before,.termin.is-public::before{transform:scaleY(1)}.termin.is-public::before{background:linear-gradient(to bottom,#4CAF50,#2E7D32)}
+.t-date{text-align:center;min-width:58px}.t-day{font-family:Montserrat,sans-serif;font-size:40px;font-weight:900;line-height:1;color:var(--red)}.t-mon{font-family:Montserrat,sans-serif;font-size:9px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}.t-sep{width:1px;height:48px;background:var(--line)}.t-inf{min-width:0}.t-name{font-family:Montserrat,sans-serif;font-size:15px;font-weight:800;color:var(--ink);margin-bottom:4px}.t-meta{display:flex;flex-wrap:wrap;gap:6px 12px}.t-chip{font-size:11px;color:var(--muted)}.t-right{display:flex;flex-direction:column;align-items:flex-end;gap:7px}.tbadge{font-family:Montserrat,sans-serif;font-size:8px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:6px 10px;border-radius:999px;white-space:nowrap}.bp{background:rgba(245,200,0,.12);color:#9B7610;border:1px solid rgba(245,200,0,.28)}.bf{background:rgba(76,175,80,.10);color:#2E7D32;border:1px solid rgba(76,175,80,.22)}
+.t-link{font-family:Montserrat,sans-serif;font-size:9px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--red);text-decoration:none}.t-link:hover{text-decoration:underline;text-underline-offset:3px}
+.termin-updated{font-size:11px;color:var(--muted);opacity:.75;margin-top:12px}
+.termin-add{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 24px;background:linear-gradient(135deg,var(--yellow),var(--orange));border-radius:10px;color:var(--ink);text-decoration:none;box-shadow:0 10px 30px rgba(245,200,0,.18);transition:transform .2s,box-shadow .2s}.termin-add:hover{transform:translateY(-2px);box-shadow:0 15px 38px rgba(245,200,0,.28)}
+.ta-t{font-family:Montserrat,sans-serif;font-size:16px;font-weight:900}.ta-s{font-size:12px;opacity:.72;margin-top:2px}.ta-arr{font-size:28px;font-family:Montserrat,sans-serif;font-weight:900}
+.termine-foot{text-align:center;margin-top:34px}.termine-foot p{color:var(--muted);font-size:14px;margin-bottom:16px}
+
+/* BAND */
+.band-section{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.band-section .kicker{color:var(--yellow)}.band-section .kicker::before{background:var(--yellow)}.band-section h2{color:#fff}.band-section h2 em{color:var(--yellow)}
+.band-top{display:flex;justify-content:space-between;gap:30px;align-items:end}.band-top .lead{color:rgba(255,255,255,.58);max-width:600px}
+.band-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:48px}
+.member{background:#211609;border:1px solid rgba(255,255,255,.08);border-radius:11px;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s}.member:hover{transform:translateY(-5px);border-color:rgba(245,200,0,.35);box-shadow:0 18px 40px rgba(0,0,0,.22)}
+.m-ph{width:100%;aspect-ratio:1;background:linear-gradient(135deg,#2C1F0A,#3d2e10);position:relative;overflow:hidden}.m-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block}.m-ph::after{content:'';position:absolute;inset:auto 0 0;height:46%;background:linear-gradient(to top,rgba(20,10,0,.72),transparent)}
+.m-inf{padding:17px 17px 19px}.m-name{font-family:Montserrat,sans-serif;font-size:18px;font-weight:800;color:#fff}.m-role{margin-top:3px;font-family:Montserrat,sans-serif;font-size:9px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:var(--yellow)}
+
+/* REPERTOIRE */
+.repertoire-wrap{display:grid;grid-template-columns:minmax(220px,.32fr) minmax(0,.68fr);gap:46px;align-items:start;margin-top:46px}
+.repertoire-side{position:sticky;top:104px}.repertoire-side h3{font-size:52px;line-height:.92;color:var(--red);letter-spacing:-2px}.repertoire-side p{margin-top:15px;color:var(--muted);font-size:13px;line-height:1.7}.repertoire-side .mini-proof{margin-top:28px;padding:16px;border:1px solid var(--line);background:var(--warm);border-radius:8px;font-family:Montserrat,sans-serif;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.songs-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;box-shadow:0 8px 30px rgba(24,17,8,.05)}
+.sf-bar{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-bottom:16px}.sf-search{flex:1 1 220px;min-width:200px;padding:12px 15px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:14px;color:var(--text);outline:none}.sf-search:focus{border-color:var(--yellow);box-shadow:0 0 0 3px rgba(245,200,0,.22)}
+.sf-chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 14px;font-family:Montserrat,sans-serif;font-size:11px;font-weight:800;letter-spacing:.5px;color:var(--muted);cursor:pointer;transition:all .2s}.sf-chip:hover{border-color:var(--yellow);color:var(--text)}.sf-chip.active{background:var(--ink);border-color:var(--ink);color:var(--yellow)}
+.sf-count{font-size:12px;color:var(--muted);margin-bottom:10px}.sf-listwrap{position:relative}.sf-listwrap.is-collapsed{max-height:300px;overflow:hidden}.sf-listwrap.is-collapsed::after{content:'';position:absolute;left:0;right:0;bottom:0;height:80px;background:linear-gradient(to bottom,rgba(255,255,255,0),#fff);pointer-events:none}.sf-list{columns:3 210px;column-gap:28px}.song{break-inside:avoid;display:flex;align-items:baseline;gap:8px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13px;line-height:1.35;color:var(--text);font-weight:700}.song:hover{color:var(--red)}.sf-more{margin-top:14px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 19px;cursor:pointer;font-family:Montserrat,sans-serif;font-size:11px;font-weight:800;letter-spacing:.5px;color:var(--ink);transition:all .2s}.sf-more:hover{border-color:var(--yellow);background:rgba(245,200,0,.10)}
+
+/* PREISE */
+.pricing-shell{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:58px;align-items:start;margin-top:48px}.pricing-copy p{font-size:15px;line-height:1.85;color:var(--muted);margin-bottom:18px}.pricing-copy p strong{color:var(--ink)}
+.price-note{margin-top:26px;padding:16px 18px;background:var(--ink);color:rgba(255,255,255,.76);border-left:4px solid var(--yellow);font-size:12px;line-height:1.65}.price-note strong{color:#fff}
+.calc{margin:0;background:#fff;border:1px solid var(--line);border-top:4px solid var(--yellow);border-radius:14px;box-shadow:0 12px 45px rgba(24,17,8,.08);overflow:hidden;display:grid;grid-template-columns:1fr .72fr}
+.calc-main{padding:30px}.calc h3{font-size:15px;font-weight:900;letter-spacing:1.7px;text-transform:uppercase;margin-bottom:7px}.calc-hint{font-size:13px;color:var(--muted);margin-bottom:25px;max-width:44ch}.calc-row{margin-bottom:23px}.calc-row>.lbl,.calc-row>label.lbl{display:block;font-family:Montserrat,sans-serif;font-size:10px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);margin-bottom:9px}.opt-grid{display:flex;flex-wrap:wrap;gap:8px}.opt{border:1px solid var(--line);background:#fff;border-radius:4px;padding:10px 13px;font-family:'Open Sans',sans-serif;font-size:13px;color:var(--text);cursor:pointer;transition:border-color .15s,background .15s,color .15s,transform .15s}.opt:hover{border-color:var(--yellow);transform:translateY(-1px)}.opt[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}.opt-sub{display:block;font-size:10px;color:var(--muted);margin-top:2px}.opt[aria-pressed="true"] .opt-sub{color:rgba(255,255,255,.62)}.calc-km{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.calc-km input{width:105px;padding:10px 12px;border:1px solid var(--line);border-radius:4px;font-size:14px;color:var(--text);background:#fff}.calc-km input:focus{outline:none;border-color:var(--yellow);box-shadow:0 0 0 3px rgba(245,200,0,.18)}.calc-km small{font-size:12px;color:var(--muted)}
+.calc-out{padding:32px 28px;background:var(--ink);color:#fff;display:flex;flex-direction:column;justify-content:flex-start}.co-lbl{font-family:Montserrat,sans-serif;font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--yellow)}.co-price{font-family:Montserrat,sans-serif;font-weight:900;font-size:40px;line-height:1.08;margin:8px 0 5px;color:#fff}.co-sub{font-size:12px;color:rgba(255,255,255,.62);margin-bottom:17px}.calc-out ul{list-style:none;margin-bottom:20px}.calc-out li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:12px;color:rgba(255,255,255,.84)}.calc-out .btn-primary{width:100%;text-align:center}.calc-note{font-size:10px;color:rgba(255,255,255,.50);margin-top:13px;line-height:1.6}
+
+/* CONTACT */
+.contact-shell{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:60px;align-items:start;margin-top:48px}.contact-copy h3{font-size:30px;font-weight:900;margin-bottom:12px}.contact-copy>p{font-size:15px;color:var(--muted);line-height:1.8;max-width:520px;margin-bottom:28px}.channels{display:flex;flex-direction:column;gap:4px}.ch{display:flex;align-items:center;padding:11px 0;text-decoration:none;transition:transform .2s}.ch:hover{transform:translateX(4px)}.ch-lbl{display:block;font-family:Montserrat,sans-serif;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}.ch-val{display:block;font-size:14px;font-weight:700;color:var(--ink)}
+.cf{background:#fff;border:1px solid var(--line);border-radius:14px;padding:30px;box-shadow:0 12px 45px rgba(24,17,8,.07)}.cf h3{font-size:25px;font-weight:900;margin-bottom:22px}.booking-form{display:grid;grid-template-columns:1fr 1fr;gap:16px}.form-field{display:flex;flex-direction:column;gap:7px}.form-field-full{grid-column:1/-1}.booking-form label{display:block;font-family:Montserrat,sans-serif;font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}.booking-form input,.booking-form select,.booking-form textarea{width:100%;padding:13px 14px;background:#fff;color:var(--text);border:1px solid var(--line);border-radius:7px;font-size:14px;font-family:'Open Sans',sans-serif;transition:.2s}.booking-form input:focus,.booking-form select:focus,.booking-form textarea:focus{outline:none;border-color:var(--yellow);box-shadow:0 0 0 3px rgba(245,200,0,.13)}.booking-form textarea{min-height:150px;resize:vertical}.booking-form button{grid-column:1/-1}.btn-sub{width:100%;background:linear-gradient(135deg,var(--yellow),var(--orange));color:var(--ink);border:none;border-radius:7px;padding:15px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;cursor:pointer;transition:.2s;box-shadow:0 8px 22px rgba(245,200,0,.22)}.btn-sub:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(245,200,0,.32)}
+.booking-form input[name="_gotcha"]{display:none}
+
+/* SUPPORTERS */
+.supporter-section{padding-top:56px;padding-bottom:72px}.supporters-grid{display:flex;gap:20px;flex-wrap:wrap;margin-top:30px}.supporter-card{width:min(280px,100%);background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px;display:flex;justify-content:center;align-items:center;min-height:120px;box-shadow:0 6px 20px rgba(24,17,8,.04);transition:.25s}.supporter-card:hover{transform:translateY(-3px);border-color:rgba(245,200,0,.38)}.supporter-card img{max-width:220px;max-height:80px;width:100%;height:auto;object-fit:contain}
+
+/* FINAL CTA */
+.final-cta{position:relative;background:var(--ink);color:#fff;overflow:hidden;padding:94px 0}.final-cta::before{content:'';position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(245,200,0,.18),transparent 68%);right:-180px;top:-180px}.final-cta-inner{position:relative;display:flex;align-items:end;justify-content:space-between;gap:40px}.final-cta .kicker{color:var(--yellow)}.final-cta .kicker::before{background:var(--yellow)}.final-cta h2{color:#fff;max-width:800px;margin-bottom:0}.final-cta h2 em{color:var(--yellow)}.final-cta-copy{max-width:420px;color:rgba(255,255,255,.62);font-size:14px;line-height:1.8;margin-top:18px}
+
+/* FOOTER */
+footer{background:#100B06;color:rgba(255,255,255,.5);padding:54px 5% 26px;text-align:center;border-top:1px solid rgba(255,255,255,.06)}.fl{display:flex;justify-content:center;margin-bottom:18px}.fl img{width:auto;height:52px;filter:drop-shadow(0 0 12px rgba(245,200,0,.25))}.ft{font-family:Montserrat,sans-serif;font-size:9px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.58);margin-bottom:24px}.flinks{display:flex;justify-content:center;gap:20px;list-style:none;flex-wrap:wrap;margin-bottom:24px}.flinks a{color:rgba(255,255,255,.62);text-decoration:none;font-family:Montserrat,sans-serif;font-size:10px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase}.flinks a:hover{color:var(--yellow)}.fcopy{font-size:11px;color:rgba(255,255,255,.42);border-top:1px solid rgba(255,255,255,.06);padding-top:19px}.fcopy a{color:rgba(255,255,255,.75)}
+
+/* STICKY MOBILE CTA */
+.book-bar{display:none}
+
+/* COOKIES */
+.cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:3000;background:var(--ink);color:#fff;border-top:3px solid var(--yellow);box-shadow:0 -10px 40px rgba(0,0,0,.25);display:none}.cookie-banner.show{display:flex}.cookie-banner-inner{max-width:1160px;margin:0 auto;width:100%;padding:20px 5%;display:flex;align-items:center;gap:24px;justify-content:space-between}.cookie-banner p{margin:0;font-size:13px;line-height:1.6;color:rgba(255,255,255,.9);flex:1}.cookie-banner a{color:var(--yellow);text-decoration:underline}.cookie-banner-actions{display:flex;gap:8px;flex-wrap:wrap}.cb-btn{border:none;cursor:pointer;padding:11px 16px;border-radius:4px;font-family:Montserrat,sans-serif;font-size:10px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;transition:.2s}.cb-btn-primary{background:var(--yellow);color:var(--ink)}.cb-btn-primary:hover{background:var(--yellow2)}.cb-btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35)}.cb-btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.05)}.cb-btn-secondary{background:rgba(255,255,255,.12);color:#fff}.cb-btn-secondary:hover{background:rgba(255,255,255,.2)}
+.cookie-modal{position:fixed;inset:0;z-index:3100;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:20px}.cookie-modal.show{display:flex}.cookie-modal-inner{background:var(--card);color:var(--text);max-width:520px;width:100%;border-radius:12px;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.25)}.cookie-modal h3{font-size:20px;font-weight:800;margin-bottom:6px}.cookie-modal-intro{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:22px}.cookie-category{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}.cookie-category:last-child{border-bottom:none}.cc-info{flex:1}.cc-title{font-family:Montserrat,sans-serif;font-weight:700;font-size:14px;margin-bottom:4px}.cc-desc{font-size:13px;color:var(--muted);line-height:1.5}.cc-toggle{appearance:none;width:44px;height:24px;border-radius:999px;background:rgba(26,18,8,.2);position:relative;cursor:pointer;flex-shrink:0;transition:background .2s}.cc-toggle:checked{background:var(--yellow)}.cc-toggle::after{content:'';position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2);transition:transform .2s}.cc-toggle:checked::after{transform:translateX(20px)}.cc-toggle:disabled{opacity:.5;cursor:not-allowed}.cookie-modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:24px}.cookie-modal-actions .cb-btn{padding:11px 20px}
+
+/* RESPONSIVE */
+@media(max-width:1080px){.nav-links{gap:16px}.hero-inner{gap:34px}.event-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.band-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.video-grid{grid-template-columns:1fr}.video-copy{position:static}.pricing-shell,.contact-shell{grid-template-columns:1fr}.calc{max-width:900px}.repertoire-wrap{grid-template-columns:1fr}.repertoire-side{position:static;display:flex;align-items:end;gap:24px}.repertoire-side h3{font-size:44px}.repertoire-side p{max-width:420px}.hero-visual{min-height:520px}}
+@media(max-width:820px){nav{height:68px}.nav-links{display:none;position:fixed;left:0;right:0;top:68px;background:rgba(24,17,8,.98);padding:10px 5%;flex-direction:column;align-items:stretch;gap:0;border-top:1px solid rgba(255,255,255,.06);box-shadow:0 14px 30px rgba(0,0,0,.22)}.nav-links.open{display:flex}.nav-links li{border-bottom:1px solid rgba(255,255,255,.05)}.nav-links a{display:block;padding:14px 0}.nav-links .nav-cta{margin:12px 0;text-align:center}.burger{display:flex}.hero-inner{grid-template-columns:1fr;min-height:0}.hero-copy{text-align:center}.hero-eyebrow{justify-content:center}.hero-btns{justify-content:center}.hero-meta{justify-content:center}.hero-visual{min-height:460px;margin-top:6px}.hero-mark{left:12px;bottom:24px;width:240px;padding:18px}.hero-stamp{right:8px;top:18px;width:98px;height:98px}.about-wrap{grid-template-columns:1fr;gap:38px}.about-photo img{height:420px}.event-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.references-heading{grid-template-columns:1fr auto}.references-heading-text{display:none}.reference-card{flex-basis:calc((100% - 10px)/2)}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.08)}.pricing-shell{gap:32px}.calc{grid-template-columns:1fr}.calc-out{min-height:310px}.contact-shell{gap:32px}.booking-form{grid-template-columns:1fr}.booking-form label{grid-column:1}.booking-form input,.booking-form select,.booking-form textarea{grid-column:1}.band-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.final-cta-inner{flex-direction:column;align-items:flex-start}.book-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:250;gap:10px;padding:9px 12px calc(9px + env(safe-area-inset-bottom));background:rgba(24,17,8,.97);backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.10)}.book-bar a{flex:1;text-align:center;padding:12px 10px;border-radius:999px;font-family:Montserrat,sans-serif;font-weight:800;font-size:12px;text-decoration:none}.bb-primary{background:var(--yellow);color:var(--ink)}.bb-ghost{border:1px solid rgba(255,255,255,.32);color:#fff}body{padding-bottom:70px}.cookie-banner-inner{flex-direction:column;align-items:flex-start;gap:14px}.cookie-banner-actions{width:100%}.cb-btn{flex:1}}
+@media(max-width:620px){.section{padding:76px 0}.container{width:90%}h2{font-size:clamp(36px,11vw,56px);letter-spacing:-1.8px}.hero-title{font-size:clamp(39px,11vw,64px);letter-spacing:-2.8px}.hero-desc{font-size:16px}.hero-visual{min-height:390px}.hero-photo{transform:none}.hero-mark{width:205px;left:10px;bottom:18px}.hero-stamp{width:88px;height:88px;font-size:8px;right:6px}.hero-bottom{height:52px}.stats{grid-template-columns:1fr 1fr}.stat{padding:22px 10px}.stat-n{font-size:38px}.stat-l{font-size:8px;letter-spacing:1.4px}.event-intro{flex-direction:column;align-items:flex-start}.event-grid{grid-template-columns:1fr}.event-card{min-height:150px}.live-roulette{height:310px;width:94%;margin-bottom:64px}.live-roulette-caption{left:17px;bottom:18px}.live-roulette-dots{right:16px;bottom:18px;max-width:58%;overflow:auto}.termines-head{display:block}.termin{grid-template-columns:auto minmax(0,1fr);gap:14px;padding:16px}.t-sep{display:none}.t-right{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between}.t-day{font-size:34px}.t-name{font-size:14px}.ta-s{font-size:11px}.band-grid{grid-template-columns:1fr 1fr}.repertoire-side{display:block}.songs-box{padding:18px}.sf-list{columns:1}.sf-search{min-width:100%}.supporter-card{width:100%}.final-cta{padding:78px 0}.cookie-modal-inner{padding:22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}.live-roulette-slide{transition:none}.references-track{transition:none}}
+
+
+/* =========================================================
+   VISUELLES REDESIGN – zweite Ebene
+   Funktionale Klassen/IDs bleiben unverändert.
+   ========================================================= */
+:root{
+  --gold:#F5C800;
+  --gold-soft:#FFE68A;
+  --dark-photo:#120D07;
+  --cream:#FFF8E8;
+}
+
+/* HERO: echtes Vollbild statt Split-Screen */
+#hero{
+  min-height:min(900px,100svh);
+  padding:110px 0 90px;
+  display:flex;
+  align-items:flex-end;
+  background:#100B06;
+}
+#hero .hero-inner{
+  display:flex;
+  min-height:calc(min(900px,100svh) - 180px);
+  align-items:flex-end;
+  position:relative;
+}
+#hero .hero-visual{
+  position:absolute;
+  inset:-110px 0 -90px;
+  min-height:0;
+  z-index:-1;
+  margin:0;
+}
+#hero .hero-photo{
+  position:absolute;
+  inset:0;
+  border:0;
+  border-radius:0;
+  transform:none;
+  box-shadow:none;
+  overflow:hidden;
+  animation:none;
+}
+#hero .hero-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 42%;
+  transform:scale(1.06);
+  animation:heroKenBurns 18s ease-in-out infinite alternate;
+  will-change:transform;
+}
+#hero .hero-photo::after{
+  background:
+    linear-gradient(180deg,rgba(12,8,4,.20) 0%,rgba(12,8,4,.18) 32%,rgba(12,8,4,.58) 67%,rgba(12,8,4,.94) 100%),
+    linear-gradient(90deg,rgba(12,8,4,.78) 0%,rgba(12,8,4,.18) 55%,rgba(12,8,4,.34) 100%);
+}
+#hero .hero-noise{z-index:1;opacity:.09}
+#hero .hero-copy{
+  max-width:850px;
+  padding:0 0 28px;
+}
+#hero .hero-eyebrow{margin-bottom:18px}
+#hero .hero-title{
+  max-width:820px;
+  font-size:clamp(48px,8vw,98px);
+  line-height:.92;
+  letter-spacing:-4.4px;
+  margin-bottom:22px;
+  text-wrap:balance;
+}
+#hero .hero-title em{display:block;margin-top:6px}
+#hero .hero-desc{max-width:720px;font-size:18px;line-height:1.75;margin-bottom:28px}
+#hero .hero-meta{margin-top:24px}
+#hero .hero-mark{
+  left:auto;
+  right:32px;
+  bottom:62px;
+  width:min(250px,28vw);
+  padding:18px;
+  background:rgba(18,13,7,.72);
+  border-color:rgba(245,200,0,.32);
+  backdrop-filter:blur(10px);
+}
+#hero .hero-stamp{right:28px;top:55px;transform:rotate(8deg)}
+.hero-hero-label{position:absolute;right:40px;bottom:24px;z-index:5;color:rgba(255,255,255,.52);font-family:Montserrat,sans-serif;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+@keyframes heroKenBurns{0%{transform:scale(1.05) translate3d(0,0,0)}100%{transform:scale(1.13) translate3d(-1.2%, -1%, 0)}}
+
+/* Mehr Spannung direkt nach dem Hero */
+.stats{
+  position:relative;
+  overflow:hidden;
+  background:#0F0A05;
+  padding:6px 0;
+}
+.stat{position:relative;padding:34px 22px 38px}
+.stat::after{content:'';position:absolute;left:28%;right:28%;bottom:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.5}
+.stat-n{font-size:clamp(42px,5vw,58px)}
+
+/* Referenzenstrip deutlich stärker */
+.references-preview{background:#171006;border-bottom:1px solid rgba(255,255,255,.07)}
+.references-preview-inner{padding:22px 0}
+.references-heading{grid-template-columns:auto minmax(0,1fr) auto}
+.references-heading-text .kicker{color:var(--gold)}
+.references-heading-text .kicker::before{background:var(--gold)}
+.reference-card{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.09);box-shadow:none}
+.reference-name{color:#fff}
+.reference-location{color:rgba(255,255,255,.48)}
+.references-cta .btn{box-shadow:0 8px 30px rgba(245,200,0,.20)}
+
+/* ABOUT: asymmetrischer und weniger nach Baukasten */
+#about{position:relative;background:var(--paper)}
+#about .about-wrap{grid-template-columns:minmax(0,.92fr) minmax(340px,1.08fr);gap:78px;margin-top:54px}
+#about .about-copy{padding-top:18px}
+#about .about-photo img{height:560px;border-radius:4px 22px 4px 22px;box-shadow:0 26px 80px rgba(24,17,8,.18)}
+#about .about-photo::before{left:auto;right:-24px;bottom:-24px;width:40%;height:46%;background:var(--red);opacity:.12;transform:rotate(5deg)}
+.about-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:520px;margin:26px 0 24px}
+.about-facts > div{padding:17px 16px;background:#fff;border:1px solid var(--line);border-radius:4px;box-shadow:0 8px 24px rgba(24,17,8,.045)}
+.about-facts strong{display:block;color:var(--red);font:900 28px/1 Montserrat,sans-serif;letter-spacing:-1px}
+.about-facts span{display:block;margin-top:5px;color:var(--muted);font:800 9px/1.2 Montserrat,sans-serif;letter-spacing:1.6px;text-transform:uppercase}
+
+/* Eventarten: jede Kachel wird zum Bildmoment */
+#eventarten{background:#151006}
+#eventarten h2,#eventarten .lead{color:#fff}
+#eventarten .kicker{color:var(--gold)}
+#eventarten .kicker::before{background:var(--gold)}
+#eventarten .event-grid{border-color:rgba(255,255,255,.10)}
+#eventarten .event-card{
+  position:relative;
+  isolation:isolate;
+  min-height:230px;
+  padding:22px 20px 20px;
+  background:#21160a;
+  overflow:hidden;
+  border-color:rgba(255,255,255,.10);
+}
+#eventarten .event-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2;transform:scale(1.03);filter:saturate(.88) contrast(1.04);transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .35s}
+
+#eventarten .event-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  z-index:-1;
+}
+#eventarten .event-card::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(180deg,rgba(12,8,4,.22) 0%,rgba(12,8,4,.54) 40%,rgba(12,8,4,.91) 100%);
+}
+#eventarten .event-card > *{position:relative;z-index:2}
+#eventarten .event-n{color:var(--gold)}
+#eventarten .event-card h3{color:#fff;font-size:24px;letter-spacing:-.8px}
+#eventarten .event-card p{color:rgba(255,255,255,.68)}
+#eventarten .event-arrow{color:#fff;font-size:26px}
+#eventarten .event-card:hover{background:#21160a;transform:translateY(-5px);border-color:rgba(245,200,0,.45)}
+#eventarten .event-card:hover .event-bg{transform:scale(1.10);filter:saturate(1.05) contrast(1.06)}
+#eventarten .event-card:hover p{color:rgba(255,255,255,.88)}
+
+/* Bildpausen / Übergänge */
+.photo-break{position:relative;min-height:320px;display:flex;align-items:center;overflow:hidden;background:#140E08;color:#fff}
+.photo-break img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.04)}
+.photo-break-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,7,4,.82),rgba(11,7,4,.38) 48%,rgba(11,7,4,.66))}
+.photo-break-copy{position:relative;z-index:2;width:min(1160px,90%);margin:0 auto;padding:70px 0}
+.photo-break-copy span{display:block;color:var(--gold);font:800 10px/1.2 Montserrat,sans-serif;letter-spacing:3px;text-transform:uppercase;margin-bottom:11px}
+.photo-break-copy strong{display:block;max-width:760px;font:900 clamp(30px,5vw,62px)/.98 Montserrat,sans-serif;letter-spacing:-2.4px}
+.photo-break-b .photo-break-copy{text-align:right}
+.photo-break-b .photo-break-overlay{background:linear-gradient(90deg,rgba(11,7,4,.58),rgba(11,7,4,.34) 45%,rgba(11,7,4,.83))}
+.photo-break-c{min-height:360px}
+
+/* Live audio/video section: vollflächiges Foto + Glas-Karten */
+#video{background:#120D07 url('bilder/live6.webp') center/cover no-repeat;position:relative;isolation:isolate;color:#fff}
+#video::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,6,3,.92),rgba(10,6,3,.72) 48%,rgba(10,6,3,.82));z-index:-1}
+#video h2{color:#fff}
+#video .kicker{color:var(--gold)}
+#video .kicker::before{background:var(--gold)}
+#video .video-intro{color:rgba(255,255,255,.68)}
+#video .audio-list{gap:12px}
+#video .soundcloud-wrap{background:rgba(255,255,255,.92);box-shadow:0 20px 50px rgba(0,0,0,.24);border-color:rgba(255,255,255,.28)}
+#video .video-wrap{box-shadow:0 26px 70px rgba(0,0,0,.28);border-color:rgba(255,255,255,.18)}
+
+/* Termine: mehr Editorial-Look */
+#termine{background:var(--cream)}
+#termine .termines-head{position:relative;padding-bottom:12px}
+#termine .termines-head::after{content:'LIVE';position:absolute;right:0;top:0;color:rgba(217,26,26,.08);font:900 clamp(80px,13vw,160px)/.8 Montserrat,sans-serif;letter-spacing:-8px;pointer-events:none}
+#termine .termin{background:rgba(255,255,255,.82);backdrop-filter:blur(6px);border-radius:4px;border-left-width:0}
+#termine .termin::before{width:5px}
+
+/* Band: dunkler Foto-Hintergrund */
+#band{background:#120D07;position:relative;isolation:isolate;color:#fff;overflow:hidden}
+#band::before{content:'';position:absolute;inset:0;background:url('bilder/live8.webp') center/cover no-repeat;z-index:-2;opacity:.18;transform:scale(1.04)}
+#band::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,13,7,.84),rgba(18,13,7,.96));z-index:-1}
+#band h2{color:#fff}
+#band .kicker{color:var(--gold)}
+#band .kicker::before{background:var(--gold)}
+#band .lead{color:rgba(255,255,255,.64)}
+#band .member{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.10);box-shadow:0 16px 45px rgba(0,0,0,.22)}
+#band .member:hover{border-color:rgba(245,200,0,.45);background:rgba(255,255,255,.10)}
+#band .m-name{color:#fff}
+#band .m-role{color:var(--gold)}
+
+/* Repertoire: starke Seitenzahl/Spaltenwirkung */
+#repertoire{background:#F3EFE6}
+#repertoire .repertoire-wrap{align-items:stretch}
+#repertoire .repertoire-side{background:#171006;color:#fff;border-radius:6px;padding:30px;min-height:100%}
+#repertoire .repertoire-side h3{color:var(--gold);font-size:58px;line-height:.9;letter-spacing:-3px}
+#repertoire .repertoire-side p{color:rgba(255,255,255,.66)}
+#repertoire .mini-proof{margin-top:22px;border-left:3px solid var(--red);padding-left:14px;color:#fff}
+#repertoire .songs-box{box-shadow:0 18px 50px rgba(24,17,8,.08);border-radius:6px}
+#repertoire .sf-chip.active{box-shadow:0 7px 20px rgba(24,17,8,.16)}
+
+/* Preise als dunkle Bühne */
+#preise{position:relative;background:#161007;overflow:hidden;color:#fff}
+#preise::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,11,5,.90),rgba(17,11,5,.84)),url('bilder/live9.webp') center/cover no-repeat;z-index:0}
+#preise .container{position:relative;z-index:1}
+#preise h2,#preise .pricing-copy p{color:#fff}
+#preise .kicker{color:var(--gold)}
+#preise .kicker::before{background:var(--gold)}
+#preise .pricing-copy p{color:rgba(255,255,255,.68)}
+#preise .price-note{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.84)}
+#preise .calc{box-shadow:0 30px 80px rgba(0,0,0,.25);border-color:rgba(255,255,255,.12)}
+
+/* Kontakt: nicht nur Formular, sondern Abschlussfläche */
+#kontakt{background:#FBF8F1}
+#kontakt .contact-copy{padding-top:12px}
+#kontakt .channels{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+#kontakt .ch{padding:15px 0;border-bottom:1px solid var(--line)}
+#kontakt .ch-val{font-size:13px}
+#kontakt .cf{border-radius:4px;box-shadow:0 22px 65px rgba(24,17,8,.10);position:relative;overflow:hidden}
+#kontakt .cf::before{content:'BOOKING';position:absolute;right:-4px;top:-8px;color:rgba(217,26,26,.06);font:900 74px/1 Montserrat,sans-serif;letter-spacing:-4px;pointer-events:none}
+
+/* Finale CTA mit Live-Foto */
+.final-cta{background:#120D07 url('bilder/live10.webp') center/cover no-repeat;isolation:isolate}
+.final-cta::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,8,4,.88),rgba(12,8,4,.62),rgba(12,8,4,.78));z-index:-1}
+.final-cta::before{z-index:0;opacity:.7}
+.final-cta-inner{position:relative;z-index:1}
+
+/* Kleine Typo-/Motion-Veredelungen */
+.btn{position:relative;overflow:hidden}
+.btn::after{content:'';position:absolute;top:0;bottom:0;left:-30%;width:18%;background:rgba(255,255,255,.26);transform:skewX(-18deg);transition:left .5s ease;pointer-events:none}
+.btn:hover::after{left:115%}
+.section,.photo-break{contain:paint}
+
+/* Mobile: echte Hero-Fläche, kompakte Foto-Breaks, Eventcards bleiben visuell */
+@media(max-width:820px){
+  #hero{min-height:820px;padding-top:90px}
+  #hero .hero-inner{min-height:650px;align-items:flex-end}
+  #hero .hero-visual{inset:-90px 0 -55px}
+  #hero .hero-copy{padding-bottom:38px}
+  #hero .hero-title{font-size:clamp(48px,14vw,76px);letter-spacing:-3px}
+  #hero .hero-desc{font-size:15px;line-height:1.7}
+  #hero .hero-mark{width:190px;right:12px;bottom:20px;opacity:.88}
+  #hero .hero-stamp{display:none}
+  .hero-hero-label{display:none}
+  #about .about-wrap{grid-template-columns:1fr;gap:34px}
+  #about .about-photo img{height:410px}
+  .about-facts{max-width:none}
+  #eventarten .event-grid{gap:1px}
+  #eventarten .event-card{min-height:205px}
+  .photo-break{min-height:280px}
+  .photo-break-copy{padding:58px 0}
+  .photo-break-copy strong{max-width:640px}
+  .photo-break-b .photo-break-copy{text-align:left}
+  #band::before{background-position:center}
+  #kontakt .channels{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  #hero{min-height:760px}
+  #hero .hero-inner{min-height:610px}
+  #hero .hero-visual{inset:-68px 0 -44px}
+  #hero .hero-title{font-size:clamp(44px,15vw,68px);letter-spacing:-2.6px}
+  #hero .hero-desc{font-size:15px}
+  #hero .hero-mark{left:50%;right:auto;bottom:12px;transform:translateX(-50%);width:160px;padding:12px}
+  .about-facts{gap:7px}
+  .about-facts > div{padding:13px 10px}
+  .about-facts strong{font-size:23px}
+  .about-facts span{font-size:8px;letter-spacing:1.2px}
+  #eventarten .event-card{min-height:185px;padding:18px 16px}
+  #eventarten .event-card h3{font-size:20px}
+  .photo-break{min-height:240px}
+  .photo-break-copy strong{font-size:34px;letter-spacing:-1.4px}
+  #preise .calc{border-radius:5px}
+}
+@media(prefers-reduced-motion:reduce){#hero .hero-photo img{animation:none;transform:scale(1.06)} }
+
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"MusicGroup",
+      "@id":"https://strivepartyband.de/#musicgroup",
+      "name":"STR!VE Partyband",
+      "alternateName":"STR!VE",
+      "url":"https://strivepartyband.de/",
+      "image":"https://strivepartyband.de/bilder/live1.webp",
+      "genre":["Rock","Pop","Party","Coverband"],
+      "areaServed":["Mayen","Koblenz","Eifel","Rheinland-Pfalz","Andernach","Neuwied","Cochem","Vulkaneifel","Mendig"],
+      "sameAs":["https://instagram.com/strive_partyband"],
+      "email":"strivepartyband@gmail.com",
+      "telephone":"+49 177 8477660"
+    },
+    {
+      "@type":"LocalBusiness",
+      "@id":"https://strivepartyband.de/#business",
+      "name":"STR!VE Partyband",
+      "url":"https://strivepartyband.de/",
+      "image":"https://strivepartyband.de/bilder/live1.webp",
+      "email":"strivepartyband@gmail.com",
+      "telephone":"+49 177 8477660",
+      "address":{"@type":"PostalAddress","addressLocality":"Nitztal","addressRegion":"Rheinland-Pfalz","addressCountry":"DE"},
+      "areaServed":["Mayen","Koblenz","Eifel","Rheinland-Pfalz"],
+      "parentOrganization":{"@id":"https://strivepartyband.de/#musicgroup"}
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#about">Zum Inhalt springen</a>
+
+<nav id="nav" aria-label="Hauptnavigation">
+  <a href="#hero" class="nav-brand" aria-label="STR!VE Startseite">
+    <img src="bilder/weblogostrive.webp" alt="STR!VE Partyband Logo" class="nav-logo-img" width="150" height="38" loading="eager">
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">Über uns</a></li>
+    <li><a href="#termine">Termine</a></li>
+    <li><a href="#repertoire">Repertoire</a></li>
+    <li><a href="#band">Die Band</a></li>
+    <li><a href="#preise">Preise</a></li>
+    <li><a href="referenzen.html">Referenzen</a></li>
+    <li><a href="#kontakt" class="nav-cta">Jetzt buchen</a></li>
+  </ul>
+  <button class="burger" id="burger" type="button" aria-label="Menü öffnen" aria-controls="navLinks" aria-expanded="false" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main>
+<section id="hero">
+  <div class="hero-noise" aria-hidden="true"></div>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <div class="hero-eyebrow">Partyband · Liveband · Coverband aus der Eifel</div>
+      <h1 class="hero-title">Partyband aus der Eifel.<em>Live. Laut. Echt.</em></h1>
+      <p class="hero-desc">STR!VE bringt <strong>Rockklassiker, moderne Hits und Partysongs</strong> auf Kirmes, Schützenfest, Firmenfeier, Hochzeit und private Feiern – aus der Region Mayen, Koblenz und der Eifel.</p>
+      <div class="hero-btns">
+        <a href="#kontakt" class="btn btn-primary">Termin anfragen</a>
+        <a href="#termine" class="btn btn-light">Nächste Auftritte</a>
+      </div>
+      <div class="hero-meta" aria-label="STR!VE Kurzprofil">
+        <span class="hero-pill">Mayen · Eifel</span>
+        <span class="hero-pill">Koblenz &amp; Umgebung</span>
+        <span class="hero-pill">100 % live</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo">
+        <img src="bilder/live1.webp" alt="STR!VE Partyband live auf der Bühne vor Publikum" width="1600" height="900" fetchpriority="high">
+      </div>
+      <div class="hero-mark">
+        <img src="bilder/weblogostrive.webp" alt="STR!VE Partyband Logo" width="460" height="210" loading="eager">
+      </div>
+      <div class="hero-stamp">Kirmes<br>Schützenfest<br>Firmenfeier<br>Hochzeit</div>
+    </div>
+  </div>
+  <div class="hero-hero-label">STR!VE Partyband · Mayen · Eifel · Rheinland-Pfalz</div>
+  <div class="hero-bottom" aria-hidden="true"></div>
+</section>
+
+<div class="stats" aria-label="STR!VE in Zahlen">
+  <div class="stat"><div class="stat-n">6</div><div class="stat-l">Bandmitglieder</div></div>
+  <div class="stat"><div class="stat-n">40+</div><div class="stat-l">Songs im Repertoire</div></div>
+  <div class="stat"><div class="stat-n">100%</div><div class="stat-l">Live gespielt</div></div>
+  <div class="stat"><div class="stat-n">∞</div><div class="stat-l">Energie auf der Bühne</div></div>
+</div>
+
+<section class="references-preview" id="referenzen-preview" aria-label="Ausgewählte Referenzen">
+  <div class="references-preview-inner">
+    <div class="references-heading">
+      <div class="references-heading-text"><div class="kicker">Schon gespielt bei</div></div>
+      <div class="references-slider" id="referencesSlider">
+        <div class="references-track" id="referencesTrack">
+          <div class="reference-card"><div><div class="reference-name">Kirmes Mayen-Nitztal</div><div class="reference-location">Mayen-Nitztal · 2026</div></div></div>
+          <div class="reference-card"><div><div class="reference-name">Sommernachtsfest</div><div class="reference-location">Ettringen · 2026</div></div></div>
+          <div class="reference-card"><div><div class="reference-name">Partnerschaftstreffen</div><div class="reference-location">Ettringen &amp; Dornes · 2026</div></div></div>
+          <div class="reference-card"><div><div class="reference-name">SPD-Europatag</div><div class="reference-location">Kottenheim · 2026</div></div></div>
+          <div class="reference-card"><div><div class="reference-name">Highlander Rock</div><div class="reference-location">Mayen · 2026</div></div></div>
+          <div class="reference-card"><div><div class="reference-name">Wohnzimmerkonzert</div><div class="reference-location">Nitztal · 2026</div></div></div>
+          <div class="reference-card"><div><div class="reference-name">Kirmes / Kaiserrock</div><div class="reference-location">Ettringen · 2026</div></div></div>
+        </div>
+      </div>
+      <div class="references-cta"><a href="referenzen.html" class="btn btn-primary">Alle Referenzen →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="kicker">Über uns</div>
+    <h2>Eine Band für<br><em>einen ganzen Abend</em></h2>
+    <div class="about-wrap">
+      <div class="about-copy">
+        <p>STR!VE ist eure <strong>Partyband aus Nitztal in der Eifel</strong>. Wir verbinden Rockcover, moderne Hits und Partysongs mit echtem Live-Spiel – passend zur Stimmung vor der Bühne.</p>
+        <p>Ob kleine Vereinsfeier oder große Kirmes: Wir bringen die Technik mit, bauen zuverlässig auf und passen unser Set an das Publikum und den Abend an. Dabei bleibt eines gleich: <strong>keine Konserve, kein Playback, sondern sechs Musiker auf der Bühne.</strong></p>
+        <p>Wir spielen für <strong>Kirmes, Schützenfest, Feuerwehrfest, Firmenfeier, Vereinsfest, Hochzeit und private Feiern</strong> im Raum Mayen, Koblenz, Vordereifel und darüber hinaus.</p>
+        <p>Unser Anspruch ist simpel: Ihr sollt nicht irgendwann denken, dass die Party gerade gut läuft. Ihr sollt merken, dass die Band dafür sorgt, dass sie läuft.</p>
+        <div class="about-facts" aria-label="STR!VE auf einen Blick">
+          <div><strong>6</strong><span>Musiker</span></div>
+          <div><strong>40+</strong><span>Songs</span></div>
+          <div><strong>100%</strong><span>live</span></div>
+        </div>
+        <a href="#kontakt" class="btn btn-primary">STR!VE für euren Termin anfragen</a>
+        <div class="about-note"><span></span> Buchbar in Mayen · Koblenz · Eifel · Rheinland-Pfalz</div>
+      </div>
+      <div class="about-photo">
+        <img src="bilder/bandbild1.webp" alt="STR!VE Partyband mit sechs Musikern aus der Eifel" width="1200" height="800" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section event-section warm" id="eventarten">
+  <div class="container">
+    <div class="event-intro">
+      <div><div class="kicker">Passt zu eurem Anlass</div><h2>Von der Kirmes<br><em>bis zur Hochzeit</em></h2></div>
+      <p class="lead">Für jeden Anlass gelten andere Rahmenbedingungen. Deshalb haben wir die wichtigsten Veranstaltungsarten auf eigenen Seiten zusammengefasst – mit Infos, Einsatzmöglichkeiten und direktem Kontakt.</p>
+    </div>
+    <div class="event-grid">
+      <a class="event-card" href="kirmes.html"><img class="event-bg" src="bilder/live2.webp" alt="STR!VE live bei Kirmes" width="1600" height="900" loading="lazy"><div class="event-n">01 · Volksfest</div><div><h3>Kirmes</h3><p>Partyband für Kirmes, Festzelt und Dorfplatz.</p></div><div class="event-arrow">↗</div></a>
+      <a class="event-card" href="schuetzenfest.html"><img class="event-bg" src="bilder/live3.webp" alt="STR!VE live bei Schützenfest" width="1600" height="900" loading="lazy"><div class="event-n">02 · Verein</div><div><h3>Schützenfest</h3><p>Live-Musik für Schützenfest und Vereinswochenende.</p></div><div class="event-arrow">↗</div></a>
+      <a class="event-card" href="firmenfeier.html"><img class="event-bg" src="bilder/live4.webp" alt="STR!VE live bei Firmenfeier" width="1600" height="900" loading="lazy"><div class="event-n">03 · Business</div><div><h3>Firmenfeier</h3><p>Musik für Sommerfest, Jahresfeier und Kundenevent.</p></div><div class="event-arrow">↗</div></a>
+      <a class="event-card" href="vereinsfest.html"><img class="event-bg" src="bilder/live5.webp" alt="STR!VE live bei Vereinsfest" width="1600" height="900" loading="lazy"><div class="event-n">04 · Gemeinschaft</div><div><h3>Vereinsfest</h3><p>Flexibles Set für Vereine, Clubs und Gemeinschaften.</p></div><div class="event-arrow">↗</div></a>
+      <a class="event-card" href="sommerfest.html"><img class="event-bg" src="bilder/live6.webp" alt="STR!VE live bei Sommerfest" width="1600" height="900" loading="lazy"><div class="event-n">05 · Open Air</div><div><h3>Sommerfest</h3><p>Live-Sound für draußen, Bühne und Abendprogramm.</p></div><div class="event-arrow">↗</div></a>
+      <a class="event-card" href="stadtfest.html"><img class="event-bg" src="bilder/live7.webp" alt="STR!VE live bei Stadtfest" width="1600" height="900" loading="lazy"><div class="event-n">06 · Innenstadt</div><div><h3>Stadtfest</h3><p>Publikumsnah, abwechslungsreich und live gespielt.</p></div><div class="event-arrow">↗</div></a>
+      <a class="event-card" href="oktoberfest.html"><img class="event-bg" src="bilder/live8.webp" alt="STR!VE live bei Oktoberfest" width="1600" height="900" loading="lazy"><div class="event-n">07 · Festzelt</div><div><h3>Oktoberfest</h3><p>Rock, Party und bekannte Mitsing-Songs fürs Zelt.</p></div><div class="event-arrow">↗</div></a>
+      <a class="event-card" href="feuerwehrfest.html"><img class="event-bg" src="bilder/live9.webp" alt="STR!VE live bei Feuerwehrfest" width="1600" height="900" loading="lazy"><div class="event-n">08 · Feuerwehr</div><div><h3>Feuerwehrfest</h3><p>Passendes Live-Programm für Zelt, Halle und Platz.</p></div><div class="event-arrow">↗</div></a>
+      <a class="event-card" href="weinfest.html"><img class="event-bg" src="bilder/live10.webp" alt="STR!VE live bei Weinfest" width="1600" height="900" loading="lazy"><div class="event-n">09 · Genuss</div><div><h3>Weinfest</h3><p>Liveband für gesellige Abende mit unterschiedlichem Publikum.</p></div><div class="event-arrow">↗</div></a>
+      <a class="event-card" href="geburtstag.html"><img class="event-bg" src="bilder/live1.webp" alt="STR!VE live bei Geburtstag" width="1600" height="900" loading="lazy"><div class="event-n">10 · Privat</div><div><h3>Geburtstag</h3><p>Persönliche Feier mit Wunsch-Songs und Live-Band.</p></div><div class="event-arrow">↗</div></a>
+    </div>
+  </div>
+</section>
+
+<section class="photo-break photo-break-a" aria-label="STR!VE live">
+  <img src="bilder/live3.webp" alt="STR!VE live vor Publikum bei einem Auftritt" width="1600" height="900" loading="lazy">
+  <div class="photo-break-overlay"></div>
+  <div class="photo-break-copy"><span>Eine Bühne. Ein Publikum. Ein Abend.</span><strong>Die Energie entsteht live.</strong></div>
+</section>
+
+<div class="live-roulette" id="liveRoulette" aria-label="STR!VE live in Bildern">
+  <div class="live-roulette-track">
+    <div class="live-roulette-slide active"><img src="bilder/live1.webp" alt="STR!VE Partyband live auf der Bühne" width="1600" height="900" loading="eager"></div>
+    <div class="live-roulette-slide"><img src="bilder/live2.webp" alt="STR!VE Liveband bei einem Auftritt in der Eifel" width="1600" height="900" loading="lazy"></div>
+    <div class="live-roulette-slide"><img src="bilder/live3.webp" alt="STR!VE Musiker bei einem Live-Auftritt" width="1600" height="900" loading="lazy"></div>
+    <div class="live-roulette-slide"><img src="bilder/live4.webp" alt="STR!VE Partyband vor Publikum" width="1600" height="900" loading="lazy"></div>
+    <div class="live-roulette-slide"><img src="bilder/live5.webp" alt="STR!VE live bei einer Veranstaltung" width="1600" height="900" loading="lazy"></div>
+    <div class="live-roulette-slide"><img src="bilder/live6.webp" alt="Live-Musik von STR!VE auf der Bühne" width="1600" height="900" loading="lazy"></div>
+    <div class="live-roulette-slide"><img src="bilder/live7.webp" alt="STR!VE Coverband bei einem Event" width="1600" height="900" loading="lazy"></div>
+    <div class="live-roulette-slide"><img src="bilder/live8.webp" alt="STR!VE mit Publikum bei einem Live-Auftritt" width="1600" height="900" loading="lazy"></div>
+    <div class="live-roulette-slide"><img src="bilder/live9.webp" alt="STR!VE Partyband live in der Region Mayen" width="1600" height="900" loading="lazy"></div>
+    <div class="live-roulette-slide"><img src="bilder/live10.webp" alt="STR!VE auf der Bühne bei einer Feier" width="1600" height="900" loading="lazy"></div>
+  </div>
+  <div class="live-roulette-caption"></div>
+  <div class="live-roulette-dots">
+    <button class="live-roulette-dot active" type="button" aria-label="Foto 1"></button><button class="live-roulette-dot" type="button" aria-label="Foto 2"></button><button class="live-roulette-dot" type="button" aria-label="Foto 3"></button><button class="live-roulette-dot" type="button" aria-label="Foto 4"></button><button class="live-roulette-dot" type="button" aria-label="Foto 5"></button><button class="live-roulette-dot" type="button" aria-label="Foto 6"></button><button class="live-roulette-dot" type="button" aria-label="Foto 7"></button><button class="live-roulette-dot" type="button" aria-label="Foto 8"></button><button class="live-roulette-dot" type="button" aria-label="Foto 9"></button><button class="live-roulette-dot" type="button" aria-label="Foto 10"></button>
+  </div>
+</div>
+
+<section class="section photo-backed-section video-section" id="video">
+  <div class="container">
+    <div class="video-grid">
+      <div class="video-copy">
+        <div class="kicker">Live erleben</div>
+        <h2>So klingt<br><em>STR!VE live</em></h2>
+        <p class="video-intro">Keine Konserve. Keine Playback-Show. Hier könnt ihr euch direkt anhören, wie STR!VE auf der Bühne klingt – und euch ein Bild davon machen, was euch bei eurem Event erwartet.</p>
+        <a href="#kontakt" class="btn btn-primary">Termin besprechen</a>
+      </div>
+      <div>
+        <div class="audio-list">
+<!-- Soundcloud Links -->
+
+<!-- Narcotic -->
+<div class="soundcloud-wrap soundcloud-facade"
+     data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2384815818&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+     data-title="STR!VE – Narcotic - Liquido">
+
+    <div class="soundcloud-facade-content">
+        <div class="soundcloud-facade-title">
+            STR!VE · Narcotic - Liquido
+        </div>
+
+        <button class="soundcloud-facade-button"
+                type="button"
+                aria-label="Narcotic von STR!VE abspielen">
+            ▶
+        </button>
+
+        <div class="soundcloud-facade-hint">
+            Zum Abspielen klicken
+        </div>
+    </div>
+
+</div>
+
+
+  
+<!-- All the small Things -->
+<div class="soundcloud-wrap soundcloud-facade"
+     data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2383081173&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+     data-title="STR!VE – All the Small Things (Live) – Blink182">
+
+    <div class="soundcloud-facade-content">
+        <div class="soundcloud-facade-title">
+            STR!VE · All the Small Things (Live) – Blink182
+        </div>
+
+        <button class="soundcloud-facade-button"
+                type="button"
+                aria-label="All the Small Things von STR!VE abspielen">
+            ▶
+        </button>
+
+        <div class="soundcloud-facade-hint">
+            Zum Abspielen klicken
+        </div>
+    </div>
+
+</div>
+
+
+
+  
+<!--Thinkin Out Loud -->
+<div class="soundcloud-wrap soundcloud-facade"
+     data-src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2383079886&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+     data-title="STR!VE – Thinkin out Loud - Ed Sheeran">
+
+    <div class="soundcloud-facade-content">
+        <div class="soundcloud-facade-title">
+            STR!VE · Thinkin out Loud - Ed Sheeran
+        </div>
+
+        <button class="soundcloud-facade-button"
+                type="button"
+                aria-label="Thinkin out Loud von STR!VE abspielen">
+            ▶
+        </button>
+
+        <div class="soundcloud-facade-hint">
+            Zum Abspielen klicken
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<br>
+  <br>
+
+
+</div>
+        </div>
+        <div style="height:18px"></div>
+        <div class="video-wrap" id="videoFacade" onclick="loadVideo()" style="cursor:pointer;position:relative;">
+          <img src="bilder/ytthumb1.webp" alt="STR!VE Partyband Live-Video" width="640" height="360" loading="lazy">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+            <div style="width:70px;height:70px;background:rgba(0,0,0,.70);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+              <div style="width:0;height:0;border-top:14px solid transparent;border-bottom:14px solid transparent;border-left:22px solid white;margin-left:5px"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="photo-break photo-break-b" aria-label="Live-Stimmung von STR!VE">
+  <img src="bilder/live7.webp" alt="STR!VE Coverband bei einem Live-Auftritt mit Publikum" width="1600" height="900" loading="lazy">
+  <div class="photo-break-overlay"></div>
+  <div class="photo-break-copy"><span>Rock. Pop. Party.</span><strong>Und immer passend zum Publikum.</strong></div>
+</section>
+
+<section class="section warm" id="termine">
+  <div class="container">
+    <div class="termines-head">
+      <div><div class="kicker">Kalender 2026</div><h2>Kommende<br><em>Auftritte</em></h2></div>
+      <p class="lead">Öffentliche Konzerte sind für alle zugänglich. Private Feiern zeigen wir nur als belegte Termine, damit ihr direkt seht, wann wir schon gebucht sind.</p>
+    </div>
+    <div class="termine-legend">
+      <span class="tl-item"><span class="tl-dot pub"></span> Öffentliches Konzert – jeder ist willkommen</span>
+      <span class="tl-item"><span class="tl-dot priv"></span> Geschlossene Veranstaltung – Termin belegt</span>
+    </div>
+    <div id="termin-status" class="termin-status" hidden></div>
+    <div id="termin-container">
+      <div class="termin-month">September 2026</div>
+      <div class="termin-list">
+        <div class="termin is-public">
+          <div class="t-date"><div class="t-day">12</div><div class="t-mon">Sep 2026</div></div>
+          <div class="t-sep"></div>
+          <div class="t-inf">
+            <div class="t-name">Konzert zur Kirmes Ettringen</div>
+            <div class="t-meta">
+              <span class="t-chip">Eventlocation Kaiserhof, 56729 Ettringen</span>
+              <span class="t-chip">Beginn wird noch bekanntgegeben</span>
+            </div>
+          </div>
+          <div class="t-right">
+            <span class="tbadge bf">Öffentlich</span>
+            <a class="t-link" href="https://maps.google.com/?q=Eventlocation+Kaiserhof+56729+Ettringen" target="_blank" rel="noopener">Route planen</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="termin-month">Oktober 2026</div>
+      <div class="termin-list">
+        <div class="termin is-private">
+          <div class="t-date"><div class="t-day">23</div><div class="t-mon">Okt 2026</div></div>
+          <div class="t-sep"></div>
+          <div class="t-inf">
+            <div class="t-name">Geschlossene Gesellschaft</div>
+            <div class="t-meta">
+              <span class="t-chip">Termin belegt</span>
+              <span class="t-chip">ab 19:00 Uhr</span>
+            </div>
+          </div>
+          <div class="t-right"><span class="tbadge bp">Privat</span></div>
+        </div>
+        <div class="termin is-private">
+          <div class="t-date"><div class="t-day">24</div><div class="t-mon">Okt 2026</div></div>
+          <div class="t-sep"></div>
+          <div class="t-inf">
+            <div class="t-name">Geschlossene Gesellschaft</div>
+            <div class="t-meta">
+              <span class="t-chip">Termin belegt</span>
+              <span class="t-chip">ab 19:00 Uhr</span>
+            </div>
+          </div>
+          <div class="t-right"><span class="tbadge bp">Privat</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="termin-month">Noch frei</div>
+    <div class="termin-list">
+      <a href="#kontakt" class="termin-add">
+        <div class="ta-l"><div class="ta-t">Euer Event hier?</div><div class="ta-s">Für 2026 und 2027 sind noch Wochenenden frei – unverbindlich anfragen.</div></div>
+        <div class="ta-arr">→</div>
+      </a>
+      <a href="referenzen.html" class="termin-add">
+        <div class="ta-l"><div class="ta-t">Vergangene Auftritte</div><div class="ta-s">Wo wir bisher gespielt haben – Referenzen ansehen.</div></div>
+        <div class="ta-arr">→</div>
+      </a>
+    </div>
+
+
+    <div class="termine-foot">
+      <p>Termin im Kopf? Sagt uns Datum und Anlass – wir melden uns meist am selben Tag zurück.</p>
+      <a href="#kontakt" class="btn btn-primary">Termin anfragen</a>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json" id="termine-jsonld">
+{
+  "@context":"https://schema.org",
+  "@graph":[]
+}
+</script>
+
+<section class="section band-section photo-backed-section band-photo-section" id="band">
+  <div class="container">
+    <div class="band-top">
+      <div><div class="kicker">Die Leute hinter STR!VE</div><h2>Meet<br><em>The Band</em></h2></div>
+      <p class="lead">Sechs Musiker plus Louis, unser Bandmaskottchen. Gesang, zwei Gitarren, Bass, Keyboard und Drums – mit eigener Technik im Hintergrund und viel Bock auf die Bühne.</p>
+    </div>
+    <div class="band-grid">
+      <div class="member"><div class="m-ph"><img src="bilder/johanna.webp" alt="Johanna von STR!VE – Gesang" width="700" height="700" loading="lazy" onerror="this.style.display='none'"></div><div class="m-inf"><div class="m-name">Johanna</div><div class="m-role">Gesang</div></div></div>
+      <div class="member"><div class="m-ph"><img src="bilder/lucas.webp" alt="Lucas von STR!VE – Gitarre" width="700" height="700" loading="lazy" onerror="this.style.display='none'"></div><div class="m-inf"><div class="m-name">Lucas</div><div class="m-role">Gitarre</div></div></div>
+      <div class="member"><div class="m-ph"><img src="bilder/luca.webp" alt="Luca von STR!VE – Gitarre" width="700" height="700" loading="lazy" onerror="this.style.display='none'"></div><div class="m-inf"><div class="m-name">Luca</div><div class="m-role">Gitarre</div></div></div>
+      <div class="member"><div class="m-ph"><img src="bilder/nicolas.webp" alt="Nicolas von STR!VE – Bass" width="700" height="700" loading="lazy" onerror="this.style.display='none'"></div><div class="m-inf"><div class="m-name">Nicolas</div><div class="m-role">Bass</div></div></div>
+      <div class="member"><div class="m-ph"><img src="bilder/jonas.webp" alt="Jonas von STR!VE – Drums" width="700" height="700" loading="lazy" onerror="this.style.display='none'"></div><div class="m-inf"><div class="m-name">Jonas</div><div class="m-role">Drums</div></div></div>
+      <div class="member"><div class="m-ph"><img src="bilder/aaron.webp" alt="Aaron von STR!VE – Keyboard" width="700" height="700" loading="lazy" onerror="this.style.display='none'"></div><div class="m-inf"><div class="m-name">Aaron</div><div class="m-role">Keyboard</div></div></div>
+      <div class="member"><div class="m-ph"><img src="bilder/louis.webp" alt="Louis – Bandmaskottchen von STR!VE" width="700" height="700" loading="lazy" onerror="this.style.display='none'"></div><div class="m-inf"><div class="m-name">Louis</div><div class="m-role">Bandmaskottchen</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="repertoire">
+  <div class="container">
+    <div class="kicker">Musik</div>
+    <h2>Rock, Pop und Party –<br><em>unser Repertoire</em></h2>
+    <div class="repertoire-wrap">
+      <div class="repertoire-side">
+        <div>
+          <h3>Live.<br>Laut.<br>Echt.</h3>
+          <p>Ihr könnt Songs filtern, suchen und direkt sehen, welche Richtung euch erwartet.</p>
+          <div class="mini-proof">Spezialwunsch? Wir lernen auch Songs extra für euch.</div>
+        </div>
+      </div>
+      <div class="songs-box">
+        <p style="font-family:Montserrat,sans-serif;font-size:9px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:11px">Bekannte Titel im Set u.a.:</p>
+        <div class="song-filter">
+          <div class="sf-bar">
+            <input type="search" class="sf-search" id="sfSearch" placeholder="Song oder Interpret suchen…" aria-label="Songs durchsuchen">
+            <button class="sf-chip active" data-genre="alle" type="button">Alle</button>
+            <button class="sf-chip" data-genre="Rock" type="button">Rock</button>
+            <button class="sf-chip" data-genre="Moderne Hits" type="button">Moderne Hits</button>
+            <button class="sf-chip" data-genre="Party" type="button">Party</button>
+          </div>
+          <div class="sf-count" id="sfCount"></div>
+          <div class="sf-listwrap is-collapsed" id="sfWrap">
+<div class="sf-list" id="sfList">
+
+      <div class="song" data-genre="Rock" data-title="American Idiot" data-artist="Green Day">
+        American Idiot – Green Day
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="All the Small Things" data-artist="Blink-182">
+        All the Small Things – Blink-182
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Blitzkrieg Bop" data-artist="Ramones">
+        Blitzkrieg Bop – Ramones
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Boulevard of Broken Dreams" data-artist="Green Day">
+        Boulevard of Broken Dreams – Green Day
+      </div>
+
+      <div class="song" data-genre="Party" data-title="Country Roads" data-artist="John Denver">
+        Country Roads – John Denver
+      </div>
+
+      <div class="song" data-genre="Moderne Hits" data-title="Don't Look Back in Anger" data-artist="Oasis">
+        Don't Look Back in Anger – Oasis
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Don't Stop Believin'" data-artist="Journey">
+        Don't Stop Believin' – Journey
+      </div>
+
+      <div class="song" data-genre="Party" data-title="Dirty Diana" data-artist="Michael Jackson">
+        Dirty Diana – Michael Jackson
+      </div>
+
+      <div class="song" data-genre="Party" data-title="Fields of Athenry" data-artist="The Dubliners">
+        Fields of Athenry – The Dubliners
+      </div>
+
+      <div class="song" data-genre="Party" data-title="Footloose" data-artist="Kenny Loggins">
+        Footloose – Kenny Loggins
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Hammer to Fall" data-artist="Queen">
+        Hammer to Fall – Queen
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Highway to Hell" data-artist="AC/DC">
+        Highway to Hell – AC/DC
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Holiday" data-artist="Green Day">
+        Holiday – Green Day
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="House of the Rising Sun" data-artist="The Animals">
+        House of the Rising Sun – The Animals
+      </div>
+
+      <div class="song" data-genre="Party" data-title="Let Me Entertain You" data-artist="Robbie Williams">
+        Let Me Entertain You – Robbie Williams
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Livin' on a Prayer" data-artist="Bon Jovi">
+        Livin' on a Prayer – Bon Jovi
+      </div>
+
+      <div class="song" data-genre="Moderne Hits" data-title="Mr. Brightside" data-artist="The Killers">
+        Mr. Brightside – The Killers
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Narcotic" data-artist="Liquido">
+        Narcotic – Liquido
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Radio Ga Ga" data-artist="Queen">
+        Radio Ga Ga – Queen
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Rockin' All Over the World" data-artist="Status Quo">
+        Rockin' All Over the World – Status Quo
+      </div>
+
+      <div class="song" data-genre="Party" data-title="Schickeria" data-artist="Spider Murphy Gang">
+        Schickeria – Spider Murphy Gang
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Schrei nach Liebe" data-artist="Die Ärzte">
+        Schrei nach Liebe – Die Ärzte
+      </div>
+
+      <div class="song" data-genre="Party" data-title="Skandal im Sperrbezirk" data-artist="Spider Murphy Gang">
+        Skandal im Sperrbezirk – Spider Murphy Gang
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Sex on Fire" data-artist="Kings of Leon">
+        Sex on Fire – Kings of Leon
+      </div>
+
+      <div class="song" data-genre="Moderne Hits" data-title="Shut Up and Dance" data-artist="WALK THE MOON">
+        Shut Up and Dance – WALK THE MOON
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Smells Like Teen Spirit" data-artist="Nirvana">
+        Smells Like Teen Spirit – Nirvana
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Song 2" data-artist="Blur">
+        Song 2 – Blur
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Summer of '69" data-artist="Bryan Adams">
+        Summer of '69 – Bryan Adams
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Sweet Child o' Mine" data-artist="Guns N' Roses">
+        Sweet Child o' Mine – Guns N' Roses
+      </div>
+
+      <div class="song" data-genre="Party" data-title="Tage wie diese" data-artist="Die Toten Hosen">
+        Tage wie diese – Die Toten Hosen
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Teenage Dirtbag" data-artist="Wheatus">
+        Teenage Dirtbag – Wheatus
+      </div>
+
+      <div class="song" data-genre="Moderne Hits" data-title="Tommi" data-artist="AnnenMayKantereit">
+        Tommi – AnnenMayKantereit
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="What's Up?" data-artist="4 Non Blondes">
+        What's Up? – 4 Non Blondes
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="We Will Rock You" data-artist="Queen">
+        We Will Rock You – Queen
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Whiskey in the Jar" data-artist="Metallica">
+        Whiskey in the Jar – Metallica
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Wish You Were Here" data-artist="Pink Floyd">
+        Wish You Were Here – Pink Floyd
+      </div>
+
+      <div class="song" data-genre="Moderne Hits" data-title="Wonderwall" data-artist="Oasis">
+        Wonderwall – Oasis
+      </div>
+
+      <div class="song" data-genre="Rock" data-title="Zombie" data-artist="The Cranberries">
+        Zombie – The Cranberries
+      </div>
+
+    </div>
+          </div>
+          <button type="button" class="sf-more" id="sfMore">Alle Songs anzeigen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="photo-break photo-break-c" aria-label="STR!VE Bühne und Publikum">
+  <img src="bilder/live10.webp" alt="STR!VE auf der Bühne bei einer Feier in der Eifel" width="1600" height="900" loading="lazy">
+  <div class="photo-break-overlay"></div>
+  <div class="photo-break-copy"><span>Wenn aus Musik</span><strong>ein gemeinsamer Abend wird.</strong></div>
+</section>
+
+<section class="section warm" id="preise">
+  <div class="container">
+    <div class="kicker">Preise</div>
+    <h2>Was kostet eine<br><em>Coverband?</em></h2>
+    <div class="pricing-shell">
+      <div class="pricing-copy">
+        <p>Jeder Anlass ist anders – deshalb gibt es bei uns kein Einheitsangebot. Ob <strong>Kirmes, Feuerwehrfest, Firmenfeier oder private Party</strong>: Wählt unten euren Anlass und die gewünschte Spieldauer aus, ergänzt die Anfahrt und seht sofort einen realistischen Richtwert.</p>
+        <p>Alle Preise beinhalten <strong>PA-Anlage, Beleuchtung, Auf- und Abbau</strong> sowie die Reisekosten ab Mayen. Extras wie erweiterte Lichtshow oder Aufbau am Vortag könnt ihr flexibel hinzubuchen.</p>
+        <p>Der Rechner zeigt eine unverbindliche Planungszahl – für ein festes Angebot meldet euch einfach bei uns. <strong>Wir antworten schnell.</strong></p>
+        <div class="price-note"><strong>Der Rechner ist nur ein Richtwert.</strong><br>Datum, Location und technischer Aufwand können den finalen Preis beeinflussen.</div>
+      </div>
+<div class="calc">
+
+  <div class="calc-main">
+
+    <h3>Preis-Rechner</h3>
+
+    <p class="calc-hint">
+      Anlass und Spieldauer wählen, Entfernung eintragen –
+      ihr seht sofort einen realistischen Richtwert.
+    </p>
+
+    <div class="calc-row">
+      <span class="lbl">Anlass</span>
+
+      <div class="opt-grid" id="calcAnlass">
+
+        <button type="button"
+                class="opt"
+                data-id="kirmes"
+                data-dauer="3"
+                data-aufschlag="0"
+                data-rabatt="0"
+                aria-pressed="true">
+          Kirmes / Volksfest
+          <span class="opt-sub">Bühne meist gestellt</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-id="feuerwehr"
+                data-dauer="3"
+                data-aufschlag="0"
+                data-rabatt="0"
+                aria-pressed="false">
+          Feuerwehr- / Vereinsfest
+          <span class="opt-sub">Zelt &amp; Halle</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-id="privat"
+                data-dauer="2"
+                data-aufschlag="100"
+                data-rabatt="100"
+                aria-pressed="false">
+          Privatfeier
+          <span class="opt-sub">Geburtstag, Hochzeit</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-id="firma_s"
+                data-dauer="2"
+                data-aufschlag="100"
+                data-rabatt="0"
+                aria-pressed="false">
+          Firmenfeier klein
+          <span class="opt-sub">bis ca. 100 Gäste</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-id="firma_l"
+                data-dauer="2.5"
+                data-aufschlag="250"
+                data-rabatt="0"
+                aria-pressed="false">
+          Firmenfeier groß
+          <span class="opt-sub">ab ca. 100 Gäste</span>
+        </button>
+
+      </div>
+    </div>
+
+
+    <div class="calc-row">
+
+      <span class="lbl">Spieldauer</span>
+
+      <div class="opt-grid" id="calcDauer">
+
+        <button type="button"
+                class="opt"
+                data-std="1"
+                data-preis="350"
+                aria-pressed="false">
+          1 Std.
+          <span class="opt-sub">1 Set</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-std="1.5"
+                data-preis="450"
+                aria-pressed="false">
+          1,5 Std.
+          <span class="opt-sub">2 kurze Sets</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-std="2"
+                data-preis="550"
+                aria-pressed="true">
+          2 Std.
+          <span class="opt-sub">2 Sets</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-std="2.5"
+                data-preis="650"
+                aria-pressed="false">
+          2,5 Std.
+          <span class="opt-sub">2 lange Sets</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-std="3"
+                data-preis="750"
+                aria-pressed="false">
+          3 Std.
+          <span class="opt-sub">3 Sets</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-std="3.5"
+                data-preis="850"
+                aria-pressed="false">
+          3,5 Std.
+          <span class="opt-sub">3 Sets</span>
+        </button>
+
+      </div>
+    </div>
+
+
+    <div class="calc-row">
+
+      <label class="lbl" for="calcKm">Anfahrt ab Mayen</label>
+
+      <div class="calc-km">
+
+        <input type="number"
+               id="calcKm"
+               min="0"
+               max="400"
+               step="5"
+               value="30"
+               inputmode="numeric">
+
+        <small>
+          km einfache Strecke · die ersten 30 km sind inklusive
+        </small>
+
+      </div>
+
+    </div>
+
+
+    <div class="calc-row">
+
+      <span class="lbl">Extras</span>
+
+      <div class="opt-grid" id="calcExtras">
+
+        <button type="button"
+                class="opt"
+                data-id="light"
+                data-preis="150"
+                aria-pressed="false">
+          Erweiterte Lichtshow
+          <span class="opt-sub">+ 150 €</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-id="mic"
+                data-preis="100"
+                aria-pressed="false">
+          Technik für Reden &amp; Playlist
+          <span class="opt-sub">+ 100 €</span>
+        </button>
+
+        <button type="button"
+                class="opt"
+                data-id="day"
+                data-preis="80"
+                aria-pressed="false">
+          Aufbau am Vortag
+          <span class="opt-sub">+ 80 €</span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="calc-out">
+
+    <div class="co-lbl">Richtwert</div>
+
+    <div class="co-price" id="calcPrice">
+      ab 750 €
+    </div>
+
+    <div class="co-sub" id="calcRange">
+      inkl. PA-Anlage, Licht &amp; Auf-/Abbau
+    </div>
+
+    <ul id="calcBreakdown"></ul>
+
+    <a href="#kontakt"
+       class="btn-yellow"
+       id="calcCta">
+      Angebot anfordern
+    </a>
+
+    <p class="calc-note">
+      Unverbindlicher Richtwert. Der finale Preis hängt von Datum,
+      Location und Aufwand ab – wir melden uns schnell mit einem festen Angebot.
+    </p>
+
+  </div>
+
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="kontakt">
+  <div class="container">
+    <div class="kicker">Kontakt &amp; Buchung</div>
+    <h2>Bereit für<br><em>eure Party?</em></h2>
+    <div class="contact-shell">
+      <div class="contact-copy">
+        <h3>Schreibt uns.</h3>
+        <p>Ihr wollt STR!VE für euer Event buchen oder habt Fragen? Schickt uns Datum, Ort und Anlass – wir melden uns schnell zurück.</p>
+        <div class="channels">
+          <a class="ch" href="mailto:strivepartyband@gmail.com"><div><span class="ch-lbl">E-Mail</span><span class="ch-val">strivepartyband@gmail.com</span></div></a>
+          <a class="ch" href="tel:+491778477660"><div><span class="ch-lbl">Telefon</span><span class="ch-val">0177 8477660</span></div></a>
+          <a class="ch" href="https://instagram.com/strive_partyband" target="_blank" rel="noopener"><div><span class="ch-lbl">Instagram</span><span class="ch-val">@strive_partyband</span></div></a>
+          <a class="ch" href="referenzen.html"><div><span class="ch-lbl">Referenzen</span><span class="ch-val">Bisherige Auftritte ansehen</span></div></a>
+        </div>
+        <div style="margin-top:25px"><a class="btn btn-dark" href="referenzen.html">Alle Referenzen ansehen</a></div>
+      </div>
+      <div class="cf">
+        <h3>Unverbindlich anfragen</h3>
+        <form action="https://formspree.io/f/mrewddre" method="POST" class="booking-form">
+          <div class="form-field"><label for="name">Name</label><input type="text" id="name" name="name" required></div>
+          <div class="form-field"><label for="email">E-Mail</label><input type="email" id="email" name="email" required></div>
+          <div class="form-field"><label for="datum">Datum der Veranstaltung</label><input type="date" id="datum" name="datum"></div>
+          <div class="form-field"><label for="ort">Ort / Location</label><input type="text" id="ort" name="ort" placeholder="z. B. Kaiserhof Ettringen"></div>
+          <div class="form-field"><label for="anlass">Anlass</label><select id="anlass" name="anlass">
+            <option value="">Bitte wählen</option>
+            <option value="Hochzeit">Hochzeit</option>
+            <option value="Firmenfeier">Firmenfeier</option>
+            <option value="Kirmes/Schützenfest">Kirmes/Schützenfest</option>
+            <option value="Vereinsfest">Vereinsfest</option>
+            <option value="Privatfeier">Privatfeier</option>
+            <option value="Sonstiges">Sonstiges</option>
+          </select></div>
+          <div class="form-field form-field-full"><label for="message">Deine Nachricht</label><textarea id="message" name="message" rows="5" placeholder="Erzählt uns von eurem Event..." required></textarea></div>
+          <input type="text" name="_gotcha" style="display:none">
+          <input type="hidden" name="_subject" value="Neue Buchungsanfrage STR!VE">
+          <button type="submit" class="btn-sub">Anfrage senden</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section supporter-section" id="unterstuetzer">
+  <div class="container">
+    <div class="kicker">Vielen Dank</div>
+    <h2>Unsere<br><em>Unterstützer</em></h2>
+    <div class="supporters-grid">
+      <div class="supporter-card">
+        <a href="https://www.kskmayen.de/" target="_blank" rel="noopener">
+          <img src="bilder/sparkasse.webp" alt="Sparkasse Mayen – Unterstützer von STR!VE" width="440" height="160" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta" aria-label="Buchungsaufruf">
+  <div class="container final-cta-inner">
+    <div>
+      <div class="kicker">Euer Termin könnte hier stehen</div>
+      <h2>Ihr plant Kirmes, Firmenfeier oder Hochzeit?<br><em>Lasst uns darüber sprechen.</em></h2>
+      <p class="final-cta-copy">Je früher ihr anfragt, desto besser können wir euren Wunschtermin einplanen. Schreibt uns einfach Datum, Ort und Anlass – den Rest klären wir gemeinsam.</p>
+    </div>
+    <a href="#kontakt" class="btn btn-primary">Jetzt anfragen</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="fl"><img src="bilder/weblogostrive.webp" alt="STR!VE Partyband Logo" width="300" height="210" loading="lazy"></div>
+  <div class="ft">Partyband · Coverband · Liveband für Mayen · Koblenz · Eifel · Rheinland-Pfalz</div>
+  <ul class="flinks">
+    <li><a href="#about">Über uns</a></li><li><a href="#termine">Termine</a></li><li><a href="#repertoire">Repertoire</a></li><li><a href="#band">Die Band</a></li><li><a href="#kontakt">Kontakt</a></li><li><a href="#preise">Preise</a></li><li><a href="referenzen.html">Referenzen</a></li><li><a href="impressum.html">Impressum</a></li><li><a href="daten.html">Datenschutzerklärung</a></li><li><a href="#" id="cookieSettingsLink">Cookie-Einstellungen</a></li>
+  </ul>
+  <div class="fcopy">© 2026 STR!VE Partyband · Nitztal · <a href="mailto:strivepartyband@gmail.com">strivepartyband@gmail.com</a></div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie-Hinweis">
+  <div class="cookie-banner-inner">
+    <p>Wir verwenden Cookies und ähnliche Technologien, um diese Website zu betreiben und Inhalte von Drittanbietern (z. B. YouTube) anzuzeigen. <a href="daten.html" target="_blank">Datenschutzerklärung</a></p>
+    <div class="cookie-banner-actions">
+      <button class="cb-btn cb-btn-primary" type="button" onclick="acceptCookies('all')">Alle akzeptieren</button>
+      <button class="cb-btn cb-btn-ghost" type="button" onclick="acceptCookies('necessary')">Nur notwendige</button>
+      <button class="cb-btn cb-btn-secondary" type="button" onclick="openCookieSettings()">Einstellungen</button>
+    </div>
+  </div>
+</div>
+
+<div class="cookie-modal" id="cookieModal" role="dialog" aria-modal="true" aria-label="Cookie-Einstellungen">
+  <div class="cookie-modal-inner">
+    <h3>Cookie-Einstellungen</h3>
+    <p class="cookie-modal-intro">Wähle aus, welche Cookies du erlaubst. Notwendige Cookies sind für den Betrieb der Seite immer aktiv.</p>
+    <div class="cookie-category"><div class="cc-info"><div class="cc-title">Notwendig</div><div class="cc-desc">Für die Grundfunktionen der Website (z. B. Navigation, Kontaktformular).</div></div><input class="cc-toggle" type="checkbox" checked disabled aria-label="Notwendige Cookies sind immer aktiv"></div>
+    <div class="cookie-category"><div class="cc-info"><div class="cc-title">Statistik &amp; Marketing</div><div class="cc-desc">Hilft uns zu verstehen, wie Besucher die Website nutzen (z. B. Google Analytics, Meta Pixel).</div></div><input class="cc-toggle" type="checkbox" id="toggleStats"></div>
+    <div class="cookie-category"><div class="cc-info"><div class="cc-title">Externe Medien</div><div class="cc-desc">Inhalte von Drittanbietern wie YouTube-Videos oder eingebettete Social-Media-Feeds.</div></div><input class="cc-toggle" type="checkbox" id="toggleExternal"></div>
+    <div class="cookie-modal-actions"><button class="cb-btn cb-btn-ghost" type="button" onclick="closeCookieModal()">Abbrechen</button><button class="cb-btn cb-btn-primary" type="button" onclick="saveCookieSettings()">Auswahl speichern</button></div>
+  </div>
+</div>
+
+<script>
+
+(function () {
+  var CAL_CFG = {
+    apiKey: 'AIzaSyB1l2JSeFzVgAfNBRQuA2oJr2klRmG2TZw',                 // <-- hier den eingeschränkten API-Key eintragen
+    calendars: [
+      { id: '65ef828e5ca28a23ffb153dfaf744498aeaef99711594c6a45a3adfab2c7b817@group.calendar.google.com'}
+    ],
+    privateKeywords: ['privat', 'geschlossene gesellschaft', 'closed'],
+    maxEvents: 12,              // wie viele Termine maximal anzeigen
+    refreshMinutes: 30,         // automatischer Refresh im offenen Tab
+    cacheKey: 'strive_cal_cache_v2',
+    cacheMinutes: 15            // Zwischenspeicher, spart Anfragen
+  };
+
+  var container = document.getElementById('termin-container');
+  var statusEl  = document.getElementById('termin-status');
+  if (!container) return;
+  if (!CAL_CFG.apiKey || !CAL_CFG.calendars.length) return; // Fallback bleibt stehen
+
+  var MON = ['Jan','Feb','Mrz','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'];
+  var MON_LONG = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+  var CACHE_KEY = 'strive_cal_cache_v1';
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c];
+    });
+  }
+
+  function parseStart(ev) {
+    var raw = (ev.start && (ev.start.dateTime || ev.start.date)) || null;
+    if (!raw) return null;
+    return { date: new Date(raw), allDay: !ev.start.dateTime };
+  }
+
+  function timeLabel(d) {
+    return ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2) + ' Uhr';
+  }
+
+  function fetchCalendar(cal) {
+    var now = new Date().toISOString();
+    var url = 'https://www.googleapis.com/calendar/v3/calendars/'
+      + encodeURIComponent(cal.id) + '/events'
+      + '?key=' + encodeURIComponent(CAL_CFG.apiKey)
+      + '&timeMin=' + encodeURIComponent(now)
+      + '&singleEvents=true&orderBy=startTime&maxResults=' + CAL_CFG.maxEvents;
+
+    return fetch(url, { cache: 'no-store' })
+      .then(function (r) {
+        if (!r.ok) return r.text().then(function (t) { throw new Error(cal.id + ' [' + r.status + '] ' + t); });
+        return r.json();
+      })
+            .then(function (data) {
+        return (data.items || []).map(function (ev) {
+          var s = parseStart(ev);
+          if (!s) return null;
+
+          var rawTitle = ev.summary || 'Termin';
+          var lower = rawTitle.toLowerCase();
+          var isPrivate = CAL_CFG.privateKeywords.some(function (k) {
+            return lower.indexOf(k) !== -1;
+          });
+
+          // Keyword + Trennzeichen aus dem angezeigten Titel entfernen
+          var title = rawTitle;
+          if (isPrivate) {
+            title = rawTitle
+              .replace(/\b(privat|geschlossene gesellschaft|closed)\b/gi, '')
+              .replace(/^[\s\-–—:|,()\[\]]+|[\s\-–—:|,()\[\]]+$/g, '')
+              .trim();
+            if (!title) title = 'Geschlossene Gesellschaft';
+          }
+
+          return {
+            type: isPrivate ? 'private' : 'public',
+            start: s.date,
+            allDay: s.allDay,
+            title: title,
+            location: isPrivate ? '' : (ev.location || ''),
+            note: isPrivate ? 'Termin belegt' : (ev.description || '')
+          };
+        }).filter(Boolean);
+      });
+
+  }
+
+  function render(events) {
+    if (!events.length) {
+      container.innerHTML = '<div class="termin-list"><div class="termin"><div class="t-inf">'
+        + '<div class="t-name">Aktuell keine öffentlichen Termine eingetragen</div>'
+        + '<div class="t-meta"><span class="t-chip">Neue Termine folgen in Kürze</span></div>'
+        + '</div></div></div>';
+      return;
+    }
+
+    var html = '', lastMonth = '';
+    events.slice(0, CAL_CFG.maxEvents).forEach(function (e) {
+      var d = e.start;
+      var monthKey = MON_LONG[d.getMonth()] + ' ' + d.getFullYear();
+      if (monthKey !== lastMonth) {
+        if (lastMonth) html += '</div>';
+        html += '<div class="termin-month">' + esc(monthKey) + '</div><div class="termin-list">';
+        lastMonth = monthKey;
+      }
+
+      var isPub = e.type === 'public';
+      var chips = [];
+      if (isPub && e.location) chips.push(esc(e.location));
+      if (!isPub) chips.push('Termin belegt');
+      chips.push(e.allDay ? 'Beginn wird noch bekanntgegeben' : 'ab ' + timeLabel(d));
+
+      html += '<div class="termin ' + (isPub ? 'is-public' : 'is-private') + '">'
+        + '<div class="t-date"><div class="t-day">' + d.getDate() + '</div>'
+        + '<div class="t-mon">' + MON[d.getMonth()] + ' ' + d.getFullYear() + '</div></div>'
+        + '<div class="t-sep"></div>'
+        + '<div class="t-inf"><div class="t-name">' + esc(e.title) + '</div>'
+        + '<div class="t-meta">' + chips.map(function (c) { return '<span class="t-chip">' + c + '</span>'; }).join('') + '</div></div>'
+        + '<div class="t-right"><span class="tbadge ' + (isPub ? 'bf">Öffentlich' : 'bp">Privat') + '</span>'
+        + (isPub && e.location
+            ? '<a class="t-link" href="https://maps.google.com/?q=' + encodeURIComponent(e.location) + '" target="_blank" rel="noopener">Route planen</a>'
+            : '')
+        + '</div></div>';
+    });
+    if (lastMonth) html += '</div>';
+
+    html += '<div class="termin-updated">Automatisch aus unserem Kalender aktualisiert – Stand '
+      + new Date().toLocaleString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+      + ' Uhr</div>';
+
+    container.innerHTML = html;
+    updateJsonLd(events);
+  }
+
+  function updateJsonLd(events) {
+    var node = document.getElementById('termine-jsonld');
+    if (!node) return;
+    var list = events.filter(function (e) { return e.type === 'public'; }).map(function (e) {
+      var obj = {
+        '@type': 'Event',
+        name: 'STR!VE live – ' + e.title,
+        startDate: e.start.toISOString().slice(0, e.allDay ? 10 : 19),
+        eventStatus: 'https://schema.org/EventScheduled',
+        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        performer: { '@type': 'MusicGroup', name: 'STR!VE Partyband' }
+      };
+      if (e.location) obj.location = { '@type': 'Place', name: e.location, address: e.location };
+      return obj;
+    });
+    if (!list.length) return;
+    node.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': list });
+  }
+
+  function readCache() {
+    try {
+      var raw = localStorage.getItem(CACHE_KEY);
+      if (!raw) return null;
+      var c = JSON.parse(raw);
+      if (Date.now() - c.t > CAL_CFG.cacheMinutes * 60000) return null;
+      c.events.forEach(function (e) { e.start = new Date(e.start); });
+      return c.events;
+    } catch (err) { return null; }
+  }
+
+  function load(force) {
+    if (!force) {
+      var cached = readCache();
+      if (cached) { render(cached); return; }
+    }
+    if (statusEl) { statusEl.hidden = false; statusEl.className = 'termin-status'; statusEl.textContent = 'Termine werden geladen …'; }
+
+    Promise.all(CAL_CFG.calendars.map(fetchCalendar))
+      .then(function (lists) {
+        var all = [].concat.apply([], lists).sort(function (a, b) { return a.start - b.start; });
+        try { localStorage.setItem(CACHE_KEY, JSON.stringify({ t: Date.now(), events: all })); } catch (err) {}
+        if (statusEl) statusEl.hidden = true;
+        render(all);
+      })
+      .catch(function (err) {
+        console.warn('Kalender konnte nicht geladen werden:', err);
+        if (statusEl) {
+          statusEl.hidden = false;
+          statusEl.className = 'termin-status err';
+          statusEl.textContent = 'Kalender gerade nicht erreichbar – unten stehen die zuletzt bekannten Termine.';
+        }
+      });
+  }
+
+  load(false);
+  setInterval(function () { load(true); }, CAL_CFG.refreshMinutes * 60000);
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) load(false);
+  });
+})();
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const slider = document.getElementById("referencesSlider");
+    const track = document.getElementById("referencesTrack");
+
+    if (!slider || !track) return;
+
+    const cards = Array.from(
+        track.querySelectorAll(".reference-card")
+    );
+
+    if (cards.length <= 1) return;
+
+    let current = 0;
+    let timer = null;
+    let isPaused = false;
+
+
+    /* Anzahl sichtbarer Karten bestimmen */
+
+    function getVisibleCards() {
+
+        if (window.innerWidth <= 700) {
+            return 1;
+        }
+
+        if (window.innerWidth <= 1000) {
+            return 2;
+        }
+
+        return 3;
+
+    }
+
+
+    /* Breite einer Karte + Abstand */
+
+    function getStep() {
+
+        if (!cards[0]) return 0;
+
+        const cardWidth =
+            cards[0].getBoundingClientRect().width;
+
+        const styles =
+            window.getComputedStyle(track);
+
+        const gap =
+            parseFloat(styles.columnGap || styles.gap) || 0;
+
+        return cardWidth + gap;
+
+    }
+
+
+    /* Maximale Position */
+
+    function getMaxIndex() {
+
+        return Math.max(
+            0,
+            cards.length - getVisibleCards()
+        );
+
+    }
+
+
+    /* Slider bewegen */
+
+    function moveSlider() {
+
+        const maxIndex = getMaxIndex();
+
+        if (current > maxIndex) {
+            current = 0;
+        }
+
+        const step = getStep();
+
+        track.style.transform =
+            "translateX(-" + (current * step) + "px)";
+
+    }
+
+
+    /* Nächste Karte */
+
+    function nextSlide() {
+
+        const maxIndex = getMaxIndex();
+
+        current++;
+
+        if (current > maxIndex) {
+            current = 0;
+        }
+
+        moveSlider();
+
+    }
+
+
+    /* Automatischen Ablauf starten */
+
+    function startSlider() {
+
+        clearInterval(timer);
+
+        timer = setInterval(function () {
+
+            if (!isPaused) {
+                nextSlide();
+            }
+
+        }, 3500);
+
+    }
+
+
+    /* Beim Darüberfahren pausieren */
+
+    slider.addEventListener(
+        "mouseenter",
+        function () {
+            isPaused = true;
+        }
+    );
+
+    slider.addEventListener(
+        "mouseleave",
+        function () {
+            isPaused = false;
+        }
+    );
+
+
+    /* Touch / Wischen auf Mobilgeräten */
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+
+    slider.addEventListener(
+        "touchstart",
+        function (event) {
+
+            touchStartX =
+                event.changedTouches[0].screenX;
+
+        },
+        { passive: true }
+    );
+
+
+    slider.addEventListener(
+        "touchend",
+        function (event) {
+
+            touchEndX =
+                event.changedTouches[0].screenX;
+
+            const distance =
+                touchStartX - touchEndX;
+
+            if (Math.abs(distance) < 40) {
+                return;
+            }
+
+            const maxIndex = getMaxIndex();
+
+            if (distance > 0) {
+
+                current++;
+
+                if (current > maxIndex) {
+                    current = 0;
+                }
+
+            } else {
+
+                current--;
+
+                if (current < 0) {
+                    current = maxIndex;
+                }
+
+            }
+
+            moveSlider();
+            startSlider();
+
+        },
+        { passive: true }
+    );
+
+
+    /* Bei Änderung der Fenstergröße neu berechnen */
+
+    window.addEventListener(
+        "resize",
+        function () {
+
+            const maxIndex = getMaxIndex();
+
+            if (current > maxIndex) {
+                current = 0;
+            }
+
+            moveSlider();
+
+        }
+    );
+
+
+    /* Initialisieren */
+
+    moveSlider();
+    startSlider();
+
+});
+</script>
+<script>
+function loadVideo() {
+  const wrap = document.getElementById('videoFacade');
+  const c = window.STRIVE_CONSENT || {};
+  if (!c.external) {
+    wrap.innerHTML = '<div class="video-consent-overlay"><p>Dieses Video wird von YouTube geladen. Bitte aktiviere „Externe Medien“ in den Cookie-Einstellungen.</p><button type="button" onclick="openCookieSettings()">Cookie-Einstellungen öffnen</button></div>';
+    return;
+  }
+  wrap.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/akB_7GcP-sY?si=Wcw2T3JqYprHL0Mm&autoplay=1" title="STR!VE Partyband Live" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>`;
+}
+
+  
+function toggleNav() {
+    document.getElementById("navLinks").classList.toggle("open");
+}
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("open");
+    });
+});
+
+
+
+
+
+</script>
+
+<div class="book-bar">
+  <a class="bb-ghost" href="tel:+491778477660">Anrufen</a>
+  <a class="bb-primary" href="#kontakt">Jetzt anfragen</a>
+</div>
+
+<script>
+/* ─── PREIS-RECHNER ───────────────────────────────────────────────── */
+
+(function () {
+
+  const elA = document.getElementById('calcAnlass');
+  const elD = document.getElementById('calcDauer');
+  const elE = document.getElementById('calcExtras');
+  const elKm = document.getElementById('calcKm');
+
+  if (!elA || !elD || !elE || !elKm) return;
+
+  const euro = n =>
+    Math.round(n).toLocaleString('de-DE') + ' €';
+
+  const freieKm = 30;
+  const proKm = 0.9;
+
+  let anlass =
+    elA.querySelector('.opt[aria-pressed="true"]') ||
+    elA.querySelector('.opt');
+
+  let dauer =
+    elD.querySelector('.opt[aria-pressed="true"]') ||
+    elD.querySelector('.opt');
+
+  const gewaehlteExtras = new Set();
+
+
+  /* Anlass auswählen */
+
+  elA.querySelectorAll('.opt').forEach(button => {
+
+    button.addEventListener('click', () => {
+
+      anlass = button;
+
+      elA.querySelectorAll('.opt').forEach(b => {
+
+        b.setAttribute(
+          'aria-pressed',
+          String(b === anlass)
+        );
+
+      });
+
+      const passendeDauer =
+        elD.querySelector(
+          '.opt[data-std="' +
+          button.dataset.dauer +
+          '"]'
+        );
+
+      if (passendeDauer) {
+        dauer = passendeDauer;
+      }
+
+      render();
+
+    });
+
+  });
+
+
+  /* Spieldauer auswählen */
+
+  elD.querySelectorAll('.opt').forEach(button => {
+
+    button.addEventListener('click', () => {
+
+      dauer = button;
+
+      elD.querySelectorAll('.opt').forEach(b => {
+
+        b.setAttribute(
+          'aria-pressed',
+          String(b === dauer)
+        );
+
+      });
+
+      render();
+
+    });
+
+  });
+
+
+  /* Extras auswählen */
+
+  elE.querySelectorAll('.opt').forEach(button => {
+
+    button.addEventListener('click', () => {
+
+      const id = button.dataset.id;
+
+      if (gewaehlteExtras.has(id)) {
+        gewaehlteExtras.delete(id);
+      } else {
+        gewaehlteExtras.add(id);
+      }
+
+      button.setAttribute(
+        'aria-pressed',
+        String(gewaehlteExtras.has(id))
+      );
+
+      render();
+
+    });
+
+  });
+
+
+  function render() {
+
+    const km = Math.max(
+      0,
+      Math.min(
+        400,
+        Number(elKm.value) || 0
+      )
+    );
+
+
+    const dauerPreis =
+      Number(dauer.dataset.preis) || 0;
+
+
+    /*
+     * Der Anlass bestimmt den regulären Grundpreis.
+     *
+     * Firmenfeiern:
+     *   Grundpreis + 100 € bzw. + 250 €
+     *
+     * Privatfeiern:
+     *   gleicher regulärer Grundpreis wie Firmenfeier klein
+     *   minus 100 € Privatkundenrabatt
+     */
+    const anlassAufschlag =
+      Number(anlass.dataset.aufschlag) || 0;
+
+    const rabatt =
+      Number(anlass.dataset.rabatt) || 0;
+
+
+    const fahrt =
+      Math.max(0, km - freieKm) * proKm;
+
+
+    const extras =
+      Array.from(
+        elE.querySelectorAll('.opt')
+      )
+      .filter(button =>
+        gewaehlteExtras.has(button.dataset.id)
+      );
+
+
+    const extraSumme =
+      extras.reduce(
+        (summe, button) =>
+          summe + Number(button.dataset.preis || 0),
+        0
+      );
+
+
+    /*
+     * Gesamtpreis:
+     *
+     * Spieldauer
+     * + regulärer Anlass-Grundpreis
+     * - Privatkundenrabatt
+     * + Anfahrt
+     * + Extras
+     */
+    const total =
+      dauerPreis +
+      anlassAufschlag -
+      rabatt +
+      fahrt +
+      extraSumme;
+
+
+    document.getElementById(
+      'calcPrice'
+    ).textContent =
+      'ab ' + euro(total);
+
+
+    document.getElementById(
+      'calcRange'
+    ).textContent =
+      'Rahmen ca. ' +
+      euro(total) +
+      ' – ' +
+      euro(total * 1.15);
+
+
+    const rows = [];
+
+
+    /*
+     * Grundpreis inklusive Anlass-Grundpreis.
+     * Dadurch erscheint bei Firmenfeiern kein
+     * separater "Aufschlag".
+     */
+    rows.push([
+      'Live-Musik · ' +
+      dauer.textContent.trim().split('\n')[0],
+      dauerPreis + anlassAufschlag
+    ]);
+
+
+    /*
+     * Nur bei Privatfeiern wird der Rabatt
+     * separat ausgewiesen.
+     */
+    if (rabatt) {
+
+      rows.push([
+        'Privatkundenrabatt',
+        -rabatt
+      ]);
+
+    }
+
+
+    if (fahrt) {
+
+      rows.push([
+        Math.round(km - freieKm) +
+        ' km Anfahrt',
+        fahrt
+      ]);
+
+    }
+
+
+    extras.forEach(button => {
+
+      rows.push([
+        button.textContent.trim().split('\n')[0],
+        Number(button.dataset.preis)
+      ]);
+
+    });
+
+
+    document.getElementById(
+      'calcBreakdown'
+    ).innerHTML =
+
+      rows.map(row =>
+
+        '<li>' +
+          '<span>' +
+            row[0] +
+          '</span>' +
+          '<span>' +
+            (
+              row[1] < 0
+                ? '− ' + euro(Math.abs(row[1]))
+                : euro(row[1])
+            ) +
+          '</span>' +
+        '</li>'
+
+      ).join('');
+
+
+    document.getElementById(
+      'calcCta'
+    ).dataset.summary =
+
+      'Meine Anfrage: ' +
+      anlass.textContent.trim().split('\n')[0] +
+      ', ' +
+      dauer.textContent.trim().split('\n')[0] +
+      ' Spielzeit, ca. ' +
+      km +
+      ' km Anfahrt' +
+
+      (
+        extras.length
+          ? ', Extras: ' +
+            extras
+              .map(x =>
+                x.textContent.trim().split('\n')[0]
+              )
+              .join(', ')
+          : ''
+      ) +
+
+      ' – Richtwert ' +
+      euro(total) +
+      '.';
+
+  }
+
+
+  elKm.addEventListener(
+    'input',
+    render
+  );
+
+
+  document.getElementById(
+    'calcCta'
+  ).addEventListener(
+    'click',
+    function () {
+
+      const msg =
+        document.getElementById('message');
+
+      if (
+        msg &&
+        !msg.value.trim()
+      ) {
+
+        msg.value =
+          this.dataset.summary +
+          '\n\n';
+
+      }
+
+    }
+  );
+
+
+  /* Anfangszustand passend zum gewählten Anlass */
+
+  const startDauer =
+    elD.querySelector(
+      '.opt[data-std="' +
+      anlass.dataset.dauer +
+      '"]'
+    );
+
+  if (startDauer) {
+
+    dauer = startDauer;
+
+    elD.querySelectorAll('.opt').forEach(b => {
+
+      b.setAttribute(
+        'aria-pressed',
+        String(b === dauer)
+      );
+
+    });
+
+  }
+
+
+  render();
+
+})();
+</script>
+<script>
+/* ─── Filterbare Songliste ─────────────────────────────────────────── */
+
+(function () {
+  const list = document.getElementById('sfList');
+  if (!list) return;
+
+  const wrap = document.getElementById('sfWrap');
+  const more = document.getElementById('sfMore');
+  const count = document.getElementById('sfCount');
+  const search = document.getElementById('sfSearch');
+  const chips = Array.from(document.querySelectorAll('.sf-chip'));
+
+  const songs = Array.from(list.querySelectorAll('.song'));
+
+  let genre = 'alle';
+  let expanded = false;
+
+  function syncMore(hits) {
+    wrap.classList.toggle(
+      'is-collapsed',
+      !expanded && hits > 12
+    );
+
+    more.style.display = hits > 12 ? 'inline-block' : 'none';
+
+    more.textContent = expanded
+      ? 'Weniger anzeigen'
+      : 'Alle ' + hits + ' Songs anzeigen';
+  }
+
+  function render() {
+    const q = search.value.trim().toLowerCase();
+
+    let hits = 0;
+
+    songs.forEach(song => {
+      const songGenre = song.dataset.genre || '';
+      const title = song.dataset.title || '';
+      const artist = song.dataset.artist || '';
+
+      const matchesGenre =
+        genre === 'alle' || songGenre === genre;
+
+      const matchesSearch =
+        !q ||
+        (title + ' ' + artist)
+          .toLowerCase()
+          .includes(q);
+
+      const visible =
+        matchesGenre && matchesSearch;
+
+      song.style.display = visible ? '' : 'none';
+
+      if (visible) hits++;
+    });
+
+    count.textContent =
+      hits + ' von ' + songs.length +
+      ' Songs – und viele mehr live im Set!';
+
+    syncMore(hits);
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+
+      chip.classList.add('active');
+
+      genre = chip.dataset.genre;
+
+      expanded = false;
+
+      render();
+    });
+  });
+
+  search.addEventListener('input', () => {
+    expanded = false;
+    render();
+  });
+
+  more.addEventListener('click', () => {
+    expanded = !expanded;
+    render();
+  });
+
+  render();
+})();
+</script>
+<script>
+(function () {
+
+  const roulette = document.getElementById('liveRoulette');
+
+  if (!roulette) return;
+
+  const slides = Array.from(
+    roulette.querySelectorAll('.live-roulette-slide')
+  );
+
+  const dots = Array.from(
+    roulette.querySelectorAll('.live-roulette-dot')
+  );
+
+  if (!slides.length) return;
+
+  let current = 0;
+  let timer;
+
+  function showSlide(index) {
+
+    current = index;
+
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === current);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === current);
+    });
+  }
+
+  function nextSlide() {
+    showSlide((current + 1) % slides.length);
+  }
+
+  function start() {
+    clearInterval(timer);
+    timer = setInterval(nextSlide, 3500);
+  }
+
+  dots.forEach((dot, index) => {
+
+    dot.addEventListener('click', function () {
+      showSlide(index);
+      start();
+    });
+
+  });
+
+  showSlide(0);
+  start();
+
+})();
+</script>
+<script>
+(function() {
+  const STORAGE_KEY = 'strive_cookie_consent';
+  let consent = null;
+
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) consent = JSON.parse(saved);
+  } catch (e) {}
+
+  window.STRIVE_CONSENT = consent || { necessary: true, statistics: false, external: false };
+
+  const banner = document.getElementById('cookieBanner');
+  const modal = document.getElementById('cookieModal');
+  const toggleStats = document.getElementById('toggleStats');
+  const toggleExternal = document.getElementById('toggleExternal');
+
+  function showBanner() { banner.classList.add('show'); }
+  function hideBanner() { banner.classList.remove('show'); }
+  function showModal() { modal.classList.add('show'); }
+  function hideModal() { modal.classList.remove('show'); }
+
+  function saveConsent(c) {
+    c.date = new Date().toISOString();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(c));
+    consent = c;
+    window.STRIVE_CONSENT = c;
+    applyConsent(c);
+  }
+
+  function applyConsent(c) {
+    document.body.dataset.cookieExternal = c.external ? '1' : '0';
+    document.body.dataset.cookieStats = c.statistics ? '1' : '0';
+  }
+
+  window.openCookieSettings = function() {
+    if (consent) {
+      toggleStats.checked = !!consent.statistics;
+      toggleExternal.checked = !!consent.external;
+    } else {
+      toggleStats.checked = false;
+      toggleExternal.checked = false;
+    }
+    hideBanner();
+    showModal();
+  };
+
+  window.closeCookieModal = function() {
+    hideModal();
+    if (!consent) showBanner();
+  };
+
+  window.acceptCookies = function(type) {
+    if (type === 'all') {
+      saveConsent({ necessary: true, statistics: true, external: true });
+    } else {
+      saveConsent({ necessary: true, statistics: false, external: false });
+    }
+    hideBanner();
+    hideModal();
+  };
+
+  window.saveCookieSettings = function() {
+    saveConsent({
+      necessary: true,
+      statistics: toggleStats.checked,
+      external: toggleExternal.checked
+    });
+    hideBanner();
+    hideModal();
+  };
+
+  if (consent) {
+    applyConsent(consent);
+  } else {
+    showBanner();
+  }
+
+  const footerLink = document.getElementById('cookieSettingsLink');
+  if (footerLink) {
+    footerLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.openCookieSettings();
+    });
+  }
+})();
+</script>
+<script>
+document.querySelectorAll('.soundcloud-facade').forEach(facade => {
+
+    facade.addEventListener('click', function () {
+
+        if (this.dataset.loaded === 'true') {
+            return;
+        }
+
+        const iframe = document.createElement('iframe');
+
+        iframe.src = this.dataset.src;
+        iframe.title = this.dataset.title;
+
+        iframe.width = '100%';
+        iframe.height = '166';
+        iframe.scrolling = 'no';
+        iframe.frameBorder = 'no';
+
+        iframe.allow = 'autoplay; encrypted-media';
+
+        iframe.style.width = '100%';
+        iframe.style.height = '166px';
+        iframe.style.border = '0';
+
+        this.innerHTML = '';
+        this.appendChild(iframe);
+
+        this.dataset.loaded = 'true';
+    });
+
+});
+</script>
+
+<script>
+/* Nav scroll state */
+(function(){
+  const nav=document.getElementById('nav');
+  if(!nav) return;
+  function sync(){nav.classList.toggle('scrolled',window.scrollY>40)}
+  sync(); window.addEventListener('scroll',sync,{passive:true});
+})();
+</script>
+
+<script>
+/* Update current-year/footer-safe date field behavior */
+(function(){
+  const d=document.getElementById('datum');
+  if(!d) return;
+  const today=new Date();
+  d.setAttribute('min',today.toISOString().slice(0,10));
+})();
+</script>
+
+</body>
+</html>
