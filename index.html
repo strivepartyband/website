@@ -1531,6 +1531,92 @@ footer {
     background-attachment:scroll;
   }
 }
+
+/* ─── ERGÄNZUNGEN, DIE IM VORHERIGEN BLOCK NOCH NICHT ENTHALTEN WAREN ─── */
+
+.photo-backed-section.video-section .video-copy h2{
+  color:#fff;
+  margin-bottom:20px;
+}
+
+.photo-backed-section.video-section .video-copy h2 em{
+  color:var(--yellow);
+}
+
+.photo-backed-section.video-section .video-copy .btn{
+  margin-top:4px;
+}
+
+.photo-backed-section.video-section .video-copy{
+  align-self:start;
+}
+
+
+/* zusätzlicher Hover-Effekt für den SoundCloud-Button */
+.photo-backed-section.video-section .soundcloud-facade-button{
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.photo-backed-section.video-section .soundcloud-facade-button:hover{
+  transform:scale(1.05);
+  box-shadow:0 8px 20px rgba(255,85,0,.28);
+}
+
+
+/* Button im YouTube-Consent etwas lebendiger */
+.photo-backed-section.video-section .video-consent-overlay button{
+  transition:
+    background .2s ease,
+    transform .2s ease;
+}
+
+.photo-backed-section.video-section .video-consent-overlay button:hover{
+  background:var(--yellow2);
+  transform:translateY(-1px);
+}
+
+
+/* Desktop: Sticky explizit aktiv */
+@media (min-width:1081px){
+
+  .photo-backed-section.video-section .video-grid{
+    align-items:start;
+  }
+
+  .photo-backed-section.video-section .video-copy{
+    position:sticky;
+    top:96px;
+    align-self:start;
+  }
+
+}
+
+
+/* Mobile-Ergänzungen */
+@media (max-width:620px){
+
+  .photo-backed-section.video-section .soundcloud-facade-title{
+    font-size:12px;
+  }
+
+  .photo-backed-section.video-section .btn{
+    width:100%;
+  }
+
+}
+
+
+/* Reduced Motion */
+@media (prefers-reduced-motion:reduce){
+
+  .photo-backed-section.video-section .soundcloud-facade-button{
+    transition:none;
+  }
+
+}
+  
 /* ─── COOKIE-BANNER / EINWILLIGUNG ─── */
 .cookie-banner {
   position: fixed;
