@@ -1000,77 +1000,6 @@ h2 em { color:var(--red); font-style:normal; }
 
   
 /* ─── BAND ─── */
-/* ─── MEET THE BAND – FOTO-HINTERGRUND ─── */
-.band-section{
-  position:relative;
-  isolation:isolate;
-  overflow:hidden;
-  background:
-    #120D07
-    url('bilder/live6.webp')
-    center center / cover no-repeat;
-  color:#fff;
-}
-
-.band-section::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:-1;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(10,6,3,.94) 0%,
-      rgba(10,6,3,.78) 50%,
-      rgba(10,6,3,.90) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(10,6,3,.28) 0%,
-      rgba(10,6,3,.82) 100%
-    );
-}
-
-.band-section::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:-1;
-  pointer-events:none;
-  background:
-    radial-gradient(
-      circle at 50% 20%,
-      rgba(245,200,0,.10),
-      transparent 38%
-    );
-}
-
-.band-section .sec-inner{
-  position:relative;
-  z-index:1;
-}
-
-.band-section .tag{
-  color:var(--yellow);
-}
-
-.band-section .tag::before{
-  background:var(--yellow);
-}
-
-.band-section h2{
-  color:#fff;
-}
-
-.band-section h2 em{
-  color:var(--yellow);
-}
-
-@media (max-width:620px){
-  .band-section{
-    background-position:center center;
-  }
-}
 .band-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:18px; margin-top:52px; }
 .member {
   background:#fff; border:1px solid var(--border);
@@ -1099,6 +1028,78 @@ h2 em { color:var(--red); font-style:normal; }
 .m-name { font-family: "Montserrat", "Montserrat Fallback", sans-serif; font-size:18px; font-weight:800; color:var(--dark); margin-bottom:3px; }
 .m-role { font-family: "Montserrat", "Montserrat Fallback", sans-serif; font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--red); }
 
+/* =========================================================
+   MEET THE BAND – LIVE-FOTO HINTERGRUND
+   Nur der Hintergrund wird verändert.
+   Das bestehende Band-Layout bleibt erhalten.
+   ========================================================= */
+
+#band{
+  position:relative;
+  overflow:hidden;
+  background:
+    #120D07
+    url('bilder/live6.webp')
+    center center / cover no-repeat;
+}
+
+/* dunkle Ebene über dem Foto */
+#band::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10,6,3,.90) 0%,
+      rgba(10,6,3,.68) 50%,
+      rgba(10,6,3,.88) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(10,6,3,.45) 0%,
+      rgba(10,6,3,.82) 100%
+    );
+}
+
+/* Inhalt über den Hintergrund legen */
+#band .sec-inner{
+  position:relative;
+  z-index:1;
+}
+
+/* Überschrift auf dunklem Hintergrund */
+#band h2{
+  color:#fff;
+}
+
+#band h2 em{
+  color:var(--yellow);
+}
+
+/* Tag/Kicker */
+#band .tag{
+  color:var(--yellow);
+}
+
+#band .tag::before{
+  background:var(--yellow);
+}
+
+/* Karten bleiben weiß */
+#band .member{
+  background:#fff;
+}
+
+/* Auf kleinen Bildschirmen Bild etwas anders positionieren */
+@media(max-width:768px){
+  #band{
+    background-position:center center;
+  }
+}
+  
 /* ─── KONTAKT ─── */
 .contact-layout { display:grid; grid-template-columns:1fr 1fr; gap:52px; margin-top:52px; align-items:start; }
 .ci h3 { font-family: "Montserrat", "Montserrat Fallback", sans-serif; font-size:26px; font-weight:800; color:var(--dark); margin-bottom:10px; }
@@ -2493,7 +2494,7 @@ footer {
 
 
 <!-- BAND -->
-<section class="band-section" id="band">
+<div class="sec-warm" id="band">
   <div class="sec-inner">
     <div class="tag">Die Leute hinter STR!VE</div>
     <h2>Meet<br><em>The Band</em></h2>
@@ -2542,7 +2543,7 @@ footer {
       </div>
     </div>
   </div>
-</section>
+</div>
   
 
   
