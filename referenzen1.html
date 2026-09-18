@@ -1,0 +1,2888 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Referenzen | STR!VE Partyband – Live-Events in der Eifel & Region</title>
+
+<meta name="description" content="STR!VE live: Kirmes, Sommerfeste, Konzerte, Jubiläen und private Veranstaltungen in der Eifel und Region. Hier seht ihr, wo unsere Partyband bereits für volle Stimmung gesorgt hat.">
+
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.strivepartyband.de/referenzen.html">
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preload" as="image" href="bilder/weblogostrive.webp" fetchpriority="high">
+
+<link rel="preload" href="fonts/montserrat-v31-latin-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/montserrat-v31-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/montserrat-v31-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/open-sans-v44-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+
+@font-face {
+    font-family:"Montserrat";
+    font-style:normal;
+    font-weight:400;
+    font-display:swap;
+    src:url("fonts/montserrat-v31-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family:"Montserrat";
+    font-style:normal;
+    font-weight:600;
+    font-display:swap;
+    src:url("fonts/montserrat-v31-latin-600.woff2") format("woff2");
+}
+
+@font-face {
+    font-family:"Montserrat";
+    font-style:normal;
+    font-weight:700;
+    font-display:swap;
+    src:url("fonts/montserrat-v31-latin-700.woff2") format("woff2");
+}
+
+@font-face {
+    font-family:"Montserrat";
+    font-style:normal;
+    font-weight:800;
+    font-display:swap;
+    src:url("fonts/montserrat-v31-latin-800.woff2") format("woff2");
+}
+
+@font-face {
+    font-family:"Montserrat";
+    font-style:normal;
+    font-weight:900;
+    font-display:swap;
+    src:url("fonts/montserrat-v31-latin-900.woff2") format("woff2");
+}
+
+@font-face {
+    font-family:"Open Sans";
+    font-style:normal;
+    font-weight:400;
+    font-display:swap;
+    src:url("fonts/open-sans-v44-latin-regular.woff2") format("woff2");
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+    --yellow:#F5C800;
+    --yellow2:#FFD700;
+
+    --red:#D91A1A;
+    --red2:#FF2727;
+
+    --orange:#FF6B00;
+
+    --dark:#1A1208;
+    --dark2:#2C1F0A;
+    --dark3:#100B05;
+
+    --bg:#FAFAF8;
+    --bg2:#F3F1EC;
+    --warm:#FFF8E8;
+
+    --white:#FFFFFF;
+
+    --text:#1A1208;
+    --muted:#786A54;
+
+    --border:rgba(26,18,8,.10);
+
+    --shadow:0 20px 60px rgba(26,18,8,.10);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+body {
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Open Sans",sans-serif;
+    overflow-x:hidden;
+}
+
+img {
+    max-width:100%;
+    display:block;
+}
+
+a {
+    color:inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color:transparent;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    height:68px;
+    z-index:500;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 5%;
+
+    background:rgba(26,18,8,.96);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(255,255,255,.04);
+}
+
+.nav-brand {
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+}
+
+.nav-logo-img {
+    width:auto;
+    height:38px;
+}
+
+.nav-links {
+    display:flex;
+    align-items:center;
+    gap:27px;
+    list-style:none;
+}
+
+.nav-links a {
+    color:rgba(255,255,255,.65);
+    text-decoration:none;
+
+    font-family:"Montserrat",sans-serif;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+
+    transition:.2s ease;
+}
+
+.nav-links a:hover {
+    color:#fff;
+}
+
+.nav-links a.active {
+    color:var(--yellow);
+}
+
+.nav-cta {
+    background:var(--yellow);
+    color:var(--dark) !important;
+
+    padding:10px 21px;
+    border-radius:3px;
+}
+
+.nav-cta:hover {
+    background:var(--yellow2) !important;
+    transform:translateY(-1px);
+}
+
+.burger {
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+}
+
+.burger span {
+    width:25px;
+    height:2px;
+    background:var(--yellow);
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+.container {
+    width:min(1160px,90%);
+    margin:0 auto;
+}
+
+.section {
+    padding:105px 0;
+}
+
+.section-tag {
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+
+    color:var(--red);
+
+    font-family:"Montserrat",sans-serif;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+}
+
+.section-tag::before {
+    content:"";
+    width:24px;
+    height:2px;
+    background:var(--red);
+}
+
+.section-heading {
+    font-family:"Montserrat",sans-serif;
+    font-weight:900;
+    font-size:clamp(40px,6vw,72px);
+    line-height:.95;
+    letter-spacing:-2.5px;
+}
+
+.section-heading em {
+    color:var(--red);
+    font-style:normal;
+}
+
+.section-lead {
+    max-width:720px;
+    margin-top:22px;
+
+    color:var(--muted);
+    font-size:17px;
+    line-height:1.8;
+}
+
+.btn {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    min-height:51px;
+    padding:14px 28px;
+
+    border-radius:3px;
+
+    font-family:"Montserrat",sans-serif;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1.7px;
+    text-transform:uppercase;
+
+    text-decoration:none;
+
+    transition:.2s ease;
+}
+
+.btn-yellow {
+    background:var(--yellow);
+    color:var(--dark);
+
+    box-shadow:0 7px 25px rgba(245,200,0,.22);
+}
+
+.btn-yellow:hover {
+    background:var(--yellow2);
+    transform:translateY(-2px);
+    box-shadow:0 12px 32px rgba(245,200,0,.32);
+}
+
+.btn-dark {
+    color:#fff;
+    background:var(--dark);
+}
+
+.btn-dark:hover {
+    background:var(--dark2);
+    transform:translateY(-2px);
+}
+
+.btn-outline {
+    color:var(--dark);
+    border:1.5px solid rgba(26,18,8,.25);
+}
+
+.btn-outline:hover {
+    border-color:var(--dark);
+    transform:translateY(-2px);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    position:relative;
+    min-height:760px;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+    padding:125px 0 85px;
+
+    color:#fff;
+    background:var(--dark);
+}
+
+.hero-bg {
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(circle at 73% 40%,rgba(245,200,0,.20),transparent 29%),
+        radial-gradient(circle at 15% 85%,rgba(217,26,26,.16),transparent 27%),
+        linear-gradient(110deg,#120D06 0%,#1A1208 48%,#241804 100%);
+}
+
+.hero-grid {
+    position:absolute;
+    inset:0;
+
+    opacity:.10;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,.15) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.15) 1px,transparent 1px);
+
+    background-size:70px 70px;
+
+    mask-image:linear-gradient(to bottom,black,transparent 80%);
+    -webkit-mask-image:linear-gradient(to bottom,black,transparent 80%);
+}
+
+.hero-light {
+    position:absolute;
+    width:430px;
+    height:430px;
+    border-radius:50%;
+
+    background:radial-gradient(circle,rgba(245,200,0,.13),transparent 68%);
+
+    filter:blur(10px);
+
+    pointer-events:none;
+}
+
+.hero-light.one {
+    top:-170px;
+    right:7%;
+}
+
+.hero-light.two {
+    bottom:-250px;
+    left:-130px;
+    background:radial-gradient(circle,rgba(217,26,26,.12),transparent 68%);
+}
+
+.hero-inner {
+    position:relative;
+    z-index:2;
+
+    display:grid;
+    grid-template-columns:1.08fr .92fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hero-copy {
+    max-width:700px;
+}
+
+.hero-kicker {
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    color:var(--yellow);
+
+    font-family:"Montserrat",sans-serif;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+}
+
+.hero-kicker::before {
+    content:"";
+    width:34px;
+    height:2px;
+    background:var(--yellow);
+}
+
+.hero-title {
+    font-family:"Montserrat",sans-serif;
+    font-weight:900;
+
+    font-size:clamp(49px,7vw,91px);
+    line-height:.91;
+    letter-spacing:-4px;
+
+    margin-bottom:29px;
+}
+
+.hero-title span {
+    color:var(--yellow);
+}
+
+.hero-description {
+    max-width:610px;
+
+    color:rgba(255,255,255,.67);
+
+    font-size:17px;
+    line-height:1.8;
+
+    margin-bottom:35px;
+}
+
+.hero-description strong {
+    color:#fff;
+}
+
+.hero-actions {
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.hero-actions .btn-outline {
+    color:#fff;
+    border-color:rgba(255,255,255,.25);
+}
+
+.hero-actions .btn-outline:hover {
+    border-color:rgba(255,255,255,.65);
+}
+
+.hero-proof {
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    min-height:420px;
+}
+
+.hero-proof::before {
+    content:"";
+
+    position:absolute;
+
+    width:380px;
+    height:380px;
+
+    border:1px solid rgba(245,200,0,.16);
+    border-radius:50%;
+
+    box-shadow:
+        0 0 0 30px rgba(245,200,0,.025),
+        0 0 0 80px rgba(245,200,0,.015);
+}
+
+.hero-logo {
+    position:relative;
+    width:min(390px,80%);
+
+    filter:
+        drop-shadow(0 8px 35px rgba(245,200,0,.36))
+        drop-shadow(0 0 75px rgba(245,200,0,.14));
+}
+
+.hero-proof-label {
+    position:relative;
+
+    margin-top:20px;
+
+    color:rgba(255,255,255,.34);
+
+    font-family:"Montserrat",sans-serif;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   PROOF STRIP
+========================================================= */
+
+.proof-strip {
+    position:relative;
+    z-index:10;
+
+    background:var(--yellow);
+
+    margin-top:-1px;
+}
+
+.proof-grid {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.proof-item {
+    min-height:135px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:24px 30px;
+
+    border-right:1px solid rgba(26,18,8,.14);
+}
+
+.proof-item:last-child {
+    border-right:none;
+}
+
+.proof-number {
+    font-family:"Montserrat",sans-serif;
+    font-size:39px;
+    font-weight:900;
+    line-height:1;
+    letter-spacing:-1.5px;
+}
+
+.proof-label {
+    margin-top:8px;
+
+    font-family:"Montserrat",sans-serif;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1.7px;
+    text-transform:uppercase;
+
+    opacity:.68;
+}
+
+
+/* =========================================================
+   INTRO / SOCIAL PROOF
+========================================================= */
+
+.intro {
+    background:var(--bg);
+}
+
+.intro-grid {
+    display:grid;
+    grid-template-columns:.82fr 1.18fr;
+    gap:90px;
+    align-items:end;
+}
+
+.intro-side {
+    padding-bottom:5px;
+}
+
+.intro-side-number {
+    font-family:"Montserrat",sans-serif;
+    font-size:130px;
+    font-weight:900;
+    line-height:.75;
+
+    color:var(--yellow);
+
+    -webkit-text-stroke:2px var(--dark);
+
+    letter-spacing:-8px;
+}
+
+.intro-side-text {
+    max-width:260px;
+    margin-top:28px;
+
+    font-family:"Montserrat",sans-serif;
+    font-size:13px;
+    font-weight:700;
+    line-height:1.6;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+
+/* =========================================================
+   REVIEW
+========================================================= */
+
+.review-section {
+    padding-top:0;
+    padding-bottom:110px;
+}
+
+.review-box {
+    position:relative;
+
+    overflow:hidden;
+
+    background:var(--warm);
+
+    border:1px solid rgba(217,26,26,.10);
+
+    padding:58px 65px;
+
+    box-shadow:var(--shadow);
+}
+
+.review-box::after {
+    content:"“";
+
+    position:absolute;
+    right:35px;
+    bottom:-80px;
+
+    font-family:Georgia,serif;
+    font-size:300px;
+    line-height:1;
+
+    color:rgba(217,26,26,.055);
+
+    pointer-events:none;
+}
+
+.review-top {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:30px;
+}
+
+.review-stars {
+    color:#F4B400;
+
+    font-size:25px;
+    letter-spacing:4px;
+}
+
+.review-source {
+    font-family:"Montserrat",sans-serif;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:var(--muted);
+}
+
+.review-text {
+    position:relative;
+    z-index:1;
+
+    max-width:900px;
+
+    font-family:"Montserrat",sans-serif;
+    font-size:clamp(21px,3vw,31px);
+    font-weight:600;
+    line-height:1.45;
+
+    letter-spacing:-.4px;
+}
+
+.review-author {
+    position:relative;
+    z-index:1;
+
+    margin-top:28px;
+
+    font-family:"Montserrat",sans-serif;
+    font-size:13px;
+    font-weight:800;
+}
+
+.review-bottom {
+    position:relative;
+    z-index:1;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:25px;
+
+    margin-top:35px;
+    padding-top:25px;
+
+    border-top:1px solid rgba(26,18,8,.10);
+}
+
+.review-rating {
+    color:var(--muted);
+
+    font-size:12px;
+    line-height:1.7;
+}
+
+.review-rating strong {
+    color:var(--dark);
+
+    font-family:"Montserrat",sans-serif;
+    font-size:13px;
+}
+
+
+/* =========================================================
+   REFERENCES INTRO
+========================================================= */
+
+.references-intro {
+    background:var(--dark);
+    color:#fff;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.references-intro::before {
+    content:"";
+
+    position:absolute;
+    top:0;
+    right:-10%;
+
+    width:50%;
+    height:100%;
+
+    background:linear-gradient(135deg,transparent 0%,rgba(245,200,0,.07) 100%);
+
+    transform:skewX(-14deg);
+}
+
+.references-intro .section-tag {
+    color:var(--yellow);
+}
+
+.references-intro .section-tag::before {
+    background:var(--yellow);
+}
+
+.references-intro .section-heading {
+    color:#fff;
+}
+
+.references-intro .section-heading em {
+    color:var(--yellow);
+}
+
+.references-intro .section-lead {
+    color:rgba(255,255,255,.55);
+}
+
+
+/* =========================================================
+   REFERENCE LIST
+========================================================= */
+
+.reference-area {
+    padding:110px 0;
+    background:var(--bg2);
+}
+
+.reference-list {
+    display:flex;
+    flex-direction:column;
+    gap:95px;
+}
+
+
+/* =========================================================
+   REFERENCE CARD
+========================================================= */
+
+.reference {
+    position:relative;
+
+    display:grid;
+    grid-template-columns:1.08fr .92fr;
+
+    min-height:590px;
+
+    background:#fff;
+
+    box-shadow:0 25px 70px rgba(26,18,8,.11);
+}
+
+.reference:nth-child(even) {
+    grid-template-columns:.92fr 1.08fr;
+}
+
+.reference:nth-child(even) .reference-photo {
+    order:2;
+}
+
+.reference:nth-child(even) .reference-content {
+    order:1;
+}
+
+.reference-photo {
+    position:relative;
+
+    min-height:590px;
+
+    overflow:hidden;
+
+    background:var(--dark);
+}
+
+.reference-photo img {
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+.reference:hover .reference-photo img {
+    transform:scale(1.045);
+}
+
+.reference-photo::after {
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(180deg,rgba(0,0,0,.03) 30%,rgba(0,0,0,.50) 100%);
+
+    pointer-events:none;
+}
+
+.reference-number {
+    position:absolute;
+    z-index:2;
+
+    left:25px;
+    bottom:22px;
+
+    color:rgba(255,255,255,.78);
+
+    font-family:"Montserrat",sans-serif;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.reference-content {
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:55px 55px 58px;
+}
+
+.reference-content::before {
+    content:"";
+
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:6px;
+    height:100%;
+
+    background:linear-gradient(to bottom,var(--yellow),var(--red));
+}
+
+.reference:nth-child(even) .reference-content::before {
+    left:auto;
+    right:0;
+}
+
+.reference-date {
+    color:var(--red);
+
+    font-family:"Montserrat",sans-serif;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:2.5px;
+    text-transform:uppercase;
+
+    margin-bottom:17px;
+}
+
+.reference-title {
+    font-family:"Montserrat",sans-serif;
+    font-size:clamp(33px,4vw,51px);
+    font-weight:900;
+    line-height:.98;
+    letter-spacing:-2px;
+
+    color:var(--dark);
+}
+
+.reference-location {
+    margin-top:8px;
+
+    color:var(--muted);
+
+    font-family:"Montserrat",sans-serif;
+    font-size:20px;
+    font-weight:700;
+}
+
+.reference-category {
+    align-self:flex-start;
+
+    margin-top:22px;
+    margin-bottom:24px;
+
+    padding:8px 12px;
+
+    border:1px solid rgba(26,18,8,.10);
+    background:var(--warm);
+
+    color:var(--dark);
+
+    font-family:"Montserrat",sans-serif;
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:1.3px;
+    text-transform:uppercase;
+}
+
+.reference-text {
+    color:#554A3A;
+
+    font-size:15px;
+    line-height:1.85;
+}
+
+.reference-text strong {
+    color:var(--dark);
+    font-weight:700;
+}
+
+.reference-actions {
+    display:flex;
+    gap:11px;
+    flex-wrap:wrap;
+
+    margin-top:30px;
+}
+
+
+/* =========================================================
+   HIGHLIGHT REFERENCE
+========================================================= */
+
+.reference.highlight {
+    grid-template-columns:1.25fr .75fr;
+}
+
+.reference.highlight .reference-photo {
+    min-height:650px;
+}
+
+.reference.highlight .reference-content {
+    padding:65px;
+}
+
+.reference.highlight .reference-title {
+    font-size:clamp(40px,5vw,66px);
+}
+
+
+/* =========================================================
+   MINI REFERENCES
+========================================================= */
+
+.compact-grid {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.reference.compact {
+    display:flex;
+    flex-direction:column;
+
+    min-height:0;
+}
+
+.reference.compact .reference-photo {
+    min-height:300px;
+    height:300px;
+}
+
+.reference.compact .reference-content {
+    padding:35px 35px 40px;
+}
+
+.reference.compact .reference-title {
+    font-size:32px;
+}
+
+.reference.compact .reference-location {
+    font-size:17px;
+}
+
+.reference.compact .reference-text {
+    font-size:14px;
+    line-height:1.75;
+}
+
+
+/* =========================================================
+   BOOKING BAND
+========================================================= */
+
+.booking-band {
+    position:relative;
+
+    overflow:hidden;
+
+    padding:75px 0;
+
+    color:#fff;
+    background:var(--dark);
+}
+
+.booking-band::before {
+    content:"";
+
+    position:absolute;
+    top:-130px;
+    right:-90px;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,rgba(245,200,0,.18),transparent 68%);
+}
+
+.booking-band::after {
+    content:"";
+
+    position:absolute;
+    bottom:-170px;
+    left:-100px;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,rgba(217,26,26,.15),transparent 68%);
+}
+
+.booking-inner {
+    position:relative;
+    z-index:2;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:45px;
+}
+
+.booking-kicker {
+    color:var(--yellow);
+
+    font-family:"Montserrat",sans-serif;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    margin-bottom:14px;
+}
+
+.booking-title {
+    font-family:"Montserrat",sans-serif;
+    font-size:clamp(34px,5vw,58px);
+    font-weight:900;
+    line-height:.98;
+    letter-spacing:-2px;
+}
+
+.booking-title span {
+    color:var(--yellow);
+}
+
+.booking-text {
+    max-width:600px;
+
+    color:rgba(255,255,255,.55);
+
+    font-size:15px;
+    line-height:1.75;
+
+    margin-top:17px;
+}
+
+.booking-actions {
+    flex-shrink:0;
+}
+
+
+/* =========================================================
+   ATMOSPHERE BANDS
+========================================================= */
+
+.atmosphere {
+    position:relative;
+
+    height:330px;
+
+    overflow:hidden;
+
+    background:var(--dark);
+}
+
+.atmosphere img {
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:.65;
+
+    filter:saturate(.9);
+}
+
+.atmosphere::after {
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(90deg,
+            rgba(26,18,8,.95) 0%,
+            rgba(26,18,8,.18) 48%,
+            rgba(26,18,8,.72) 100%
+        );
+}
+
+.atmosphere-content {
+    position:absolute;
+    z-index:2;
+
+    inset:0;
+
+    display:flex;
+    align-items:center;
+}
+
+.atmosphere-text {
+    max-width:600px;
+}
+
+.atmosphere-kicker {
+    color:var(--yellow);
+
+    font-family:"Montserrat",sans-serif;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.atmosphere-title {
+    margin-top:10px;
+
+    color:#fff;
+
+    font-family:"Montserrat",sans-serif;
+    font-size:clamp(30px,5vw,55px);
+    font-weight:900;
+    line-height:1;
+    letter-spacing:-2px;
+}
+
+.atmosphere-title em {
+    color:var(--yellow);
+    font-style:normal;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta {
+    position:relative;
+    overflow:hidden;
+
+    padding:120px 0;
+
+    background:
+        linear-gradient(135deg,#FFF8E8 0%,#FAFAF8 52%,#F3F1EC 100%);
+}
+
+.final-cta::before {
+    content:"STR!VE";
+
+    position:absolute;
+
+    right:-80px;
+    bottom:-45px;
+
+    font-family:"Montserrat",sans-serif;
+    font-size:clamp(100px,20vw,270px);
+    font-weight:900;
+    line-height:1;
+
+    color:rgba(217,26,26,.045);
+
+    pointer-events:none;
+}
+
+.final-inner {
+    position:relative;
+    z-index:2;
+
+    text-align:center;
+}
+
+.final-kicker {
+    color:var(--red);
+
+    font-family:"Montserrat",sans-serif;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.final-title {
+    max-width:900px;
+    margin:18px auto 0;
+
+    font-family:"Montserrat",sans-serif;
+    font-size:clamp(44px,7vw,82px);
+    font-weight:900;
+    line-height:.94;
+    letter-spacing:-3px;
+}
+
+.final-title em {
+    color:var(--red);
+    font-style:normal;
+}
+
+.final-text {
+    max-width:650px;
+    margin:24px auto 30px;
+
+    color:var(--muted);
+
+    font-size:16px;
+    line-height:1.8;
+}
+
+.final-actions {
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding:60px 5% 28px;
+
+    background:var(--dark);
+    color:rgba(255,255,255,.5);
+
+    text-align:center;
+}
+
+.footer-logo {
+    display:flex;
+    justify-content:center;
+
+    margin-bottom:18px;
+}
+
+.footer-logo img {
+    height:55px;
+    width:auto;
+
+    filter:drop-shadow(0 0 15px rgba(245,200,0,.28));
+}
+
+.footer-tagline {
+    margin-bottom:30px;
+
+    color:rgba(255,255,255,.58);
+
+    font-family:"Montserrat",sans-serif;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+.footer-links {
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    flex-wrap:wrap;
+
+    list-style:none;
+
+    margin-bottom:30px;
+}
+
+.footer-links a {
+    color:rgba(255,255,255,.62);
+
+    font-family:"Montserrat",sans-serif;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1.4px;
+    text-transform:uppercase;
+
+    text-decoration:none;
+
+    transition:.2s;
+}
+
+.footer-links a:hover {
+    color:var(--yellow);
+}
+
+.footer-copy {
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+    font-size:11px;
+}
+
+.footer-copy a {
+    color:rgba(255,255,255,.72);
+    text-decoration:underline;
+    text-underline-offset:2px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1000px) {
+
+    .nav-links {
+        gap:18px;
+    }
+
+    .hero {
+        min-height:680px;
+    }
+
+    .hero-inner {
+        grid-template-columns:1fr .75fr;
+        gap:25px;
+    }
+
+    .hero-title {
+        font-size:clamp(48px,7vw,72px);
+    }
+
+    .hero-logo {
+        width:100%;
+    }
+
+    .reference,
+    .reference:nth-child(even),
+    .reference.highlight {
+        grid-template-columns:1fr;
+    }
+
+    .reference:nth-child(even) .reference-photo {
+        order:1;
+    }
+
+    .reference:nth-child(even) .reference-content {
+        order:2;
+    }
+
+    .reference-photo,
+    .reference.highlight .reference-photo {
+        min-height:450px;
+    }
+
+    .reference-content,
+    .reference.highlight .reference-content {
+        padding:48px;
+    }
+
+    .reference-content::before,
+    .reference:nth-child(even) .reference-content::before {
+        left:0;
+        right:auto;
+        width:100%;
+        height:5px;
+        top:0;
+        bottom:auto;
+    }
+
+    .booking-inner {
+        align-items:flex-start;
+        flex-direction:column;
+    }
+}
+
+
+@media(max-width:800px) {
+
+    nav {
+        height:64px;
+    }
+
+    .nav-links {
+        display:none;
+
+        position:fixed;
+        top:64px;
+        left:0;
+        right:0;
+
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+
+        padding:10px 0;
+
+        background:rgba(26,18,8,.98);
+
+        border-bottom:1px solid rgba(255,255,255,.07);
+    }
+
+    .nav-links.open {
+        display:flex;
+    }
+
+    .nav-links li {
+        border-bottom:1px solid rgba(255,255,255,.045);
+    }
+
+    .nav-links a {
+        display:block;
+        padding:15px 5%;
+    }
+
+    .nav-links .nav-cta {
+        margin:12px 5%;
+        text-align:center;
+    }
+
+    .burger {
+        display:flex;
+    }
+
+    .hero {
+        min-height:auto;
+        padding:120px 0 70px;
+    }
+
+    .hero-inner {
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero-copy {
+        max-width:none;
+    }
+
+    .hero-kicker {
+        justify-content:center;
+    }
+
+    .hero-description {
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-actions {
+        justify-content:center;
+    }
+
+    .hero-proof {
+        min-height:270px;
+        margin-top:10px;
+    }
+
+    .hero-proof::before {
+        width:240px;
+        height:240px;
+    }
+
+    .hero-logo {
+        width:260px;
+    }
+
+    .proof-grid {
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .proof-item {
+        min-height:110px;
+        padding:20px;
+        border-bottom:1px solid rgba(26,18,8,.14);
+    }
+
+    .proof-item:nth-child(2) {
+        border-right:none;
+    }
+
+    .intro-grid {
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+
+    .intro-side {
+        order:2;
+    }
+
+    .intro-side-number {
+        font-size:100px;
+    }
+
+    .review-box {
+        padding:40px 28px;
+    }
+
+    .review-bottom {
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .reference-area {
+        padding:75px 0;
+    }
+
+    .reference-list {
+        gap:65px;
+    }
+
+    .compact-grid {
+        grid-template-columns:1fr;
+    }
+
+    .atmosphere {
+        height:270px;
+    }
+
+    .final-cta {
+        padding:90px 0;
+    }
+}
+
+
+@media(max-width:520px) {
+
+    .container {
+        width:min(92%,1160px);
+    }
+
+    .section {
+        padding:75px 0;
+    }
+
+    .hero {
+        padding-top:110px;
+    }
+
+    .hero-title {
+        font-size:47px;
+        letter-spacing:-2.8px;
+    }
+
+    .hero-description {
+        font-size:15px;
+    }
+
+    .hero-actions .btn {
+        width:100%;
+    }
+
+    .proof-number {
+        font-size:32px;
+    }
+
+    .proof-label {
+        font-size:9px;
+    }
+
+    .section-heading {
+        font-size:42px;
+        letter-spacing:-1.8px;
+    }
+
+    .section-lead {
+        font-size:15px;
+    }
+
+    .review-box {
+        padding:32px 23px;
+    }
+
+    .review-text {
+        font-size:19px;
+    }
+
+    .reference-photo,
+    .reference.highlight .reference-photo {
+        min-height:290px;
+        height:290px;
+    }
+
+    .reference-content,
+    .reference.highlight .reference-content {
+        padding:38px 27px 40px;
+    }
+
+    .reference-title,
+    .reference.highlight .reference-title {
+        font-size:36px;
+        letter-spacing:-1.5px;
+    }
+
+    .reference-location {
+        font-size:17px;
+    }
+
+    .reference-text {
+        font-size:14px;
+        line-height:1.8;
+    }
+
+    .reference-actions .btn {
+        width:100%;
+    }
+
+    .reference.compact .reference-photo {
+        height:240px;
+        min-height:240px;
+    }
+
+    .booking-band {
+        padding:65px 0;
+    }
+
+    .booking-title {
+        font-size:38px;
+    }
+
+    .booking-actions {
+        width:100%;
+    }
+
+    .booking-actions .btn {
+        width:100%;
+    }
+
+    .atmosphere {
+        height:235px;
+    }
+
+    .final-title {
+        font-size:46px;
+    }
+
+    .final-actions .btn {
+        width:100%;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media(prefers-reduced-motion:reduce) {
+
+    html {
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition:none !important;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAV
+===================================================== -->
+
+<nav id="nav">
+
+    <a href="index.html" class="nav-brand">
+        <img
+            src="bilder/weblogostrive.webp"
+            alt="STR!VE Logo"
+            class="nav-logo-img"
+            width="150"
+            height="38"
+        >
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+
+        <li><a href="index.html#about">Über uns</a></li>
+        <li><a href="index.html#termine">Termine</a></li>
+        <li><a href="index.html#repertoire">Repertoire</a></li>
+        <li><a href="index.html#band">Die Band</a></li>
+        <li><a href="index.html#preise">Preise</a></li>
+        <li><a href="referenzen.html" class="active">Referenzen</a></li>
+        <li><a href="index.html#kontakt" class="nav-cta">Jetzt buchen</a></li>
+
+    </ul>
+
+    <div class="burger" id="burger" aria-label="Menü öffnen" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="hero">
+
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-light one"></div>
+    <div class="hero-light two"></div>
+
+    <div class="container hero-inner">
+
+        <div class="hero-copy">
+
+            <div class="hero-kicker">
+                STR!VE LIVE
+            </div>
+
+            <h1 class="hero-title">
+                Nicht nur<br>
+                <span>Musik.</span><br>
+                Ein Abend.
+            </h1>
+
+            <p class="hero-description">
+                Von der ersten Note bis zum letzten Song:
+                <strong>STR!VE bringt Rock, Party und echte Live-Energie</strong>
+                auf die Bühne. Hier seht ihr, wo wir bereits für Stimmung
+                gesorgt haben.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#referenzen" class="btn btn-yellow">
+                    Auftritte ansehen
+                </a>
+
+                <a href="index.html#kontakt" class="btn btn-outline">
+                    STR!VE buchen
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-proof">
+
+            <img
+                src="bilder/weblogostrive.webp"
+                alt="STR!VE Partyband"
+                class="hero-logo"
+                width="460"
+                height="320"
+            >
+
+            <div class="hero-proof-label">
+                Partyband · Eifel · Region
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     PROOF STRIP
+===================================================== -->
+
+<section class="proof-strip" aria-label="STR!VE Fakten">
+
+    <div class="container proof-grid">
+
+        <div class="proof-item">
+            <div class="proof-number">2026</div>
+            <div class="proof-label">Live-Saison</div>
+        </div>
+
+        <div class="proof-item">
+            <div class="proof-number">6</div>
+            <div class="proof-label">Musiker auf der Bühne</div>
+        </div>
+
+        <div class="proof-item">
+            <div class="proof-number">7+</div>
+            <div class="proof-label">unterschiedliche Events</div>
+        </div>
+
+        <div class="proof-item">
+            <div class="proof-number">100%</div>
+            <div class="proof-label">Live gespielt</div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="section intro">
+
+    <div class="container intro-grid">
+
+        <div class="intro-side">
+
+            <div class="intro-side-number">
+                06
+            </div>
+
+            <div class="intro-side-text">
+                Musiker.<br>
+                Eine Bühne.<br>
+                Ein gemeinsamer Abend.
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <div class="section-tag">
+                ECHTE AUFTRITTE
+            </div>
+
+            <h2 class="section-heading">
+                Was passiert,<br>
+                <em>wenn STR!VE spielt?</em>
+            </h2>
+
+            <p class="section-lead">
+                Wir kommen nicht auf die Bühne, um eine Setlist abzuspielen.
+                Wir wollen, dass nach dem ersten Song niemand mehr stillsteht.
+                Ob Kirmesplatz, Pub, Bürgerhaus oder Jubiläumsfeier:
+                Unsere Referenzen zeigen, wie unterschiedlich die Veranstaltungen
+                sein können – und was sie gemeinsam haben.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     GOOGLE REVIEW
+===================================================== -->
+
+<section class="review-section">
+
+    <div class="container">
+
+        <div class="review-box">
+
+            <div class="review-top">
+
+                <div class="review-stars" aria-label="5 von 5 Sternen">
+                    ★★★★★
+                </div>
+
+                <div class="review-source">
+                    Google-Bewertung
+                </div>
+
+            </div>
+
+            <p class="review-text">
+                „Ein wirklich toller Abend mit Livemusik.
+                Es war für jede Altersklasse etwas dabei.
+                Musik mit Leidenschaft.“
+            </p>
+
+            <div class="review-author">
+                Heike S
+            </div>
+
+            <div class="review-bottom">
+
+                <div class="review-rating">
+                    <strong>5,0 auf Google</strong><br>
+                    Basierend auf 5 Bewertungen
+                </div>
+
+                <a
+                    href="https://www.google.de/maps/place/STRIVE+Partyband/@50.7226549,5.0253795,704550m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2317fb8d84addf9f:0x904b5fa721dbc871!8m2!3d50.7489563!4d7.6639832!16s%2Fg%2F11z676b5xk?entry=ttu"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-yellow"
+                >
+                    Alle Bewertungen
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     REFERENCE INTRO
+===================================================== -->
+
+<section class="section references-intro" id="referenzen">
+
+    <div class="container">
+
+        <div class="section-tag">
+            REFERENZEN
+        </div>
+
+        <h2 class="section-heading">
+            Bühnen, Events,<br>
+            <em>volle Abende.</em>
+        </h2>
+
+        <p class="section-lead">
+            Von unserem ersten Konzert bis zur großen Kirmes:
+            Das sind echte Veranstaltungen, bei denen STR!VE bereits
+            live auf der Bühne stand.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     REFERENCES
+===================================================== -->
+
+<main class="reference-area">
+
+    <div class="container reference-list">
+
+
+        <!-- =================================================
+             KAISERROCK – HIGHLIGHT
+        ================================================== -->
+
+        <article class="reference highlight" id="kaiserrock-ettringen">
+
+            <div class="reference-photo">
+
+                <img
+                    src="bilder/kaiserrock.webp"
+                    alt="STR!VE beim Kaiserrock im Kaiserhof Ettringen"
+                    loading="lazy"
+                >
+
+                <div class="reference-number">
+                    01 / 08
+                </div>
+
+            </div>
+
+
+            <div class="reference-content">
+
+                <div class="reference-date">
+                    12. SEPTEMBER 2026
+                </div>
+
+                <h2 class="reference-title">
+                    Kaiserrock
+                </h2>
+
+                <div class="reference-location">
+                    Eventlocation Kaiserhof · Ettringen
+                </div>
+
+                <div class="reference-category">
+                    Kirmes 2026
+                </div>
+
+                <p class="reference-text">
+                    Beim Kaiserrock im Kaiserhof Ettringen wurde aus einem
+                    Kirmesabend ein langer Konzertabend. STR!VE brachte
+                    Rockklassiker, moderne Hits und Partysongs auf die Bühne
+                    und spielte bis <strong>0:30 Uhr</strong>.
+                    <br><br>
+                    Zwischendurch übernahm Midnight Falling die Bühne,
+                    danach ging es mit STR!VE weiter. Der Wechsel der beiden
+                    Bands machte den Abend besonders abwechslungsreich –
+                    und das Publikum blieb bis spät in die Nacht dabei.
+                </p>
+
+                <div class="reference-actions">
+
+                    <a href="index.html#kontakt" class="btn btn-yellow">
+                        Genau so einen Abend buchen
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =================================================
+             ATMOSPHERE
+        ================================================== -->
+
+        <div class="atmosphere">
+
+            <img
+                src="bilder/live1.webp"
+                alt="STR!VE live auf der Bühne"
+                loading="lazy"
+            >
+
+            <div class="container atmosphere-content">
+
+                <div class="atmosphere-text">
+
+                    <div class="atmosphere-kicker">
+                        LIVE IST LIVE
+                    </div>
+
+                    <div class="atmosphere-title">
+                        Die Bühne gehört<br>
+                        <em>nicht nur uns.</em>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             HIGHLANDER
+        ================================================== -->
+
+        <article class="reference" id="highlander-mayen">
+
+            <div class="reference-photo">
+
+                <img
+                    src="bilder/highlander.webp"
+                    alt="STR!VE live im Highlander Scottish Pub in Mayen"
+                    loading="lazy"
+                >
+
+                <div class="reference-number">
+                    02 / 08
+                </div>
+
+            </div>
+
+
+            <div class="reference-content">
+
+                <div class="reference-date">
+                    07. AUGUST 2026
+                </div>
+
+                <h2 class="reference-title">
+                    Highlander Pub
+                </h2>
+
+                <div class="reference-location">
+                    Mayen
+                </div>
+
+                <div class="reference-category">
+                    Konzert · Live-Pub
+                </div>
+
+                <p class="reference-text">
+                    Ab 21:00 Uhr wurde der Highlander Scottish Pub zur
+                    Live-Location. Rockklassiker, moderne Hits und bekannte
+                    Partysongs sorgten dafür, dass Gäste mitsangen, tanzten
+                    und gemeinsam den Abend feierten.
+                    <br><br>
+                    Gerade die Nähe zum Publikum machte den Auftritt
+                    besonders: keine große Distanz, sondern Band und Gäste
+                    mitten im selben Abend.
+                </p>
+
+                <div class="reference-actions">
+
+                    <a
+                        href="https://www.instagram.com/reel/DbxqAMzuDaQ/?igsh=MWR6aDZ1bnVwZW04eg=="
+                        target="_blank"
+                        rel="noopener"
+                        class="btn btn-outline"
+                    >
+                        Instagram-Reel
+                    </a>
+
+                    <a href="index.html#kontakt" class="btn btn-yellow">
+                        STR!VE buchen
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =================================================
+             CTA
+        ================================================== -->
+
+        <section class="booking-band">
+
+            <div class="container booking-inner">
+
+                <div>
+
+                    <div class="booking-kicker">
+                        Euer Event fehlt hier noch
+                    </div>
+
+                    <h2 class="booking-title">
+                        Dann sollten wir<br>
+                        <span>darüber reden.</span>
+                    </h2>
+
+                    <p class="booking-text">
+                        Kirmes, Geburtstag, Vereinsfest, Firmenfeier oder
+                        einfach ein Abend, der nach mehr als Hintergrundmusik
+                        verlangt: Schreibt uns, was ihr plant.
+                    </p>
+
+                </div>
+
+                <div class="booking-actions">
+
+                    <a href="index.html#kontakt" class="btn btn-yellow">
+                        Termin anfragen
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SOMMERNACHTSFEST
+        ================================================== -->
+
+        <article class="reference" id="sommernachtsfest-ettringen">
+
+            <div class="reference-photo">
+
+                <img
+                    src="bilder/sommernacht.webp"
+                    alt="STR!VE beim Sommernachtsfest der Showtanzgruppe Ettringen"
+                    loading="lazy"
+                >
+
+                <div class="reference-number">
+                    03 / 08
+                </div>
+
+            </div>
+
+
+            <div class="reference-content">
+
+                <div class="reference-date">
+                    01. AUGUST 2026
+                </div>
+
+                <h2 class="reference-title">
+                    Sommernachtsfest
+                </h2>
+
+                <div class="reference-location">
+                    Kirmesplatz · Ettringen
+                </div>
+
+                <div class="reference-category">
+                    Open Air · Showtanzgruppe
+                </div>
+
+                <p class="reference-text">
+                    Beim Sommernachtsfest der Showtanzgruppe Ettringen
+                    eröffnete STR!VE den Festabend musikalisch.
+                    Von 19:00 bis 20:30 Uhr ging es mit Rockklassikern,
+                    modernen Hits und Partysongs direkt vor Publikum los.
+                    <br><br>
+                    Der Platz füllte sich, es wurde mitgesungen und getanzt.
+                    Danach übernahm 6inflames die Bühne und führte den Abend
+                    bis in die späten Stunden weiter.
+                </p>
+
+                <div class="reference-actions">
+
+                    <a href="index.html#kontakt" class="btn btn-yellow">
+                        Euer Open Air buchen
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =================================================
+             ATMOSPHERE
+        ================================================== -->
+
+        <div class="atmosphere">
+
+            <img
+                src="bilder/live4.webp"
+                alt="STR!VE bei einem Live-Auftritt"
+                loading="lazy"
+            >
+
+            <div class="container atmosphere-content">
+
+                <div class="atmosphere-text">
+
+                    <div class="atmosphere-kicker">
+                        VOM ERSTEN SONG AN
+                    </div>
+
+                    <div class="atmosphere-title">
+                        Wenn der erste Song läuft,<br>
+                        <em>geht's los.</em>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             NITZTAL
+        ================================================== -->
+
+        <article class="reference" id="kirmes-nitztal-2026">
+
+            <div class="reference-photo">
+
+                <img
+                    src="bilder/nitztal1.webp"
+                    alt="STR!VE live bei der Kirmes in Mayen-Nitztal"
+                    loading="lazy"
+                >
+
+                <div class="reference-number">
+                    04 / 08
+                </div>
+
+            </div>
+
+
+            <div class="reference-content">
+
+                <div class="reference-date">
+                    11. JULI 2026
+                </div>
+
+                <h2 class="reference-title">
+                    Kirmes
+                </h2>
+
+                <div class="reference-location">
+                    Schützenhalle · Mayen-Nitztal
+                </div>
+
+                <div class="reference-category">
+                    Kirmes 2026
+                </div>
+
+                <p class="reference-text">
+                    In Nitztal wurde trotz des kleinen Raums direkt vor der
+                    Bühne gemeinsam gefeiert. Vom ersten Song an wurde
+                    mitgesungen, getanzt und bis spät in den Abend weitergemacht.
+                    <br><br>
+                    Als Band aus der Region war dieser Auftritt für uns
+                    besonders: ein Heimspiel vor einem Publikum, das vom
+                    ersten bis zum letzten Song voll dabei war.
+                </p>
+
+                <div class="reference-actions">
+
+                    <a
+                        href="https://www.blick-aktuell.de/Mayen/Vielfaeltige-Kirmes-in-Nitztal-mit-Musik-und-Gemeinschaft-669605.html"
+                        target="_blank"
+                        rel="noopener"
+                        class="btn btn-outline"
+                    >
+                        Zeitungsbericht
+                    </a>
+
+                    <a href="index.html#kontakt" class="btn btn-yellow">
+                        Kirmes buchen
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =================================================
+             COMPACT REFERENCES
+        ================================================== -->
+
+        <div class="compact-grid">
+
+
+            <!-- PARTNERSCHAFT -->
+
+            <article class="reference compact" id="partnerschaft-ettringen-dornes">
+
+                <div class="reference-photo">
+
+                    <img
+                        src="bilder/hosiha.webp"
+                        alt="STR!VE beim Partnerschaftstreffen Ettringen und Dornes"
+                        loading="lazy"
+                    >
+
+                    <div class="reference-number">
+                        05 / 08
+                    </div>
+
+                </div>
+
+
+                <div class="reference-content">
+
+                    <div class="reference-date">
+                        24. MAI 2026
+                    </div>
+
+                    <h2 class="reference-title">
+                        60 Jahre Partnerschaft
+                    </h2>
+
+                    <div class="reference-location">
+                        Hochsimmerhalle · Ettringen
+                    </div>
+
+                    <div class="reference-category">
+                        Jubiläumsfeier · Konzert
+                    </div>
+
+                    <p class="reference-text">
+                        Zum 60-jährigen Bestehen der Ortspartnerschaft zwischen
+                        Ettringen und Dornes gestaltete STR!VE den musikalischen
+                        Abschluss des offiziellen Festabends. Nach dem Chor
+                        Colores wechselte der Abend von offizieller Feier zu
+                        gemeinsamem Tanzen, Feiern und Zusammensein.
+                    </p>
+
+                    <div class="reference-actions">
+                        <a href="index.html#kontakt" class="btn btn-yellow">
+                            STR!VE buchen
+                        </a>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- SPD -->
+
+            <article class="reference compact" id="spd-kottenheim">
+
+                <div class="reference-photo">
+
+                    <img
+                        src="bilder/spd.webp"
+                        alt="STR!VE live im Bürgerhaus Kottenheim"
+                        loading="lazy"
+                    >
+
+                    <div class="reference-number">
+                        06 / 08
+                    </div>
+
+                </div>
+
+
+                <div class="reference-content">
+
+                    <div class="reference-date">
+                        08. MAI 2026
+                    </div>
+
+                    <h2 class="reference-title">
+                        80 Jahre SPD
+                    </h2>
+
+                    <div class="reference-location">
+                        Bürgerhaus · Kottenheim
+                    </div>
+
+                    <div class="reference-category">
+                        Jubiläum · Bürgerempfang
+                    </div>
+
+                    <p class="reference-text">
+                        STR!VE eröffnete den feierlichen Bürgerempfang zum
+                        80-jährigen Jubiläum der SPD Kottenheim. Nach unserem
+                        Auftritt folgte das offizielle Programm mit Gästen
+                        aus Politik, Gesellschaft und der Region, bevor der
+                        Abend beim gemeinsamen Empfang ausklang.
+                    </p>
+
+                    <div class="reference-actions">
+                        <a href="index.html#kontakt" class="btn btn-yellow">
+                            STR!VE buchen
+                        </a>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- =================================================
+             ATMOSPHERE
+        ================================================== -->
+
+        <div class="atmosphere">
+
+            <img
+                src="bilder/live7.webp"
+                alt="STR!VE live mit Publikum"
+                loading="lazy"
+            >
+
+            <div class="container atmosphere-content">
+
+                <div class="atmosphere-text">
+
+                    <div class="atmosphere-kicker">
+                        EGAL WELCHER ANLASS
+                    </div>
+
+                    <div class="atmosphere-title">
+                        Eure Veranstaltung.<br>
+                        <em>Euer Abend.</em>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             WOHNZIMMERKONZERT
+        ================================================== -->
+
+        <article class="reference" id="wohnzimmerkonzert-nitztal">
+
+            <div class="reference-photo">
+
+                <img
+                    src="bilder/wohnzimmer.webp"
+                    alt="STR!VE beim ersten Konzert im Bürgerhaus Nitztal"
+                    loading="lazy"
+                >
+
+                <div class="reference-number">
+                    07 / 08
+                </div>
+
+            </div>
+
+
+            <div class="reference-content">
+
+                <div class="reference-date">
+                    10. APRIL 2026
+                </div>
+
+                <h2 class="reference-title">
+                    Unser Anfang
+                </h2>
+
+                <div class="reference-location">
+                    Bürgerhaus · Mayen-Nitztal
+                </div>
+
+                <div class="reference-category">
+                    Erstes Konzert · 2026
+                </div>
+
+                <p class="reference-text">
+                    Hier fing es an: Am 10. April 2026 spielte STR!VE das
+                    <strong>erste Konzert überhaupt</strong> – ein exklusives
+                    Wohnzimmerkonzert im Bürgerhaus Nitztal.
+                    <br><br>
+                    Vor Familie, Freunden und Musikbegeisterten präsentierten
+                    wir zum ersten Mal unser Live-Programm. Aus diesem Abend
+                    wurde der Startpunkt für die weiteren Auftritte der Band.
+                </p>
+
+                <div class="reference-actions">
+
+                    <a href="index.html#kontakt" class="btn btn-yellow">
+                        Teil der Geschichte werden
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- =================================================
+             EXTRA LIVE ATMOSPHERE
+        ================================================== -->
+
+        <div class="atmosphere">
+
+            <img
+                src="bilder/live10.webp"
+                alt="STR!VE Partyband live"
+                loading="lazy"
+            >
+
+            <div class="container atmosphere-content">
+
+                <div class="atmosphere-text">
+
+                    <div class="atmosphere-kicker">
+                        NOCH NICHT GENUG?
+                    </div>
+
+                    <div class="atmosphere-title">
+                        Vielleicht wird eure<br>
+                        Veranstaltung die <em>nächste.</em>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             FINAL SMALL PROOF
+        ================================================== -->
+
+        <article class="reference compact" id="region">
+
+            <div class="reference-photo">
+
+                <img
+                    src="bilder/highlander.webp"
+                    alt="STR!VE Partyband live"
+                    loading="lazy"
+                >
+
+                <div class="reference-number">
+                    08 / 08
+                </div>
+
+            </div>
+
+
+            <div class="reference-content">
+
+                <div class="reference-date">
+                    STR!VE · LIVE
+                </div>
+
+                <h2 class="reference-title">
+                    Euer Event
+                </h2>
+
+                <div class="reference-location">
+                    Eifel & Region
+                </div>
+
+                <div class="reference-category">
+                    Jetzt Termin anfragen
+                </div>
+
+                <p class="reference-text">
+                    Die bisherigen Auftritte zeigen nur einen Ausschnitt.
+                    Vielleicht steht als Nächstes euer Name hier:
+                    Kirmes, Vereinsfest, Geburtstag, Firmenfeier, Open Air
+                    oder einfach ein Abend, für den es einen Grund braucht.
+                </p>
+
+                <div class="reference-actions">
+
+                    <a href="index.html#kontakt" class="btn btn-yellow">
+                        STR!VE anfragen
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+<section class="final-cta">
+
+    <div class="container final-inner">
+
+        <div class="final-kicker">
+            DER NÄCHSTE AUFTRITT KÖNNTE EURER SEIN
+        </div>
+
+        <h2 class="final-title">
+            Ihr plant den Anlass.<br>
+            <em>Wir bringen den Abend.</em>
+        </h2>
+
+        <p class="final-text">
+            Ihr habt einen Termin, eine Idee oder bisher nur eine grobe
+            Vorstellung? Schreibt uns. Wir schauen gemeinsam, was für
+            eure Veranstaltung passt.
+        </p>
+
+        <div class="final-actions">
+
+            <a href="index.html#kontakt" class="btn btn-yellow">
+                Jetzt Termin anfragen
+            </a>
+
+            <a href="index.html#preise" class="btn btn-outline">
+                Preise ansehen
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        <img
+            src="bilder/weblogostrive.webp"
+            alt="STR!VE Partyband"
+            width="300"
+            height="210"
+        >
+
+    </div>
+
+    <div class="footer-tagline">
+        Partyband · Eifel · Mayen · Region
+    </div>
+
+    <ul class="footer-links">
+
+        <li><a href="index.html#about">Über uns</a></li>
+        <li><a href="index.html#termine">Termine</a></li>
+        <li><a href="index.html#repertoire">Repertoire</a></li>
+        <li><a href="index.html#band">Die Band</a></li>
+        <li><a href="index.html#preise">Preise</a></li>
+        <li><a href="referenzen.html" style="color:var(--yellow);">Referenzen</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="daten.html">Datenschutzerklärung</a></li>
+
+    </ul>
+
+    <div class="footer-copy">
+        © 2026 STR!VE Partyband · Nitztal ·
+        <a href="mailto:strivepartyband@gmail.com">
+            strivepartyband@gmail.com
+        </a>
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("navLinks");
+
+function toggleNav() {
+    navLinks.classList.toggle("open");
+}
+
+burger.addEventListener("click", toggleNav);
+
+burger.addEventListener("keydown", function(event) {
+    if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        toggleNav();
+    }
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", function() {
+        navLinks.classList.remove("open");
+    });
+
+});
+
+
+/* Close mobile menu when clicking outside */
+
+document.addEventListener("click", function(event) {
+
+    if (
+        navLinks.classList.contains("open") &&
+        !navLinks.contains(event.target) &&
+        !burger.contains(event.target)
+    ) {
+        navLinks.classList.remove("open");
+    }
+
+});
+
+
+/* Slight navigation shadow after scrolling */
+
+window.addEventListener("scroll", function() {
+
+    const nav = document.getElementById("nav");
+
+    if (window.scrollY > 30) {
+        nav.style.boxShadow = "0 8px 30px rgba(0,0,0,.22)";
+    } else {
+        nav.style.boxShadow = "none";
+    }
+
+});
+
+</script>
+
+
+</body>
+</html>
