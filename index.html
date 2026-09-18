@@ -1337,7 +1337,200 @@ footer {
 .video-consent-overlay{position:absolute;inset:0;background:rgba(24,17,8,.88);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px;text-align:center}
 .video-consent-overlay p{max-width:320px;color:rgba(255,255,255,.85);font-size:14px;line-height:1.6}
 .video-consent-overlay button{background:var(--yellow);color:var(--ink);border:none;padding:12px 22px;border-radius:4px;font-family:Montserrat,sans-serif;font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.6px;cursor:pointer}
+/* =========================================================
+   SO KLINGT STR!VE LIVE
+   Fehlende Styles für die neue Photo-Backed-Section
+   ========================================================= */
 
+.section{
+  padding:100px 0;
+}
+
+.container{
+  width:min(1140px,90%);
+  margin:0 auto;
+}
+
+.photo-backed-section.video-section{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    #120D07
+    url('bilder/live6.webp')
+    center center / cover no-repeat;
+  color:#fff;
+}
+
+.photo-backed-section.video-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10,6,3,.94) 0%,
+      rgba(10,6,3,.75) 46%,
+      rgba(10,6,3,.84) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(10,6,3,.20) 0%,
+      rgba(10,6,3,.76) 100%
+    );
+}
+
+.photo-backed-section.video-section::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(
+      circle at 78% 24%,
+      rgba(245,200,0,.12),
+      transparent 34%
+    );
+}
+
+.photo-backed-section.video-section .video-grid{
+  position:relative;
+  z-index:1;
+}
+
+.photo-backed-section.video-section .video-copy{
+  position:sticky;
+  top:104px;
+}
+
+.photo-backed-section.video-section .kicker{
+  color:var(--yellow);
+}
+
+.photo-backed-section.video-section .kicker::before{
+  background:var(--yellow);
+}
+
+.photo-backed-section.video-section h2{
+  color:#fff;
+}
+
+.photo-backed-section.video-section h2 em{
+  color:var(--yellow);
+}
+
+.photo-backed-section.video-section .video-intro{
+  color:rgba(255,255,255,.70);
+}
+
+.photo-backed-section.video-section .audio-list{
+  gap:12px;
+}
+
+.photo-backed-section.video-section .soundcloud-wrap{
+  background:rgba(255,255,255,.94);
+  border-color:rgba(255,255,255,.22);
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.25),
+    0 0 0 1px rgba(245,200,0,.05);
+}
+
+.photo-backed-section.video-section .soundcloud-facade{
+  background:#f3f3f1;
+}
+
+.photo-backed-section.video-section .video-wrap{
+  position:relative;
+  overflow:hidden;
+  border-radius:14px;
+  background:var(--dark);
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 26px 70px rgba(0,0,0,.32);
+}
+
+.photo-backed-section.video-section .video-wrap img{
+  width:100%;
+  height:auto;
+  display:block;
+  aspect-ratio:16 / 9;
+  object-fit:cover;
+}
+
+.photo-backed-section.video-section .video-consent-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(26,18,8,.88);
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  padding:24px;
+  text-align:center;
+}
+
+.photo-backed-section.video-section .video-consent-overlay p{
+  max-width:320px;
+  color:rgba(255,255,255,.86);
+  font-size:14px;
+  line-height:1.6;
+}
+
+.photo-backed-section.video-section .video-consent-overlay button{
+  background:var(--yellow);
+  color:var(--dark);
+  border:none;
+  padding:12px 22px;
+  border-radius:4px;
+  font-family:"Montserrat","Montserrat Fallback",sans-serif;
+  font-weight:800;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.6px;
+  cursor:pointer;
+}
+
+.photo-backed-section.video-section .video-consent-overlay button:hover{
+  background:var(--yellow2);
+}
+
+@media (max-width:1080px){
+  .photo-backed-section.video-section .video-grid{
+    grid-template-columns:1fr;
+  }
+
+  .photo-backed-section.video-section .video-copy{
+    position:static;
+  }
+}
+
+@media (max-width:620px){
+  .photo-backed-section.video-section{
+    padding:76px 0;
+    background-position:center center;
+  }
+
+  .photo-backed-section.video-section .video-intro{
+    font-size:15px;
+  }
+
+  .photo-backed-section.video-section .soundcloud-facade{
+    height:150px;
+  }
+
+  .photo-backed-section.video-section .video-wrap{
+    border-radius:10px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .photo-backed-section.video-section{
+    background-attachment:scroll;
+  }
+}
 /* ─── COOKIE-BANNER / EINWILLIGUNG ─── */
 .cookie-banner {
   position: fixed;
